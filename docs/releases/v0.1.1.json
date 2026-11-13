@@ -1,0 +1,112 @@
+{
+  "schema_version": 2,
+  "group": "chigiri",
+  "config_hash": "6f0aa1a7ae0dc145877599621c9dcfc48ea60ac0b5681cb8b056ec204da417a9",
+  "head": "9a2c39f38c4f6990039438532a6009f284712e93",
+  "base": "v0.1.0",
+  "current": "0.1.0",
+  "next": "0.1.1",
+  "tag": "v0.1.1",
+  "bump": "patch",
+  "mode": "normal",
+  "prepared": false,
+  "receipt_path": "docs/releases/v0.1.1.json",
+  "notes": "# v0.1.1\n\nGroup: `chigiri`\n\nCompare: `v0.1.0` → `9a2c39f38c4f6990039438532a6009f284712e93`\n\n## Changes\n\n- fix(readme): clarify pre-1.0 stability and upgrade expectations (a79b3c3a535e8cb1fa881e84e631e9b54e733943)\n- fix(build): align release preparation with standards v0.6.2 (710977a8c77e08567eef3cc289003718f9204462)\n- fix(release): follow workspace versions in local consumers (9a2c39f38c4f6990039438532a6009f284712e93)\n",
+  "changes": [
+    {
+      "path": "Cargo.toml",
+      "before": "c4de9620adde7190dc002a445ad80e358069246d448ca5ee7ae5d499c946bd0b",
+      "after": "50d9aa6c15bc119a0138339d7872b8e6195d9ae51bbdb0949c2d8bcb1f36f858"
+    },
+    {
+      "path": "Cargo.lock",
+      "before": "f171e40753f92620a562cac36e13e3e94e0f02eb4dd9db49762948f6ce7ce97e",
+      "after": "42ce1b376e8f3ebd84c2e56ff1f22c02b3d007ba7238df3a5e45d8cd89986915"
+    },
+    {
+      "path": "crates/codegen/tests/compile/custom_scalar_output/Cargo.lock",
+      "before": "39e41d9f2989a6400df3e41da63df897141654599a785b90bf555cc8edac701d",
+      "after": "95c11b89f35f024eb7c3e8c2f6e42b9b35c44f54bfee2d60f665991e3492b6f3"
+    },
+    {
+      "path": "crates/codegen/tests/compile/field_missing/Cargo.lock",
+      "before": "68023be4df1ddf0d9a4820a1d07bff9fce17c1513c42ba9be6cc1b13a0117bbb",
+      "after": "05a7152da9cd275c791e60692c50a8bf2ebde3a63688d3d8972d2efba9c2d244"
+    },
+    {
+      "path": "crates/codegen/tests/compile/group_missing/Cargo.lock",
+      "before": "b8894febd8d13eccc8983b20cd0e195af256f276687c3b4359af42f9d0ed40b9",
+      "after": "e58ef8b83215d22d5b1afd935a7b54076c52df1d23c8503cf9a7393487f9c772"
+    },
+    {
+      "path": "crates/codegen/tests/compile/pass/Cargo.lock",
+      "before": "2f7aabe21270c781b7c815707fe268d7c68dd2844edbef53c3d0aa77d8eb7292",
+      "after": "0b1fcef30db29991dc03fe63e899f11cb9e575e8f6fb78ef25a48baa3b28b986"
+    },
+    {
+      "path": "crates/codegen/tests/compile/typestate_fail/Cargo.lock",
+      "before": "49741a9f1889b9104905f0753004098f60e588d15b567a595fd0d4b796664e88",
+      "after": "b039e58010daf53a731138cc8d97c1098cea7ffe8411ae2d90fa5765a6548204"
+    },
+    {
+      "path": "fuzz/Cargo.lock",
+      "before": "980be6454fbe0caf069f5e8c683556fffb347a9e394dac8b3ad5432e52e91ead",
+      "after": "8a747f152f17e61c22d211d29b9d546a619ef7d6dc5980904bcaf136f46d960d"
+    },
+    {
+      "path": "tests/fixtures/bridge-negative-surface/Cargo.lock",
+      "before": "0835d342eae45809d449f1874e341c0246ce5ac79740dcfaeb5e1b2e96cf97b8",
+      "after": "b07e1ef5c647a78d550b7ca608a2b4e00872b2d5873919d40fca60d28fc10e71"
+    },
+    {
+      "path": "tests/fixtures/full-schema/consumer/Cargo.lock",
+      "before": "cb805ffbb50cf9df58d846a2616bc3737ee8962a9decdd02080822a7ba1791dc",
+      "after": "23cceef5fe204315657838d2a95c1f487b7c26618a7889d5ca177265847737a5"
+    },
+    {
+      "path": "tests/fixtures/graphiql-consumer/Cargo.lock",
+      "before": "73f229babae1863777d8af76ecdc4463133df9eaa44b948eb734f5ab42f4b302",
+      "after": "c41126580160a78db6aaf8ff70839d69f6e8b1961b55b2f0eef760ebfd1a633e"
+    },
+    {
+      "path": "tests/fixtures/mock-blog-comparison/Cargo.lock",
+      "before": "d7d53b8cc65bd3bbdc445164480f7b8e8c9d23c5bdb736bf6b93b38b05df3ed3",
+      "after": "ad2112cb8e2c73fed07c1b43493e0f21ffa11fee774ec5821fe3261f5c81e9cb"
+    },
+    {
+      "path": "tests/fixtures/neutral-endpoint-consumer/Cargo.lock",
+      "before": "95d2715e9a954c733dff62b0b6120e933eae9e28048c5e9c2c82243eadcb3eab",
+      "after": "30f5a117f9858772d8c50f265250961802bcadd9dda4e0164b27ab726c78adcf"
+    },
+    {
+      "path": "tests/fixtures/observability-opt-in-consumer/Cargo.lock",
+      "before": "4d8a310419e65daf72d603fef88e1235007ec4137125033afc19c9e8e46ffb25",
+      "after": "02ce2433d3ed5e167154f8284d5fdaa1e9d578ec4eb98a1e13360ed45ef3f29e"
+    },
+    {
+      "path": "tests/fixtures/rate-provider-minimal/Cargo.lock",
+      "before": "ee6f8c0aa472dbc5eeb90e5f7f0591883548d06830fed182b4db19f9ff10723f",
+      "after": "63aee6907d867c823dc2ca533747b34e1510a2ff679e8f935cdedaf12d66db33"
+    },
+    {
+      "path": "tests/fixtures/repository-consumer/Cargo.lock",
+      "before": "a5593b2ca00c9fdfbdf48764b826c93c58e2840e06bef1ef1d4127eb305ec1aa",
+      "after": "d8c8e5f605463fc02fd25daf6b56156bfedad1691648df2f036374a1a800c2d0"
+    },
+    {
+      "path": "tests/fixtures/usability-negative-surface/Cargo.lock",
+      "before": "862e075a30875a3a36a197e9c3392f8fc6adce79b248709b1cc2fbb4ebdb4969",
+      "after": "0c30baaa0d90b4ffd9e5a71c66772b180d3a04cc6f11517486d8cdc1a27ca264"
+    },
+    {
+      "path": "tests/fixtures/vnext-large-product/consumer/Cargo.lock",
+      "before": "edc1315eb7ce2e8a75adf5ff8453ef3d6a57d823ef1e7ea0a456f0e6d8647fc6",
+      "after": "252d10ad6e4b57a7b52298cc1dfa8f9900c72127d899d764b208b1f920e2670d"
+    },
+    {
+      "path": "docs/releases/v0.1.1.md",
+      "before": null,
+      "after": "47db53b7049cb4b7932d1b8c4c33bfaaa24f208d603d6e2eaa1869b311adb1e1"
+    }
+  ]
+}

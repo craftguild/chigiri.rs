@@ -54,7 +54,7 @@ checksum = "4e7648175b45a9a48536d676f68d918270699102aa8dab5496df06904c914600"
 
 [[package]]
 name = "chigiri"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "chigiri_http",
  "chigiri_observability",
@@ -83,11 +83,11 @@ dependencies = [
 
 [[package]]
 name = "chigiri_core"
-version = "0.1.0"
+version = "0.1.1"
 
 [[package]]
 name = "chigiri_http"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "chigiri_core",
  "chigiri_runtime",
@@ -97,7 +97,7 @@ dependencies = [
 
 [[package]]
 name = "chigiri_observability"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "blake3",
  "chigiri_runtime",
@@ -107,7 +107,7 @@ dependencies = [
 
 [[package]]
 name = "chigiri_operation"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "chigiri_http",
  "chigiri_runtime",
@@ -116,7 +116,7 @@ dependencies = [
 
 [[package]]
 name = "chigiri_policy"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "chigiri_http",
  "chigiri_rate",
@@ -125,11 +125,11 @@ dependencies = [
 
 [[package]]
 name = "chigiri_rate"
-version = "0.1.0"
+version = "0.1.1"
 
 [[package]]
 name = "chigiri_rate_memory"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "atomic-waker",
  "chigiri_rate",
@@ -137,7 +137,7 @@ dependencies = [
 
 [[package]]
 name = "chigiri_runtime"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "chigiri_core",
  "futures-core",

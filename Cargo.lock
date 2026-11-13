@@ -214,7 +214,7 @@ checksum = "f079e83a288787bcd14a6aea84cee5c87a67c5a3e660c30f557a3d24761b3527"
 
 [[package]]
 name = "chigiri"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "chigiri_graphiql",
  "chigiri_http",
@@ -265,7 +265,7 @@ dependencies = [
 
 [[package]]
 name = "chigiri_axum"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "axum",
  "bytes",
@@ -285,7 +285,7 @@ dependencies = [
 
 [[package]]
 name = "chigiri_axum_adoption"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "axum",
  "chigiri",
@@ -301,7 +301,7 @@ dependencies = [
 
 [[package]]
 name = "chigiri_books"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "axum",
  "bytes",
@@ -325,7 +325,7 @@ dependencies = [
 
 [[package]]
 name = "chigiri_cli"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "axum",
  "chigiri",
@@ -345,7 +345,7 @@ dependencies = [
 
 [[package]]
 name = "chigiri_codegen"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "chigiri_core",
  "chigiri_host",
@@ -360,15 +360,15 @@ dependencies = [
 
 [[package]]
 name = "chigiri_core"
-version = "0.1.0"
+version = "0.1.1"
 
 [[package]]
 name = "chigiri_graphiql"
-version = "0.1.0"
+version = "0.1.1"
 
 [[package]]
 name = "chigiri_host"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "ctrlc",
  "rustix",
@@ -379,7 +379,7 @@ dependencies = [
 
 [[package]]
 name = "chigiri_http"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "chigiri_core",
  "chigiri_runtime",
@@ -389,7 +389,7 @@ dependencies = [
 
 [[package]]
 name = "chigiri_hyper"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "bytes",
  "chigiri",
@@ -405,7 +405,7 @@ dependencies = [
 
 [[package]]
 name = "chigiri_mock"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "axum",
  "base64",
@@ -441,7 +441,7 @@ dependencies = [
 
 [[package]]
 name = "chigiri_observability"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "blake3",
  "chigiri_http",
@@ -452,7 +452,7 @@ dependencies = [
 
 [[package]]
 name = "chigiri_opentelemetry"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "chigiri_runtime",
  "opentelemetry",
@@ -462,7 +462,7 @@ dependencies = [
 
 [[package]]
 name = "chigiri_operation"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "chigiri_http",
  "chigiri_runtime",
@@ -472,7 +472,7 @@ dependencies = [
 
 [[package]]
 name = "chigiri_policy"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "chigiri_http",
  "chigiri_rate",
@@ -483,11 +483,11 @@ dependencies = [
 
 [[package]]
 name = "chigiri_rate"
-version = "0.1.0"
+version = "0.1.1"
 
 [[package]]
 name = "chigiri_rate_memory"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "atomic-waker",
  "chigiri_rate",
@@ -495,7 +495,7 @@ dependencies = [
 
 [[package]]
 name = "chigiri_runtime"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "chigiri_core",
  "futures-core",
@@ -504,7 +504,7 @@ dependencies = [
 
 [[package]]
 name = "chigiri_subscriptions_example"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "axum",
  "chigiri",
@@ -518,7 +518,7 @@ dependencies = [
 
 [[package]]
 name = "chigiri_testkit"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "axum",
  "bytes",
@@ -551,7 +551,7 @@ dependencies = [
 
 [[package]]
 name = "chigiri_tracing"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "chigiri_runtime",
  "tracing",
