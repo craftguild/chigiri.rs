@@ -5,8 +5,9 @@ edition = "2024"
 rust-version = "1.95"
 publish = false
 
+# Repository-only path dependencies follow this checkout and its lockfile.
 [dependencies]
 generated = { package = "chigiri-large-contract", path = "../generated" }
-chigiri = { path = "../../../../crates/facade", version = "=0.1.0" }
+chigiri = { path = "../../../../crates/facade" }
 
 [workspace]

@@ -7,9 +7,10 @@ edition = "2024"
 rust-version = "1.95"
 publish = false
 
+# Repository-only path dependencies follow this checkout and its lockfile.
 [dependencies]
-chigiri_rate = { path = "../../../crates/rate", version = "=0.1.0" }
+chigiri_rate = { path = "../../../crates/rate" }
 
 [dev-dependencies]
-chigiri_testkit = { path = "../../../crates/testkit", version = "=0.1.0" }
+chigiri_testkit = { path = "../../../crates/testkit" }
 tokio = { version = "1.53.3", default-features = false, features = ["macros", "rt-multi-thread"] }
