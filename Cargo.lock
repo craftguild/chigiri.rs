@@ -608,13 +608,13 @@ dependencies = [
 
 [[package]]
 name = "craftguild-cli"
-version = "0.6.1"
-source = "git+https://github.com/craftguild/standards.rs?rev=6852b210a9a614920bc5be2187f2705f46db978d#6852b210a9a614920bc5be2187f2705f46db978d"
+version = "0.6.2"
+source = "git+https://github.com/craftguild/standards.rs?rev=be63eefb44a850a01f4cc065c66fff2fe558ee18#be63eefb44a850a01f4cc065c66fff2fe558ee18"
 
 [[package]]
 name = "craftguild-cli-build"
-version = "0.6.1"
-source = "git+https://github.com/craftguild/standards.rs?rev=6852b210a9a614920bc5be2187f2705f46db978d#6852b210a9a614920bc5be2187f2705f46db978d"
+version = "0.6.2"
+source = "git+https://github.com/craftguild/standards.rs?rev=be63eefb44a850a01f4cc065c66fff2fe558ee18#be63eefb44a850a01f4cc065c66fff2fe558ee18"
 dependencies = [
  "craftguild-core",
  "serde_json",
@@ -622,8 +622,8 @@ dependencies = [
 
 [[package]]
 name = "craftguild-core"
-version = "0.6.1"
-source = "git+https://github.com/craftguild/standards.rs?rev=6852b210a9a614920bc5be2187f2705f46db978d#6852b210a9a614920bc5be2187f2705f46db978d"
+version = "0.6.2"
+source = "git+https://github.com/craftguild/standards.rs?rev=be63eefb44a850a01f4cc065c66fff2fe558ee18#be63eefb44a850a01f4cc065c66fff2fe558ee18"
 dependencies = [
  "jsonschema",
  "serde",

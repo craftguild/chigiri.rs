@@ -37,18 +37,7 @@ representative standalone consumer quality, fixed fuzz regressions, optimized
 Mock safety regressions and the short HTTP workload. Linux x86_64 and macOS
 arm64 both run this profile on pushes and pull requests.
 
-CI explicitly prepares locked dependencies for the root workspace and each
-independently locked consumer, compile fixture and fuzz manifest before offline
-validation. Preparation includes the two additional consumers used by the
-optional full profile; it does not run that profile or update any lockfile.
-CI runs the standalone ordinary catalog first, then `make check`. The shared
-adapter verifies its complete, ordered, current-source receipt instead of
-repeating the catalog. This preserves each command deadline and the two-hour
-CI job limit. Standards v0.6.1 has no implicit aggregate command deadline.
-The CI catalog runs its existing workspace test command immediately after the
-debug artifact build, before the slower Mock and CLI suites, to report native
-runtime failures sooner. Every required command still runs once with its
-original arguments and deadline, and receipts follow the current catalog order.
+CI explicitly prepares locked dependencies for the root workspace and each independently locked consumer, compile fixture and fuzz manifest before offline validation. Preparation includes the two additional consumers used by the optional full profile; it does not run that profile or update any lockfile. CI runs the standalone ordinary catalog first, then `make check`. The shared adapter verifies its complete, ordered, current-source receipt instead of repeating the catalog. This preserves each command deadline and the two-hour CI job limit. Standards v0.6.2 has no implicit aggregate command deadline. The CI catalog runs its existing workspace test command immediately after the debug artifact build, before the slower Mock and CLI suites, to report native runtime failures sooner. Every required command still runs once with its original arguments and deadline, and receipts follow the current catalog order.
 
 On the WarpBuild Linux runner, Cargo dev/test builds keep line-table debug
 information for filename/line backtraces and disable incremental caches to
@@ -76,15 +65,7 @@ and its internal concurrency checks remain required within the 30-minute
 command deadline. This uses the serial harness policy formerly applied to the
 full stable-toolchain repeat with the current fixed Rust 1.95.0 compiler.
 
-All 16 CLI integration targets run in one locked, all-features Cargo invocation,
-with the same explicit target list and no test-name filter. This avoids rebuilding
-the CLI between targets when their fixtures switch prepared build contexts. The
-command retains a 30-minute deadline; VM target commands remain separate. Both
-profiles use this grouping. Their completion records must match the current plan;
-older per-target command records cannot satisfy it. The pinned v0.6.1 engine
-retains explicit command watchdogs without an implicit aggregate deadline. Current
-timings and incomplete attempts live in Beads rather than changing the required
-product scope.
+All 16 CLI integration targets run in one locked, all-features Cargo invocation, with the same explicit target list and no test-name filter. This avoids rebuilding the CLI between targets when their fixtures switch prepared build contexts. The command retains a 30-minute deadline; VM target commands remain separate. Both profiles use this grouping. Their completion records must match the current plan; older per-target command records cannot satisfy it. The pinned v0.6.2 engine retains explicit command watchdogs without an implicit aggregate deadline. Current timings and incomplete attempts live in Beads rather than changing the required product scope.
 
 The two Cargo-config cache cases run their original assertions in dedicated Rust
 test children without ambient target/build-directory overrides. This keeps their

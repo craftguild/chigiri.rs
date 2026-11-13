@@ -65,8 +65,8 @@ license = "MIT OR Apache-2.0"
 repository = "https://github.com/craftguild/chigiri.rs"
 
 [workspace.dependencies]
-craftguild-cli = { git = "https://github.com/craftguild/standards.rs", rev = "6852b210a9a614920bc5be2187f2705f46db978d" }
-craftguild-cli-build = { git = "https://github.com/craftguild/standards.rs", rev = "6852b210a9a614920bc5be2187f2705f46db978d" }
+craftguild-cli = { git = "https://github.com/craftguild/standards.rs", rev = "be63eefb44a850a01f4cc065c66fff2fe558ee18" }
+craftguild-cli-build = { git = "https://github.com/craftguild/standards.rs", rev = "be63eefb44a850a01f4cc065c66fff2fe558ee18" }
 axum = { version = "0.8.4", default-features = false, features = ["http1", "tokio"] }
 blake3 = "1.8.7"
 bytes = "1.10.1"

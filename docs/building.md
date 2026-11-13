@@ -44,24 +44,7 @@ output's ELF/glibc requirements, and executes it in that image before common
 Release packaging. macOS arm64 retains its native build and artifact acceptance.
 The installer downloads those packaged bytes; it does not build a native fallback.
 
-Engine v0.6.1 resolves the declared context, prepares its exact SBOM, compiles in
-an ignored candidate cache, and publishes the binary with
-`.craftguild/chigiri/receipt.json`. That receipt retains sealed inputs and output
-hashes; its per-run SBOM records build identity and actual runtime components
-without a source inventory. These are local consistency records, not signatures
-or release attestations. The thin entry and full engine are pinned by
-`standards/engine.json`; explicit `make setup` verifies and caches that fixed
-macOS ARM64 or Linux x86_64 GNU engine without a sibling checkout or global tool.
-`make prime` reads matching offline rules. Ordinary operations do not download
-or update the engine. The compatibility shell selects Python 3.11+ and retains
-the product's bounded validation prerequisites, not a host/archive loader.
-`make install PREFIX="$HOME/.local"` copies an existing matching release binary;
-`BINDIR`, `DESTDIR`, `TARGET` and `CARGO_TARGET_DIR` are supported. A missing,
-modified or mismatched output fails with a build instruction. Install does not
-invoke Cargo, npm or any compiler and never acquires a missing entry/engine.
-Repeat an explicit `TARGET` or `PROFILE` used for the build during install.
-`make acceptance` builds and checks a copied
-offline binary and installation under a private temporary staging directory.
+Engine v0.6.2 resolves the declared context, prepares its exact SBOM, compiles in an ignored candidate cache, and publishes the binary with `.craftguild/chigiri/receipt.json`. That receipt retains sealed inputs and output hashes; its per-run SBOM records build identity and actual runtime components without a source inventory. These are local consistency records, not signatures or release attestations. The thin entry and full engine are pinned by `standards/engine.json`; explicit `make setup` verifies and caches that fixed macOS ARM64 or Linux x86_64 GNU engine without a sibling checkout or global tool. `make prime` reads matching offline rules. Ordinary operations do not download or update the engine. The compatibility shell selects Python 3.11+ and retains the product's bounded validation prerequisites, not a host/archive loader. `make install PREFIX="$HOME/.local"` copies an existing matching release binary; `BINDIR`, `DESTDIR`, `TARGET` and `CARGO_TARGET_DIR` are supported. A missing, modified or mismatched output fails with a build instruction. Install does not invoke Cargo, npm or any compiler and never acquires a missing entry/engine. Repeat an explicit `TARGET` or `PROFILE` used for the build during install. `make acceptance` builds and checks a copied offline binary and installation under a private temporary staging directory.
 
 ## Release preparation
 

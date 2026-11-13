@@ -3,8 +3,8 @@
   "release": {
     "schema_version": 3,
     "identity": {
-      "version": "0.6.1",
-      "revision": "6852b210a9a614920bc5be2187f2705f46db978d",
+      "version": "0.6.2",
+      "revision": "be63eefb44a850a01f4cc065c66fff2fe558ee18",
       "baseline": "0.1.0",
       "protocol": "craftguild-execution-1",
       "entry_protocol": "craftguild-entry-1"
@@ -13,44 +13,44 @@
       "aarch64-apple-darwin": {
         "initializer": {
           "binary": {
-            "url": "https://github.com/craftguild/standards.rs/releases/download/v0.6.1/craftguild-standards-v0.6.1-aarch64-apple-darwin",
-            "sha256": "89f8f37b1f879eeb2a382bd135ccef63e4085db956ff0b7635671ee8106dc6c1"
+            "url": "https://github.com/craftguild/standards.rs/releases/download/v0.6.2/craftguild-standards-v0.6.2-aarch64-apple-darwin",
+            "sha256": "587dc77ae9cb3706f5ecb27f484d9e6051144fc4d776a7894dff83a273a2e222"
           },
           "sbom": {
-            "url": "https://github.com/craftguild/standards.rs/releases/download/v0.6.1/craftguild-standards-v0.6.1-aarch64-apple-darwin.bom.json",
-            "sha256": "14f525e48e9d4e4b3a2c5bafc49f9b799f0665fbf4ee842716b541558160c211"
+            "url": "https://github.com/craftguild/standards.rs/releases/download/v0.6.2/craftguild-standards-v0.6.2-aarch64-apple-darwin.bom.json",
+            "sha256": "e3738e162ba25bea4c3bd5cef47a90a74e7e71134111bd2d5f7e2937ff3cf8c0"
           }
         },
         "engine": {
           "binary": {
-            "url": "https://github.com/craftguild/standards.rs/releases/download/v0.6.1/craftguild-standards-engine-v0.6.1-aarch64-apple-darwin",
-            "sha256": "2e24d167ef24a7432ea8fb40f5e072bc47fc2bb0d373a1e2937d682759d30c90"
+            "url": "https://github.com/craftguild/standards.rs/releases/download/v0.6.2/craftguild-standards-engine-v0.6.2-aarch64-apple-darwin",
+            "sha256": "cb3b9b8975c3d998a7abf92b9641aa894d55e2507172c74e0b58593389bb69f6"
           },
           "sbom": {
-            "url": "https://github.com/craftguild/standards.rs/releases/download/v0.6.1/craftguild-standards-engine-v0.6.1-aarch64-apple-darwin.bom.json",
-            "sha256": "482542e306f8e816f8d9197b8c71bebebace5980ac5e2f0d34c4cb7dfca33257"
+            "url": "https://github.com/craftguild/standards.rs/releases/download/v0.6.2/craftguild-standards-engine-v0.6.2-aarch64-apple-darwin.bom.json",
+            "sha256": "0eefc4dbe763100281a191409b57a63200ad712ec5e4bade71a99f82d3d2c20b"
           }
         }
       },
       "x86_64-unknown-linux-gnu": {
         "initializer": {
           "binary": {
-            "url": "https://github.com/craftguild/standards.rs/releases/download/v0.6.1/craftguild-standards-v0.6.1-x86_64-unknown-linux-gnu",
-            "sha256": "52f1511c4d70686768f3c5c23c03e2b270cb7f62755b1dc3a8d67ab1b0bbf0af"
+            "url": "https://github.com/craftguild/standards.rs/releases/download/v0.6.2/craftguild-standards-v0.6.2-x86_64-unknown-linux-gnu",
+            "sha256": "78b9958407fc137e4daa08df9392727e5db8fa11209ee6b819cf0799dc7ce7d5"
           },
           "sbom": {
-            "url": "https://github.com/craftguild/standards.rs/releases/download/v0.6.1/craftguild-standards-v0.6.1-x86_64-unknown-linux-gnu.bom.json",
-            "sha256": "a6e31e70994543b3087c4558ab27f1cecf13f21e2c10d85bb83d061f70ff520c"
+            "url": "https://github.com/craftguild/standards.rs/releases/download/v0.6.2/craftguild-standards-v0.6.2-x86_64-unknown-linux-gnu.bom.json",
+            "sha256": "3e6ef9eb9764c094a63bd7d64571341e36197c994334f5f41f9f12fb6c93552e"
           }
         },
         "engine": {
           "binary": {
-            "url": "https://github.com/craftguild/standards.rs/releases/download/v0.6.1/craftguild-standards-engine-v0.6.1-x86_64-unknown-linux-gnu",
-            "sha256": "05e1c379d5403410c3af1797c25e51228b9e216e28f0554f1495193202f86c81"
+            "url": "https://github.com/craftguild/standards.rs/releases/download/v0.6.2/craftguild-standards-engine-v0.6.2-x86_64-unknown-linux-gnu",
+            "sha256": "3dc04007679f79e4bd40f52d53301de241b6d8fc64ab86e651544c7731d3fac8"
           },
           "sbom": {
-            "url": "https://github.com/craftguild/standards.rs/releases/download/v0.6.1/craftguild-standards-engine-v0.6.1-x86_64-unknown-linux-gnu.bom.json",
-            "sha256": "a54c275b0c265df5912d2f5948db2a5159f1a49ebcbbfdb982c2d42638b25397"
+            "url": "https://github.com/craftguild/standards.rs/releases/download/v0.6.2/craftguild-standards-engine-v0.6.2-x86_64-unknown-linux-gnu.bom.json",
+            "sha256": "c15631307494b884e1b280fe9331b8a65399562ac9eeb3f2d724479d34a417b3"
           }
         }
       }

@@ -20,14 +20,14 @@ release. Use the CLI binaries below or build the CLI and libraries from source.
 ## Quick start
 
 Release binaries are available for Linux x86_64 GNU and macOS arm64 from
-[GitHub Releases](https://github.com/craftguild/chigiri.rs/releases/tag/v0.1.0).
+[GitHub Releases](https://github.com/craftguild/chigiri.rs/releases/latest).
 The installer needs POSIX sh, curl, and `sha256sum` or `shasum`. It verifies the
 downloaded checksum and installs to `~/.local/bin` by default.
 
 Install the CLI, then create a local mock project:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/craftguild/chigiri.rs/v0.1.0/scripts/install.sh | sh -s -- --version 0.1.0
+curl -fsSL https://raw.githubusercontent.com/craftguild/chigiri.rs/main/scripts/install.sh | sh
 BIN="$HOME/.local/bin/chigiri"
 mkdir -p target/hello
 printf 'type Query { hello: String! }\n' > target/hello/schema.graphql
@@ -39,9 +39,10 @@ The check reports `readiness_checked = true`. The initial resolver deliberately
 returns `NOT_IMPLEMENTED`; edit its Luau body to implement the query. Continue
 with the [Mock quick start](docs/guides/mock-quick-start.md) to serve a Todo API.
 
-Pass `--bindir /absolute/bin` after `--version 0.1.0` to choose another directory.
-Use `--uninstall` instead of `--version 0.1.0` to remove the command; pass the same
-`--bindir` for a custom destination. Add that directory to PATH for bare commands.
+The installer selects the latest published release.
+Pass `-s -- --bindir /absolute/bin` after `sh` to choose another directory.
+Use `-s -- --uninstall` after `sh` to remove the command; pass the same `--bindir` for a custom destination.
+Add that directory to PATH for bare commands.
 Each release includes target-specific `SHA256SUMS` files and a CLI SBOM.
 
 ## System requirements
@@ -61,12 +62,7 @@ Use Rust/Cargo **1.95.0**, rustfmt, a native linker, GNU Make, a POSIX shell,
 Git, curl, Python **3.11+** and Node.js/npm. CI selects Node.js **24.15.0**.
 The first-party package minimum is Rust **1.95**.
 
-`make setup` explicitly restores standards **v0.6.1** from the fixed reference.
-The published engine hosts are macOS arm64 and Linux x86_64 GNU. Ordinary
-operations use the verified cache; no global standards installation is required.
-Prepare Cargo and GraphiQL's locked dependencies before building. GraphiQL's
-ordinary regeneration uses its prepared npm cache offline; its audit reads
-current advisory metadata.
+`make setup` explicitly restores standards **v0.6.2** from the fixed reference. The published engine hosts are macOS arm64 and Linux x86_64 GNU. Ordinary operations use the verified cache; no global standards installation is required. Prepare Cargo and GraphiQL's locked dependencies before building. GraphiQL's ordinary regeneration uses its prepared npm cache offline; its audit reads current advisory metadata.
 
 Quality checks additionally use Clippy, tokei **15.0.0**, cargo-deny **0.19.8**,
 ripgrep (`rg`), `jq` and the private development dependencies prepared with `npm ci --ignore-scripts

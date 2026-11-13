@@ -11,6 +11,24 @@ paths = ["Cargo.toml", "Cargo.lock", "crates", "examples", "generated", "tests",
 [[releases.cargo]]
 manifest = "Cargo.toml"
 lockfile = "Cargo.lock"
+additional_lockfiles = [
+  "crates/codegen/tests/compile/custom_scalar_output/Cargo.lock",
+  "crates/codegen/tests/compile/field_missing/Cargo.lock",
+  "crates/codegen/tests/compile/group_missing/Cargo.lock",
+  "crates/codegen/tests/compile/pass/Cargo.lock",
+  "crates/codegen/tests/compile/typestate_fail/Cargo.lock",
+  "fuzz/Cargo.lock",
+  "tests/fixtures/bridge-negative-surface/Cargo.lock",
+  "tests/fixtures/full-schema/consumer/Cargo.lock",
+  "tests/fixtures/graphiql-consumer/Cargo.lock",
+  "tests/fixtures/mock-blog-comparison/Cargo.lock",
+  "tests/fixtures/neutral-endpoint-consumer/Cargo.lock",
+  "tests/fixtures/observability-opt-in-consumer/Cargo.lock",
+  "tests/fixtures/rate-provider-minimal/Cargo.lock",
+  "tests/fixtures/repository-consumer/Cargo.lock",
+  "tests/fixtures/usability-negative-surface/Cargo.lock",
+  "tests/fixtures/vnext-large-product/consumer/Cargo.lock",
+]
 workspace = true
 packages = ["chigiri", "chigiri_axum", "chigiri_axum_adoption", "chigiri_books", "chigiri_cli", "chigiri_codegen", "chigiri_core", "chigiri_graphiql", "chigiri_host", "chigiri_http", "chigiri_hyper", "chigiri_mock", "chigiri_observability", "chigiri_opentelemetry", "chigiri_operation", "chigiri_policy", "chigiri_rate", "chigiri_rate_memory", "chigiri_runtime", "chigiri_subscriptions_example", "chigiri_testkit", "chigiri_tracing"]
 

@@ -482,3 +482,10 @@ Workload evidence alone advances to format 6. Benchmark/accepted-baseline format
 5 and historical observations retain their identities and original scope. The
 native private RSS reader and temporary runner timing diagnostic are removed;
 ordinary `ps` collection is sufficient for the revised precision requirement.
+
+## 2026-11-13 standards v0.6.2 release preparation
+
+Use published standards v0.6.2 at `be63eefb44a850a01f4cc065c66fff2fe558ee18` through the verified initializer.
+The fixed engine reference and common Cargo Git dependencies select that same full revision, with rules baseline 0.1.0 and product Rust 1.95.
+This amendment aligns the shared release preparation across CraftGuild products while preserving earlier decisions and historical producer observations.
+Declare independent Cargo path-consumer lockfiles in `releases.cargo.additional_lockfiles` so normal release preparation synchronizes their selected local package versions.

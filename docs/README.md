@@ -41,27 +41,11 @@ requires complete verified ownership and exact isolated regeneration.
 
 ## Current boundaries
 
-- One `chigiri` executable provides `rust` and `mock` namespaces. ADR-0048
-  supersedes the former product names and binaries.
-- Generated Rust uses ABI 8 under ADR-0054, manifest-only commands, dedicated
-  owned crates and complete resolver traits. ADR-0053 defines the ordinary
-  application boundary retained by ABI 8. Applications enter the framework
-  through `chigiri::Endpoint`, whose façade owns the transport pipeline.
-  Applications own HTTP listeners, routing, connections and shutdown.
-- All first-party libraries, generated SDKs, Mock and CLI require Rust 1.95;
-  normal builds, generation and CI use exactly 1.95.0 under the ADR-0059 amendment.
-  Normal/Mock dependency isolation remains. ADR-0050 defines the portable host
-  boundary and platform tiers; ADR-0058 separates ordinary checks from full
-  and weekly robustness campaigns.
-- The current Mock contract includes adopted SDL snapshots (ADR-0052), typed
-  event sources and consumers (ADR-0057), and request-atomic behavior
-  (ADR-0039). The [workflow version table](mock-project-workflow.md#supported-versions)
-  names the current closed formats; old examples and historical ADR versions
-  do not define additional supported readers.
-- [ADR-0059](adr/0059-craftguild-standards-adoption.md) adopts pinned Craftguild
-  rules v0.1.0 with engine v0.6.1 for CLI presentation, SBOM, Code measurement, build/install and release
-  preparation. Its implementation remains in progress until the current
-  product gates and standalone-source checks finish.
+- One `chigiri` executable provides `rust` and `mock` namespaces. ADR-0048 supersedes the former product names and binaries.
+- Generated Rust uses ABI 8 under ADR-0054, manifest-only commands, dedicated owned crates and complete resolver traits. ADR-0053 defines the ordinary application boundary retained by ABI 8. Applications enter the framework through `chigiri::Endpoint`, whose façade owns the transport pipeline. Applications own HTTP listeners, routing, connections and shutdown.
+- All first-party libraries, generated SDKs, Mock and CLI require Rust 1.95; normal builds, generation and CI use exactly 1.95.0 under the ADR-0059 amendment. Normal/Mock dependency isolation remains. ADR-0050 defines the portable host boundary and platform tiers; ADR-0058 separates ordinary checks from full and weekly robustness campaigns.
+- The current Mock contract includes adopted SDL snapshots (ADR-0052), typed event sources and consumers (ADR-0057), and request-atomic behavior (ADR-0039). The [workflow version table](mock-project-workflow.md#supported-versions) names the current closed formats; old examples and historical ADR versions do not define additional supported readers.
+- [ADR-0059](adr/0059-craftguild-standards-adoption.md) adopts pinned Craftguild rules v0.1.0 with engine v0.6.2 for CLI presentation, SBOM, Code measurement, build/install and release preparation. Its implementation remains in progress until the current product gates and standalone-source checks finish.
 
 ## Decisions and evidence
 

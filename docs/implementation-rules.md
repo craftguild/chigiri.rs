@@ -17,12 +17,7 @@ text and vendored code by their actual roles. Explicit source groups live in
 `craftguild.toml`. New executable source without a role fails; an unreadable,
 unsupported or ambiguous file is unmeasured and cannot pass.
 
-Mixed Rust is parsed before counting. Engine v0.6.1 handles test-only fields,
-initializers, variants, match arms, statements and items. It blanks parsed spans
-in a temporary source copy,
-preserves source lines and potential production feature branches, and uses the
-shared separator and counter. Unsupported syntax remains a failure.
-It does not edit or compile a different product configuration.
+Mixed Rust is parsed before counting. Engine v0.6.2 handles test-only fields, initializers, variants, match arms, statements and items. It blanks parsed spans in a temporary source copy, preserves source lines and potential production feature branches, and uses the shared separator and counter. Unsupported syntax remains a failure. It does not edit or compile a different product configuration.
 
 Canonical generated Rust receives a size exception only after complete
 ownership, hashes, input provenance and isolated regeneration succeed. The
