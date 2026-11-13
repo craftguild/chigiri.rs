@@ -1,0 +1,28 @@
+schema {
+  query: Query
+  subscription: Subscription
+}
+
+interface EventNode {
+  id: ID!
+}
+
+type Presence implements EventNode {
+  id: ID!
+}
+
+type Alert implements EventNode {
+  id: ID!
+}
+
+union EventResult = Presence | Alert
+
+type Query {
+  health: Boolean!
+}
+
+type Subscription {
+  maybePresences: [Presence]
+  node: EventNode!
+  result: EventResult!
+}

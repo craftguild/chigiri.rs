@@ -1,0 +1,15 @@
+[package]
+name = "chigiri_http"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Runtime-neutral GraphQL over HTTP codec and lifecycle SPI for Chigiri"
+documentation = "https://docs.rs/chigiri_http"
+
+[dependencies]
+chigiri_core.workspace = true
+chigiri_runtime.workspace = true
+serde.workspace = true
+serde_json = { workspace = true, features = ["raw_value"] }

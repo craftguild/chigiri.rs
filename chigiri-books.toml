@@ -1,0 +1,23 @@
+schema_version = "chigiri/config-v2"
+
+[schema]
+directory = "examples/books/graphql"
+
+[package]
+name = "chigiri-books-contract"
+version = "0.0.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+
+[generation]
+output = "generated/books"
+
+[runtime]
+source = "path"
+root = "."
+
+[consumer]
+cargo_manifest = "examples/books/Cargo.toml"
+package = "chigiri_books"
+generated_dependency = "generated"
+features = ["production-validation"]

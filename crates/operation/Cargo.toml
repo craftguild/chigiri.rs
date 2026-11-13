@@ -1,0 +1,17 @@
+[package]
+name = "chigiri_operation"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Persisted operation catalog and APQ providers for Chigiri"
+documentation = "https://docs.rs/chigiri_operation"
+
+[dependencies]
+chigiri_http.workspace = true
+chigiri_runtime.workspace = true
+sha2 = "0.10.9"
+
+[dev-dependencies]
+tokio.workspace = true

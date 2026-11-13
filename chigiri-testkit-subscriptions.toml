@@ -1,0 +1,21 @@
+schema_version = "chigiri/config-v2"
+
+[schema]
+directory = "crates/testkit/tests/fixtures/subscription-streaming"
+
+[package]
+name = "chigiri-testkit-subscriptions-contract"
+version = "0.0.0"
+edition = "2024"
+
+[generation]
+output = "generated/testkit-subscriptions"
+
+[runtime]
+source = "path"
+root = "."
+
+[consumer]
+cargo_manifest = "crates/testkit/Cargo.toml"
+package = "chigiri_testkit"
+generated_dependency = "subscription_generated"

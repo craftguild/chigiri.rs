@@ -1,0 +1,51 @@
+{
+  "formatVersion": 5,
+  "producerRevision": "e21a0c280c3646f5bab885947fb8597836a99a6e",
+  "description": "Observer queue contract captured from the real 31x100 producer. This fixture contains no baseline approval or performance qualification.",
+  "samples": 31,
+  "iterationsPerSample": 100,
+  "observerQueues": [
+    {
+      "name": "observer-enabled",
+      "capacity": 65536,
+      "lifecycleEventsPerRequest": 29,
+      "expectedLifecycleEventCount": 89900,
+      "acceptedLifecycleEventCount": 89900,
+      "droppedLifecycleEventCount": 0,
+      "acceptedErrorEventCount": 0,
+      "droppedErrorEventCount": 0
+    },
+    {
+      "name": "facade-composition-enabled",
+      "capacity": 65536,
+      "lifecycleEventsPerRequest": 29,
+      "expectedLifecycleEventCount": 89900,
+      "acceptedLifecycleEventCount": 89900,
+      "droppedLifecycleEventCount": 0,
+      "acceptedErrorEventCount": 0,
+      "droppedErrorEventCount": 0
+    }
+  ],
+  "diagnosticObserverQueues": [
+    {
+      "name": "diagnostic-queue-only",
+      "capacity": 65536,
+      "lifecycleEventsPerRequest": 29,
+      "expectedLifecycleEventCount": 89900,
+      "acceptedLifecycleEventCount": 89900,
+      "droppedLifecycleEventCount": 0,
+      "acceptedErrorEventCount": 0,
+      "droppedErrorEventCount": 0
+    },
+    {
+      "name": "diagnostic-full-observer",
+      "capacity": 65536,
+      "lifecycleEventsPerRequest": 29,
+      "expectedLifecycleEventCount": 89900,
+      "acceptedLifecycleEventCount": 89900,
+      "droppedLifecycleEventCount": 0,
+      "acceptedErrorEventCount": 0,
+      "droppedErrorEventCount": 0
+    }
+  ]
+}

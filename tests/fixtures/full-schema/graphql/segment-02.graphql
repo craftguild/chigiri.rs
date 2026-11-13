@@ -1,0 +1,119 @@
+# Synthetic schema coverage: lists, nullability, defaults, roots and enum bindings.
+enum FormatKind {
+	VALUE176
+	VALUE180
+	VALUE179
+}
+
+enum FixtureChoice029 {
+	VALUE024
+	VALUE046
+	VALUE118
+	VALUE107
+	VALUE127
+	VALUE125
+	VALUE012
+}
+
+enum FixtureChoice030 {
+	VALUE078
+	VALUE164
+	VALUE081
+}
+
+enum FixtureChoice031 {
+	VALUE048
+}
+
+enum FixtureChoice032 {
+	VALUE064
+	VALUE065
+	VALUE063
+	VALUE061
+	VALUE062
+}
+
+enum FixtureChoice033 {
+	VALUE177
+	VALUE053
+	VALUE181
+}
+
+enum FixtureChoice034 {
+	VALUE142
+	VALUE166
+	VALUE178
+	VALUE182
+}
+
+enum FixtureChoice035 {
+	VALUE045
+	VALUE037
+}
+
+enum FixtureChoice036 {
+	VALUE165
+	VALUE045
+	VALUE033
+}
+
+"""Repo-owned synthetic compatibility input for typed generation and binding coverage."""
+enum TransportKind {
+	VALUE168
+	VALUE169
+}
+
+enum FixtureChoice038 {
+	VALUE168
+	VALUE170
+}
+
+enum FixtureChoice039 {
+	VALUE121
+	VALUE154
+	VALUE044
+}
+
+enum FixtureChoice040 {
+	VALUE045
+}
+
+enum FixtureChoice041 {
+	VALUE177
+	VALUE053
+}
+
+enum FixtureChoice042 {
+	VALUE128
+	VALUE147
+	VALUE079
+	VALUE051
+	VALUE066
+}
+
+enum FixtureChoice043 {
+	VALUE094
+	VALUE161
+	VALUE171
+	VALUE183
+	VALUE028
+}
+
+enum FixtureChoice044 {
+	VALUE154
+	VALUE193
+}
+
+enum FixtureChoice045 {
+	VALUE155
+	VALUE055
+	VALUE124
+	VALUE047
+	VALUE172
+}
+
+enum FixtureChoice046 {
+	VALUE139
+	VALUE101
+	VALUE095
+}

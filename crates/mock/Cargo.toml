@@ -1,0 +1,43 @@
+[package]
+name = "chigiri_mock"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish = false
+description = "Experimental local Luau mock server with an owned GraphQL schema and shared Mock IR"
+
+[dependencies]
+base64 = "=0.22.1"
+email_address = { version = "=0.2.9", default-features = false }
+getrandom = "=0.3.4"
+num-bigint = "=0.4.6"
+regex = "=1.13.1"
+time = { version = "=0.3.47", default-features = false, features = ["std", "parsing"] }
+ulid = { version = "=1.2.1", default-features = false }
+uriparse = "=0.6.4"
+uuid = { version = "=1.18.1", default-features = false }
+axum.workspace = true
+clap.workspace = true
+crossbeam-channel.workspace = true
+futures-core.workspace = true
+http-body = "1.0.1"
+hyper.workspace = true
+hyper-util = { workspace = true, features = ["service"] }
+luaur = { version = "=0.1.8", default-features = false, features = ["typecheck"] }
+chigiri = { workspace = true, features = ["graphiql", "subscription-worker"] }
+chigiri_axum = { workspace = true, features = ["graphiql"] }
+chigiri_http.workspace = true
+chigiri_host.workspace = true
+serde.workspace = true
+serde_json = { workspace = true, features = ["raw_value"] }
+sha2 = "0.10.9"
+stylua = { version = "=2.5.2", default-features = false, features = ["luau"] }
+full_moon = { version = "=2.2.0", default-features = false, features = ["roblox"] }
+tokio = { workspace = true, features = ["sync"] }
+tower.workspace = true
+toml_edit = { version = "0.22.27", features = ["serde"] }
+
+[target.'cfg(any(target_os = "linux", target_os = "macos"))'.dev-dependencies]
+rustix = { version = "1.1.4", features = ["process"] }

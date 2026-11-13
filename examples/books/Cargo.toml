@@ -1,0 +1,40 @@
+[package]
+name = "chigiri_books"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Application-owned server example for Chigiri"
+publish = false
+
+[features]
+production-validation = ["dep:chigiri_operation", "dep:serde", "dep:serde_json", "dep:sha2"]
+
+[dependencies]
+bytes.workspace = true
+clap.workspace = true
+generated = { package = "chigiri-books-contract", path = "../../generated/books" }
+http-body-util.workspace = true
+hyper.workspace = true
+hyper-util.workspace = true
+chigiri.workspace = true
+chigiri_http.workspace = true
+chigiri_hyper.workspace = true
+chigiri_observability.workspace = true
+chigiri_operation = { workspace = true, optional = true }
+chigiri_policy.workspace = true
+serde = { workspace = true, optional = true }
+serde_json = { workspace = true, optional = true }
+sha2 = { version = "0.10.9", optional = true }
+tokio.workspace = true
+
+[dev-dependencies]
+axum.workspace = true
+chigiri_axum.workspace = true
+serde_json.workspace = true
+
+[[bin]]
+name = "production-benchmark"
+path = "src/bin/production-benchmark.rs"
+required-features = ["production-validation"]

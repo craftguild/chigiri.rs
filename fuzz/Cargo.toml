@@ -1,0 +1,65 @@
+[package]
+name = "chigiri-fuzz"
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.95"
+publish = false
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4.10"
+chigiri_codegen = { path = "../crates/codegen", features = ["fuzzing"] }
+chigiri_core = { path = "../crates/core" }
+chigiri_http = { path = "../crates/http" }
+chigiri_operation = { path = "../crates/operation" }
+serde_json = { version = "1.0.140", features = ["arbitrary_precision"] }
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "parser"
+path = "fuzz_targets/parser.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "sdl_composition"
+path = "fuzz_targets/sdl_composition.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "http_decode"
+path = "fuzz_targets/http_decode.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "json_conversion"
+path = "fuzz_targets/json_conversion.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "persisted_id"
+path = "fuzz_targets/persisted_id.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "config_parser"
+path = "fuzz_targets/config_parser.rs"
+test = false
+doc = false
+bench = false
+
+[workspace]
+members = ["."]

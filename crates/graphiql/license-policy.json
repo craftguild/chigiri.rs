@@ -1,0 +1,23 @@
+{
+  "allow": ["Apache-2.0", "BSD-3-Clause", "MIT", "Unicode-3.0"],
+  "exceptions": [
+    {
+      "name": "argparse",
+      "version": "2.0.1",
+      "license": "Python-2.0",
+      "approval": "2026-09-09: Explicitly approved by the user under ADR-0035 section 4.3."
+    },
+    {
+      "name": "entities",
+      "version": "4.5.0",
+      "license": "BSD-2-Clause",
+      "approval": "2026-09-09: Explicitly approved by the user under ADR-0035 section 4.3."
+    },
+    {
+      "name": "tslib",
+      "version": "2.8.1",
+      "license": "0BSD",
+      "approval": "2026-09-09: Explicitly approved by the user under ADR-0035 section 4.3."
+    }
+  ]
+}

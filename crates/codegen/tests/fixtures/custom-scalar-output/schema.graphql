@@ -1,0 +1,9 @@
+"Acceptance fixture for the custom scalar output contract."
+scalar Json
+
+type Query {
+  json(mode: String!): Json
+  requiredJson(mode: String!): Json!
+  echoJson(value: Json!): Json!
+  text: String
+}

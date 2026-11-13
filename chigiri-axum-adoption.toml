@@ -1,0 +1,25 @@
+schema_version = "chigiri/config-v2"
+
+[schema]
+directory = "examples/axum-adoption/graphql"
+
+[package]
+name = "chigiri-axum-adoption-contract"
+version = "0.0.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+
+[generation]
+output = "generated/axum-adoption"
+
+[runtime]
+source = "path"
+root = "."
+
+[bindings]
+domain_enums = ["AccessLevel"]
+
+[consumer]
+cargo_manifest = "examples/axum-adoption/Cargo.toml"
+package = "chigiri_axum_adoption"
+generated_dependency = "generated"

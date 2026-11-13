@@ -1,0 +1,98 @@
+{
+  "format": "chigiri-mock-update-state/v9",
+  "generation": "335d4627de54bd424e2e9fd0e399710c8c552d86c2725bb626613086113b3746",
+  "public_digest": "74b9528d1246cb7d1449fbdaec25603890fda51bad731e375bd47d227552b996",
+  "schema_digest": "e8e39fc2a28639b99a8613d8de5e510d1a0b63ef8385a29eba3ea1325dd2fe82",
+  "types_digest": "4732b0b09494274c46240d3bb8691bbf3461043a5029b41785526916aa23fcca",
+  "summary_digest": "bed461198456096ea3b95f9acd2a8bcb00f59f35da2d2f755872caa797d3cb9b",
+  "snapshot_digest": "a12c5644dd1205fdf3948333ae01e30227cae86136664c7404df7268314f5655",
+  "config": {
+    "capability_version": "chigiri-mock-capabilities/v2",
+    "hooks": {
+      "request": {
+        "before": false,
+        "after": false
+      },
+      "operation": {
+        "before": false,
+        "after": false
+      },
+      "field": {
+        "before": false,
+        "after": false
+      }
+    },
+    "state_contract_digest": "ec79f5c52d70904503380c05944bf95a0f2254532b5081fda4c085bae61ea3e0",
+    "clock_mode": "system",
+    "clock_now": null
+  },
+  "hooks": [
+    {
+      "slot": "request.before",
+      "path": "hooks/request/before.luau",
+      "base": "c6654032a35bdc33869c577eab1b1b03077020dedfc754db12275db0ef9e39dd",
+      "candidate": "c6654032a35bdc33869c577eab1b1b03077020dedfc754db12275db0ef9e39dd",
+      "dist": null
+    },
+    {
+      "slot": "request.after",
+      "path": "hooks/request/after.luau",
+      "base": "48d918675eb968377a8ad3c4952a07c42cfadb41a170bea77834dba6bf1b9bf3",
+      "candidate": "48d918675eb968377a8ad3c4952a07c42cfadb41a170bea77834dba6bf1b9bf3",
+      "dist": null
+    },
+    {
+      "slot": "operation.before",
+      "path": "hooks/operation/before.luau",
+      "base": "390671085f7288a9c21c1ac08fd85b019ccf00dafc3fefe92ee9135dd769577f",
+      "candidate": "390671085f7288a9c21c1ac08fd85b019ccf00dafc3fefe92ee9135dd769577f",
+      "dist": null
+    },
+    {
+      "slot": "operation.after",
+      "path": "hooks/operation/after.luau",
+      "base": "f0f53750e527f311e8c7152274301543e46e5852e95a2641a7704f687555c66f",
+      "candidate": "f0f53750e527f311e8c7152274301543e46e5852e95a2641a7704f687555c66f",
+      "dist": null
+    },
+    {
+      "slot": "field.before",
+      "path": "hooks/field/before.luau",
+      "base": "73fbea62ee53c7eb2f28c81e74e47114184f0f05e25d59c9b3fcccf642f4dc5c",
+      "candidate": "73fbea62ee53c7eb2f28c81e74e47114184f0f05e25d59c9b3fcccf642f4dc5c",
+      "dist": null
+    },
+    {
+      "slot": "field.after",
+      "path": "hooks/field/after.luau",
+      "base": "50055b785590074d752e489ad44f590c337428c236794e061578cd2c1b16b79b",
+      "candidate": "50055b785590074d752e489ad44f590c337428c236794e061578cd2c1b16b79b",
+      "dist": null
+    }
+  ],
+  "resolvers": [
+    {
+      "coordinate": "Query.todos",
+      "path": "resolvers/query/todos.luau",
+      "base": "65d002fbf91fb3213f08e548888a3971cb6c73bbdd224ee4d4ca16b079ddd68e",
+      "candidate": "65d002fbf91fb3213f08e548888a3971cb6c73bbdd224ee4d4ca16b079ddd68e",
+      "dist": null,
+      "active": true
+    },
+    {
+      "coordinate": "Mutation.addTodo",
+      "path": "resolvers/mutation/addTodo.luau",
+      "base": "e77787a136be8276e9f2eab479a2bfb44eda029ab021ecc0366a2b99a77fa2cd",
+      "candidate": "e77787a136be8276e9f2eab479a2bfb44eda029ab021ecc0366a2b99a77fa2cd",
+      "dist": null,
+      "active": true
+    }
+  ],
+  "seeds": [
+    {
+      "model": "Todo",
+      "path": "seeds/Todo.jsonl",
+      "active": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+[package]
+name = "chigiri_graphiql"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Optional offline GraphiQL assets for the Chigiri endpoint"
+documentation = "https://docs.rs/chigiri_graphiql"
+
+[dependencies]

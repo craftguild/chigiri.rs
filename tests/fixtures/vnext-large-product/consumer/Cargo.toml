@@ -1,0 +1,12 @@
+[package]
+name = "chigiri_vnext_large_consumer"
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.95"
+publish = false
+
+[dependencies]
+generated = { package = "chigiri-large-contract", path = "../generated" }
+chigiri = { path = "../../../../crates/facade", version = "=0.1.0" }
+
+[workspace]

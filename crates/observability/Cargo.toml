@@ -1,0 +1,18 @@
+[package]
+name = "chigiri_observability"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Bounded observability exporters and error identity for Chigiri"
+documentation = "https://docs.rs/chigiri_observability"
+
+[dependencies]
+blake3.workspace = true
+crossbeam-channel.workspace = true
+getrandom = "0.3.3"
+chigiri_runtime.workspace = true
+
+[dev-dependencies]
+chigiri_http.workspace = true

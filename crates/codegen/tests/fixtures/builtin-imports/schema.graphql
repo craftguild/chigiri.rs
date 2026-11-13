@@ -1,0 +1,14 @@
+# Fixture that includes specified built-ins in the snapshot, matching the async-graphql printer.
+directive @skip(if: Boolean!) on INLINE_FRAGMENT | FIELD | FRAGMENT_SPREAD
+directive @include(if: Boolean!) on FIELD | FRAGMENT_SPREAD | INLINE_FRAGMENT
+"""Built-in description supplied by the printer."""
+directive @deprecated(
+  """argument description"""
+  reason: String! = """No longer supported"""
+) on ENUM_VALUE | INPUT_FIELD_DEFINITION | ARGUMENT_DEFINITION | FIELD_DEFINITION
+directive @specifiedBy(url: String!) on SCALAR
+directive @oneOf on INPUT_OBJECT
+
+type Query {
+  value: String
+}

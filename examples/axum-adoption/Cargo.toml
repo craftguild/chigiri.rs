@@ -1,0 +1,27 @@
+[package]
+name = "chigiri_axum_adoption"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Axum adoption and differential migration example for Chigiri"
+publish = false
+
+[dependencies]
+axum.workspace = true
+generated = { package = "chigiri-axum-adoption-contract", path = "../../generated/axum-adoption" }
+chigiri.workspace = true
+chigiri_axum = { path = "../../crates/axum" }
+chigiri_http.workspace = true
+chigiri_testkit = { path = "../../crates/testkit" }
+serde_json.workspace = true
+tokio.workspace = true
+
+[dev-dependencies]
+http-body-util.workspace = true
+tower.workspace = true
+
+[[bin]]
+name = "chigiri-axum-adoption"
+path = "src/main.rs"

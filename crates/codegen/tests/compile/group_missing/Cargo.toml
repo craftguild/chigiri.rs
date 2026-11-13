@@ -1,0 +1,12 @@
+[package]
+name = "chigiri-codegen-group-missing"
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.95"
+publish = false
+
+[dependencies]
+generated = { package = "chigiri-codegen-full-contract", path = "../../golden/full" }
+chigiri = { path = "../../../../facade" }
+
+[workspace]

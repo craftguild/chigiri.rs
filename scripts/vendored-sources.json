@@ -1,0 +1,259 @@
+{
+  "format": 1,
+  "packages": [
+    {
+      "name": "stylua",
+      "version": "2.5.2",
+      "crate_sha256": "de1ff8ec275ef3a0d44845d727368c47ee6f6a04e078bd8bb21c3f8409763d6f",
+      "files": {
+        "Cargo.toml": {
+          "bytes": 3479,
+          "sha256": "4f40c5fd1750e825b61e6511f05315aa94e912c934e109e2c87c3476af85f090"
+        },
+        "LICENSE.md": {
+          "bytes": 16724,
+          "sha256": "4b89d4518bd135ab4ee154a7bce722246b57a98c3d7efc1a09409898160c2bd1"
+        },
+        "README.md": {
+          "bytes": 22853,
+          "sha256": "e8952281e5a490ca180f24e801e8ea95ee952201a5083af2a55a7717aec8100f"
+        },
+        ".cargo_vcs_info.json": {
+          "bytes": 94,
+          "sha256": "23febd03b2c83cafde1836dbbad0c50486118cecbc87737e72c46b6a9b5c962e"
+        },
+        "Cargo.toml.orig": {
+          "bytes": 2320,
+          "sha256": "93a61e431522cd24328bd77ddced0fafd0573aeed5baf41bb76fbc378d270882"
+        },
+        "src/verify_ast.rs": {
+          "bytes": 14020,
+          "sha256": "56f90302819f524935a31d1c83c716583cd54cd2032f64d3e8a07cfdc3f903a7"
+        },
+        "src/lib.rs": {
+          "bytes": 19859,
+          "sha256": "846915bdcb757f67296e7583f0a503f76949f2d96a6644ccb7a9e6ed9ff4cb3f"
+        },
+        "src/sort_requires.rs": {
+          "bytes": 11610,
+          "sha256": "948d71e68e10c735d4f370c593215b4d456b4e99deb790c71ce393991570ec27"
+        },
+        "src/editorconfig.rs": {
+          "bytes": 19187,
+          "sha256": "6125c5911677a7b7a1be2219def5aab1709785ac01e65eedc3e0c246757b4fdf"
+        },
+        "src/shape.rs": {
+          "bytes": 9416,
+          "sha256": "d0350fea56e060e801e9cda8813706a691d123a6760a587bcde8e5ef32fcc7e7"
+        },
+        "src/context.rs": {
+          "bytes": 8283,
+          "sha256": "d9ad308a0745d5cbe89c9525f3031adea16adfad18a0085ef77e7b2e5fde9883"
+        },
+        "src/formatters/compound_assignment.rs": {
+          "bytes": 2100,
+          "sha256": "98b398cedcad3fae160f2f098c764a32b092c4df270373b1b16d0bdf07fb6a95"
+        },
+        "src/formatters/stmt.rs": {
+          "bytes": 48743,
+          "sha256": "22b5404f8d9385560e13889d337bf3ae147c45946e531b6fb1f457d4410eeee7"
+        },
+        "src/formatters/goto.rs": {
+          "bytes": 1909,
+          "sha256": "a28b1d1fda97cfbbd3f3dc65830fa650f32b7ce2e6a9de86a6dfec6b1e608299"
+        },
+        "src/formatters/functions.rs": {
+          "bytes": 57478,
+          "sha256": "25a2447f5c607d061cec315f7f4d41b4b1d436acf07bb3fd7c4502303dc4faca"
+        },
+        "src/formatters/expression.rs": {
+          "bytes": 61130,
+          "sha256": "29d4cc2132a39abf359858f8495ae7dc295c718075056c0414b23261ffeddc26"
+        },
+        "src/formatters/mod.rs": {
+          "bytes": 1110,
+          "sha256": "60074792814461590a4ab3262f47edf263e09639f6f7f6f03a0cf23f313f5907"
+        },
+        "src/formatters/general.rs": {
+          "bytes": 30392,
+          "sha256": "7a8b4cce3a1abdc531734cd05cd477d7db2126930d256207bf54f40ce9fd3262"
+        },
+        "src/formatters/block.rs": {
+          "bytes": 29203,
+          "sha256": "77c44350f2e63ac8bcd9c85e68a8e645694704e7d5d1ff9a1da2ea71cdec0aed"
+        },
+        "src/formatters/table.rs": {
+          "bytes": 24150,
+          "sha256": "423868d967a594466b53fdc2d598ddba4f9faa0bc94dbcf650eb92d2bb0a1353"
+        },
+        "src/formatters/trivia.rs": {
+          "bytes": 42637,
+          "sha256": "e951b61a63b3734a101a84d050e6ee808ad3d8eefd0e785987fb238071cb79ae"
+        },
+        "src/formatters/trivia_util.rs": {
+          "bytes": 48058,
+          "sha256": "845499b98f5d1310aeb8d5b62418b6ae17360146d52911b0f967ec7fc3e74f4c"
+        },
+        "src/formatters/lua54.rs": {
+          "bytes": 678,
+          "sha256": "d5477aecb4640675b5b694b74071d6e1283f9a7960cb2b8f76442d823adb371b"
+        },
+        "src/formatters/assignment.rs": {
+          "bytes": 26461,
+          "sha256": "2a96a51179c83487551210821849267d3cc8a34d108fb15379fa6ad7932a3eb4"
+        },
+        "src/formatters/luau.rs": {
+          "bytes": 58584,
+          "sha256": "bd75bf9861273f4cb45880ea9a464dda4f01e817703ae7f7f70dc35507513a76"
+        },
+        "src/cli/stylua_ignore.rs": {
+          "bytes": 2178,
+          "sha256": "01fc271aa851f1e920126dad201d6a3a29191ec9a0073e24446432578d6becf2"
+        },
+        "src/cli/opt.rs": {
+          "bytes": 9509,
+          "sha256": "a90ab381321e2e3caa0b471630c14cbb25551194a51934f75ef6b63d7738147a"
+        },
+        "src/cli/config.rs": {
+          "bytes": 13563,
+          "sha256": "1a996c18eb9af86484ab0202034bd1c60e74f6c9ce88b0a08879d5e3e912cc5d"
+        },
+        "src/cli/output_diff.rs": {
+          "bytes": 8104,
+          "sha256": "76c2cf966456985a9d3eee383a67c8e7a0f84feef4b2618b61dfccf80cbc85bf"
+        },
+        "src/cli/main.rs": {
+          "bytes": 38314,
+          "sha256": "19f597ee8fe40a8164593410b7d35b646f836a356b4ef27c9a2c3321b7ed934c"
+        },
+        "src/cli/lsp.rs": {
+          "bytes": 47690,
+          "sha256": "1efced7e717f3f62996e5407c9d6ab32634044680de3a5286bc82924fd7104e9"
+        }
+      }
+    },
+    {
+      "name": "full_moon",
+      "version": "2.2.0",
+      "crate_sha256": "a083d6f598bbe9d70e694f2a5cf78f0354678a8c13528da2df6467b089586404",
+      "files": {
+        "Cargo.toml": {
+          "bytes": 2481,
+          "sha256": "cce4f4739b994fa1cd22bd3beb91344eb8becb190449dceb374f7b7b7dfca6b4"
+        },
+        "README.md": {
+          "bytes": 1249,
+          "sha256": "0866c9dbf4b86ed66fc07173a5152b2776c38d96a537dc35240bba58843f7419"
+        },
+        ".cargo_vcs_info.json": {
+          "bytes": 103,
+          "sha256": "77cb9c16f30dc5e746b63997b7d1d3f14fcbcebc0e49bc2be146062d42e4e71d"
+        },
+        "Cargo.toml.orig": {
+          "bytes": 1438,
+          "sha256": "d2057ce983b9b1ca0d5c38dc2fc4d11028842b88a2e6cafc8aaa0a0424b5fb9d"
+        },
+        "src/visitors.rs": {
+          "bytes": 10354,
+          "sha256": "2d03e0f0fa750270a283fdbdce47144f5c64605e9f7f8e08cf61c420b4b5b500"
+        },
+        "src/util.rs": {
+          "bytes": 3220,
+          "sha256": "528d119cbce3dc3098e6416971254d4ff22a2b150e95410791ca550c8dccdc6b"
+        },
+        "src/lib.rs": {
+          "bytes": 4300,
+          "sha256": "50165eb33cea5cd425b11571d5292a2ce7f2a5e253ce454190c5095a2377820f"
+        },
+        "src/short_string.rs": {
+          "bytes": 1464,
+          "sha256": "6474f3e8739ddc6745d467dd5ae0ef3377328f6e71031d68ec31cd9a45a90c1f"
+        },
+        "src/private.rs": {
+          "bytes": 580,
+          "sha256": "39f320fdf942e3229679c47695327ed06d54f059e20c061e0e52c73cfb515f0a"
+        },
+        "src/node.rs": {
+          "bytes": 7496,
+          "sha256": "3984c07195ae63ea3d0b8350a655067c60b9f9f6008b6d3aaa9494c8fbd4fdf0"
+        },
+        "src/tokenizer/mod.rs": {
+          "bytes": 115,
+          "sha256": "c0c84f02f3a5e842360149bf37e7f32497f7a060b22df590f264c4d4ca968459"
+        },
+        "src/tokenizer/interpolated_strings.rs": {
+          "bytes": 3453,
+          "sha256": "ba58b072b37a52016be128314bf0d9d360b22db4cc83494e38d9947f96e58560"
+        },
+        "src/tokenizer/lexer.rs": {
+          "bytes": 52905,
+          "sha256": "6155cd060ef3aa64c3bdd3e340fe682c97ee518de05aefc5f77b4a2305158ed4"
+        },
+        "src/tokenizer/structs.rs": {
+          "bytes": 37917,
+          "sha256": "5d65b28cfec6f3c21af2a0b17d247e6aef6bff7e2da7c2b12027f15102e96597"
+        },
+        "src/ast/parsers.rs": {
+          "bytes": 138409,
+          "sha256": "9ece0ae126448b13c8982e8eb0efa31f60968146b42a2065b11518c08ebb76c4"
+        },
+        "src/ast/lua52.rs": {
+          "bytes": 3160,
+          "sha256": "60ed4631056637fab13cb0531242e2857fd6561b6fe61b7b4508a24c9aae44fc"
+        },
+        "src/ast/punctuated.rs": {
+          "bytes": 15415,
+          "sha256": "607b84564bd6bdc04574d658b008e311d02d53433224255e78f96ce7f172f810"
+        },
+        "src/ast/parser_util.rs": {
+          "bytes": 1069,
+          "sha256": "76fa503c576bf9911f5209da5c62f8715a70350240b36efc74f4968912158854"
+        },
+        "src/ast/visitors.rs": {
+          "bytes": 21498,
+          "sha256": "b5611c31d9b47926ab7cee8cbe7e633a1b6c777c0ac59c049af82365966d0b33"
+        },
+        "src/ast/update_positions.rs": {
+          "bytes": 2991,
+          "sha256": "2b050dc246455311d6eea73bcb7cfffa2f5032b3d809594f9f76a0ddb7ed331f"
+        },
+        "src/ast/span.rs": {
+          "bytes": 1750,
+          "sha256": "22046060483b0c2fd263236c6d4f8105f0b9e9cf86245d25871abbd15955e24c"
+        },
+        "src/ast/parser_structs.rs": {
+          "bytes": 12493,
+          "sha256": "1d22192fb547b3cb5943d99a8655b3c514bb9f1066828dd6d3e5581e5efab97c"
+        },
+        "src/ast/mod.rs": {
+          "bytes": 79488,
+          "sha256": "7c0879283e52f115474efd0af52e609dd0bc523ab75db24cae1db17750e839d9"
+        },
+        "src/ast/versions.rs": {
+          "bytes": 4805,
+          "sha256": "c99c917284cf1ccd275dda08e339966f05a93adb797edadbc7fe6d72fad96b5e"
+        },
+        "src/ast/lua54.rs": {
+          "bytes": 1693,
+          "sha256": "078621d3d77c1cbaf4c78a2682e93c77599ba74ba3a96f229ccdc0d1928f0ed8"
+        },
+        "src/ast/luau_visitors.rs": {
+          "bytes": 16355,
+          "sha256": "cfd50e9d0bed940a0c5793171967d6d3fc209d066e30d704f1016d0c3a2e5988"
+        },
+        "src/ast/compound.rs": {
+          "bytes": 5442,
+          "sha256": "65cfaeaf3fd0ea39dae51514082386359496547dea4dd6a61cfbe5f3b03ee2b7"
+        },
+        "src/ast/luau.rs": {
+          "bytes": 48189,
+          "sha256": "d17f53ca1985d4a63392e30dc747245612778fc1e1160e646f117bfc15f2da7c"
+        },
+        "tests/roblox_cases/pass/string_interpolation_conformance/LICENSE.md": {
+          "bytes": 1125,
+          "sha256": "48ba696d6241255c23d47822e52d4372cbd48d70064740a95a9742d3072ed309"
+        }
+      }
+    }
+  ]
+}

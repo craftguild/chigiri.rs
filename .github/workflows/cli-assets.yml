@@ -1,0 +1,84 @@
+name: CLI assets
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: warp-ubuntu-2404-x64-4x
+            target: x86_64-unknown-linux-gnu
+            variant: distribution
+          - runner: warp-macos-26-arm64-6x
+            target: aarch64-apple-darwin
+            variant: ''
+    runs-on: ${{ matrix.runner }}
+    env:
+      VARIANT: ${{ matrix.variant }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: dtolnay/rust-toolchain@683b588c487a69d01f6c6ddf40f036ff682cc2c8
+        with:
+          toolchain: 1.95.0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24.15.0'
+      - uses: Swatinem/rust-cache@v2
+        with:
+          key: cli-${{ matrix.target }}
+      - name: Require the native target and clean source
+        env:
+          EXPECTED_TARGET: ${{ matrix.target }}
+        run: |
+          test "$(rustc +1.95.0 -vV | sed -n 's/^host: //p')" = "$EXPECTED_TARGET"
+          test -z "$(git status --porcelain)"
+      - name: Prepare the fixed engine and locked dependencies
+        run: |
+          make setup
+          cargo +1.95.0 fetch --locked
+          python3 scripts/graphiql_build.py --prepare-dependencies
+      - name: Prepare the pinned Linux distribution tools
+        if: runner.os == 'Linux'
+        run: |
+          . scripts/build-tool-versions.sh
+          cargo +1.95.0 install cross --version "$CHIGIRI_CROSS_VERSION" --locked --root "$RUNNER_TEMP/chigiri-cross"
+          echo "$RUNNER_TEMP/chigiri-cross/bin" >> "$GITHUB_PATH"
+          docker pull "$CHIGIRI_LINUX_IMAGE"
+      - name: Build and accept the release CLI
+        run: |
+          make installer INSTALLER_ARGS=--check
+          make build BUILD_ARGS="--artifact chigiri-cli" PROFILE=release
+          make acceptance PROFILE=release
+      - name: Verify the Linux distribution binary and glibc 2.17 runtime
+        if: runner.os == 'Linux'
+        run: |
+          . scripts/build-tool-versions.sh
+          output=$(python3 -c 'import json; print(json.load(open(".craftguild/chigiri/receipt.json"))["context"]["output"])')
+          python3 scripts/verify-dist.py --artifact x86_64-unknown-linux-gnu "$output"
+          for mode in root rust mock; do
+            if [ "$mode" = root ]; then set --; else set -- "$mode"; fi
+            timeout 30s docker run --rm --pull=never --network=none -v "$output:/candidate/chigiri:ro" "$CHIGIRI_LINUX_IMAGE" /candidate/chigiri "$@" --help
+            timeout 30s docker run --rm --pull=never --network=none -v "$output:/candidate/chigiri:ro" "$CHIGIRI_LINUX_IMAGE" /candidate/chigiri "$@" --version
+          done
+      - name: Package the verified CLI, SBOM and checksums
+        run: make package PACKAGE_ARGS="--group chigiri --output $RUNNER_TEMP/cli-release-assets"
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: cli-${{ matrix.target }}
+          path: ${{ runner.temp }}/cli-release-assets/*
+          if-no-files-found: error
+          retention-days: 30

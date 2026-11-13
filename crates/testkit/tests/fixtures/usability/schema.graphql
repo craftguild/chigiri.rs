@@ -1,0 +1,13 @@
+type Query {
+  greeting: String!
+  item: Item!
+}
+
+type Mutation {
+  rename(name: String!): String!
+}
+
+type Item {
+  id: ID!
+  name: String!
+}

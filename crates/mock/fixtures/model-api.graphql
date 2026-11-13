@@ -1,0 +1,15 @@
+# HTTP acceptance schema composed with projects.graphql; manual resolvers invoke all seven operations.
+extend type Query {
+  memberCount(status: Status): Int!
+  projectCount: Int!
+  searchMembers(needle: String!, offset: Int! = 0, limit: Int! = 20): [Member!]!
+
+  root: Mutation!
+  forbidden: Boolean
+}
+extend type Mutation {
+  linkProject(id: ID!, memberId: ID!): Project!
+  unlinkProject(id: ID!, memberId: ID!): Project!
+  failProject(id: ID!, memberId: ID!, mode: String!): Boolean
+  unchecked(id: ID!, memberId: ID!): Boolean
+}

@@ -1,0 +1,71 @@
+name: Installer acceptance
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Published stable version without the v prefix
+        required: true
+        default: '0.1.0'
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  install:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: warp-ubuntu-2404-x64-4x
+            os: Linux
+            arch: x86_64
+            target: x86_64-unknown-linux-gnu
+          - runner: warp-macos-26-arm64-6x
+            os: Darwin
+            arch: arm64
+            target: aarch64-apple-darwin
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: v${{ inputs.version }}
+      - name: Install from the published tag, exercise the CLI and uninstall
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_VERSION: ${{ inputs.version }}
+          ASSET_TARGET: ${{ matrix.target }}
+          EXPECTED_OS: ${{ matrix.os }}
+          EXPECTED_ARCH: ${{ matrix.arch }}
+        run: |
+          [[ "$RELEASE_VERSION" =~ ^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]]
+          test "$(uname -s)" = "$EXPECTED_OS"
+          test "$(uname -m)" = "$EXPECTED_ARCH"
+          install_dir=$(mktemp -d "$RUNNER_TEMP/chigiri-install.XXXXXX")
+          trap 'rm -rf -- "$install_dir"' EXIT
+          evidence_dir="$GITHUB_WORKSPACE/target/installer-acceptance"
+          mkdir -p "$evidence_dir" "$install_dir/assets"
+          git rev-parse HEAD > "$evidence_dir/tag-source.txt"
+          release_tag="v$RELEASE_VERSION"
+          asset_name="chigiri-$release_tag-$ASSET_TARGET"
+          curl -fsSL "https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$release_tag/scripts/install.sh" > "$install_dir/install.sh"
+          cmp scripts/install.sh "$install_dir/install.sh"
+          gh release view "$release_tag" --repo "github.com/$GITHUB_REPOSITORY" --json tagName,targetCommitish,assets > "$evidence_dir/release.json"
+          gh release download "$release_tag" --repo "github.com/$GITHUB_REPOSITORY" --dir "$install_dir/assets"             --pattern "$asset_name" --pattern "$asset_name.bom.json" --pattern "SHA256SUMS-$ASSET_TARGET.txt"
+          sh "$install_dir/install.sh" --version "$RELEASE_VERSION" --bindir "$install_dir/bin"
+          cmp "$install_dir/assets/$asset_name" "$install_dir/bin/chigiri"
+          "$install_dir/bin/chigiri" --help > "$evidence_dir/help.txt"
+          "$install_dir/bin/chigiri" --version > "$evidence_dir/version.txt"
+          "$install_dir/bin/chigiri" sbom > "$evidence_dir/embedded.bom.json"
+          cmp "$install_dir/assets/$asset_name.bom.json" "$evidence_dir/embedded.bom.json"
+          sh "$install_dir/install.sh" --uninstall --bindir "$install_dir/bin"
+          test ! -e "$install_dir/bin/chigiri"
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: installer-${{ matrix.target }}
+          path: target/installer-acceptance/*
+          if-no-files-found: error
+          retention-days: 30

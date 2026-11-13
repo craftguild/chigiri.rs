@@ -1,0 +1,212 @@
+//! Uses recorded inputs and complete byte comparisons to verify non-destructive success and failure paths.
+
+use std::fs;
+
+use serde_json::Value;
+use sha2::{Digest as _, Sha256};
+
+use super::fixture::Fixture;
+use crate::contract::{GENERATED_MARKER_FILE, render_recorded};
+use crate::{check_contract, generator_info, render_contract};
+
+#[test]
+fn sg_info_04_preserves_and_exactly_compares_different_host_profile_and_unknown_versions() {
+    let fixture = Fixture::new();
+    let mut recorded = generator_info().clone();
+    recorded.version = "0.0.1".into();
+    recorded.revision = "unknown".into();
+    recorded.git_commit = None;
+    recorded.dirty = None;
+    recorded.build.host = "x86_64-unknown-linux-gnu".into();
+    recorded.build.profile = "release".into();
+    fixture.write(&render_recorded(&fixture.manifest, &recorded).unwrap());
+    let before = fixture.snapshot();
+    let result = check_contract(&fixture.manifest).unwrap();
+    assert!(result.generator_differs());
+    assert_eq!(result.recorded, recorded);
+    assert_eq!(&result.current, generator_info());
+    assert_eq!(fixture.snapshot(), before);
+}
+
+#[test]
+fn sg_fs_06_reports_extra_missing_and_changed_files_without_modifying_bytes() {
+    let fixture = Fixture::new();
+    let rendered = render_contract(&fixture.manifest).unwrap();
+    for (name, change) in [
+        ("src/lib.rs", "change"),
+        ("Cargo.toml", "change"),
+        ("src/lib.rs", "delete"),
+        (GENERATED_MARKER_FILE, "delete"),
+        ("src/handwritten.rs", "extra"),
+        ("Cargo.lock", "extra"),
+        ("empty", "directory"),
+    ] {
+        fixture.write(&rendered);
+        let path = fixture.output().join(name);
+        match change {
+            "delete" => fs::remove_file(path).unwrap(),
+            "directory" => fs::create_dir(path).unwrap(),
+            _ => fs::write(path, b"owner changed bytes\n").unwrap(),
+        }
+        let before = fixture.snapshot();
+        assert!(
+            check_contract(&fixture.manifest).is_err(),
+            "{name}/{change}"
+        );
+        assert_eq!(fixture.snapshot(), before);
+    }
+}
+
+#[test]
+fn sg_info_05_rejects_nested_legacy_and_record_mismatch_without_input_values() {
+    let fixture = Fixture::new();
+    let rendered = render_contract(&fixture.manifest).unwrap();
+    let source: Value = serde_json::from_slice(&rendered.files[GENERATED_MARKER_FILE]).unwrap();
+    for pointer in [
+        "",
+        "/package",
+        "/generator",
+        "/generator/build",
+        "/runtime",
+        "/provenance",
+        "/files/0",
+        "/provenance/sources/0",
+    ] {
+        let mut value = source.clone();
+        value
+            .pointer_mut(pointer)
+            .unwrap()
+            .as_object_mut()
+            .unwrap()
+            .insert(
+                "unexpected".to_owned(),
+                Value::String("https://user:secret@example.org/private".to_owned()),
+            );
+        reject_marker(&fixture, &rendered, &value);
+    }
+    for (pointer, value) in [
+        ("/abi", serde_json::json!(5)),
+        (
+            "/schema_version",
+            serde_json::json!("chigiri/generated-crate-v0"),
+        ),
+        (
+            "/schema_version",
+            serde_json::json!("pythia/generated-crate-v1"),
+        ),
+        (
+            "/generator/dirty",
+            if source["generator"]["dirty"].is_null() {
+                serde_json::json!(true)
+            } else {
+                serde_json::json!(null)
+            },
+        ),
+        ("/generator/revision", serde_json::json!("not-a-hash")),
+        ("/files/0/path", serde_json::json!("../outside")),
+        (
+            "/provenance/schema_sha256",
+            serde_json::json!("not-a-digest"),
+        ),
+        ("/package/name", serde_json::json!("different-package")),
+    ] {
+        let mut changed = source.clone();
+        *changed.pointer_mut(pointer).unwrap() = value;
+        reject_marker(&fixture, &rendered, &changed);
+    }
+    let mut changed = source.clone();
+    changed["generator"]
+        .as_object_mut()
+        .unwrap()
+        .remove("git_commit");
+    reject_marker(&fixture, &rendered, &changed);
+    let mut changed = source.clone();
+    changed["generator"]["build"]["profile"] = serde_json::json!("other-profile");
+    reject_marker(&fixture, &rendered, &changed);
+    let mut changed = source.clone();
+    changed["files"]
+        .as_array_mut()
+        .unwrap()
+        .push(source["files"][0].clone());
+    reject_marker(&fixture, &rendered, &changed);
+}
+
+#[test]
+fn sg_info_05_rejects_noncanonical_generator_prose_even_when_inventory_matches() {
+    let fixture = Fixture::new();
+    let rendered = render_contract(&fixture.manifest).unwrap();
+    fixture.write(&rendered);
+    let source_path = "src/__chigiri/generator_info.rs";
+    let source_file = fixture.output().join(source_path);
+    let source = fs::read_to_string(&source_file)
+        .unwrap()
+        .replace(
+            "// This file was generated by Chigiri. Do not edit it manually.",
+            "// Legacy generated-file notice.",
+        )
+        .replace(
+            "// Information captured at generation time; never rediscovered at runtime.",
+            "// Legacy generation observation.",
+        );
+    fs::write(&source_file, &source).unwrap();
+
+    let marker_path = fixture.output().join(GENERATED_MARKER_FILE);
+    let mut marker: Value = serde_json::from_slice(&fs::read(&marker_path).unwrap()).unwrap();
+    let record = marker["files"]
+        .as_array_mut()
+        .unwrap()
+        .iter_mut()
+        .find(|record| record["path"] == source_path)
+        .unwrap();
+    record["bytes"] = serde_json::json!(source.len());
+    record["sha256"] = serde_json::json!(crate::provenance::lowercase_hex(&Sha256::digest(
+        source.as_bytes()
+    )));
+    fs::write(&marker_path, serde_json::to_vec_pretty(&marker).unwrap()).unwrap();
+
+    let before = fixture.snapshot();
+    let error = check_contract(&fixture.manifest).unwrap_err();
+    assert_eq!(error.report().diagnostics()[0].code(), "SF4021");
+    assert_eq!(fixture.snapshot(), before);
+}
+
+#[test]
+fn sg_info_05_rejects_renderer_byte_differences_even_when_inventory_hash_matches() {
+    let fixture = Fixture::new();
+    let rendered = render_contract(&fixture.manifest).unwrap();
+    fixture.write(&rendered);
+    let mut changed = rendered.files["src/lib.rs"].clone();
+    changed.extend_from_slice("\n // renderer differential \n".as_bytes());
+    fs::write(fixture.output().join("src/lib.rs"), &changed).unwrap();
+    let mut marker: Value = serde_json::from_slice(&rendered.files[GENERATED_MARKER_FILE]).unwrap();
+    let file = marker["files"]
+        .as_array_mut()
+        .unwrap()
+        .iter_mut()
+        .find(|file| file["path"] == "src/lib.rs")
+        .unwrap();
+    file["bytes"] = serde_json::json!(changed.len());
+    file["sha256"] = serde_json::json!(crate::provenance::lowercase_hex(&Sha256::digest(&changed)));
+    fs::write(
+        fixture.output().join(GENERATED_MARKER_FILE),
+        serde_json::to_vec_pretty(&marker).unwrap(),
+    )
+    .unwrap();
+    let before = fixture.snapshot();
+    let error = check_contract(&fixture.manifest).unwrap_err();
+    assert_eq!(error.report().diagnostics()[0].code(), "SF4009");
+    assert_eq!(fixture.snapshot(), before);
+}
+
+fn reject_marker(fixture: &Fixture, rendered: &crate::RenderedContract, marker: &Value) {
+    fixture.write(rendered);
+    fs::write(
+        fixture.output().join(GENERATED_MARKER_FILE),
+        serde_json::to_vec_pretty(marker).unwrap(),
+    )
+    .unwrap();
+    let before = fixture.snapshot();
+    let error = check_contract(&fixture.manifest).expect_err("the malformed marker must fail");
+    assert!(!error.to_string().contains("secret"));
+    assert_eq!(fixture.snapshot(), before);
+}

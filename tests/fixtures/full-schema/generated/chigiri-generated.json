@@ -1,0 +1,3061 @@
+{
+  "schema_version": "chigiri/generated-crate-v1",
+  "package": {
+    "name": "chigiri-full-schema-contract",
+    "version": "0.0.0",
+    "edition": "2024"
+  },
+  "abi": 8,
+  "generator": {
+    "schema_version": "chigiri/generator-info-v1",
+    "version": "0.1.0",
+    "revision": "54a32b5d2c59a56d82064d6c3be3092bf1d9d8f2-dirty",
+    "git_commit": "54a32b5d2c59a56d82064d6c3be3092bf1d9d8f2",
+    "dirty": true,
+    "build": {
+      "rustc": "rustc 1.95.0 (59807616e 2026-04-14)",
+      "host": "aarch64-apple-darwin",
+      "target": "aarch64-apple-darwin",
+      "profile": "release"
+    }
+  },
+  "runtime": {
+    "source": "path",
+    "root": "../../.."
+  },
+  "provenance": {
+    "manifest_label": "chigiri.toml",
+    "manifest_sha256": "8535b0ec0bc6c85a97f9983ee9b4c7ccf2fba4fce76af1d10c3f3b8949ca463a",
+    "schema_sha256": "a97f0c0b35af24d90bf7acd5644fe7144985336c61e1548594945f383ce5f6ca",
+    "binding_sha256": "a6c6c5dc1c5ecbaf5b24a3651a2b9e93b4964c2f2133f81b782ba0318f80eb9f",
+    "sources": [
+      {
+        "path": "schema.graphql",
+        "bytes": 4641,
+        "sha256": "6fb9878138f8900e52c530a7579352cf41c5fba1569ae924827b3d5f05c8a826"
+      },
+      {
+        "path": "segment-00.graphql",
+        "bytes": 1271,
+        "sha256": "460a265157a2ca3d44dcc01a9efd7410fc787e4c2e0dbf9161d8397f23495927"
+      },
+      {
+        "path": "segment-01.graphql",
+        "bytes": 663,
+        "sha256": "86be50d88026924a8269aba478be0e21010d5109701655455c5d786baa0202fc"
+      },
+      {
+        "path": "segment-02.graphql",
+        "bytes": 1287,
+        "sha256": "150c3fdbc62f84e35437b6cef33bdd79e9544847321761f06674577f579a28f8"
+      },
+      {
+        "path": "segment-03.graphql",
+        "bytes": 1559,
+        "sha256": "e91862b98df47be7e11c53e0f93999348c62a85f38abbb72cafedc977548d00d"
+      },
+      {
+        "path": "segment-04.graphql",
+        "bytes": 2036,
+        "sha256": "a5dcc3efe00acb94223b3d181b155eecf12d61770aee0257ea087b06d9a1e959"
+      },
+      {
+        "path": "segment-06.graphql",
+        "bytes": 4648,
+        "sha256": "9ce8b47ad8c324e04c66e12fe044f0a040d3ea20988fc5176bafb5b7862460e3"
+      },
+      {
+        "path": "segment-07.graphql",
+        "bytes": 5199,
+        "sha256": "fce48c6ac4c25fdaf38b6160517d8988bd161d19c14e2bc791c642d79c3c2880"
+      },
+      {
+        "path": "segment-08.graphql",
+        "bytes": 1110,
+        "sha256": "d8523b2b498dcc2b97fae04630d131c815acd2f82f76a2f6758bb0c0246d7d9a"
+      },
+      {
+        "path": "segment-09.graphql",
+        "bytes": 7004,
+        "sha256": "be5273170139706de38f9a823ec07a302fb9a6cf747d39a459ced258fb6eeab3"
+      },
+      {
+        "path": "segment-10.graphql",
+        "bytes": 5269,
+        "sha256": "d96e581f0a77c2430b58570473c292e537b8f021cb0d31a5ba7590632402dd6f"
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": "Cargo.toml",
+      "bytes": 283,
+      "sha256": "c5e5137dcff8e1d15b299d4a51f90e4c68c07a512f66768fb2bbd22f33007ed9"
+    },
+    {
+      "path": "src/__chigiri/assembly.rs",
+      "bytes": 66431,
+      "sha256": "b03ec4e7245b684bbffe5bc96b9ea47e5367fa019e258790c9b831e40312a3c7"
+    },
+    {
+      "path": "src/__chigiri/generator_info.rs",
+      "bytes": 969,
+      "sha256": "737f0bab617a64c1b6964178e9f38a38d037efaf0986d9f22722c8e2d5ffa562"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/dispatch.rs",
+      "bytes": 4231,
+      "sha256": "751069e5803a6c7abaef0a5339f5cafd49c8544ef7eee9db079cabb15a962f51"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record000.rs",
+      "bytes": 6573,
+      "sha256": "182e39600c0dacf717945c337ac63e514118c24a552cf8374b5ebec0ed0ec62b"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record001.rs",
+      "bytes": 29984,
+      "sha256": "942fb94e344d55c32ee2d71505f9ca0a3cbb452eb4a2e22ded965c85bfa81fc7"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record002.rs",
+      "bytes": 27862,
+      "sha256": "d43fa64ee4736e5a092394f6820d00ea556823df03c90b1e3e1461d51cdeb225"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record003.rs",
+      "bytes": 20045,
+      "sha256": "ee6c58b7f731dd623d35bf9527b5c83467305b67d307d8657512928080ee1cfd"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record004.rs",
+      "bytes": 16418,
+      "sha256": "85ac2ece5f4babfe30126143b8f8ce9c22f2e5b2b03a0301c4d458a4b6864666"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record005.rs",
+      "bytes": 23827,
+      "sha256": "8f8f82a9e4757e1530879a1b431541efa7faa42dd97fc3a95c9a01f0bcb6ba8f"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record006.rs",
+      "bytes": 46971,
+      "sha256": "fc4104eab59be45c83e613763756b8ae2a342a72656f59b83a642701739b5916"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record007.rs",
+      "bytes": 21946,
+      "sha256": "ed2786eb01c7be18667c508e2cde629ee52b7d13716b4fa606456027bc7c54ad"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record008.rs",
+      "bytes": 41074,
+      "sha256": "ab9af2b401a6537da232c89b78932387ea45ecfe98a523a6d47c0911579b9e15"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record009.rs",
+      "bytes": 25624,
+      "sha256": "76c3d64e93a23729f3bf5b99df9b96993d47db830d247269fa464f7c10796ba9"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record010.rs",
+      "bytes": 16075,
+      "sha256": "b885df4718c9a4cb7ebe9a0d13849e00c481cf6c3a1ded66acb60cb1f2e974ad"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record011.rs",
+      "bytes": 16079,
+      "sha256": "ede72f6bbe5ac9e0f69c17714e624bea05e2bc8e3be972eaa3ab9fe66c790003"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record012.rs",
+      "bytes": 10751,
+      "sha256": "29756a00b508e4f8befe8363c216c99144444d081ec11886ab8a768156805cfe"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record013.rs",
+      "bytes": 19952,
+      "sha256": "87946bef96ee5bb5ac568972762cd6715e8a8a7853cce86ed187fd9da65e9704"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record014.rs",
+      "bytes": 37241,
+      "sha256": "12eb34277740d2b575ad5698e16d060a5ed74eddcb8cc13def80fd70d32aaea9"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record015.rs",
+      "bytes": 47303,
+      "sha256": "6f1ee6dc70b0dfa6ff3c4e75c5467d8ae59ce0da50393042b5ed9ddd9d853615"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record016.rs",
+      "bytes": 22031,
+      "sha256": "7a44b4326893ace9e880cb0390e743bdc0a42e9953b2af9da2afa61ad0da46b5"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record017.rs",
+      "bytes": 26024,
+      "sha256": "8d3e82e65d603f6850563f1a77ae671e0dbc34e011da8659e39c8537b8b09a3b"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record018.rs",
+      "bytes": 37419,
+      "sha256": "fef43831652aabfe3f0c6acc51fe5e35847866a1f99e28f0bfb2694eb4e5ba51"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record019.rs",
+      "bytes": 35642,
+      "sha256": "b42dab743bc6b18ffcf242e470e9dfb42802c279d94559a7d5bc1c79810aeee9"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record020.rs",
+      "bytes": 35728,
+      "sha256": "4b60e2a8c1f504199c3d07bb5029432355494a7d69d8836561763ae966d22006"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record021.rs",
+      "bytes": 23840,
+      "sha256": "fc0f9ab51d2bc6744d268d8a49e83cd6f115cf59d92bb424171d1a8f5b0aaacb"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record022.rs",
+      "bytes": 20073,
+      "sha256": "b047e2acf15b9cb0be8eb44a1619320f7d621f67f78c964eb75564d148749287"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record023.rs",
+      "bytes": 16233,
+      "sha256": "f3fc7646bc41fb6c95dd21b735d4a6eb7b72778c7666932a8b800f60ccf19402"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record024.rs",
+      "bytes": 8591,
+      "sha256": "f6373569bbceade85e321e8ee5993a89cd2ca2ed2c71988d29e6daf66a218320"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record025.rs",
+      "bytes": 14343,
+      "sha256": "5c4f80c73c5e705185eff469f30c7c0135fc6a5b2a30d72e068f3dd12f9fcd03"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record026.rs",
+      "bytes": 10426,
+      "sha256": "1133b65d000713768ec54dfd4aa06f3b35dc7306bdd5744c0044d393aa850b60"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record027.rs",
+      "bytes": 4679,
+      "sha256": "fc0a267f04f11a514da8acdff85a52c6aa5ea57bef38b29ea015a527fc89840f"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record028.rs",
+      "bytes": 8493,
+      "sha256": "d8d8c144c6dfefe982b1874ac7c8a5585f227e5912b794a6dbcf06b6e86f83ec"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record029.rs",
+      "bytes": 12437,
+      "sha256": "c0c4f90d086b983e6b7942e9975ba6bbd0343a0b3a420891012b30b846b37b56"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record030.rs",
+      "bytes": 12411,
+      "sha256": "a219821d7019e483ca8c2aef1e62165121371647ef607bd2fa343cdec69f3193"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record031.rs",
+      "bytes": 6599,
+      "sha256": "e55cebbccbb1603989ee4d5d25a8e3096d068c61c7abbc45efdaf836a38d6a6b"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record032.rs",
+      "bytes": 31592,
+      "sha256": "c4ee71b4d6fd79b5494fae8e2cff48b191a68dbe4b1f8b4e527b2509dd353329"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record033.rs",
+      "bytes": 6599,
+      "sha256": "bd9e4ad0c33471152565c1b5d8f35957358efcb09cc4c084f83809b526fdfac4"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record034.rs",
+      "bytes": 6671,
+      "sha256": "763197434114a00ad43f1695dce9077ee8d3cf51a8e82947cc4889ed5d5ba9d8"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record035.rs",
+      "bytes": 8584,
+      "sha256": "0312855d65f3a650e93fbca58a0f55d70e65bc39953c971f217c5bbf0dd6c762"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record036.rs",
+      "bytes": 41055,
+      "sha256": "36cfd1365f49b00692e918bbba1dd056c5dab4a6fc3351d0cb560df53753d6ae"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record037.rs",
+      "bytes": 27613,
+      "sha256": "4542e4fb9ed4e39b9ce1b9b18a06337c54b4e707fc530b286fc73ee0c0b7e0cb"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record038.rs",
+      "bytes": 18093,
+      "sha256": "7747dfb8d65048834eb969e6a81fcfac12971fd9642f257fc91e22a091d9744a"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record039.rs",
+      "bytes": 18106,
+      "sha256": "f39b5effebe93dfa59266f8b0788418dc8d1897d0c041d3e54f28e516d6dd587"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record040.rs",
+      "bytes": 14409,
+      "sha256": "f36bae7065b022ff9cf43bae92c05d6b0b6ff61ac7795410f51c2c3cf86cd1fe"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record041.rs",
+      "bytes": 62383,
+      "sha256": "10c11376ecda55aa68345020e37d3511fa4a5057f838fa86c07d7a9af85ac9f5"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record042.rs",
+      "bytes": 8519,
+      "sha256": "e7a3627e99bc006bb8bdf77a13c369818bdbdbed3390073a4e62446dbd968e23"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record043.rs",
+      "bytes": 6677,
+      "sha256": "6e90b79995943310c29e543ed85fab5a77c3fa7e1d96040da553b5d23d0e60aa"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record044.rs",
+      "bytes": 43157,
+      "sha256": "ef5324f4e1a8dd862a1f5d01e23f4136e0dfb1a8a08841be12738a9b815d62de"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record045.rs",
+      "bytes": 6671,
+      "sha256": "912fc43fb6d0ba4583919c495e3f3e854d9e58cf847af76f6a85f95b9af11457"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record046.rs",
+      "bytes": 12311,
+      "sha256": "597d39e30259d77322255666e45cdc28917d16309ae95f3cc62248a78d30759e"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record047.rs",
+      "bytes": 23866,
+      "sha256": "4d48b27da8127031e96cec1982f949dbca4ec6f87e7c392f0ac7945ff888c4d8"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record048.rs",
+      "bytes": 8584,
+      "sha256": "f38e0b942ebfb7bac86a370753ff1e99b9f9c84a045e4dbc0170be4fd40cc307"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record049.rs",
+      "bytes": 64290,
+      "sha256": "f2b9cc279ee0dc36ab792c1fb396c2bcbb626ba01133bfd8d28117f4e8fc02d9"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record050.rs",
+      "bytes": 8584,
+      "sha256": "c39cb107f1521dd9df8edec0f0d60e345f032849a708a9bf79b93450c24dcc1b"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record051.rs",
+      "bytes": 4679,
+      "sha256": "5bb7daff5607638832be145e56e9df1e664368b4ba05147e7cfccb16bc85cc35"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record052.rs",
+      "bytes": 27706,
+      "sha256": "53f844ed67d51c640a06ffec795abde9cc14fcfc4450ffc0bc1edc3f95690a17"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record054.rs",
+      "bytes": 8414,
+      "sha256": "acdd0a64a77d88efd021a132145028591aa362df015a6be09004719521f3f328"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record055.rs",
+      "bytes": 31553,
+      "sha256": "22bc872708e6fd1d70ce6f40ed2d8bfa142bcdcb057a28f58a470e104c8962ef"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record056.rs",
+      "bytes": 14201,
+      "sha256": "e1af97ef9276eb92535893b1a78526f438a0be2b2bf04a1d3e108431d0e1d7fb"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record057.rs",
+      "bytes": 57444,
+      "sha256": "f86a743120909c12e8e56f4419a4d7bb975abdf4c9b9338da65db9f7df8114a1"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record058.rs",
+      "bytes": 16173,
+      "sha256": "c071b952e1738b92be19024a2fd21de392029a274890707c58ed6bbddcabca06"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record059.rs",
+      "bytes": 47829,
+      "sha256": "859247ad6c6382252791af0be393138d0f881c0e064bc8b57ab9e692fa6d0499"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record060.rs",
+      "bytes": 21899,
+      "sha256": "79aab8ced1cf8469336c5edb245e31d67a87df1df582194906b870093ffde206"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record061.rs",
+      "bytes": 37934,
+      "sha256": "b6931f89d32237fb693af3de3f431f63b09ac386b957a91f0367b0c155affced"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record062.rs",
+      "bytes": 30198,
+      "sha256": "f064ff16c794d8e5b09a0bb5406b62c8b330b023568884bf3742e11ee20c46c0"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record063.rs",
+      "bytes": 8569,
+      "sha256": "e9c7a6166fdd40e63cdadf453cbd3750413f4f726f090f2fd1a581a4b2ad9777"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/fixture_record064.rs",
+      "bytes": 14500,
+      "sha256": "76846bbf9d0903971879357954b88ce1c847f8f80cdef2c9ad7ecdd5135e7ab4"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/measurement.rs",
+      "bytes": 8300,
+      "sha256": "7bc6d9d83d1fc54522d331614b266be448d56c5c4afdd50f97bbbd394fd61b1d"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/mutation.rs",
+      "bytes": 45434,
+      "sha256": "12b7ef46aade7c6a24cf6e3a6b1a2ac32c9e5785b50172deb4221a8619e860ae"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/query.rs",
+      "bytes": 87182,
+      "sha256": "ee0fc88a447c3816a39082bc0b48d455f909390bc80a375e1795735b56e08a32"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/schema.rs",
+      "bytes": 24772,
+      "sha256": "d6dc9bbacec891f9beb2a3e3ded32c1d62f5ecd6f6eff24733fec7921fc467bc"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice004.rs",
+      "bytes": 1801,
+      "sha256": "b154e221832c9346413fd80e0ddb7cce7ca100bd281188e6e16453542b662d99"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice008.rs",
+      "bytes": 1687,
+      "sha256": "1f4250587a7d8c7369a28299c12f2f803aaedf4fdf1e73ccbb8e8be1d410eaf6"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice009.rs",
+      "bytes": 2371,
+      "sha256": "0a7d526dc19d0cbc273f9b76547001d5b57b9a15e47a1f66d6f45071b6c779ec"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice012.rs",
+      "bytes": 1687,
+      "sha256": "4a405fd64c38175868bbb3dd7b35edcdcb1eac94a3a50101694528a073e244e5"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice014.rs",
+      "bytes": 1459,
+      "sha256": "0267f4c0ce2431f1fb0eebf4996afd2f82edc8ae41b30366352886bf597a4129"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice015.rs",
+      "bytes": 1915,
+      "sha256": "2e2a01fdb66987614e0cf61518082b9f08214e07ac4720f940583cdf1a2fdcf5"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice017.rs",
+      "bytes": 1459,
+      "sha256": "07d212797d151708ede88a75829dc218da7cc1e42d1dc042a28a1ba83dec6f91"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice023.rs",
+      "bytes": 1915,
+      "sha256": "ce928cf600104366f42f4a7ca6b5875a543b489d607f906e09ea57a3b85344b4"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice024.rs",
+      "bytes": 1573,
+      "sha256": "5a8262850803098028e8c168dd868007f99d2244d6ad10d359e4f6744cd6f51a"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice025.rs",
+      "bytes": 1687,
+      "sha256": "9c1ace978ca53fd94b3f6e33e3271f16910645509eceb2cda1aa054a820f088f"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice026.rs",
+      "bytes": 1687,
+      "sha256": "0693fac12a1a80180a8277195df352c4699e2b47d903468a688542f7c0c2df03"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice027.rs",
+      "bytes": 1687,
+      "sha256": "c75f2024ed5b115c9cc18b98e0eab6b2e5376e7f91d0fb1b932dc1e02cec327c"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice030.rs",
+      "bytes": 1687,
+      "sha256": "ecf287bd14f71895a42a66b88c2a3e885f445e160de087f92f3251673ab38edf"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice031.rs",
+      "bytes": 1459,
+      "sha256": "88e672d908293babb4efa1d0a3410fde73d7a6c51d13f9fe3ca6f059bd5a7b09"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice032.rs",
+      "bytes": 1915,
+      "sha256": "99f38700ad9fb28ba590d99bdc5e0409828794c420a9b965a9db476c276289b7"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice033.rs",
+      "bytes": 1687,
+      "sha256": "44809d72cebab3ff7698f026fec4bbac90530ff62dd4a78c1ffe63aa3974c159"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice034.rs",
+      "bytes": 1801,
+      "sha256": "8b98c7844ea5a11bd5ba2bb4b9b9b522ce53a6acfaaa576801e6d97b8cf5bf57"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice035.rs",
+      "bytes": 1573,
+      "sha256": "9c0c29fe4021f87622df1c76aae99df87d6d24f126597c630a5bafe95573baae"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice036.rs",
+      "bytes": 1687,
+      "sha256": "75e887fe217f88070c94d783b2a02bd879b7b3af6460e83cb9bd58f85a29535b"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice038.rs",
+      "bytes": 1573,
+      "sha256": "d61f83b9f1ec34bcc45d33a32eb11913dc4d72d6911a85f5f526362ac1e86afd"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice039.rs",
+      "bytes": 1687,
+      "sha256": "db9c1d1206699cc4e6dc0229d4c7329a110c44ae7b22528f4a166f52275451f7"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice040.rs",
+      "bytes": 1459,
+      "sha256": "a902c7640b8e2db8560e777750f4561091287815154a46cbeea9249b4b3c4208"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice041.rs",
+      "bytes": 1573,
+      "sha256": "00a7077da317ca148ccbde4549e5450767c72d9b0ee260e99a3165f78be4b8e1"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice042.rs",
+      "bytes": 1915,
+      "sha256": "e0d88e7b1a18473edfe759e76276be138d1e2d830db6fffb2f1ef705be12f0d3"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice043.rs",
+      "bytes": 1915,
+      "sha256": "09147b09c153ca30c38ca8bb1780240dd5eb2998acc8ec6d16bf7a42e3544dbe"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice044.rs",
+      "bytes": 1573,
+      "sha256": "e1574f86c2838db97a8428c32cba753272e7f4f9b0a6f10c15595f7fe04117e0"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice045.rs",
+      "bytes": 1915,
+      "sha256": "7b8402d3115a04c04e68cfa4fc2d3bf7390b4ab39088506a6da86b9c9fcebfe5"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice046.rs",
+      "bytes": 1687,
+      "sha256": "b4d334dc8b58b83a891cbb8f1a756f1eba6bfbf9a54bf8f6a8f83bb18e641de9"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice047.rs",
+      "bytes": 1801,
+      "sha256": "5f0d6e9c8984c268c1c0a1adbd53a25c8865a941cc810ad29f2e854a5992f660"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice048.rs",
+      "bytes": 1573,
+      "sha256": "9b75c351977aa6bd7a865b76092b4f718023b0fd08e4869b4aa25984c6152ddf"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice049.rs",
+      "bytes": 2029,
+      "sha256": "66e88b30e0e34a970af4a1a6de84e994d7f9612efdb73398163528557baccd68"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice050.rs",
+      "bytes": 1687,
+      "sha256": "e7fe588b84d1646b6096012f4c31d78ac6d6911a8ca6616e343bacea6dc0f7b3"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice051.rs",
+      "bytes": 1801,
+      "sha256": "3af44ec0c5a76e839cc270f02a56cb77ce8ff67ea66c2c30c2b2ac3398416d37"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice052.rs",
+      "bytes": 1801,
+      "sha256": "ca31bfb461d261330d17d9dca4e0b1e35d5227ea275e173f45bb04b83154ee9f"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice053.rs",
+      "bytes": 2257,
+      "sha256": "05c77b25bdc6299f402d3375eaf9ac3a76ff12f00e1a9e7fdcaed78ed3464f8b"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice054.rs",
+      "bytes": 2257,
+      "sha256": "753661d8753682c6131316df597493f718df72447cc5a8365b9673e0418d4ca6"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice057.rs",
+      "bytes": 1801,
+      "sha256": "8c977f12a57cb356477e5b0d90687957526eadb6e22af608e71a446fadee791d"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice058.rs",
+      "bytes": 1801,
+      "sha256": "71ec6d65764c96c60d79a1b401b26e484e4925d5926cbe95a0746ca22d4fcf11"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice059.rs",
+      "bytes": 1573,
+      "sha256": "99b4114776ea2068f7803a9fe5784c8e24e41d6732cf571fe146d07236ca701c"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice060.rs",
+      "bytes": 1573,
+      "sha256": "ab9912d7c2be1784308b938b8ad62c0cd0399ee4aabb884cb64db7d1947c55a9"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice061.rs",
+      "bytes": 2143,
+      "sha256": "f60eac654d3926c921505bb3343e1b5c8f861bf5adfe7531dfbcc434e5a6bf20"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice062.rs",
+      "bytes": 1801,
+      "sha256": "93402adecd520b722e58d59508a439e3d02833d06ec35649b9e225abe1fedcc5"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice063.rs",
+      "bytes": 1915,
+      "sha256": "5854869bf58f5d6408762f063612686977dbdea68bdc4b5240503fafeeb6d508"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_choice064.rs",
+      "bytes": 2143,
+      "sha256": "034300fb78e89e663b3c2a9bb801bf154170da209bf35b1e25020be959e86f0b"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_input000.rs",
+      "bytes": 3591,
+      "sha256": "07c4922a5b79d90e03a1af886562ca1d68e19b5525b1abcf041fa6649a84ca70"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_input001.rs",
+      "bytes": 2425,
+      "sha256": "cea260e9765b187af9036a336c6c58db10463d6bc1fe0afda1b01bca452e2531"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_input002.rs",
+      "bytes": 2489,
+      "sha256": "e72f60fd3822a3f3c689d5610403739885da60c9aa445433b49bb73490d2687c"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_input003.rs",
+      "bytes": 1327,
+      "sha256": "f2c6187911b7a3328a86e5630020df314f4a986fef3d7bb7787b4aad0810466c"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_input004.rs",
+      "bytes": 4710,
+      "sha256": "879c77272c93b42b4b932d1cbb707eff1c90004a4ab7b06d654d55965fee05c2"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_input005.rs",
+      "bytes": 5273,
+      "sha256": "1c9ac117cd2ca57bee16f8cc4eb97ba4f8e833a9cfeef4310d2f51f775174b07"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_input006.rs",
+      "bytes": 2422,
+      "sha256": "2cf6f04fb6c5a777192a0d25bc6fc6df363e06848eaed9517caca37d6743ea8e"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_input007.rs",
+      "bytes": 1327,
+      "sha256": "dbf45ab863d0e8964a9c4a72f2ea019008c1fff5f83d6d84f6f0cdbfae218a8c"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_input008.rs",
+      "bytes": 2424,
+      "sha256": "3ce6ea911c9a9a53539d513e21e5dc3a5a25358b7a184217ea5e01f97e38e1f2"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_input009.rs",
+      "bytes": 2463,
+      "sha256": "1ab90a29b2513655f7571270f0416f4d98268ff4ce3da743f67f25c056fcf9e5"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_input010.rs",
+      "bytes": 1874,
+      "sha256": "7a44c3354f61a6c11f2b461ed190162171fea0e20d9c3608ebedfed7d4a13217"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_input011.rs",
+      "bytes": 1878,
+      "sha256": "d459029fd51523720d58ed935dea214ad827b35294fb9b5b4380d92ed6d68bb7"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_input012.rs",
+      "bytes": 1901,
+      "sha256": "6dcefbe63e2dd6658bfc4a12b529e78aab0bc467f59590789420a90f7957ac8c"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_input013.rs",
+      "bytes": 2425,
+      "sha256": "a9ad287f7c1ad2213d318e9bd8676794724ca62e7b268953c96e3bb264dc5e40"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_input014.rs",
+      "bytes": 1327,
+      "sha256": "2e33506dff1f9b699cfb2779f73eb540059d580f0e6dc1d2bee2d921298890c0"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_input015.rs",
+      "bytes": 1882,
+      "sha256": "87e59ed13e6148c203f0b335fce02f9778e2053c939845eb2709f7c22c40c288"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_input016.rs",
+      "bytes": 1927,
+      "sha256": "cea76346fb54ea65eead8c76445e672429ec25a7d76ea7b02c0949cf9b059187"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_input017.rs",
+      "bytes": 2031,
+      "sha256": "1fa1e8d4ecf1a9aa66e54e9cb6de191b88d17cea7ae810b8fd99cf25cfac1d80"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_input018.rs",
+      "bytes": 1327,
+      "sha256": "87cceb9659af0c98e3aa84f929f766df69d30b1ea6741174081f6f39b2a45fef"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record000.rs",
+      "bytes": 481,
+      "sha256": "fa0509ee3d25ea2ebdece16355fc014f3d3f291319b479a7611b0bbf409459b4"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record001.rs",
+      "bytes": 481,
+      "sha256": "19bbd729ec31fa966ae05c6545b60c5cd4a019468e0d4c2d7453e0c69000fce1"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record002.rs",
+      "bytes": 481,
+      "sha256": "7533bfe8cdf1417c39530ee8a42e2d327d64b23da06fbe069d42b034c7bc683d"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record003.rs",
+      "bytes": 481,
+      "sha256": "bed3bf1bb4866b89d27efae5920659e0d398b2da1f43b4a21137cfd8eee56f3d"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record004.rs",
+      "bytes": 481,
+      "sha256": "588e57dfe908a0108bdc566e2df1ee5cef8a8b5acbd8ac0a46a12cf775522856"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record005.rs",
+      "bytes": 481,
+      "sha256": "1a37dc9ec1b33a4afe9df460c135fa08a86563b4356ffb61176167b452725453"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record006.rs",
+      "bytes": 481,
+      "sha256": "65bc6bed95bcd958b18a2bef4b66ffcccc2e8c054b1b512b3b85981f184a521b"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record007.rs",
+      "bytes": 481,
+      "sha256": "214077af21333149d20d2e397eec1033e079fd8bc14e50af9bf6907c5420472c"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record008.rs",
+      "bytes": 481,
+      "sha256": "7d355a9e75a23e7abfc5474b1e00a30b1c4e3d3d936830031f4e48e8a03840e4"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record009.rs",
+      "bytes": 481,
+      "sha256": "2fd94d7f6d3efa8298e8279ea8dd60a9fb6537bbf02e9be1f034ef59e25b7622"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record010.rs",
+      "bytes": 481,
+      "sha256": "e8548b7c48b508a5358e869c5035e96faaa5c575a02a39b765039bf15f897919"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record011.rs",
+      "bytes": 481,
+      "sha256": "4001aa0cfe97421f3db4ea1a3d7e528bdf670a90b171d7538b250b6c146c67f9"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record012.rs",
+      "bytes": 481,
+      "sha256": "c847991b9d4b07d08744881bbd3951cabf79e5f4660abe238de43134ce556672"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record013.rs",
+      "bytes": 481,
+      "sha256": "f7818b6b7c595c4388d5eaf33cb3ce9d14d41aaea35a48c52c69f39f3110c891"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record014.rs",
+      "bytes": 481,
+      "sha256": "37d44b4be2e6fbbd65635642ffe7cda24a6ebc037453f7d81e49ab86aedcabc8"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record015.rs",
+      "bytes": 481,
+      "sha256": "505ffa562032fc800ba07649b0817b384c184c02715269042b295f658b05f30f"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record016.rs",
+      "bytes": 481,
+      "sha256": "b7ae14aeb3c07b0938f239ef1515596faece1e750afc30609ab533c148c0b24c"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record017.rs",
+      "bytes": 481,
+      "sha256": "460c6c13bcc95a4fa8dd1536b84ec612531df843767bfa6b1c7687e9f926ecd3"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record018.rs",
+      "bytes": 481,
+      "sha256": "4c36a1de67cacc2c5c84876fc016a414b15e70452dad960b581bd1ea415f8601"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record019.rs",
+      "bytes": 481,
+      "sha256": "6a3c0af0d01cbb0ac03d0779eb33506a08e8eb0fe631f1a9c659dc8ae99e62b3"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record020.rs",
+      "bytes": 481,
+      "sha256": "7ab89467d445b00d0b30a79480aca74d93c387a3f1210b5944814eb94e5e9795"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record021.rs",
+      "bytes": 481,
+      "sha256": "602ef2abdb1836677f257d6f8a2167cefbfc2c424d67dc3f965bc242d4400324"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record022.rs",
+      "bytes": 481,
+      "sha256": "26fbd1e433e7b510708319c05ccb0c9be43fe593ffa00dbf90c817d91d4c63df"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record023.rs",
+      "bytes": 481,
+      "sha256": "8ffea6c531dcf15c69fef5172ed148dc0d41639ca4c8bd0eb634cdd67355c9b4"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record024.rs",
+      "bytes": 481,
+      "sha256": "59fe4f10b60e3db0445142ec12c707bd90a293be8bce6789cad68f028de8da23"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record025.rs",
+      "bytes": 481,
+      "sha256": "9fe49c7359b806c85fc88f0db0f6b21e7a4cdfcb39f34463076f3c28c92c7c99"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record026.rs",
+      "bytes": 481,
+      "sha256": "0dfc2457640a97110b8eb51c0ff9b2f2c191d325e56e4829cdeb324cb3e578c3"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record027.rs",
+      "bytes": 481,
+      "sha256": "a32a34b5326c998ff7da125982a9d12141ae46b31663029aa0afd50779fd1582"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record028.rs",
+      "bytes": 481,
+      "sha256": "85c33f25af699d01ad6de5ed1637afe6c43326b8042890565ba9b68f8fc19796"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record029.rs",
+      "bytes": 481,
+      "sha256": "2b017cd55bdbe5d0d35f48d6d315faf594eb5f1329a1e2dbedffe2d4a1faffdb"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record030.rs",
+      "bytes": 481,
+      "sha256": "e633408f3efb6fbbfdde118302712aba2dd875e25ab17397638fe24ce76917a2"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record031.rs",
+      "bytes": 481,
+      "sha256": "47d74e87c0104425d3489409c7acc0f5e6e5d6429de4950b16300d60e25c8576"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record032.rs",
+      "bytes": 481,
+      "sha256": "be8362d25872eeac64232be71664df20be8180cdbe1c50d3b7b17e8c21b0a639"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record033.rs",
+      "bytes": 481,
+      "sha256": "5f316f35e25491f2df0fdcd767066b19ec1f307853d6f937a9f82893682a9679"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record034.rs",
+      "bytes": 481,
+      "sha256": "5f2920bb4b45b308805c2b53e4ab11e527f51f9cda9e7f00ee28f22908be0e92"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record035.rs",
+      "bytes": 481,
+      "sha256": "5f0d993a99eb1e6bfb2f88457ed1bcb9b1809fd14deb7a9eb06487d3f9e0bda2"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record036.rs",
+      "bytes": 481,
+      "sha256": "0e80338b8f79ba5d04fec8a11350551e773977706211ee2ac8899dbc0724e536"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record037.rs",
+      "bytes": 481,
+      "sha256": "95e41bb817f4e3fb22d7de55f248be5edb9faca6f933095925caaa9c46b1e2ab"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record038.rs",
+      "bytes": 481,
+      "sha256": "62d3fd3a7252d4012fb5def02c4df09fa1b650fae9e45f67c305a6927b909c33"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record039.rs",
+      "bytes": 481,
+      "sha256": "8d7503637bff09f1d54f99f96db838a6cde10200ea21d875a7d1d25eb08d5d4d"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record040.rs",
+      "bytes": 481,
+      "sha256": "adce7fdcdec19099144af754dff92692117c4b21d66f9ab0fc47dfbdae20d78f"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record041.rs",
+      "bytes": 481,
+      "sha256": "520242de37f42d68fd821e1605696749de3d83742f3bd5e9f4ca175c44c1c1a6"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record042.rs",
+      "bytes": 481,
+      "sha256": "8a7bc5e7863dc315c0801a9348a726f98e0e55b22bcb9c2ba929c4b80042f230"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record043.rs",
+      "bytes": 481,
+      "sha256": "b43c29a2a37d45ced1f274d2acaccc8f451791014725f125537e8e785c9f78c2"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record044.rs",
+      "bytes": 481,
+      "sha256": "3043acd83bd3e2efdccc03ed8ee167d6cc7b6c8899c9a582023a3e524b00d094"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record045.rs",
+      "bytes": 481,
+      "sha256": "decf695fe2961864ec3c0406d5a2151671495ba53dd6ba331544b997c7307f0e"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record046.rs",
+      "bytes": 481,
+      "sha256": "3baeb0d12e940fe837db75b6438730edc92ffc3728cd365557c4dc1e777ad981"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record047.rs",
+      "bytes": 481,
+      "sha256": "cda69bfdb6c7143e6d52553542113ae9a270a5d08b8c129d4959e9a8c0801e9a"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record048.rs",
+      "bytes": 481,
+      "sha256": "d2600bf1934af90880abcb8c45b483f630dbf977cc545dd8c9b8911eccda4549"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record049.rs",
+      "bytes": 481,
+      "sha256": "de39ee88135f0f0804e1895ab16045aedf317ef4766a4c43208ce20fd65f0d0d"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record050.rs",
+      "bytes": 481,
+      "sha256": "6e04271c24a853114c39ebaa51441f57cc7725bd8355bea1ef3b9b34fd5fcc32"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record051.rs",
+      "bytes": 481,
+      "sha256": "4b5a1791d7ee011b4a522df1e7cf59a8e2702aecfaa5a54ec6742601fbb7babb"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record052.rs",
+      "bytes": 481,
+      "sha256": "f7725c08c37e6f18a85ea8f1b07c0b2fb0bd86dfff7a30a8a14e8f22df8f96f6"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record054.rs",
+      "bytes": 481,
+      "sha256": "a58421a7d23c0ebe40507e6ca47a2e0cc340a4f449308d6b98f04b623a5ffb9f"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record055.rs",
+      "bytes": 481,
+      "sha256": "6f2aa270a3cad8774d16e4e78d883c69f54ae8a4a05ed40b0776b36d4b5d92a2"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record056.rs",
+      "bytes": 481,
+      "sha256": "e076973303504f6490c73fd913cb2fa191e4115b2286750c8384f8161b009b94"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record057.rs",
+      "bytes": 481,
+      "sha256": "9cbe45b9ce1a803ef09f4a2b4c33b822e63487a9f8cf05667d1f00615fdcadb2"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record058.rs",
+      "bytes": 481,
+      "sha256": "f9353d9af828abb95eeb5305b81759d628871332cfa2c02a2e3970ec14f6fd28"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record059.rs",
+      "bytes": 481,
+      "sha256": "d51bc64d79524e8f15e2ccf5436071a9426cbc65ef26d3084c2f50e9aa3a3b37"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record060.rs",
+      "bytes": 481,
+      "sha256": "1e3374e11cc21489da37ce0c41e94fc53308d07114de1fa8b5eb937aa3b981fb"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record061.rs",
+      "bytes": 481,
+      "sha256": "881c23576418dcd316c56a61f667292df08351647e3d0f921aadba9e1b7cd1d8"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record062.rs",
+      "bytes": 481,
+      "sha256": "d24c537b77772482fe67fc40f8b5c607b272e002c44237790f6efbdf58c649ca"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record063.rs",
+      "bytes": 481,
+      "sha256": "45a1be40379f5ce9378c556936006eee581adf149cd616f98217bebc10e48809"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_record064.rs",
+      "bytes": 481,
+      "sha256": "4e3e07e74944460a63ad15690ee0468249530d0d56b7834dfa2ef749975c8fdf"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_scalar000.rs",
+      "bytes": 602,
+      "sha256": "15d82107c60b5e32f27d38ea5f893fc57e2492b081a3c427e14e5387eb50f70d"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_scalar001.rs",
+      "bytes": 602,
+      "sha256": "306f586d24473efd050eae23361649131c5ae2945022d8757aa62d1b61736607"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_scalar002.rs",
+      "bytes": 602,
+      "sha256": "94db0cbad5f5a03010659994bf5c8b50f010431903f22857fbacda611fa6469a"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_scalar003.rs",
+      "bytes": 602,
+      "sha256": "d175023396bfa1428a96f28be7214e84d36bf616f31c149f9817c21b60c7e5d1"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/fixture_scalar004.rs",
+      "bytes": 602,
+      "sha256": "9a46ce59a337e5ce6195f576661ba25c36cf52fe90a4b5de645ad2b21b42acda"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/format_kind.rs",
+      "bytes": 1614,
+      "sha256": "ce8f3f5f503af0ce8dc6840dc0a02a55fb104bb5a89f537a5367e825d492c80d"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/measurement.rs",
+      "bytes": 465,
+      "sha256": "825731807ee23f71e1022e74a981184fe7d10890cb084b571b209a9a670ca628"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/transport_kind.rs",
+      "bytes": 1542,
+      "sha256": "b7eef5f63165178bc6887afa7cbdb4026730a9ba3b82da79c4e02d078b660a6e"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/unit_kind.rs",
+      "bytes": 1590,
+      "sha256": "56369c01da5b22a83ebcb3198596594b44eff0817bf2c4e74512d15be22985f3"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/schema.rs",
+      "bytes": 6649,
+      "sha256": "e56539839f2d7dfab1b17a66828e2ba2740c5e90afce613ac19b86fb70473840"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice000.rs",
+      "bytes": 1935,
+      "sha256": "14506bdbc9fcb3123fec4a3c0e526b71da3d033c49ff6bae7b84914af82c3c0c"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice001.rs",
+      "bytes": 2260,
+      "sha256": "9c98b632920eb9855b9c75791abe58972741fa4d4740bf36e565ac8d0818d042"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice002.rs",
+      "bytes": 1935,
+      "sha256": "990bd67cacd4f9dd9cf26d81a03fb7fdd00ae830b417ebd73bd692f74b09a9b4"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice004.rs",
+      "bytes": 2260,
+      "sha256": "d304c0d0c41d8ff28ad7df3a342e135ad37bc77d771cff24de8c961df14e8dd8"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice005.rs",
+      "bytes": 1935,
+      "sha256": "08854a949c4efa5dacfa145a12d33f100100c67be126daf13d7e6776fc71467d"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice006.rs",
+      "bytes": 2585,
+      "sha256": "10cad5640648100d8cc85e60141f5f1ee98eb7dc2f39f22d46fd924291934f3d"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice007.rs",
+      "bytes": 2585,
+      "sha256": "422a00d2b0146e4054aa8c07e31a61754dc01863318648145e38b73eeb4ae092"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice008.rs",
+      "bytes": 1935,
+      "sha256": "ed351491f5438e119f7308bb9d40f84d4b9cdc13e65c4b1e3551793af0ddf776"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice009.rs",
+      "bytes": 3885,
+      "sha256": "db393318967581ed98e1871c71a7dff14c231f3838f1c69a81bb29ea1b14ce39"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice010.rs",
+      "bytes": 3885,
+      "sha256": "c608252882ce9d960192837467f02ca093e4e9b98fd215047e207854ef6549f0"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice011.rs",
+      "bytes": 1935,
+      "sha256": "895daa89f84352fdd3a950ce1ee6a063b84666c9eadea79b8d9b59dd2d66f539"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice012.rs",
+      "bytes": 1935,
+      "sha256": "d38f48bd6fbfa1f045fba722eea06a0c64e486d889c620c4859a9138c47336a5"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice013.rs",
+      "bytes": 2260,
+      "sha256": "49890a8ee1868ba72accfb9894b414c2df4b6b20d488aa8b788b143af72a6229"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice014.rs",
+      "bytes": 1282,
+      "sha256": "f9434c78001e17125dcdf61ffb89c241dc0442ef33795c97d11660a66f79e6fb"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice015.rs",
+      "bytes": 2585,
+      "sha256": "61a8a773b3db39a2e1edc0b8a10757c99a3ffcc82bbccb904e30b09b2c73301c"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice016.rs",
+      "bytes": 1935,
+      "sha256": "46d0230fa4ffc56d14eb4d6ef6359ccc324e1c205f0915c61396eabc1ab26f4c"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice017.rs",
+      "bytes": 1282,
+      "sha256": "b6be61bc5a82ab95dca26f829100ca994550dc19dfa7913ff372414bf3e08e5e"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice018.rs",
+      "bytes": 1610,
+      "sha256": "3c41bb11f85c45a2082786f30e585aad8b5b3e8be90e5016b2fff6162b219e8b"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice019.rs",
+      "bytes": 1610,
+      "sha256": "204611092b4ee35806c3fcfb0adc4ff5ce82f961e0321a4c6381ae0f25a6a5c2"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice020.rs",
+      "bytes": 1935,
+      "sha256": "b3c7fa37c27eaf733839555831800811b51b127ebe1efb5986dea969759e3448"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice021.rs",
+      "bytes": 2585,
+      "sha256": "1c1a461d8f546f88d11bc0c6386505e959327b7b6395826cc72e96873cb248a5"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice022.rs",
+      "bytes": 1935,
+      "sha256": "0afc7955fce1593c1d9552787a3e2617a2436971178fc7093bf803e583c05f31"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice023.rs",
+      "bytes": 2585,
+      "sha256": "a9bbf84ae015883a2ab5366fffa443643d17968b90a3971d32339c8532ed10e1"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice024.rs",
+      "bytes": 1610,
+      "sha256": "0c9c288a0f85cc45df5318ec4c9f1f9762d2f84312d5047c43290274d4c2079f"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice025.rs",
+      "bytes": 1935,
+      "sha256": "7bc43a556691b2099a5653ca3641ef2beaea65fbb2ed980f14d5d4188ef5b846"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice026.rs",
+      "bytes": 1935,
+      "sha256": "408c49a2978988bb3428fccb8f10e0cf618264b42841a979ddfe4906fccb7936"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice027.rs",
+      "bytes": 1935,
+      "sha256": "6e90d3c5e940386ff4fed0ca19088679f06db0965075c88787966896b1828205"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice029.rs",
+      "bytes": 3235,
+      "sha256": "0d6b4dd143fa53e2b1da987a5c9af378d65b434c3f8e914a0dc322ba41e282f0"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice030.rs",
+      "bytes": 1935,
+      "sha256": "ca4d23388e1f64b3f28665878e0e4965d7cbe5c9292c0d1637fa1ffb3090585c"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice031.rs",
+      "bytes": 1282,
+      "sha256": "14e2d977879ba5c91d9e218950137f9fa10e0a34a869b1bec35748ba0bb3309c"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice032.rs",
+      "bytes": 2585,
+      "sha256": "61cf17b05daea36cb59dd387c47afa6ca86a02b1b32f033e12c5e9c6729d7f51"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice033.rs",
+      "bytes": 1935,
+      "sha256": "77a89ace1a9b7e40ddfbee8e54c25a64e51154c00349b0b787e94ba37a4b4a1d"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice034.rs",
+      "bytes": 2260,
+      "sha256": "f1883f7e6ad40003a96d43f9d9f492e14829aa7df655e8d4e1f8ea77f5a6c613"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice035.rs",
+      "bytes": 1610,
+      "sha256": "3a4c0c6bc5671419de7947a44abf99ef3312642b6976cb60d971c336bbf7575d"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice036.rs",
+      "bytes": 1935,
+      "sha256": "147e962726ed85b8404027c784097476449703e964c1278acec449a8a1222b96"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice038.rs",
+      "bytes": 1610,
+      "sha256": "3403e63a794f7f7d90cab78d02d0126634a03bccaf8194d3782a97c0c04f3d41"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice039.rs",
+      "bytes": 1935,
+      "sha256": "5f0677129fe7935f0b19e62757150324debed7b44cdcd0fa22cf389650f0bf4d"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice040.rs",
+      "bytes": 1282,
+      "sha256": "9e756ed480d2b7391b98e0ee5d962e2ccbf86e4e4977e74e6fa68f72c633499d"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice041.rs",
+      "bytes": 1610,
+      "sha256": "5c0936675bd12ac8db989c8463659e5b03a04b47a2c41ad6139f7fa25a8b1aac"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice042.rs",
+      "bytes": 2585,
+      "sha256": "173701d3a889618bcba6d4076d2f1033a82a6e820741acc15519c9b8ab0b415a"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice043.rs",
+      "bytes": 2585,
+      "sha256": "ba86b5853134a7fdc43c1182fa31c9294a337a53808593b093cd9d26e806f128"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice044.rs",
+      "bytes": 1610,
+      "sha256": "4d8c6c5ace76328a2f0a816acb7ebd70078f59ed7705ac0b6c4ba036ae68abed"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice045.rs",
+      "bytes": 2585,
+      "sha256": "e0ab13015279d7704937961eb3ae74fff684fa07f5f8b3567e723d9a92c4e116"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice046.rs",
+      "bytes": 1935,
+      "sha256": "fe1fb151100aa17d4f8bdc7126ba17913b0e06affb2878106f6473ba19517136"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice047.rs",
+      "bytes": 2260,
+      "sha256": "d4854ff1fb7c23450d5e7f81b189b2725b08b06e7b4b6d87f70a7a51ab808251"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice048.rs",
+      "bytes": 1610,
+      "sha256": "db1f7142adead4d7af2f5d988dacd09f8a8de4394f099b151c40062c2ab7fa99"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice049.rs",
+      "bytes": 2910,
+      "sha256": "f6d14a4a8fc13f71324fc5199bb65f41c161e5b101a125bb9f2752b421989a5f"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice050.rs",
+      "bytes": 1935,
+      "sha256": "e6b086bba30b2fc8a220d844905933fcb6e02a1dff2dad4cf99894ffa415934a"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice051.rs",
+      "bytes": 2260,
+      "sha256": "b29afd73309179c934b3da7e693ef851288a8abda4a9d27003fe9ea711d7898d"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice052.rs",
+      "bytes": 2260,
+      "sha256": "386bea20f630aa9808dd70addb46bb1bed5ef53fbf87e1516805d9888faacac7"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice053.rs",
+      "bytes": 3560,
+      "sha256": "a13e821e2e4f0c6de2e5915ad576e17d443088299f598479087430e39040f786"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice054.rs",
+      "bytes": 3560,
+      "sha256": "8947b97694359596af058cbd55d813e6641e5cd3c00888b724211783a0787431"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice055.rs",
+      "bytes": 6810,
+      "sha256": "e1ad597f6835fb74bfe7702f42b804f1e08a04d57281d81a2872ba35d11092ad"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice056.rs",
+      "bytes": 3235,
+      "sha256": "b0a036e2523e6fb45bcb1e1bdb7ffdd63642259cb78f8ead519174409721e1f6"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice057.rs",
+      "bytes": 2260,
+      "sha256": "e9489f40fedf72143f54c531808f996a1b6037cecd24de64473ffd7f67f79c2a"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice058.rs",
+      "bytes": 2260,
+      "sha256": "4eee0b63a9d4fd9cc410b1863bc78aef4880119b44ee3f3d606740ed7d9b7dc1"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice059.rs",
+      "bytes": 1610,
+      "sha256": "de6671d1442466744dfd22f3673fd66162af44bf96930841705b17f3b62e2e17"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice060.rs",
+      "bytes": 1610,
+      "sha256": "603f7ea2c8db891d76c5d755083188eae9d87fb1d00044067f194f8bfa371792"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice061.rs",
+      "bytes": 3235,
+      "sha256": "7ce5907c3d49603730c43f0704140871c3e2f0b4a47f89ee19928a977edceea6"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice062.rs",
+      "bytes": 2260,
+      "sha256": "05435a413afb58147f2e7af590eeebb3477c61010fe041face180f56cc3bda12"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice063.rs",
+      "bytes": 2585,
+      "sha256": "35e190ae274f3c6f8130750212b229355dd329713c50a5248dbebdbd17c27b83"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_choice064.rs",
+      "bytes": 3235,
+      "sha256": "05bdd34946291ef30aa660acf08b4df286bc53c17f71be6c6d1a09a582312f98"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_input000.rs",
+      "bytes": 3847,
+      "sha256": "96166fa59634056304e9fb16bcf8db0cc7f2bd01876c2e28e7572cce90a32e4e"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_input001.rs",
+      "bytes": 2665,
+      "sha256": "fd396c44d667d114d7c94bf286cfe8d067545657549d16fb6423879fdaa24a5b"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_input002.rs",
+      "bytes": 2713,
+      "sha256": "10ca557023dc7ec02dded2795c7c5754aed8ecc5454bbac240f76636e5072666"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_input003.rs",
+      "bytes": 1524,
+      "sha256": "bfe8dac3c63c00c0e06abc8b5a29fe0689fc0b5fdfca55d97d26fb4e85a2cf89"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_input004.rs",
+      "bytes": 4919,
+      "sha256": "aa2ed55d81ad5fb8b23e8c12f4f4189b7b7f633a6fddce1dbcfb99e9b7f45ff2"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_input005.rs",
+      "bytes": 5565,
+      "sha256": "e7388b770c77ab64dea0f65171f411d20f9be0e74199d83c289fe946626dd2c5"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_input006.rs",
+      "bytes": 2659,
+      "sha256": "51bdfe56857eb64e25b31893badbaa3b903bc39e3113df8c3643bca0a3b22d7a"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_input007.rs",
+      "bytes": 1524,
+      "sha256": "46ecb78282be37973b61ea4387804015447bebabec59bf436429718584c1c613"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_input008.rs",
+      "bytes": 2663,
+      "sha256": "bad183944a5358c452df1bee11601e9ae6f0d1ff49f07960e43a583b9a97d26f"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_input009.rs",
+      "bytes": 2693,
+      "sha256": "86f06be01d13e0965e058048285aa14ea1997d4a4ff11dc211317cd3846c04d3"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_input010.rs",
+      "bytes": 2098,
+      "sha256": "d0e63a9ccafcf5f84e12efddaab9727a0ad1d006f363cea5d5e1c55b4a0d7dd9"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_input011.rs",
+      "bytes": 2106,
+      "sha256": "c9a629a6cab3ec282a001c4c10b00c9ecc0b166352bc17d852c286cbb0fe75f6"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_input012.rs",
+      "bytes": 2127,
+      "sha256": "8cdc3dd10e3cd6e483be18ef3fe89203999e75ec20eff209f58b49539e697bb5"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_input013.rs",
+      "bytes": 2665,
+      "sha256": "b83013a3452b48e04924910199fd164a7fa889dcede5619f54f99c7e3081b652"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_input014.rs",
+      "bytes": 1524,
+      "sha256": "f2510b7189f1ad53faed6e7b261b5ee94d19452a146070fc630ab35848dbaebf"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_input015.rs",
+      "bytes": 2114,
+      "sha256": "0f990b62e69886e904031625c4afd0ca97fe23a876d2852ac6a7714605ba56dd"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_input016.rs",
+      "bytes": 2147,
+      "sha256": "1976e9a7c35093382b17af73f518f1b5a95ab225e8df8966b7da864c085c50e3"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_input017.rs",
+      "bytes": 2237,
+      "sha256": "b52006e6dab733b1539fa829a565b62f51402baed34daddc6a575bfa68e7d4a0"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_input018.rs",
+      "bytes": 1524,
+      "sha256": "f1b952ba5f9c3112d1d5109c3f768435771e2479c4ac2013c2f1f6096174c639"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record000.rs",
+      "bytes": 2000,
+      "sha256": "79bbf2fb358b7480eed7eee5e70a5e31b7f2dadf3dd51099764ced3ee4d53f9f"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record001.rs",
+      "bytes": 8642,
+      "sha256": "b772c7eb166e57d25414495561f56e6addd6f4cb3d07a48e46a82e9d7622abea"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record002.rs",
+      "bytes": 7967,
+      "sha256": "f997defdc84f48f018aa713d6dc39973cf09c72fcf18d2ad37d0c00b6fddef14"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record003.rs",
+      "bytes": 5723,
+      "sha256": "754cc460c3db9d4342124209052182511aa6b6298382fa573df4678d475239eb"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record004.rs",
+      "bytes": 4484,
+      "sha256": "2ea6a87c59cbb2bb113cd1ef00f92b61448b80f658157c3d26836875757249d7"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record005.rs",
+      "bytes": 6923,
+      "sha256": "f7df51639ef81b98e89563307e70a9bd2c0878c2709d95d5fe01c41474fdb3e0"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record006.rs",
+      "bytes": 13535,
+      "sha256": "fc79e9a13bffe217cfc10ba3f91869e099966f7c40bb8fb523f9710a6c36f193"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record007.rs",
+      "bytes": 6444,
+      "sha256": "ca5ee7ac81e9ce3223fe16affc266c431fe0549259070f7269ace65664e57831"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record008.rs",
+      "bytes": 11730,
+      "sha256": "f530b40251953339a3526738cbefd221855fa06e4eddbf182b97a1f2fbfbcceb"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record009.rs",
+      "bytes": 7357,
+      "sha256": "4d431ed9a7eda8d83e9c3005a5dbf20049bf5f488a0c42a5b701d318fb1a2b2c"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record010.rs",
+      "bytes": 4664,
+      "sha256": "1c6785ff7b0b0dd70cb7b4fe5987889d58288d3b69dd43315489ff655feea55f"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record011.rs",
+      "bytes": 4581,
+      "sha256": "7c48c4f3c506d87ed39044f96d65906079065ce00951b65b66e79b171d53f80c"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record012.rs",
+      "bytes": 2890,
+      "sha256": "207d70a8222346c21d02619870c46c95a083cb4673d5893b682d16f497dff806"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record013.rs",
+      "bytes": 5798,
+      "sha256": "f4a6c90a024cce88b7eca6639a578f826c319f5827c0a03128ac69daca216436"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record014.rs",
+      "bytes": 10752,
+      "sha256": "86d3684c0d3c65acdfda9a3f5e9be22f47ee6c8f03ef69832a6858accfd77b61"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record015.rs",
+      "bytes": 13024,
+      "sha256": "950f6e07fca3d694907365820e98784ecbe9e95b212c148ab426e032361ca0dd"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record016.rs",
+      "bytes": 6445,
+      "sha256": "1f41fb5b353fbe7c6ac2bac5bc331b53c8121171d638afd91496db6e1e9f0d01"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record017.rs",
+      "bytes": 7120,
+      "sha256": "749022762804720c65cb282d9d3dbc0cb74bc050907aa24f7d3156005e350a2b"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record018.rs",
+      "bytes": 10583,
+      "sha256": "7a939990459d4532b866e50d2e79d1020b5430ea476029b09044e2e7e4fc80a2"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record019.rs",
+      "bytes": 10018,
+      "sha256": "62a855abe1a83f5af56262789262f7ccc003c9d8d73bf6f2578347638858096e"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record020.rs",
+      "bytes": 9937,
+      "sha256": "69f636f9d5e909ab39777686fe93971c0bcedc13b683cba5d74743bff5b93f20"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record021.rs",
+      "bytes": 6823,
+      "sha256": "85dc9b34d40f47dd7f17040a33a25b0a40d2d20cd47512ba268fa077060a0dc7"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record022.rs",
+      "bytes": 5819,
+      "sha256": "7f3ba0d2c8b5fd4d14b174a049928a30cd3a86dbc5c561fb35254740d5eab019"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record023.rs",
+      "bytes": 4705,
+      "sha256": "37dff8633b869b7265e1f5f1f5a40afd81de89518e3f1886fa9f7db67746e622"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record024.rs",
+      "bytes": 2704,
+      "sha256": "18c5f7ea83bfb277d37a33fe39272d925aa3e2bdef287c08b6ed2ed646955c27"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record025.rs",
+      "bytes": 4209,
+      "sha256": "a166731ad899cbac2150f4ab85b104eba1427ff575f932077291ea203659fffb"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record026.rs",
+      "bytes": 3118,
+      "sha256": "f846899c64c0eda69d749196cb309202d026ec922ba8d1e98179e5bd91449e75"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record027.rs",
+      "bytes": 1484,
+      "sha256": "50c6fdc40bd8074e5ef7a68b698f7b71043293b036e6da7dedcf27191fbce801"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record028.rs",
+      "bytes": 2553,
+      "sha256": "6ecc5781c7ea9ca02c8be27922abb25401bd8c59c88e93759ad37bf46a0988ed"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record029.rs",
+      "bytes": 3503,
+      "sha256": "22decfb96f9467b8adb2237fdac10571fa450d0c07676f5a291e3eb42b56b523"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record030.rs",
+      "bytes": 3589,
+      "sha256": "11eb15dfa1e01ddaea909ca97a16dd1f29a0876e31fc9eac025978a213026da2"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record031.rs",
+      "bytes": 2040,
+      "sha256": "faaddde71cece458400f4a2029af16f4cce41a9799b42976f131da7fba4e8825"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record032.rs",
+      "bytes": 9264,
+      "sha256": "0cf5a728930549eaf8f21fd6ab317cd74f103436f5bdfe1519ad70d4e73340f8"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record033.rs",
+      "bytes": 2040,
+      "sha256": "1fc43890468cff2b904d6235cfb9a01bc9f525209e804fbc498f7483ff4db52f"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record034.rs",
+      "bytes": 2151,
+      "sha256": "545c1b8515fd0ae7a599488a3f0f4ff7006201755f7ab1a893ea715d1b754a23"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record035.rs",
+      "bytes": 2509,
+      "sha256": "56f7abc7b3e4375b86fb74daa931e5e63f6a6260e04a75bc3581c16bd81567ed"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record036.rs",
+      "bytes": 11802,
+      "sha256": "6fe73cf0126b63d2545c48c33f334ec42fd386a8526b11994388dc39998937f6"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record037.rs",
+      "bytes": 7966,
+      "sha256": "ff6deca640cc87009a9534e97fb181a12a7939fe838593ec9e96d58245dd27fa"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record038.rs",
+      "bytes": 5304,
+      "sha256": "6a8e359243b85f507fa5a726aeea715ce9a44dbeff8743b0d5a543f59f8c777f"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record039.rs",
+      "bytes": 5338,
+      "sha256": "a22a087d3edaf0efeaf99a4808bbe1aac58fed8599f0e6be6510f426f981e965"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record040.rs",
+      "bytes": 4078,
+      "sha256": "352a98eca16ccf67827c97e88786e96ef094ca12e6189debebf20a5a66981fcf"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record041.rs",
+      "bytes": 17853,
+      "sha256": "0b810d7f2a1ca5c201b31c210e60e7fa8119f70cc59175fcf7f9bdafab29f0f7"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record042.rs",
+      "bytes": 2593,
+      "sha256": "8e690b7f42b40aaa9cb69a8a556822d2dcdff962b382f3a63882d85d4cfe3d6c"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record043.rs",
+      "bytes": 1976,
+      "sha256": "809f564f1767b80f3d57b71a5391b2d3e90bff34c939d4583b1014e114f649a1"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record044.rs",
+      "bytes": 12277,
+      "sha256": "74dc9d85d04b368f88a54e722e3355f1fd4ee74a49a4fb473869297c42372cef"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record045.rs",
+      "bytes": 2151,
+      "sha256": "4342effda44082282e6ce2695947d5124784814b1bf0a9652aefa10e296883f3"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record046.rs",
+      "bytes": 3652,
+      "sha256": "d70e73bc3f406ecfe9aa43842e015c44daf5646a53f5d254bc9a3c36c47f6e3f"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record047.rs",
+      "bytes": 6991,
+      "sha256": "aa90306f0d1ad205c18215782ca3597156067b47bf61c6f865b13a1ed1b00a24"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record048.rs",
+      "bytes": 2509,
+      "sha256": "ad5b4614a04d72a484667ccae4f76137213651ff21242e8737df214b0e11ef39"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record049.rs",
+      "bytes": 18378,
+      "sha256": "bf7d00827ef89202646a3949bf52d63a3221f3f98b1512fa0f167b557d062cb6"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record050.rs",
+      "bytes": 2509,
+      "sha256": "fbc11e1e298842349fe082c829ed9d1cbf38e1ae353ed50425839f5363e556d6"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record051.rs",
+      "bytes": 1484,
+      "sha256": "2971a3cba5e1baa378fdc967597db7d8882402f2e9a933ea7716b12eb9ba1102"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record052.rs",
+      "bytes": 8095,
+      "sha256": "2a75baf00d7d628a3687b1984ea1fc1d19c8e2769fc01b5e0cbd99abd0b7d87c"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record054.rs",
+      "bytes": 2524,
+      "sha256": "8d42d1233b98d2ef69b13f8f6847f9f0f5c8a45d720e8c7bae0195f34e6398c6"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record055.rs",
+      "bytes": 9212,
+      "sha256": "130360c5760c611bcf89b05dc3622eba8a4fa66eb552b569bf5915bc5406239e"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record056.rs",
+      "bytes": 4096,
+      "sha256": "054271bb27747a140220383eac27b947acfdf8d60dd8094a9d95d9c12a180588"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record057.rs",
+      "bytes": 16230,
+      "sha256": "dc7af40eb94fa1b898006b1d9c7b2a480db393ab035ca81020c2ab95347fd358"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record058.rs",
+      "bytes": 4759,
+      "sha256": "d5cefaca45387012057df2d26e7c90244151af24478ecca486c468f3b9f43f31"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record059.rs",
+      "bytes": 12831,
+      "sha256": "b9df40f0fc701eb80745954f5525c66245e0cc575c466b7e53c7700b4f136844"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record060.rs",
+      "bytes": 6336,
+      "sha256": "413d02e116471861c22d88f6b01d09348db1a1a36b87e7916abe1dab92a572c6"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record061.rs",
+      "bytes": 10044,
+      "sha256": "3dbd62dfd7ba57bd30487188d231b70e6ec4eb54a7f7909d1dc8b1ee09d87c5b"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record062.rs",
+      "bytes": 7904,
+      "sha256": "436a2a9ca82c93d15a6bbea0026a8ea01025a61722801f2cc607aed03e8ce9f0"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record063.rs",
+      "bytes": 2520,
+      "sha256": "8f463df922a89f9fe0876209349851ffcfc02a9bc4d6ee93a176709cc086bda8"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_record064.rs",
+      "bytes": 4032,
+      "sha256": "dc790cd6b5c3a1769607ef4cfe4b5cbdde525cbf5a4a11c92030522a2875b33d"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_scalar000.rs",
+      "bytes": 630,
+      "sha256": "bae7c22c39f68970db8ee40c0096623b278022ccf714e7923160bd8a1c7c1e1f"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_scalar001.rs",
+      "bytes": 630,
+      "sha256": "f50c0e68d325240f39c33a4f4a397169318bbc3f889b03abfc9753e6531907dd"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_scalar002.rs",
+      "bytes": 630,
+      "sha256": "ebd14d61ce37f02e4dc46d1415f0b456ee6e5db0b616e6b72a8170e865b259b3"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_scalar003.rs",
+      "bytes": 630,
+      "sha256": "977847014d2508e1bdafcfb27c83ae21ca692310030647933d15d62bd40b057c"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/fixture_scalar004.rs",
+      "bytes": 630,
+      "sha256": "17b22e2bc9a34b52820bbff166fc09a09af9aac5a07d48105ec068c634cdcc4d"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/format_kind.rs",
+      "bytes": 1929,
+      "sha256": "0f641da204eed676593dd6b18bba10436c918a8d30dd0ddac4691cf88942a3a9"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/measurement.rs",
+      "bytes": 2519,
+      "sha256": "94c732d7657be17c9b62956a33b962fc5e68da300e6c5fbc9838a1ecdd13b321"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/mutation.rs",
+      "bytes": 28587,
+      "sha256": "8f3620bcdbf71322ff6540c1b83f9db021413ae032a87804d92b01c9da3340b4"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/query.rs",
+      "bytes": 74183,
+      "sha256": "480d21a2cffc8b03fc18a2660b06aa3aaa73de93594c54e8fe02945969d4db89"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/transport_kind.rs",
+      "bytes": 1709,
+      "sha256": "9fd722b542a469d1f8c0b96f877abf95d67c9ba6b21f2947184d360d1a8242be"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/unit_kind.rs",
+      "bytes": 1927,
+      "sha256": "7fe952803e95b999dd54664f8d2ff92b7af991b850c259933230ddbc1f3a0b3d"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record000.rs",
+      "bytes": 1801,
+      "sha256": "18922d8caf980c4f846497d8eaee139e6065f69956f72ec6aa3bdd3f1cdd6465"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record001.rs",
+      "bytes": 1801,
+      "sha256": "44461b2469d32b4782bfcc62ce25bff724da826482b4c729c64631ae0cab2f28"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record002.rs",
+      "bytes": 1801,
+      "sha256": "2fcef375feb7648519c01d0ca91daff5910eff6f7d887e099d91b133cbb4a0a7"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record003.rs",
+      "bytes": 1801,
+      "sha256": "f71b6fba013a615c8e236b4b0a00f469861a66a0f366a2173478f9bc4d140f30"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record004.rs",
+      "bytes": 1801,
+      "sha256": "4afece8bdcdd348b0f512dca2a91d169e02d0f70ce964cbb58a5d9e523f9efad"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record005.rs",
+      "bytes": 1801,
+      "sha256": "d28cb6bf4d0933cc07da45ffac30af4adc27723628f1a96a91d2068336b6abc5"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record006.rs",
+      "bytes": 1801,
+      "sha256": "010a27206bab0ef1ec97caca6398ea8450d8b5642d55e3f4cfa0083ae5805028"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record007.rs",
+      "bytes": 1801,
+      "sha256": "75a25ce80c3a483b673d80e1d8c0724566528ca42fca0e3767e1792791d1a882"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record008.rs",
+      "bytes": 1802,
+      "sha256": "c3da172e456ba6046a8f1d2009d10dc40a83cbd8a80e05a584df7f6b2a42e164"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record009.rs",
+      "bytes": 1802,
+      "sha256": "1a1ff20538805ba56a2c7b8557aeaaaf80442d3148fc3a08fd9a6cab43e87194"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record010.rs",
+      "bytes": 1802,
+      "sha256": "b2bbe27eb5ae36fc350ca62f21e5d3059d8b1da256a669a2ff9a3fa0a57abcd7"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record011.rs",
+      "bytes": 1802,
+      "sha256": "e8ee80c98f38bbbc80db09c74c8a0d2c760fb191e95756564a293084fecac07e"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record012.rs",
+      "bytes": 1802,
+      "sha256": "783131fe71f16074e5785292237aa8529c82dfff584e61452af6755a0df449be"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record013.rs",
+      "bytes": 1802,
+      "sha256": "a68d9a3f1792f850972e9ae211a1f19af31924c5e0ed0a8cfbb41b288b6d97ff"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record014.rs",
+      "bytes": 1802,
+      "sha256": "060446497021004a2433061e2d6d11a9f19ca15bc579c600fd38fe1d1d6225c0"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record015.rs",
+      "bytes": 1802,
+      "sha256": "1f17cee8d0c0f5da2f587a0ce72f14a9b598d657a3a001cc95a76b8e6aab9822"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record016.rs",
+      "bytes": 1802,
+      "sha256": "9f0519f84e6e20ee8016a585b13b668cbfaa808ffbd269721ca2d76d981336f8"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record017.rs",
+      "bytes": 1802,
+      "sha256": "fa673daaf7e329be0273152311c9236647ccac736a29797dcac0595f419c68fb"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record018.rs",
+      "bytes": 1802,
+      "sha256": "defc98fbba582304292bbf24d236cc2d9bccb3f0ae8a095bf595792650f75cd3"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record019.rs",
+      "bytes": 1802,
+      "sha256": "ed7e1e388ffccbcd0a549e6e1fe3a2f5a5e349cafc598166b07f443c44730453"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record020.rs",
+      "bytes": 1802,
+      "sha256": "0420918af40ab8331d7caf13600cad88b0944bd469bffc1a39b39ac7ec52e080"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record021.rs",
+      "bytes": 1802,
+      "sha256": "566f69eccff3919934f63045e49bc8e1871f23186293efab6a9db01861229e43"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record022.rs",
+      "bytes": 1802,
+      "sha256": "3101b2d524498579da1aa8450230e1da125888e7e95d3632eaf3967e9ded5341"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record023.rs",
+      "bytes": 1802,
+      "sha256": "cf5673ca48dde1549d5c907ec4dabd2110f6bcf9a535912053c4085fb5cd0d22"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record024.rs",
+      "bytes": 1802,
+      "sha256": "db12b12f45e740852aa426c4a7c2dfc83b838e7326e616806a9b21233fd6ba4b"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record025.rs",
+      "bytes": 1802,
+      "sha256": "a3c759dbbb9db614bbd74409c89572f14915b113ab97bd5add150682d8f0cee5"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record026.rs",
+      "bytes": 1802,
+      "sha256": "b832bea422d1f780dedf5d3b8dd9aa79ee40451ff64a9224ae339a5ae9664e19"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record027.rs",
+      "bytes": 1802,
+      "sha256": "dd63e253d45b1a162f88c14b787db25206efd4e4080caaff29f34f0323673f00"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record028.rs",
+      "bytes": 1802,
+      "sha256": "b5a3e2e6a8621fd4abe1f332c98104865391e90ebcea9e41d0330508075c77a1"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record029.rs",
+      "bytes": 1802,
+      "sha256": "f9bc4e01b21c17f25cb063379e07b924e455c96d6b51e1d95c0e0c736dc4cb8b"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record030.rs",
+      "bytes": 1802,
+      "sha256": "dee86c18e832b6a57a1a1ef8939f2ffefb1a9a235888cc76f68662296e1140ae"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record031.rs",
+      "bytes": 1802,
+      "sha256": "c0a50c01c151ad53ead8d15d67fde90af6aae39b5cb6a038750f73e4080d0963"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record032.rs",
+      "bytes": 1802,
+      "sha256": "8fb976f189bb256ffdb536cb9b2f17c1e6eb574da71261e0004756b67700c27f"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record033.rs",
+      "bytes": 1802,
+      "sha256": "a2bd747949cf8f88f4fcd67891039c41a5f54d539edc8698c92b451ddd139378"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record034.rs",
+      "bytes": 1802,
+      "sha256": "3eeec14d4ef8c786fd6d238cfc07598680a1831effc7c73aaba2eb1b94ca2646"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record035.rs",
+      "bytes": 1802,
+      "sha256": "ff60861dd4c7d8298c891431b0049e6aac7ef96073a085a7e8e258dcdb0cc199"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record036.rs",
+      "bytes": 1802,
+      "sha256": "ef9f6e0d33adc472f2b896235d4628df495e33303acd22d1ff257ad094c2d0d8"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record037.rs",
+      "bytes": 1802,
+      "sha256": "dafc5a76798ff03e349aaf9e6cf0e57929753b801ba6f91d2e13b5b74f383bfd"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record038.rs",
+      "bytes": 1802,
+      "sha256": "0fb378c3d86e113b32b9c93c6ab3f781c63337e3a714bc7ea88f92aeaec5459e"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record039.rs",
+      "bytes": 1802,
+      "sha256": "fe2d1b093e3cf0b859f786c89287b1da7718e07c108ddf879e5d8145c84a33de"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record040.rs",
+      "bytes": 1802,
+      "sha256": "67040b0adf9c20267b12dcdc728b51fc1e0542523722a64498f9fccaaf412906"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record041.rs",
+      "bytes": 1802,
+      "sha256": "bb3e2cb82f0f525a38807afff2bba6323304b5572ca3226be1c504eebf6b4521"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record042.rs",
+      "bytes": 1802,
+      "sha256": "49acd919cd964eda0f45aae4234fcfebec918c50032184ad5e5afaf4c9803990"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record043.rs",
+      "bytes": 1802,
+      "sha256": "3afdac5e8df9fd5e7859edfdd378206bcfa9667ed6c7f182cd325a1e1777932d"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record044.rs",
+      "bytes": 1802,
+      "sha256": "a58aff71452436e454e1fda0bfd62193ed57689eaeca451f89555c36b51a5ac2"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record045.rs",
+      "bytes": 1802,
+      "sha256": "925f4fffce39f9de39333e7371b17def06ef0d28318e981be8c6b2f82a0cbb98"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record046.rs",
+      "bytes": 1802,
+      "sha256": "5c83d1b035e1ccf751a2a35074d206817d4522ec6f1f623b37719f139ccfafa1"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record047.rs",
+      "bytes": 1802,
+      "sha256": "6414def8e8ee403f9dedd45fa4f467bee00b1a78bb665cccd6f16fbdf34e8e06"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record048.rs",
+      "bytes": 1802,
+      "sha256": "f5dfa83fc1de4e1915255a07e4cb7a7b5e86a4c065c6340f90c8b80278c35805"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record049.rs",
+      "bytes": 1802,
+      "sha256": "37db1b77560b5f89dcacc94ca78bd7efacb441a2ffd0e6a24cc0d3f1950cd1ba"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record050.rs",
+      "bytes": 1802,
+      "sha256": "77e500d5f1e01ef2fa2f6a50605ebb9103a783d1382aee1e81a020ed74b31be4"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record051.rs",
+      "bytes": 1802,
+      "sha256": "24ed5ae28dbaba98679a6462a14cc213fd760ff9bda8fb507981e3f3365351e8"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record052.rs",
+      "bytes": 1802,
+      "sha256": "2314b77ca6b61ad529efb50d3a5364ee6218d0723e5da5855a5e1878dfc56c89"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record054.rs",
+      "bytes": 1802,
+      "sha256": "1bc8ec1df42ee91b8415e64b0ed9b6f6a843b1baad16dab35c67343a35b6f2c5"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record055.rs",
+      "bytes": 1802,
+      "sha256": "763fd08af3319ed6380149576566762cc5d2524b0f10dc9f67adccccde75ce30"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record056.rs",
+      "bytes": 1802,
+      "sha256": "ab747fa5109ecc138dbb85090ea1b52aefcd283c9da1cd0a51da25df6b19aa0d"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record057.rs",
+      "bytes": 1802,
+      "sha256": "12c5d25a98dcc32f968a9d71f1ff1229c6808b816a876db93df44a0583f75a40"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record058.rs",
+      "bytes": 1802,
+      "sha256": "ddf60d7ce5cfd5c60d284934a5fb1b84cc4ba3f85f9c177b52ebb9c3e2975b0d"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record059.rs",
+      "bytes": 1802,
+      "sha256": "2f9c90d4a820f0a7ca4fecca135fe68be8d856eed3a78a1a70962351c40ebc94"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record060.rs",
+      "bytes": 1802,
+      "sha256": "e0f56636491f6c71351912e5eb47c3e3d20db9bf017d625eba9ffb8efe1f5d88"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record061.rs",
+      "bytes": 1802,
+      "sha256": "a2894355593121ee59e252eac2e06616b28ecf811890fb6a7c2e1b67f73553fd"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record062.rs",
+      "bytes": 1802,
+      "sha256": "de93e568aba2bb49f51e0fef5188f013391c1deef90ed3b75efa33da22e30f8f"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record063.rs",
+      "bytes": 1802,
+      "sha256": "8d33bf3ec8ddd64412400d8c719469c8bb3fe602c363303d8af9a187e4981953"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/fixture_record064.rs",
+      "bytes": 1802,
+      "sha256": "f1d717f4a3f0d8bb9cb6d7a8cae61aa14c770a868253e336478d20583cad9ae6"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/measurement.rs",
+      "bytes": 1778,
+      "sha256": "b23251e6b5a092cba0e7f3b7375dde89338311b490874c351327f57c2677109a"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/mutation.rs",
+      "bytes": 1765,
+      "sha256": "0094c3d1625811d1a23246eb9bf9e8b934d13e223d553edb7b4296586f7d8d82"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/query.rs",
+      "bytes": 1753,
+      "sha256": "fa361de36bdb4e6592ba719ef870b2c41be5b5481717b88784d46c62d48c207f"
+    },
+    {
+      "path": "src/__chigiri/internal/scalars/registry.rs",
+      "bytes": 824,
+      "sha256": "27763a8283cf20debcb29f6cc51292c434f58f4257ae7a4f731f7e2314d55381"
+    },
+    {
+      "path": "src/__chigiri/internal/scalars/types/fixture_scalar000.rs",
+      "bytes": 370,
+      "sha256": "9e498cc840f7132fc45fe45d997ee8c28390c8fbc295a7bca407b9d999dab50c"
+    },
+    {
+      "path": "src/__chigiri/internal/scalars/types/fixture_scalar001.rs",
+      "bytes": 370,
+      "sha256": "b24e75352a414b7d8b8f4d284aeef8a2dd9307ee683e28198c88256e8fff5329"
+    },
+    {
+      "path": "src/__chigiri/internal/scalars/types/fixture_scalar002.rs",
+      "bytes": 370,
+      "sha256": "6c0891c1b8b404880938b21ed8bea19c168214dcbbe1db1edbe9ee174edadf02"
+    },
+    {
+      "path": "src/__chigiri/internal/scalars/types/fixture_scalar003.rs",
+      "bytes": 370,
+      "sha256": "2ff7cf72e2d5bc73cfc1ca7d9f43d3083541070860afa5132fcc2332c824bda1"
+    },
+    {
+      "path": "src/__chigiri/internal/scalars/types/fixture_scalar004.rs",
+      "bytes": 370,
+      "sha256": "f66ffb089e80a67632dc8894933a6b4853e3cab9b3f61f62779862327b86b026"
+    },
+    {
+      "path": "src/__chigiri/mod.rs",
+      "bytes": 1347,
+      "sha256": "ce91058962c41147fd8f6f90c3a2c77de4b3e0f2064ec64a3f782bee2cf42c77"
+    },
+    {
+      "path": "src/__chigiri/modules.rs",
+      "bytes": 97136,
+      "sha256": "efe6de39718f87f6bbbc4c827c0c3feafd41f7ac3855bf0f190c49d781c02261"
+    },
+    {
+      "path": "src/__chigiri/resolvers/mutation.rs",
+      "bytes": 8503,
+      "sha256": "29dcdc4eccd9ae422ce4fd6cffaed544ac2bb2020ca31db5a223612317dff503"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record000.rs",
+      "bytes": 952,
+      "sha256": "73da5b7a636e7cccddd6f9163b63d17deff100527910346eb7103048f0974fa0"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record001.rs",
+      "bytes": 4214,
+      "sha256": "941abb3967957f1c218658168827307d2d987a12314b854335cb91aaf4d248fb"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record002.rs",
+      "bytes": 3881,
+      "sha256": "961197fbb1f4f0f0e2cbecbd97d0189c613bc4e8c51f7158e7122b6922e2d249"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record003.rs",
+      "bytes": 2791,
+      "sha256": "0b3bfc19a92d005a4e0cc4ece9380aed2e6f2d2e85f6a6c9698ac848378d15f1"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record004.rs",
+      "bytes": 2367,
+      "sha256": "249a466229ca2f4d8599372b07a773e33bb20601b30a0fea2a07f958ef77e50b"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record005.rs",
+      "bytes": 3271,
+      "sha256": "1ffa5cedeabeaa952526547ede06ac72f8ebb6257ce774633bae751718cfd3ee"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record006.rs",
+      "bytes": 6433,
+      "sha256": "eb26c9dce294d84db14468dc8e0fce61535f68ce8e215d7bc081d8da6a277005"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record007.rs",
+      "bytes": 3038,
+      "sha256": "fe8f3c2c498e5f5af8e6777bd5572778ec06be25f203d1377624029bc25874f7"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record008.rs",
+      "bytes": 5597,
+      "sha256": "cf35c4cfc16347e1ea752dbd8720b179b9f57d86a03758a8375efd6ee4dbb8cf"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record009.rs",
+      "bytes": 3503,
+      "sha256": "6d4d718581114af8e351b79b8fc917e3fcdc75509022975f0719b0c39edba7d1"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record010.rs",
+      "bytes": 2194,
+      "sha256": "a8c21db414471accd63b1023de68bfbc9b86221eaefd73a5c6e18847de26af15"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record011.rs",
+      "bytes": 2225,
+      "sha256": "e7ca65c2059525bccbd7557805b3a6cf48c678164f61b7788589fc5a429870c0"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record012.rs",
+      "bytes": 1606,
+      "sha256": "96fe4baf4fd7445bfe167a9089f322e6bf6f46548521e25a3b5f09e8d18a2f95"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record013.rs",
+      "bytes": 2744,
+      "sha256": "359bad7b9448d2c8802189f19a485515cb12c02413493aee7bff3e0832909435"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record014.rs",
+      "bytes": 5120,
+      "sha256": "bc570ec0a33c620d6e99baa31f48252b306b2282c5d4b6974b845e79e493f434"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record015.rs",
+      "bytes": 6517,
+      "sha256": "13d3000569cb11df6b24cf640c110595f90435dce82e46edde82f6faec5c1c5f"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record016.rs",
+      "bytes": 3071,
+      "sha256": "32e7c74d18618b8c3fe25e777234f48c374b4c49f22d924dbaface487973c077"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record017.rs",
+      "bytes": 3637,
+      "sha256": "17188c4a07b723cc6ad893491a8268a34db4f523e59b0c4e2eaffb793012d8a7"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record018.rs",
+      "bytes": 5143,
+      "sha256": "8e37fcd39db2372ee5b9c299e01c534989c684e84d2bccb203fd614e29696690"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record019.rs",
+      "bytes": 4967,
+      "sha256": "d02bf8cb9403d8fb249811a366618fba439c456ffc21e5dde11cddbb5518893a"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record020.rs",
+      "bytes": 4996,
+      "sha256": "d902b12f685c12ce570dbdd1ea252a1920c8fa37fc3c9c2f3665cd1e95dde19c"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record021.rs",
+      "bytes": 3259,
+      "sha256": "6c2d20993f785a627cf7fd6d8fdf21b1d7a237855a8f5a2d68318f6e41fe1a3f"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record022.rs",
+      "bytes": 2775,
+      "sha256": "f8f34dd3d990a7a3473039571227110dbd2331a7617a04edac8dad5788d1617c"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record023.rs",
+      "bytes": 2252,
+      "sha256": "2a145bef78815d4ff4e4c19539a49318a2ffb166bc3f82145ad190c55e480588"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record024.rs",
+      "bytes": 1237,
+      "sha256": "f45a0bf661f9c8f65405dfa52691b9662142c930e125753c1becfb3b2bb0129a"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record025.rs",
+      "bytes": 2015,
+      "sha256": "e31e6116024ce0c766ab3128b8624143af868dc2f71d203f0f46037770910507"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record026.rs",
+      "bytes": 1464,
+      "sha256": "2597af594c59d954bb207794a4c8b69fd7d74d6a6b4f8e8cffa36c49a288b884"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record027.rs",
+      "bytes": 687,
+      "sha256": "5c1e69d8bcd21ca3977c8d0adb9eccda2242950e6f55b7cf414cc0ab5c31d9cc"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record028.rs",
+      "bytes": 1213,
+      "sha256": "78a619fc0345913e4e6b420d0d3a7f56767d51e9b9016cb4587d58c6224c2256"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record029.rs",
+      "bytes": 1797,
+      "sha256": "a3841e519b41eab350bcbc39226f2629f2ba6951cadec2844dc0178585a1f3f3"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record030.rs",
+      "bytes": 1736,
+      "sha256": "d128e6dff4467ef94708b4ababdf358fe4ace520ea6d8a1e1434316279f65cd4"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record031.rs",
+      "bytes": 948,
+      "sha256": "2eccb9d837cf2fb547c3cae6225da9e46da12c2c4887e1c8abf242ccc6831554"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record032.rs",
+      "bytes": 4359,
+      "sha256": "deb98ae1ef54f69d53a737470019175a3404635e927f7db10f04e1a5c9ba3079"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record033.rs",
+      "bytes": 948,
+      "sha256": "f341988dc913c37fcaa20ac92978dd5810892e8e71d780e130c7cb3705caab1b"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record034.rs",
+      "bytes": 976,
+      "sha256": "877dd0b01f09cb66fcb1229e3bb8bb7f388f6f4265cd48ac657521ac2e9ae7c5"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record035.rs",
+      "bytes": 1245,
+      "sha256": "ca79b9c841483f5f9e3f35589dbf77c9e53877516b363b06d10187ad05ced981"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record036.rs",
+      "bytes": 5550,
+      "sha256": "2ca45c712e8914e066e1219ef22397147e9d7af231edb39f0510d52ac3245ad7"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record037.rs",
+      "bytes": 3666,
+      "sha256": "763495ff707e5ee0f5fa9e6804ea3f17bad1f9fe49622c3be594a4b2487596a7"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record038.rs",
+      "bytes": 2484,
+      "sha256": "fdb657ed5b1415fdc7d6c4b9f737761a2f10261b9ad19edeb610290ba1abda9d"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record039.rs",
+      "bytes": 2516,
+      "sha256": "0c940d9c2ac8e53eeaaac0ee69117ab809ce209df2b90aa723fd649252b8a3af"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record040.rs",
+      "bytes": 2031,
+      "sha256": "ce1c2fd3c0b2992eb1e51c7a2a5528584af6245bc5801e645a7c738c83e7c203"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record041.rs",
+      "bytes": 8577,
+      "sha256": "5319ebf574264966ef49295e69b6e5127c74bca4e63c610fa3c9213911ec0393"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record042.rs",
+      "bytes": 1209,
+      "sha256": "ce098fe5ee0fdc1e1f2479ddff3b752429a7286adc7764bdc23ba00bf49007c6"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record043.rs",
+      "bytes": 982,
+      "sha256": "3e80fdb79558b398091447f26224276b12af54d4ffc2b0362653de92b73d9d91"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record044.rs",
+      "bytes": 5945,
+      "sha256": "df3315023adb7326dd6615fa39d16d28a232f92c53020a52018124fd4940097f"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record045.rs",
+      "bytes": 976,
+      "sha256": "a5b2c939479f75d83a1109339e09f6e402e4cdae10e7ac1139d99092acf0c938"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record046.rs",
+      "bytes": 1727,
+      "sha256": "f42a2fb696c2988f29eb0d6544c82146dfa0aa7ae8aa8a9cd217f440dfab7084"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record047.rs",
+      "bytes": 3273,
+      "sha256": "b8be3ac9ba37cfce1ddb0e61ac19ca901c0905d59731c4a3823d2b4eeef83de5"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record048.rs",
+      "bytes": 1245,
+      "sha256": "2a4ac87b83e2c90a4a77c596224734a3188fcd2469812c13103d38849e6fbc88"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record049.rs",
+      "bytes": 8832,
+      "sha256": "eee74253b964218f9721c2629aa3d86c9c019ddf998b026e5546890882251c1a"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record050.rs",
+      "bytes": 1245,
+      "sha256": "fd2ca1706aae3af55fb10aceeb544fa8eddfa16761a39c4338138e4e11721776"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record051.rs",
+      "bytes": 687,
+      "sha256": "e1aa6d67bc1030be3bea2a0a74d0b92337adf93e26545b4da197c647a6ef430c"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record052.rs",
+      "bytes": 3813,
+      "sha256": "961d5d644a6af75dadfafe27cdd7f8f8902f68026f6824c08fcb0a8aaf3c8265"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record054.rs",
+      "bytes": 1147,
+      "sha256": "5150b6a2656e87ceb1cba4ba7358125e9d801ad9da3f9a8dd039c9198a407343"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record055.rs",
+      "bytes": 4373,
+      "sha256": "c00eb9c3e7fce517f7819f2b31771bae10ad9d55a8476bfc3a43095a6246d3cb"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record056.rs",
+      "bytes": 1848,
+      "sha256": "d3904db8d91dff9e1a7381b140a518b61e1ef6113912cda88bcc2b6b13af5a36"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record057.rs",
+      "bytes": 8140,
+      "sha256": "11ba19eaddbbbe35c9be301b0ca91f60aba33258e2ded53f09db4bf774fc312c"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record058.rs",
+      "bytes": 2224,
+      "sha256": "2ba4f52d699192d2a154cb818b469fee9834562b6fb31961a53c4105bd0059e2"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record059.rs",
+      "bytes": 6807,
+      "sha256": "7e159fa8e188494a76b9caa2a2bd2b65a54e24e89229a8328dd6541a0bab4e70"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record060.rs",
+      "bytes": 3004,
+      "sha256": "f6bf9a0dcdc8606c9d28f4f590cea64ab9821d39487691e3e21e54b9a22bca18"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record061.rs",
+      "bytes": 5424,
+      "sha256": "e3a8a8f7f60989c750c8f3a13e300ed7c58be7e28198bb6f2835bac0ccbec915"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record062.rs",
+      "bytes": 4306,
+      "sha256": "7cf8376e3f5d57055f29bec83f2dd4ff72f1f0208504fc58bb114294ade8a5b7"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record063.rs",
+      "bytes": 1233,
+      "sha256": "d381e14796ced521652b6213c83c1a54065947d971e59eb195dd475502af4301"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/fixture_record064.rs",
+      "bytes": 2088,
+      "sha256": "6777898564cada34383861b940538eae12eacb11409ef34c677a5bf8dd41a20f"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/measurement.rs",
+      "bytes": 1122,
+      "sha256": "61ac05a2bef9ef876adfaa587cdcb9449fa5ce004697f90c747da37900908785"
+    },
+    {
+      "path": "src/__chigiri/resolvers/query.rs",
+      "bytes": 16690,
+      "sha256": "a1425e60b485fd4882be58ac066b1c148bd6b89accab7c3963a16f7573533185"
+    },
+    {
+      "path": "src/__chigiri/schema_types.rs",
+      "bytes": 32080,
+      "sha256": "7cad596eea2fcac4b3a39715a6ac62048473ead6d44c4eaf5c41521a319cae78"
+    },
+    {
+      "path": "src/__chigiri/sources.rs",
+      "bytes": 341,
+      "sha256": "502b5e323da4b719dcf6540fa9c3ddaf86cb80b82816a83b43987956d68c3aca"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice000.rs",
+      "bytes": 182,
+      "sha256": "597829fd355df07d29882abc1494b105ff3edab1024aa400a26fd7e9706dc359"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice001.rs",
+      "bytes": 196,
+      "sha256": "06b2808ee94fc58f35131005638079f9296165f73d9ea6bee602ee0821ae7434"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice002.rs",
+      "bytes": 182,
+      "sha256": "fdf4f9b97d6c7e8600174668e3b61c5b971d67e5ac2eb13720b98ce06f174a3b"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice004.rs",
+      "bytes": 196,
+      "sha256": "4a73a28e59fde0ae529a36024bc892509ad76ebc65d182f072f69aa706b4ebe2"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice005.rs",
+      "bytes": 182,
+      "sha256": "b67ed38caa7fbd82e8e51159f345335d7a3b62a0e987242b20286cf09c221a29"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice006.rs",
+      "bytes": 210,
+      "sha256": "10625dbd7eb43a139b1d006144ab77001048700979cac4083831700e7e50bd1f"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice007.rs",
+      "bytes": 210,
+      "sha256": "86df58a83dd9c8964b837fb89689f7e7cf081fff771c0d43c769af2cf43b82c1"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice008.rs",
+      "bytes": 182,
+      "sha256": "df6a5987e00dbd53321c47bb11df2259b03023fff69fede6b1be9b9555a24a56"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice009.rs",
+      "bytes": 266,
+      "sha256": "0ed84bdfb36c8fef61efa432b23db447a42191d30df8d5ddd66969b418d9cfe6"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice010.rs",
+      "bytes": 266,
+      "sha256": "653c075cc90c6f6036b35a8ce0b1d28e33fd67416c82ee314970b20d0e29d79f"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice011.rs",
+      "bytes": 182,
+      "sha256": "72b6f949aa2ec7a0694c09f0127b688b228a5fa612e39ee25bbf4ecd6e92a690"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice012.rs",
+      "bytes": 182,
+      "sha256": "5b33ebc8e74c50193b1f4be8480a77be1af303738253040889d5f4fe2bbc1b39"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice013.rs",
+      "bytes": 196,
+      "sha256": "8b9fadf11fe6df49d7d5a6e736182f0a4825a2b0fd1d788f4439b1e65a526fc7"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice014.rs",
+      "bytes": 154,
+      "sha256": "3f5fb8352c5c341bb27f3526de649ab1e94ac550a427de6d68fdcdc406c2a102"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice015.rs",
+      "bytes": 210,
+      "sha256": "23e23b72c8d5097889f506d81022fdaf5b9734db7451c15d2fbd064b261182fb"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice016.rs",
+      "bytes": 182,
+      "sha256": "4973a55418ace85676a629fd8437045a107661158947e1615262d0d5529f3162"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice017.rs",
+      "bytes": 154,
+      "sha256": "c82c3cb78ec8086f10765ccdaab4624207e5abe344099cd67c1412ff10a987b2"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice018.rs",
+      "bytes": 168,
+      "sha256": "f41c38f93775ff2af6538d886ed9520a5d2609845b5731fac2a51d31a70fc822"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice019.rs",
+      "bytes": 168,
+      "sha256": "1c62fc934e3ea7d19cab4f0f6f204f01186727e41af23b202ac57bff323d2f04"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice020.rs",
+      "bytes": 182,
+      "sha256": "a022f54bb963a187f0b2729bb80e9e10e73dd5dffaa71b667ef5fea891ea7579"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice021.rs",
+      "bytes": 210,
+      "sha256": "7ebd29f418c1aac5099d110f89d5bb2fddf2a27767f4a8b3d0c37980c4652c3c"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice022.rs",
+      "bytes": 182,
+      "sha256": "ff3f1833e35b720d5a1fb9472491ed93f3a1835172a8e74245ee6991b9ef8197"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice023.rs",
+      "bytes": 210,
+      "sha256": "5b27f5a6bace9171f164f80d2e06e62a78cef758225fb238c3c7a1cdf8117ad1"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice024.rs",
+      "bytes": 168,
+      "sha256": "f1846ce70b903a1ed80a6ff17ee3b4190186130c723d8a4244190ebb09eadcc8"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice025.rs",
+      "bytes": 182,
+      "sha256": "021c9260d541067e7b4c50f5b7bdf94baec4af20ea319f2561463899e6bb7645"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice026.rs",
+      "bytes": 182,
+      "sha256": "85b4ec02bd7fb8f00b99f37bfb431bdbaa91c0978e054344b2a2175a6693cd05"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice027.rs",
+      "bytes": 182,
+      "sha256": "8ed61c19f1d1a689680e25e4dea9967f93b5337e0a829c6e81d9929499ce308d"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice029.rs",
+      "bytes": 238,
+      "sha256": "94c5101ff793bfa5bf20e0732ea30bdda6ddaec5828a549caf6b8f3bb2f7cf15"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice030.rs",
+      "bytes": 182,
+      "sha256": "9bfacebc93ed4b94ae64997ef9a5653b0621cf01592934b52b737731f4cd77ad"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice031.rs",
+      "bytes": 154,
+      "sha256": "4eeeb995970298c795c020c11ff2f211919aba4e665b74c4d2d6e020617abece"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice032.rs",
+      "bytes": 210,
+      "sha256": "bbb3df3d9191bcb2039b36c31be8c3232df0bd944810f3affd9f10608e5036e5"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice033.rs",
+      "bytes": 182,
+      "sha256": "06cd9593886ce673f54a153a36ac7104d008fe727f2f42bedbb304c2af8b0791"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice034.rs",
+      "bytes": 196,
+      "sha256": "c2e1d1c82b312189b025c4c734366e026d43fe8dd767145bae1ac34cf02cc4b5"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice035.rs",
+      "bytes": 168,
+      "sha256": "4acba43fbd8c3a04bb6d4164568bcded06744614ecc9816a8317bb3e924d4d92"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice036.rs",
+      "bytes": 182,
+      "sha256": "a077b02e15a61c4c5ffc9df7bd0c6fa37051b4e52c6a3a6368cb9ca6868dbc53"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice038.rs",
+      "bytes": 168,
+      "sha256": "df04f456c9eea894333780a648120b744f4d33a6e9f34e72aa3c2f3112ee39f1"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice039.rs",
+      "bytes": 182,
+      "sha256": "e038d36f17a1609d92b8f27f84b1247702d3edeb00bdd03b409f45dd6fa0b9d9"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice040.rs",
+      "bytes": 154,
+      "sha256": "0a4d3bb6e2f7a63fcfaa82e34e2465f872def689545505455ebc291d20af4790"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice041.rs",
+      "bytes": 168,
+      "sha256": "6bbd92436adec15fd200ff022b7cf11d25e81825adaa04725bde53e4c60bc4b2"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice042.rs",
+      "bytes": 210,
+      "sha256": "cd6bfbeab0205b363c74511e82d0a876afbf0e73f82a6c8e319fd88c38b22859"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice043.rs",
+      "bytes": 210,
+      "sha256": "91a47e9d84d48ad2aba29c1ab43136c483436881d7e231fd55338adcdede0c33"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice044.rs",
+      "bytes": 168,
+      "sha256": "a03695de14948f74f3abbca145b268a4872971ce6968aca2b8545864422a36f4"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice045.rs",
+      "bytes": 210,
+      "sha256": "d0c5608fdb3aa5551024c939b60fb1a38a2d64b02088421a41f5380cfda6fb17"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice046.rs",
+      "bytes": 182,
+      "sha256": "34c96ee9d672e274a4f599605a49ba840fba2d92a8946135c0185dab4e04e638"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice047.rs",
+      "bytes": 196,
+      "sha256": "5cc53ea3399c71d5a5279239e964757e245af5046f316decb034cf7fc48d99e3"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice048.rs",
+      "bytes": 168,
+      "sha256": "3ce701d8ac5ba5b462853190788262917f3a0fcec1b3e75e24ceafad69affbb1"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice049.rs",
+      "bytes": 224,
+      "sha256": "77ad43b4dd5c8899bdccfb8400a01a0ec20cbd232a3215ca50f24cdd5b05b523"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice050.rs",
+      "bytes": 182,
+      "sha256": "4439f8414bfc66a92e06c00ec04bd029784f85bae6fd87e2f302ad7ff6e7a918"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice051.rs",
+      "bytes": 196,
+      "sha256": "7c65b3e5a0a8f1306a87fa507075dee27cea16cb9d433fad311010025d0acb59"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice052.rs",
+      "bytes": 196,
+      "sha256": "3b593a8f7e7ffe079a6a9ab3e05c054e50989804517c865cff2a8c7ddd121018"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice053.rs",
+      "bytes": 252,
+      "sha256": "bcc2fa6d26144256263f5aa1434da5438a0962680247c2ba9aa4b842878f4372"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice054.rs",
+      "bytes": 252,
+      "sha256": "53f17c9528b552cdc70c4866a5b358e29419a5c5c9a03c9b6a82d3092cefba3d"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice055.rs",
+      "bytes": 392,
+      "sha256": "96230e685bea92c8c380ce8e249391fe80861df3e718febb495b8ac1bc63e79b"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice056.rs",
+      "bytes": 238,
+      "sha256": "cb5ff6cf610dbdb6cf04a66f4c5168efe52c16f33827b223ac39ab55e0d13e92"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice057.rs",
+      "bytes": 196,
+      "sha256": "abfb7a21c2cf7d95b944c127a652dbf4ffd606afe0c92c421eb5e5d891e80532"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice058.rs",
+      "bytes": 196,
+      "sha256": "534622bf053ef2625a1de183f2dce33659f505330a6490d76bb604e6b7a08eeb"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice059.rs",
+      "bytes": 168,
+      "sha256": "4656b135dc132cd3796c8f9a180df31f398c2faa5ac6f387fa0d165b68e06a3f"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice060.rs",
+      "bytes": 168,
+      "sha256": "029e32c517a3aee90c4837649ee97714b9901a81321338debdf5df4572bd4f9d"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice061.rs",
+      "bytes": 238,
+      "sha256": "3cfac2d05b62e702338dead728ac03b6fff7560db037e771054da5f645f3034d"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice062.rs",
+      "bytes": 196,
+      "sha256": "42e619362f15b22c6d4c66c75df5059a2a55ecd2a71c85bf356edd54f99a7724"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice063.rs",
+      "bytes": 210,
+      "sha256": "1d1497a3b4d07f828caf91c2bba9dd0286bc38519422382f833fbd2d904d5d84"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_choice064.rs",
+      "bytes": 238,
+      "sha256": "1d549584dcd7817a35cbe4416e8966812845f127c102656f33f2462445b2d643"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_input000.rs",
+      "bytes": 352,
+      "sha256": "b8118d344f23f608c4c7b6aff244ada0ca122adba259502f8654724e9684caf0"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_input001.rs",
+      "bytes": 227,
+      "sha256": "23c1c12f34d518673128938250e82cbf253ecac1e701cb04e4d6fb43b9cc4e07"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_input002.rs",
+      "bytes": 254,
+      "sha256": "91c5b31fd219d3beeed16954a7b04fa530abd7988b5282ef2d21681e34f00573"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_input003.rs",
+      "bytes": 137,
+      "sha256": "bbb35bc89cdabc9f1be1bd72d28a3292cb2f3e3c5c71eaffa4a40e1fbe03b534"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_input004.rs",
+      "bytes": 453,
+      "sha256": "88acf7608bfc471ddafc66ee170a92ebdfd997aa1f6c87531b4c6b79002faf15"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_input005.rs",
+      "bytes": 471,
+      "sha256": "0554476a0ed32541e5dad4feaf852c3825ab6bff4468ae0c7bfe64ea73ada894"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_input006.rs",
+      "bytes": 209,
+      "sha256": "063df246cb7b52f6926198417981e5148892b6e9ddc964f1ca47edc7f054d9f5"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_input007.rs",
+      "bytes": 137,
+      "sha256": "ad14c851838b6f1afc1bc4c9b6de83bcb5cbcb4f41467b0ebf4618d49b6a2df7"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_input008.rs",
+      "bytes": 189,
+      "sha256": "769fccbc334e0c98828ad53d86b464e1eac6d6e6bf695546f6117c8caceb0382"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_input009.rs",
+      "bytes": 256,
+      "sha256": "16d157ca4aff3314a964320bd64015c66b54022122334ba1efd80831190ee921"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_input010.rs",
+      "bytes": 178,
+      "sha256": "893098e1338e0fbaa216daa8851a68a568ad42463049db0a288666328ef6fcf0"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_input011.rs",
+      "bytes": 186,
+      "sha256": "426c8e3d6b8dca8dae8af6dc6e6bf75499000a4eaf8b53f308ce786238358995"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_input012.rs",
+      "bytes": 207,
+      "sha256": "753f2b428f183f82056b69424d482287e471813cc85076e27a884ada9dd8de1b"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_input013.rs",
+      "bytes": 227,
+      "sha256": "87238059114284fb60657cae5ef399a2c9ae3be1cfeda2596f78845e3c6d1346"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_input014.rs",
+      "bytes": 137,
+      "sha256": "bf54605be5037a783ba4cf411ae1f6df64991c1c9931f469598f50172e9d20c4"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_input015.rs",
+      "bytes": 194,
+      "sha256": "923ef89efc50d284f12ec5dc0614d289becd9ee2c6fb8f8822d8826ab4b48350"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_input016.rs",
+      "bytes": 205,
+      "sha256": "8295fbac899929e70f1557444f7ab6f0e6f87b9d7085c29e1265bb17735097fc"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_input017.rs",
+      "bytes": 224,
+      "sha256": "c8e3f094ebc9098a19a12bf6461867a513ae890dfe9f1aedcd8876c3c83bf499"
+    },
+    {
+      "path": "src/__chigiri/types/fixture_input018.rs",
+      "bytes": 137,
+      "sha256": "d7839c6edd1056fb7d5e817e9fb14f72a59c0ca66b441f78d696b5d6cf92c541"
+    },
+    {
+      "path": "src/__chigiri/types/format_kind.rs",
+      "bytes": 176,
+      "sha256": "a7932fd005f48ff117f0237112763a11364e009a5b39dd04ad4be9df1f3c9290"
+    },
+    {
+      "path": "src/__chigiri/types/transport_kind.rs",
+      "bytes": 253,
+      "sha256": "d4d51cb8b3fc2e8633b7cda27b9b1c324a4efd3ff7d262b74ddd9e11d61ba5bb"
+    },
+    {
+      "path": "src/__chigiri/types/unit_kind.rs",
+      "bytes": 174,
+      "sha256": "d61d00627cc1976069dac710fd40366644a6e8f94c61699764a435fb8d1c2edc"
+    },
+    {
+      "path": "src/lib.rs",
+      "bytes": 501,
+      "sha256": "88b1b1d7e35946621e39976546454887167d10f4213285b2b9560f1f087d8a84"
+    }
+  ]
+}

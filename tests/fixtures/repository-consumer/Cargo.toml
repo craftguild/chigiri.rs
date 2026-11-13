@@ -1,0 +1,25 @@
+[workspace]
+
+[package]
+name = "chigiri-repository-consumer"
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.95"
+publish = false
+
+[dependencies]
+chigiri = { path = "../../../crates/facade" }
+chigiri_axum = { path = "../../../crates/axum" }
+chigiri_codegen = { path = "../../../crates/codegen" }
+chigiri_core = { path = "../../../crates/core" }
+chigiri_http = { path = "../../../crates/http" }
+chigiri_hyper = { path = "../../../crates/hyper" }
+chigiri_observability = { path = "../../../crates/observability" }
+chigiri_opentelemetry = { path = "../../../crates/opentelemetry" }
+chigiri_operation = { path = "../../../crates/operation" }
+chigiri_policy = { path = "../../../crates/policy" }
+chigiri_rate = { path = "../../../crates/rate" }
+chigiri_rate_memory = { path = "../../../crates/rate-memory" }
+chigiri_runtime = { path = "../../../crates/runtime" }
+chigiri_testkit = { path = "../../../crates/testkit" }
+chigiri_tracing = { path = "../../../crates/tracing" }

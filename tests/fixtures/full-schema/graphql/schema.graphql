@@ -1,0 +1,82 @@
+# Synthetic schema coverage: lists, nullability, defaults, roots and enum bindings.
+scalar FixtureScalar000
+
+scalar FixtureScalar001
+
+type FixtureRecord000 {
+	fixtureField369: String!
+	fixtureField149: String!
+}
+
+scalar FixtureScalar002
+
+scalar FixtureScalar003
+
+scalar FixtureScalar004
+
+type Mutation {
+	fixtureField363(input: FixtureInput016!): FixtureRecord028!
+	fixtureField361(input: FixtureInput015!): FixtureRecord027!
+	fixtureField362: Boolean!
+	fixtureField075(input: FixtureInput005!): FixtureRecord033!
+	fixtureField319(input: FixtureInput012!): FixtureRecord050!
+	fixtureField074(input: FixtureInput004!): FixtureRecord045!
+	fixtureField287(input: FixtureInput010!): FixtureRecord042!
+	fixtureField286(input: FixtureInput009!): FixtureRecord007!
+	fixtureField003(input: FixtureInput000!): FixtureRecord006!
+	fixtureField006(input: FixtureInput001!): FixtureRecord031!
+	fixtureField333(input: FixtureInput014!): FixtureRecord043!
+	fixtureField072(input: FixtureInput002!): FixtureRecord034!
+	fixtureField318(input: FixtureInput011!): FixtureRecord035!
+	fixtureField076(input: FixtureInput006!): FixtureRecord047!
+	fixtureField320(input: FixtureInput013!): FixtureRecord048!
+	fixtureField073(input: FixtureInput003!): FixtureRecord039!
+	fixtureField323(input: FixtureInput007!): FixtureRecord046!
+	fixtureField325(input: FixtureInput017!): FixtureRecord046!
+	fixtureField326(input: FixtureInput018!): FixtureRecord046!
+}
+
+type Query {
+	fixtureField051: FixtureRecord000!
+	fixtureField195: FixtureRecord024
+	fixtureField233(fixtureField157: ID): FixtureRecord025
+	fixtureField236(first: Int = 50, after: ID): [FixtureRecord025!]!
+	fixtureField064(fixtureField115: Boolean, first: Int = 50, after: ID): [FixtureRecord013!]!
+	fixtureField117(sequence: FixtureScalar001!, first: Int = 50, after: ID): [FixtureRecord014!]!
+	fixtureField116(sequence: FixtureScalar001!, fixtureField157: ID!): FixtureRecord014
+	fixtureField069(fixtureField183: ID!, first: Int = 50, after: ID): [FixtureRecord032!]!
+	fixtureField068(fixtureField183: ID!, fixtureField347: ID!): FixtureRecord032
+	fixtureField427(sequence: FixtureScalar001!, fixtureField115: Boolean, first: Int = 50, after: ID): [FixtureRecord058!]!
+	fixtureField279(sequence: FixtureScalar001, transport: TransportKind, fixtureField115: Boolean, first: Int = 50, after: ID): [FixtureRecord017!]!
+	fixtureField301(sequence: FixtureScalar001, transport: TransportKind, first: Int = 50, after: ID): [FixtureRecord020!]!
+	measurements(sequence: FixtureScalar001, transport: TransportKind, format: FormatKind, first: Int = 50, after: ID): [FixtureRecord019!]!
+	fixtureField232(sequence: FixtureScalar001!, first: Int = 50, after: ID): [FixtureRecord016!]!
+	fixtureField274(sequence: FixtureScalar001, transport: TransportKind, fixtureField294: FixtureChoice036, first: Int = 50, after: ID): [FixtureRecord018!]!
+	fixtureField227(sequence: FixtureScalar001!, first: Int = 50, after: ID): [FixtureRecord015!]!
+	fixtureField123(sequence: FixtureScalar001, transport: TransportKind, fixtureField294: FixtureChoice036, first: Int = 50, after: ID): [FixtureRecord052!]!
+	fixtureField109(sequence: FixtureScalar001!, fixtureField294: FixtureChoice036, first: Int = 50, after: ID): [FixtureRecord036!]!
+	fixtureField426(fixtureField157: ID!): FixtureRecord057
+	fixtureField429(fixtureField157: ID!): FixtureRecord059
+	fixtureField431(fixtureField234: ID, fixtureField387: FixtureChoice064, first: Int = 50, after: ID): [FixtureRecord057!]!
+	fixtureField093(fixtureField234: ID): FixtureRecord051!
+	fixtureField430(fixtureField428: ID!, first: Int = 50, after: ID): [FixtureRecord062!]!
+	fixtureField083: FixtureRecord005!
+	fixtureField038(fixtureField157: ID!): FixtureRecord001
+	fixtureField040(fixtureField234: ID!, fixtureField387: FixtureChoice004, first: Int = 50, after: ID): [FixtureRecord001!]!
+	fixtureField082(fixtureField234: ID!): FixtureRecord001
+	fixtureField169(fixtureField234: ID!, first: Int = 50, after: ID): [FixtureRecord008!]!
+	fixtureField251(fixtureField234: ID!, first: Int = 50, after: ID): [FixtureRecord009!]!
+	fixtureField247(fixtureField234: ID!, first: Int = 50, after: ID): [FixtureRecord010!]!
+	fixtureField250(fixtureField234: ID!, first: Int = 50, after: ID): [FixtureRecord011!]!
+}
+
+"""Repo-owned synthetic compatibility input for typed generation and binding coverage."""
+directive @include(if: Boolean!) on FIELD | FRAGMENT_SPREAD | INLINE_FRAGMENT
+
+"""Repo-owned synthetic compatibility input for typed generation and binding coverage."""
+directive @skip(if: Boolean!) on FIELD | FRAGMENT_SPREAD | INLINE_FRAGMENT
+
+schema {
+	query: Query
+	mutation: Mutation
+}

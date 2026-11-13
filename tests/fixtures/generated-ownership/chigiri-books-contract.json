@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "owner": "chigiri-books-contract",
+  "generator_revision": "54a32b5d2c59a56d82064d6c3be3092bf1d9d8f2",
+  "inputs": {
+    "chigiri-books.toml": "6083a5ead0d85678a43ace60eba96be3b1cac90cc47debc27b7d3bdb9ddd2e04",
+    "examples/books/graphql/schema.graphql": "a900e3e3b479d199da5be5661d8229affcf13cedf30d5c4f7aa2f2af2855996b",
+    "generated/books/chigiri-generated.json": "df92eb8c14fe4e8b194d74671fe067453abd575a6beaa9c540709f0d6ffc053c"
+  },
+  "files": {
+    "generated/books/Cargo.toml": "7166af77b7a2e15a877f85f2c6061645fa381f5ee3301f353d46ba29fbdc5086",
+    "generated/books/chigiri-generated.json": "df92eb8c14fe4e8b194d74671fe067453abd575a6beaa9c540709f0d6ffc053c",
+    "generated/books/src/__chigiri/assembly.rs": "cb2a2869e3795fb476eff6bab841829936b4db4121ad57856602e7997f777a12",
+    "generated/books/src/__chigiri/generator_info.rs": "3684d19ed87a0558ba1d07f8782e3fcdb18711c884fc5e8a7edbbea79ab97017",
+    "generated/books/src/__chigiri/internal/bridge/dispatch.rs": "98f7c03a97522daa01aaa13038a5f7b0c16722d73c8c41f58ff90a2e425f3d4e",
+    "generated/books/src/__chigiri/internal/bridge/objects/book.rs": "4d0701b546bc0c9ca45b89c2394613a2bf51aa05642126079d40d904061b0ac2",
+    "generated/books/src/__chigiri/internal/bridge/objects/mutation.rs": "ab3a987b10eda33162b8267502a815fcc5849358577dd05d563ebe3794008b4b",
+    "generated/books/src/__chigiri/internal/bridge/objects/query.rs": "b4d595184d7d25a7df043dd4cafb5b7de164244a56c7dbb3e69fe1e0f0403c7f",
+    "generated/books/src/__chigiri/internal/bridge/schema.rs": "d14b3b4da69d4e2402cab0cc913474d4271f42a7a5409f60fc2574d9ec4f9555",
+    "generated/books/src/__chigiri/internal/coercion/add_book_input.rs": "d4759475bbdfaa5fa26c8ae5e2def7ad59b9eb7abc4a74b6562bf489060c56bd",
+    "generated/books/src/__chigiri/internal/coercion/book.rs": "834f49b61246f874e40bd03f74abd74b09e8bfaaccaa4ada1507bd9b7dd5d08a",
+    "generated/books/src/__chigiri/internal/descriptor/schema.rs": "21d51d6e01ff8720d25ccc3b447b9ac3157bb43adca411f43cd11a2033bb5f1e",
+    "generated/books/src/__chigiri/internal/descriptor/types/add_book_input.rs": "9d244f9e086198d2bd5e453810741c0664a0e00da415ef81ada7fd54080d8467",
+    "generated/books/src/__chigiri/internal/descriptor/types/book.rs": "fb1a6360e6430fce55fd26043f7aed9663b300d2d51072ca75568bea84510ec4",
+    "generated/books/src/__chigiri/internal/descriptor/types/mutation.rs": "6465f5193be11f5ba3c22dda78283b25de142b94d20fe5930ed0fe8e105a15c5",
+    "generated/books/src/__chigiri/internal/descriptor/types/query.rs": "9556b516d66f3c21e9dea9743204e2a6799c0521ba8c9e3fb7d3104ee5d26ed8",
+    "generated/books/src/__chigiri/internal/dispatch/book.rs": "3cf83f5cf8f7c43a05083e45758173732b789be2f3349648d6d0518c8d3126e4",
+    "generated/books/src/__chigiri/internal/dispatch/mutation.rs": "0094c3d1625811d1a23246eb9bf9e8b934d13e223d553edb7b4296586f7d8d82",
+    "generated/books/src/__chigiri/internal/dispatch/query.rs": "825d4bc5c3d5742892eb9096f925a78e3b5ba7b0ec34b5289e4f135ead30d66d",
+    "generated/books/src/__chigiri/mod.rs": "07a4e692a1c2b1d5b68dec85c54419e592af5279c1707df55e62f08bdf2aee61",
+    "generated/books/src/__chigiri/modules.rs": "715324732e7d9d50d31c10d2e188b0d4cf7007ef2fef55f2347cce069167fc82",
+    "generated/books/src/__chigiri/resolvers/mutation.rs": "1e8327d985bdbe5058f539693e9c5b8ebb791c3d8262e1fe4ab28797911116f9",
+    "generated/books/src/__chigiri/resolvers/objects/book.rs": "a77e576e4c209ab17d55fb14dc054f7621bb1d7c05fdbb685e8619799decee94",
+    "generated/books/src/__chigiri/resolvers/query.rs": "63db3cfb4331b5e2dcbd146079070df753e2e58d649deb90d0e17d2eedf9030a",
+    "generated/books/src/__chigiri/schema_types.rs": "d471702a3f38edb1f65bc0da36f72837846d2b19ebde40b905a8c328f4b66a7f",
+    "generated/books/src/__chigiri/sources.rs": "4443c98ea7a06f739a375254dbe48c5afdca40ad7b67f3db728b81e6dda13915",
+    "generated/books/src/__chigiri/types/add_book_input.rs": "9d5dfc5517b3a0dced7b9387447b832f0915e4dd357d65dfe351ee2029a79b05",
+    "generated/books/src/lib.rs": "88b1b1d7e35946621e39976546454887167d10f4213285b2b9560f1f087d8a84"
+  }
+}

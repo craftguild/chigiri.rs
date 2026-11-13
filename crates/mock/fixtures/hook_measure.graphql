@@ -1,0 +1,5 @@
+type Note { id: ID! title: String! }
+type Query {
+  notes: [Note!]!
+  greeting: String!
+}

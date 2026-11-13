@@ -1,0 +1,13 @@
+[package]
+name = "chigiri_rate_memory"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Official bounded in-memory rate-limit providers for Chigiri"
+documentation = "https://docs.rs/chigiri_rate_memory"
+
+[dependencies]
+atomic-waker = "1.1.2"
+chigiri_rate.workspace = true

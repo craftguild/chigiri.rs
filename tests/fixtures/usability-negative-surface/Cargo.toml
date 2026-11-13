@@ -1,0 +1,12 @@
+[package]
+name = "chigiri-usability-negative-surface"
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.95"
+publish = false
+
+[dependencies]
+chigiri = { path = "../../../crates/facade" }
+chigiri_http = { path = "../../../crates/http" }
+
+[workspace]

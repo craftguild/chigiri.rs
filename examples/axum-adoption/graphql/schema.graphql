@@ -1,0 +1,24 @@
+enum AccessLevel {
+  PUBLIC
+  PRIVATE
+}
+
+type Viewer {
+  id: ID!
+  access: AccessLevel!
+}
+
+type Item {
+  id: ID!
+  title: String!
+}
+
+type Query {
+  viewer: Viewer
+  item(id: ID!): Item
+  expensive: Boolean!
+}
+
+type Mutation {
+  touch(id: ID!): Item!
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "id": "anonymous-viewer",
+    "query": "{ viewer { id access } }",
+    "headers": {},
+    "compareHeaders": [],
+    "legacy": {
+      "status": 200,
+      "mediaType": "application/graphql-response+json; charset=utf-8",
+      "headers": {},
+      "body": { "data": { "viewer": null } }
+    }
+  },
+  {
+    "id": "authenticated-viewer",
+    "query": "{ viewer { id access } }",
+    "headers": { "authorization": "Bearer synthetic-token" },
+    "compareHeaders": [],
+    "legacy": {
+      "status": 200,
+      "mediaType": "application/graphql-response+json; charset=utf-8",
+      "headers": {},
+      "body": { "data": { "viewer": { "id": "viewer-1", "access": "PRIVATE" } } }
+    }
+  },
+  {
+    "id": "request-loader-cache",
+    "query": "query LoadItems($id: ID!) { first: item(id: $id) { id title } second: item(id: $id) { id title } }",
+    "operationName": "LoadItems",
+    "variables": { "id": "item-1" },
+    "headers": {},
+    "compareHeaders": [],
+    "legacy": {
+      "status": 200,
+      "mediaType": "application/graphql-response+json; charset=utf-8",
+      "headers": {},
+      "body": {
+        "data": {
+          "first": { "id": "item-1", "title": "Synthetic one" },
+          "second": { "id": "item-1", "title": "Synthetic one" }
+        }
+      }
+    }
+  },
+  {
+    "id": "mutation-cookie",
+    "query": "mutation { touch(id: \"item-2\") { id title } }",
+    "headers": {},
+    "compareHeaders": ["set-cookie"],
+    "legacy": {
+      "status": 200,
+      "mediaType": "application/graphql-response+json; charset=utf-8",
+      "headers": { "set-cookie": ["last_touch=item-2; Path=/; HttpOnly"] },
+      "body": { "data": { "touch": { "id": "item-2", "title": "Synthetic two" } } }
+    }
+  },
+  {
+    "id": "query-rate-limit",
+    "query": "{ expensive }",
+    "headers": {},
+    "compareHeaders": [],
+    "legacy": {
+      "status": 429,
+      "mediaType": "application/graphql-response+json; charset=utf-8",
+      "headers": {},
+      "body": { "errors": [{ "message": "Query budget exceeded", "extensions": { "code": "RATE_LIMITED" } }] }
+    }
+  },
+  {
+    "id": "query-budget-allowed",
+    "query": "{ expensive }",
+    "headers": { "x-query-budget": "allow" },
+    "compareHeaders": [],
+    "legacy": {
+      "status": 200,
+      "mediaType": "application/graphql-response+json; charset=utf-8",
+      "headers": {},
+      "body": { "data": { "expensive": true } }
+    }
+  },
+  {
+    "id": "invalid-auth",
+    "query": "{ viewer { id } }",
+    "headers": { "authorization": "Bearer invalid" },
+    "compareHeaders": [],
+    "legacy": {
+      "status": 401,
+      "mediaType": "application/graphql-response+json; charset=utf-8",
+      "headers": {},
+      "body": { "errors": [{ "message": "Authentication failed", "extensions": { "code": "UNAUTHENTICATED" } }] }
+    }
+  }
+]

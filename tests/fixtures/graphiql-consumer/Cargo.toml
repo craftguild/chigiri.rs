@@ -1,0 +1,25 @@
+[workspace]
+
+[package]
+name = "chigiri-graphiql-consumer"
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.95"
+publish = false
+license = "MIT"
+
+[features]
+default = []
+graphiql = ["chigiri/graphiql", "chigiri_axum/graphiql", "chigiri_hyper/graphiql"]
+probe = []
+
+[dependencies]
+chigiri = { path = "../../../crates/facade" }
+chigiri_axum = { path = "../../../crates/axum" }
+chigiri_hyper = { path = "../../../crates/hyper" }
+axum = { version = "0.8.4", default-features = false, features = ["http1", "tokio"] }
+
+[[bin]]
+name = "publication-probe"
+path = "src/probe.rs"
+required-features = ["probe"]

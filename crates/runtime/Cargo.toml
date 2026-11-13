@@ -1,0 +1,14 @@
+[package]
+name = "chigiri_runtime"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Lower-level GraphQL execution runtime for Chigiri"
+documentation = "https://docs.rs/chigiri_runtime"
+
+[dependencies]
+chigiri_core.workspace = true
+futures-core.workspace = true
+sha2 = "0.10.9"

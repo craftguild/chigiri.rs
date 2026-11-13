@@ -1,0 +1,152 @@
+name: Product validation
+
+on:
+  workflow_call:
+    inputs:
+      runner:
+        required: true
+        type: string
+      expected-os:
+        required: true
+        type: string
+      expected-arch:
+        required: true
+        type: string
+      profile:
+        required: false
+        type: string
+        default: ci
+    outputs:
+      validation:
+        description: Complete only when the requested profile passes against unchanged sources
+        value: ${{ jobs.validate.outputs.validation }}
+      profile:
+        description: The completed validation profile
+        value: ${{ jobs.validate.outputs.profile }}
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ${{ inputs.runner }}
+    timeout-minutes: 120
+    outputs:
+      validation: ${{ steps.product.outputs.validation }}
+      profile: ${{ steps.product.outputs.profile }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assert the native Tier 1 runner
+        shell: bash
+        env:
+          EXPECTED_OS: ${{ inputs['expected-os'] }}
+          EXPECTED_ARCH: ${{ inputs['expected-arch'] }}
+        run: |
+          test "$(uname -s)" = "$EXPECTED_OS"
+          test "$(uname -m)" = "$EXPECTED_ARCH"
+          echo "runner-image=${ImageOS:-unknown}"
+          echo "runner-os=$(uname -s)"
+          echo "runner-arch=$(uname -m)"
+      - name: Prepare Linux Rust validation resources
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          df -h "$GITHUB_WORKSPACE"
+          printf '%s\n' \
+            'CARGO_PROFILE_DEV_DEBUG=line-tables-only' \
+            'CARGO_PROFILE_TEST_DEBUG=line-tables-only' \
+            'CARGO_INCREMENTAL=0' | tee -a "$GITHUB_ENV"
+      - name: Prepare declared validation command tools
+        shell: bash
+        run: |
+          case "$RUNNER_OS" in
+            Linux)
+              sudo apt-get update
+              sudo apt-get install --yes --no-install-recommends ripgrep jq
+              ;;
+            macOS)
+              brew install ripgrep jq
+              ;;
+            *) echo "Unsupported native validation OS: $RUNNER_OS" >&2; exit 2 ;;
+          esac
+          command -v rg
+          rg --version
+          command -v jq
+          jq --version
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24.15.0"
+      - name: Install the fixed Rust 1.95 toolchain and quality tools
+        shell: bash
+        run: |
+          rustup toolchain install 1.95.0 --profile minimal --component clippy --component rustfmt
+          rustup override set 1.95.0
+          cargo +1.95.0 install cargo-deny --version 0.19.8 --locked
+          cargo +1.95.0 install tokei --version 15.0.0 --locked
+      - name: Prepare fixed engine and locked dependencies explicitly
+        shell: bash
+        run: |
+          make setup
+          cargo +1.95.0 fetch --locked
+          for manifest in \
+            tests/fixtures/graphiql-consumer/Cargo.toml \
+            crates/codegen/tests/compile/pass/Cargo.toml \
+            crates/codegen/tests/compile/custom_scalar_output/Cargo.toml \
+            crates/codegen/tests/compile/field_missing/Cargo.toml \
+            crates/codegen/tests/compile/group_missing/Cargo.toml \
+            crates/codegen/tests/compile/typestate_fail/Cargo.toml \
+            tests/fixtures/bridge-negative-surface/Cargo.toml \
+            tests/fixtures/usability-negative-surface/Cargo.toml \
+            tests/fixtures/neutral-endpoint-consumer/Cargo.toml \
+            tests/fixtures/observability-opt-in-consumer/Cargo.toml \
+            tests/fixtures/repository-consumer/Cargo.toml \
+            tests/fixtures/mock-blog-comparison/Cargo.toml \
+            tests/fixtures/vnext-large-product/consumer/Cargo.toml \
+            fuzz/Cargo.toml \
+            tests/fixtures/full-schema/consumer/Cargo.toml \
+            tests/fixtures/rate-provider-minimal/Cargo.toml; do
+            cargo +1.95.0 fetch --locked --manifest-path "$manifest"
+          done
+          npm ci --ignore-scripts --no-audit --no-fund
+          python3 scripts/graphiql_build.py --prepare-dependencies
+      - name: Run shared local and CI product validation
+        id: product
+        shell: bash
+        env:
+          VALIDATION_PROFILE: ${{ inputs.profile }}
+        run: |
+          printf 'CARGO_PROFILE_DEV_DEBUG=%s\nCARGO_PROFILE_TEST_DEBUG=%s\nCARGO_INCREMENTAL=%s\n' \
+            "${CARGO_PROFILE_DEV_DEBUG:-cargo-default}" \
+            "${CARGO_PROFILE_TEST_DEBUG:-cargo-default}" \
+            "${CARGO_INCREMENTAL:-cargo-default}"
+          if [[ "$VALIDATION_PROFILE" == ci ]]; then
+            ./scripts/validate.sh --profile ci
+            make check
+          else
+            ./scripts/validate.sh --profile "$VALIDATION_PROFILE"
+            ./scripts/check-implementation-rules.sh
+          fi
+          echo 'validation=complete' >> "$GITHUB_OUTPUT"
+          echo "profile=$VALIDATION_PROFILE" >> "$GITHUB_OUTPUT"
+      - name: Report validation storage
+        if: ${{ always() }}
+        shell: bash
+        run: |
+          df -h "$GITHUB_WORKSPACE"
+          for directory in target .craftguild; do
+            if test -d "$directory"; then du -sh "$directory"; fi
+          done
+      - name: Retain validation evidence, including failures
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: product-${{ inputs.expected-os }}-${{ inputs.profile }}
+          path: |
+            target/product-validation/
+            target/production-evidence/
+            .craftguild/current-ci.json
+            .craftguild/implementation-size.json
+          retention-days: 30

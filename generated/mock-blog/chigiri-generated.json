@@ -1,0 +1,231 @@
+{
+  "schema_version": "chigiri/generated-crate-v1",
+  "package": {
+    "name": "chigiri-mock-blog-contract",
+    "version": "0.0.0",
+    "edition": "2024"
+  },
+  "abi": 8,
+  "generator": {
+    "schema_version": "chigiri/generator-info-v1",
+    "version": "0.1.0",
+    "revision": "54a32b5d2c59a56d82064d6c3be3092bf1d9d8f2-dirty",
+    "git_commit": "54a32b5d2c59a56d82064d6c3be3092bf1d9d8f2",
+    "dirty": true,
+    "build": {
+      "rustc": "rustc 1.95.0 (59807616e 2026-04-14)",
+      "host": "aarch64-apple-darwin",
+      "target": "aarch64-apple-darwin",
+      "profile": "debug"
+    }
+  },
+  "runtime": {
+    "source": "path",
+    "root": "."
+  },
+  "provenance": {
+    "manifest_label": "chigiri-mock-blog.toml",
+    "manifest_sha256": "ab8313b2e0964da4de3ad52a6a4a82b7f89d324ed1fc18615b17c6e5e2ef6dad",
+    "schema_sha256": "1a5544ad2ab9332039db4edfe6f2c9fd4a937545f38499489b823c567c12ed41",
+    "binding_sha256": "45c8ff0c5974f886e130b97833005691c161e7b50dad410edf3102537a315e18",
+    "sources": [
+      {
+        "path": "blog.graphql",
+        "bytes": 653,
+        "sha256": "583cf329d73f77a944a4291f450851bb342d5ac85269e6cb1b44bca87aa76e4e"
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": "Cargo.toml",
+      "bytes": 275,
+      "sha256": "3a67933a65f853868a4c2e13ca2814aa441e586c0b03fd8b08cd8df502f08548"
+    },
+    {
+      "path": "src/__chigiri/assembly.rs",
+      "bytes": 5972,
+      "sha256": "ba2d57b73d11fb69b126f8ab3f37c804039e1a338a58467fbef9ab30bd44d986"
+    },
+    {
+      "path": "src/__chigiri/generator_info.rs",
+      "bytes": 967,
+      "sha256": "3684d19ed87a0558ba1d07f8782e3fcdb18711c884fc5e8a7edbbea79ab97017"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/dispatch.rs",
+      "bytes": 4163,
+      "sha256": "39ca3417899f5b02780b35f3dec142d1f19d54d5cd5f00caf00d302645015128"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/mutation.rs",
+      "bytes": 11883,
+      "sha256": "f3c508e4882863640348f315d251fa3bc151ce505289f98e29830ac240e38adc"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/post.rs",
+      "bytes": 9791,
+      "sha256": "780a424695ed585b18e2b5c93f7e1de6c5a8c5df727b4516f705fbd663d116cb"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/query.rs",
+      "bytes": 7713,
+      "sha256": "8c4c9baec0ae227445e64757795de75d9c41fb7622e066617b3a5b4d6eda1433"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/user.rs",
+      "bytes": 8419,
+      "sha256": "8f1e8424739f449d09d18b91898b919587379571132cc544a600ff27981b262e"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/schema.rs",
+      "bytes": 1970,
+      "sha256": "a7c8746cd3830ca29c6dc8149b4cce7029a921ee1e3f66e3550eb24b913f482e"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/create_post_input.rs",
+      "bytes": 2372,
+      "sha256": "cd8c4d597934c93354906aef58e61175385888a0a8f34490c8d249218b221d60"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/create_user_input.rs",
+      "bytes": 1309,
+      "sha256": "c555296601637d1c27ba46e26262ac63dc92a0453c713db22b6b06801643167b"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/post.rs",
+      "bytes": 421,
+      "sha256": "87fe929b8b7cef766015a25864627c3a8a57a61b2c7b2666ece71b66cd9c3404"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/update_post_input.rs",
+      "bytes": 2372,
+      "sha256": "a72142ddf7024349c94eb57de431d89f2abc0d84271f2dba401ea5dbd762e4e8"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/user.rs",
+      "bytes": 421,
+      "sha256": "a564e35818031d80976784d500cbf116df91fe3bdcf731bee181e29dd63536b8"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/schema.rs",
+      "bytes": 1464,
+      "sha256": "d306c3987fb843434c3ad5aa5e96a08579accdffea275cc86cd1fb834e18270e"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/create_post_input.rs",
+      "bytes": 2645,
+      "sha256": "b1bc34e5954cca3d4af0c2405137b96ee73e5b7eb2001919f25c7758f46c5219"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/create_user_input.rs",
+      "bytes": 1521,
+      "sha256": "ab5a1f8834207eb10b83c68afc258d46a21491082a9aabfaccefaf8bd1ffb5c9"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/mutation.rs",
+      "bytes": 7380,
+      "sha256": "5fb20771dd3557df6413c37ca69ef2c4c2b9af13dc30a2d136e883bb02e4eccb"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/post.rs",
+      "bytes": 2999,
+      "sha256": "539f41b785fdbbffd8bf65bb0febab243d404741789b54ec639236cfaced6685"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/query.rs",
+      "bytes": 5150,
+      "sha256": "4e149a8e933244c8b384d63e615eb80ea276450f3eb3eaf53c3bad2d31ad4d41"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/update_post_input.rs",
+      "bytes": 2453,
+      "sha256": "8a92df407be277d368201e1e188379fff0e35a7d6b30dcbb6b30b56599288a64"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/user.rs",
+      "bytes": 3566,
+      "sha256": "070fa9eae438c4dfedf80134c64d54a52d16277bf39203a6e9b95efe1235ed66"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/mutation.rs",
+      "bytes": 1765,
+      "sha256": "92761a51fd44786ddabd5fc039aba953346f125a9fa523151a1e71706057337c"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/post.rs",
+      "bytes": 1749,
+      "sha256": "58352cd39f537a6c373f3e0f3858761b93450413c89686a61d5caaa4e514820b"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/query.rs",
+      "bytes": 1753,
+      "sha256": "fa361de36bdb4e6592ba719ef870b2c41be5b5481717b88784d46c62d48c207f"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/user.rs",
+      "bytes": 1749,
+      "sha256": "5b167c4bac5a0c8374dc0a15a9283423bd1893822ebbe384c47113b75aabea65"
+    },
+    {
+      "path": "src/__chigiri/mod.rs",
+      "bytes": 1356,
+      "sha256": "7fe27b19d7934c99de525485c3544be2ce29680e8a6cfdfcc5884a36ba8bf65b"
+    },
+    {
+      "path": "src/__chigiri/modules.rs",
+      "bytes": 4411,
+      "sha256": "9116b47873bc7481ae8751ae5c2925998be83009e628b701f93177b983c45013"
+    },
+    {
+      "path": "src/__chigiri/resolvers/mutation.rs",
+      "bytes": 1962,
+      "sha256": "043237eafbd5f6576eb2a5a769ae33d6bb73f4a691b364fc7c6870d1bbea8651"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/post.rs",
+      "bytes": 1325,
+      "sha256": "739f23b9122c15b67a2f3c11d820185c759df6330d090c5a36b645f54ff4ce34"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/user.rs",
+      "bytes": 1254,
+      "sha256": "5bed7555f2d3a05cebe4ec3325848001897309e8e0e105eccbce476eb2cb4123"
+    },
+    {
+      "path": "src/__chigiri/resolvers/query.rs",
+      "bytes": 1247,
+      "sha256": "404d010e0489e24fb3b9ba7b8ffe7abbc57110893f4faa5ba23b152a613d5d9a"
+    },
+    {
+      "path": "src/__chigiri/schema_types.rs",
+      "bytes": 363,
+      "sha256": "91a7bad0ce63baa5e4f6d79014949412f5fff63a4625371074d67a6e38345e8f"
+    },
+    {
+      "path": "src/__chigiri/sources.rs",
+      "bytes": 99,
+      "sha256": "0ccb8481bf4ed68aef55dc3c46a31357b179103ae323842b66fd457fd1242798"
+    },
+    {
+      "path": "src/__chigiri/types/create_post_input.rs",
+      "bytes": 205,
+      "sha256": "40b56f052783046cd590e08bf159d6e4854543714bb77b9084410ab0611b52c0"
+    },
+    {
+      "path": "src/__chigiri/types/create_user_input.rs",
+      "bytes": 133,
+      "sha256": "e4c7652f8c1dc47e082a33091619c20c029e8d83652ec7b47b0f19ad5bfb0ad0"
+    },
+    {
+      "path": "src/__chigiri/types/update_post_input.rs",
+      "bytes": 259,
+      "sha256": "7ac7c48ca5bb66fb8d145de83ed1b9f00fa3fd1ab38a2ed78793bbe85ba5b3e2"
+    },
+    {
+      "path": "src/lib.rs",
+      "bytes": 501,
+      "sha256": "88b1b1d7e35946621e39976546454887167d10f4213285b2b9560f1f087d8a84"
+    }
+  ]
+}

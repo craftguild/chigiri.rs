@@ -1,0 +1,17 @@
+type Todo {
+  id: ID!
+  title: String!
+  completed: Boolean!
+}
+
+type Query {
+  todos(limit: Int = 10): [Todo!]!
+}
+
+type Mutation {
+  addTodo(title: String!): Todo!
+}
+
+type Subscription {
+  todoChanged(topic: String!): Todo!
+}

@@ -1,0 +1,90 @@
+schema_version = "chigiri/config-v2"
+
+[schema]
+directory = "graphql"
+
+[package]
+name = "chigiri-full-schema-contract"
+version = "0.0.0"
+edition = "2024"
+
+[generation]
+output = "generated"
+
+[runtime]
+source = "path"
+root = "../../.."
+
+[bindings]
+domain_enums = [
+  "FormatKind",
+  "FixtureChoice018",
+  "FixtureChoice000",
+  "FixtureChoice001",
+  "FixtureChoice002",
+  "UnitKind",
+  "FixtureChoice004",
+  "FixtureChoice005",
+  "FixtureChoice006",
+  "FixtureChoice007",
+  "FixtureChoice008",
+  "FixtureChoice009",
+  "FixtureChoice010",
+  "FixtureChoice029",
+  "FixtureChoice030",
+  "FixtureChoice031",
+  "FixtureChoice019",
+  "FixtureChoice011",
+  "FixtureChoice047",
+  "FixtureChoice012",
+  "FixtureChoice013",
+  "FixtureChoice020",
+  "FixtureChoice021",
+  "FixtureChoice014",
+  "FixtureChoice015",
+  "FixtureChoice022",
+  "FixtureChoice023",
+  "FixtureChoice032",
+  "FixtureChoice033",
+  "FixtureChoice034",
+  "FixtureChoice024",
+  "FixtureChoice025",
+  "FixtureChoice016",
+  "FixtureChoice048",
+  "FixtureChoice049",
+  "FixtureChoice050",
+  "FixtureChoice051",
+  "FixtureChoice035",
+  "FixtureChoice036",
+  "FixtureChoice052",
+  "TransportKind",
+  "FixtureChoice038",
+  "FixtureChoice039",
+  "FixtureChoice040",
+  "FixtureChoice041",
+  "FixtureChoice042",
+  "FixtureChoice053",
+  "FixtureChoice054",
+  "FixtureChoice055",
+  "FixtureChoice056",
+  "FixtureChoice026",
+  "FixtureChoice057",
+  "FixtureChoice017",
+  "FixtureChoice043",
+  "FixtureChoice058",
+  "FixtureChoice059",
+  "FixtureChoice044",
+  "FixtureChoice045",
+  "FixtureChoice046",
+  "FixtureChoice027",
+  "FixtureChoice060",
+  "FixtureChoice061",
+  "FixtureChoice062",
+  "FixtureChoice063",
+  "FixtureChoice064",
+]
+
+[consumer]
+cargo_manifest = "consumer/Cargo.toml"
+package = "chigiri-full-schema-consumer"
+generated_dependency = "contract"

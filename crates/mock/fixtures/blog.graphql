@@ -1,0 +1,25 @@
+# Blog using automatic models and explicit relations. Users implement root operations in Luau.
+type User {
+  id: ID!
+  name: String! @constraint(maxLength: 256)
+  posts: [Post!]! @relation
+}
+type Post {
+  id: ID!
+  title: String! @constraint(maxLength: 256)
+  body: String! @constraint(maxLength: 4096)
+  author: User! @relation(fields: ["authorId"], references: ["id"])
+}
+input CreateUserInput { name: String! }
+input CreatePostInput { title: String!, body: String!, authorId: ID! }
+input UpdatePostInput { title: String, body: String, authorId: ID }
+type Query {
+  getUsers(limit: Int! = 20): [User!]!
+  findPost(id: ID, authorId: ID, limit: Int! = 20): [Post!]!
+}
+type Mutation {
+  createUser(input: CreateUserInput!): User!
+  createPost(input: CreatePostInput!): Post!
+  updatePost(id: ID!, input: UpdatePostInput!): Post!
+  deletePost(id: ID!): Boolean!
+}

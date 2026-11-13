@@ -1,0 +1,44 @@
+[package]
+rust-version = "1.95"
+name = "bridge-negative-surface"
+version = "0.0.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+chigiri_axum = { path = "../../../crates/axum" }
+chigiri_hyper = { path = "../../../crates/hyper" }
+
+[workspace]
+
+[[bin]]
+name = "hyper-server"
+path = "src/hyper_server.rs"
+
+[[bin]]
+name = "hyper-listener"
+path = "src/hyper_listener.rs"
+
+[[bin]]
+name = "hyper-serve"
+path = "src/hyper_serve.rs"
+
+[[bin]]
+name = "hyper-shutdown"
+path = "src/hyper_shutdown.rs"
+
+[[bin]]
+name = "axum-router"
+path = "src/axum_router.rs"
+
+[[bin]]
+name = "axum-route"
+path = "src/axum_route.rs"
+
+[[bin]]
+name = "axum-bind"
+path = "src/axum_bind.rs"
+
+[[bin]]
+name = "axum-shutdown"
+path = "src/axum_shutdown.rs"

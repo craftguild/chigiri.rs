@@ -1,0 +1,35 @@
+# Syntax vocabulary for Mock v3. Storage, relations, and value constraints resolve into the same IR.
+enum ChigiriMockRepresentation { STRING BOOLEAN INTEGER NUMBER OBJECT ARRAY JSON }
+
+directive @relation(
+  fields: [String!]
+  references: [String!]
+  name: String
+) on FIELD_DEFINITION
+directive @virtual on FIELD_DEFINITION
+directive @constraint(
+  minLength: Int
+  maxLength: Int
+  startsWith: String
+  endsWith: String
+  contains: String
+  notContains: String
+  pattern: String
+  format: String
+  min: Float
+  max: Float
+  exclusiveMin: Float
+  exclusiveMax: Float
+  multipleOf: Float
+  minItems: Int
+  maxItems: Int
+) on FIELD_DEFINITION | INPUT_FIELD_DEFINITION | ARGUMENT_DEFINITION
+directive @representation(
+  type: ChigiriMockRepresentation!
+  min: Float
+  max: Float
+  minBytes: Int
+  maxBytes: Int
+  minItems: Int
+  maxItems: Int
+) on SCALAR

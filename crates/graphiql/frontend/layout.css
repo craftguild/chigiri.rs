@@ -1,0 +1,10 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+/* Use device fonts without fetching or distributing additional font assets. */
+.graphiql-container {
+  --font-family: system-ui, sans-serif;
+  --font-family-mono: ui-monospace, monospace;
+}

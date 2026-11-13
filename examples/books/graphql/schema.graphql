@@ -1,0 +1,28 @@
+"The entry point for querying the book catalog."
+type Query {
+  "Returns registered books in insertion order."
+  books: [Book!]!
+  "Returns the book matching the ID."
+  book(id: ID!): Book
+}
+
+"The entry point for updating the book catalog."
+type Mutation {
+  "Registers a new book."
+  addBook(input: AddBookInput!): Book!
+  "Replaces an existing book while retaining its ID."
+  replaceBook(id: ID!, input: AddBookInput!): Book!
+}
+
+"Book data to register in the catalog."
+input AddBookInput {
+  title: String!
+  author: String!
+}
+
+"A book in the catalog."
+type Book {
+  id: ID!
+  title: String!
+  author: String!
+}

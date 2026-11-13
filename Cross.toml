@@ -1,0 +1,6 @@
+[target.x86_64-unknown-linux-gnu]
+image = "quay.io/pypa/manylinux2014_x86_64@sha256:2fa5f99f660f115f547d96b4edcadfc19f77a6de8807734bf0fc4924f81be01a"
+
+[target.x86_64-unknown-linux-gnu.env]
+# The common engine seals an invocation-local record, not the legacy default.
+passthrough = ["CRAFTGUILD_PREPARED", "CRAFTGUILD_COMMAND"]

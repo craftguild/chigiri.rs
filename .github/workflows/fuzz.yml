@@ -1,0 +1,46 @@
+name: Long fuzz qualification
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fuzz:
+    name: ${{ matrix.target }}
+    runs-on: warp-ubuntu-2404-x64-4x
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        target:
+          - parser
+          - sdl_composition
+          - http_decode
+          - json_conversion
+          - persisted_id
+          - config_parser
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install nightly and cargo-fuzz
+        run: |
+          rustup toolchain install nightly --profile minimal --component rust-src
+          cargo +nightly install cargo-fuzz --locked
+      - name: Run fixed corpus and coverage-guided fuzzing
+        env:
+          CHIGIRI_FUZZ_SECONDS: "1800"
+          FUZZ_TARGET: ${{ matrix.target }}
+        run: |
+          ./scripts/run-release-fuzz.sh --target "$FUZZ_TARGET"
+      - name: Retain fuzz evidence, corpus and failure inputs
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: fuzz-${{ matrix.target }}
+          path: target/production-evidence/fuzz/
+          retention-days: 30

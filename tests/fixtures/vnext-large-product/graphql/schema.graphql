@@ -1,0 +1,1422 @@
+# Synthetic schema that reproduces ADR-0007's large-consumer contract without product data.
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+scalar Scalar000
+scalar Scalar001
+scalar Scalar002
+scalar Scalar003
+scalar Scalar004
+
+enum Enum000 {
+  ALPHA
+  BETA
+}
+enum Enum001 {
+  ALPHA
+  BETA
+}
+
+enum Enum002 {
+  ALPHA
+  BETA
+}
+
+enum Enum003 {
+  ALPHA
+  BETA
+}
+
+enum Enum004 {
+  ALPHA
+  BETA
+}
+
+enum Enum005 {
+  ALPHA
+  BETA
+}
+
+enum Enum006 {
+  ALPHA
+  BETA
+}
+
+enum Enum007 {
+  ALPHA
+  BETA
+}
+
+enum Enum008 {
+  ALPHA
+  BETA
+}
+
+enum Enum009 {
+  ALPHA
+  BETA
+}
+
+enum Enum010 {
+  ALPHA
+  BETA
+}
+
+enum Enum011 {
+  ALPHA
+  BETA
+}
+
+enum Enum012 {
+  ALPHA
+  BETA
+}
+
+enum Enum013 {
+  ALPHA
+  BETA
+}
+
+enum Enum014 {
+  ALPHA
+  BETA
+}
+
+enum Enum015 {
+  ALPHA
+  BETA
+}
+
+enum Enum016 {
+  ALPHA
+  BETA
+}
+
+enum Enum017 {
+  ALPHA
+  BETA
+}
+
+enum Enum018 {
+  ALPHA
+  BETA
+}
+
+enum Enum019 {
+  ALPHA
+  BETA
+}
+
+enum Enum020 {
+  ALPHA
+  BETA
+}
+
+enum Enum021 {
+  ALPHA
+  BETA
+}
+
+enum Enum022 {
+  ALPHA
+  BETA
+}
+
+enum Enum023 {
+  ALPHA
+  BETA
+}
+
+enum Enum024 {
+  ALPHA
+  BETA
+}
+
+enum Enum025 {
+  ALPHA
+  BETA
+}
+
+enum Enum026 {
+  ALPHA
+  BETA
+}
+
+enum Enum027 {
+  ALPHA
+  BETA
+}
+
+enum Enum028 {
+  ALPHA
+  BETA
+}
+
+enum Enum029 {
+  ALPHA
+  BETA
+}
+
+enum Enum030 {
+  ALPHA
+  BETA
+}
+
+enum Enum031 {
+  ALPHA
+  BETA
+}
+
+enum Enum032 {
+  ALPHA
+  BETA
+}
+
+enum Enum033 {
+  ALPHA
+  BETA
+}
+
+enum Enum034 {
+  ALPHA
+  BETA
+}
+
+enum Enum035 {
+  ALPHA
+  BETA
+}
+
+enum Enum036 {
+  ALPHA
+  BETA
+}
+
+enum Enum037 {
+  ALPHA
+  BETA
+}
+
+enum Enum038 {
+  ALPHA
+  BETA
+}
+
+enum Enum039 {
+  ALPHA
+  BETA
+}
+
+enum Enum040 {
+  ALPHA
+  BETA
+}
+
+enum Enum041 {
+  ALPHA
+  BETA
+}
+
+enum Enum042 {
+  ALPHA
+  BETA
+}
+
+enum Enum043 {
+  ALPHA
+  BETA
+}
+
+enum Enum044 {
+  ALPHA
+  BETA
+}
+
+enum Enum045 {
+  ALPHA
+  BETA
+}
+
+enum Enum046 {
+  ALPHA
+  BETA
+}
+
+enum Enum047 {
+  ALPHA
+  BETA
+}
+
+enum Enum048 {
+  ALPHA
+  BETA
+}
+
+enum Enum049 {
+  ALPHA
+  BETA
+}
+
+enum Enum050 {
+  ALPHA
+  BETA
+}
+
+enum Enum051 {
+  ALPHA
+  BETA
+}
+
+enum Enum052 {
+  ALPHA
+  BETA
+}
+
+enum Enum053 {
+  ALPHA
+  BETA
+}
+
+enum Enum054 {
+  ALPHA
+  BETA
+}
+
+enum Enum055 {
+  ALPHA
+  BETA
+}
+
+enum Enum056 {
+  ALPHA
+  BETA
+}
+
+enum Enum057 {
+  ALPHA
+  BETA
+}
+
+enum Enum058 {
+  ALPHA
+  BETA
+}
+
+enum Enum059 {
+  ALPHA
+  BETA
+}
+
+enum Enum060 {
+  ALPHA
+  BETA
+}
+
+enum Enum061 {
+  ALPHA
+  BETA
+}
+
+enum Enum062 {
+  ALPHA
+  BETA
+}
+
+enum Enum063 {
+  ALPHA
+  BETA
+}
+
+enum Enum064 {
+  ALPHA
+  BETA
+}
+
+input Input000 {
+  term: String
+  state: Enum000
+  limit: Int = 20
+}
+
+input Input001 {
+  term: String
+  state: Enum001
+  limit: Int = 20
+}
+
+input Input002 {
+  term: String
+  state: Enum002
+  limit: Int = 20
+}
+
+input Input003 {
+  term: String
+  state: Enum003
+  limit: Int = 20
+}
+
+input Input004 {
+  term: String
+  state: Enum004
+  limit: Int = 20
+}
+
+input Input005 {
+  term: String
+  state: Enum005
+  limit: Int = 20
+}
+
+input Input006 {
+  term: String
+  state: Enum006
+  limit: Int = 20
+}
+
+input Input007 {
+  term: String
+  state: Enum007
+  limit: Int = 20
+}
+
+input Input008 {
+  term: String
+  state: Enum008
+  limit: Int = 20
+}
+
+input Input009 {
+  term: String
+  state: Enum009
+  limit: Int = 20
+}
+
+input Input010 {
+  term: String
+  state: Enum010
+  limit: Int = 20
+}
+
+input Input011 {
+  term: String
+  state: Enum011
+  limit: Int = 20
+}
+
+input Input012 {
+  term: String
+  state: Enum012
+  limit: Int = 20
+}
+
+input Input013 {
+  term: String
+  state: Enum013
+  limit: Int = 20
+}
+
+input Input014 {
+  term: String
+  state: Enum014
+  limit: Int = 20
+}
+
+input Input015 {
+  term: String
+  state: Enum015
+  limit: Int = 20
+}
+
+input Input016 {
+  term: String
+  state: Enum016
+  limit: Int = 20
+}
+
+input Input017 {
+  term: String
+  state: Enum017
+  limit: Int = 20
+}
+
+input Input018 {
+  term: String
+  state: Enum018
+  limit: Int = 20
+}
+
+interface Node {
+  id: ID!
+}
+
+union SearchResult = ProductObject000 | ProductObject001
+
+type Query {
+  node: Node
+  search(term: String!): [SearchResult!]!
+  object000(filter: Input000, state: Enum000): ProductObject000!
+  object001(filter: Input001, state: Enum001): ProductObject001!
+  object002(filter: Input002, state: Enum002): ProductObject002!
+  object003(filter: Input003, state: Enum003): ProductObject003!
+  object004(filter: Input004, state: Enum004): ProductObject004!
+  object005(filter: Input005, state: Enum005): ProductObject005!
+  object006(filter: Input006, state: Enum006): ProductObject006!
+  object007(filter: Input007, state: Enum007): ProductObject007!
+  object008(filter: Input008, state: Enum008): ProductObject008!
+  object009(filter: Input009, state: Enum009): ProductObject009!
+  object010(filter: Input010, state: Enum010): ProductObject010!
+  object011(filter: Input011, state: Enum011): ProductObject011!
+  object012(filter: Input012, state: Enum012): ProductObject012!
+  object013(filter: Input013, state: Enum013): ProductObject013!
+  object014(filter: Input014, state: Enum014): ProductObject014!
+  object015(filter: Input015, state: Enum015): ProductObject015!
+  object016(filter: Input016, state: Enum016): ProductObject016!
+  object017(filter: Input017, state: Enum017): ProductObject017!
+  object018(filter: Input018, state: Enum018): ProductObject018!
+  object019(filter: Input000, state: Enum019): ProductObject019!
+  object020(filter: Input001, state: Enum020): ProductObject020!
+  object021(filter: Input002, state: Enum021): ProductObject021!
+  object022(filter: Input003, state: Enum022): ProductObject022!
+  object023(filter: Input004, state: Enum023): ProductObject023!
+  object024(filter: Input005, state: Enum024): ProductObject024!
+  object025(filter: Input006, state: Enum025): ProductObject025!
+  object026(filter: Input007, state: Enum026): ProductObject026!
+  object027(filter: Input008, state: Enum027): ProductObject027!
+  object028(filter: Input009, state: Enum028): ProductObject028!
+  object029(filter: Input010, state: Enum029): ProductObject029!
+  object030(filter: Input011, state: Enum030): ProductObject030!
+  object031(filter: Input012, state: Enum031): ProductObject031!
+  object032(filter: Input013, state: Enum032): ProductObject032!
+  object033(filter: Input014, state: Enum033): ProductObject033!
+  object034(filter: Input015, state: Enum034): ProductObject034!
+  object035(filter: Input016, state: Enum035): ProductObject035!
+  object036(filter: Input017, state: Enum036): ProductObject036!
+  object037(filter: Input018, state: Enum037): ProductObject037!
+  object038(filter: Input000, state: Enum038): ProductObject038!
+  object039(filter: Input001, state: Enum039): ProductObject039!
+  object040(filter: Input002, state: Enum040): ProductObject040!
+  object041(filter: Input003, state: Enum041): ProductObject041!
+  object042(filter: Input004, state: Enum042): ProductObject042!
+  object043(filter: Input005, state: Enum043): ProductObject043!
+  object044(filter: Input006, state: Enum044): ProductObject044!
+  object045(filter: Input007, state: Enum045): ProductObject045!
+  object046(filter: Input008, state: Enum046): ProductObject046!
+  object047(filter: Input009, state: Enum047): ProductObject047!
+  object048(filter: Input010, state: Enum048): ProductObject048!
+  object049(filter: Input011, state: Enum049): ProductObject049!
+  object050(filter: Input012, state: Enum050): ProductObject050!
+  object051(filter: Input013, state: Enum051): ProductObject051!
+  object052(filter: Input014, state: Enum052): ProductObject052!
+  object053(filter: Input015, state: Enum053): ProductObject053!
+  object054(filter: Input016, state: Enum054): ProductObject054!
+  object055(filter: Input017, state: Enum055): ProductObject055!
+  object056(filter: Input018, state: Enum056): ProductObject056!
+  object057(filter: Input000, state: Enum057): ProductObject057!
+  object058(filter: Input001, state: Enum058): ProductObject058!
+  object059(filter: Input002, state: Enum059): ProductObject059!
+}
+
+type Mutation {
+  updateObject(input: Input000!): ProductObject000!
+}
+
+type ProductObject000 implements Node {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum000!
+  custom: Scalar000
+  next: ProductObject001
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject001 implements Node {
+  id: ID!
+  name: String!
+  related(limit: Int!): ProductObject002
+  enabled: Boolean!
+  score: Int!
+  kind: Enum001!
+  custom: Scalar001
+  next: ProductObject002
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject002 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum002!
+  custom: Scalar002
+  next: ProductObject003
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject003 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum003!
+  custom: Scalar003
+  next: ProductObject004
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject004 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum004!
+  custom: Scalar004
+  next: ProductObject005
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject005 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum005!
+  custom: Scalar000
+  next: ProductObject006
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject006 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum006!
+  custom: Scalar001
+  next: ProductObject007
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject007 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum007!
+  custom: Scalar002
+  next: ProductObject008
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject008 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum008!
+  custom: Scalar003
+  next: ProductObject009
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject009 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum009!
+  custom: Scalar004
+  next: ProductObject010
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject010 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum010!
+  custom: Scalar000
+  next: ProductObject011
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject011 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum011!
+  custom: Scalar001
+  next: ProductObject012
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject012 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum012!
+  custom: Scalar002
+  next: ProductObject013
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject013 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum013!
+  custom: Scalar003
+  next: ProductObject014
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject014 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum014!
+  custom: Scalar004
+  next: ProductObject015
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject015 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum015!
+  custom: Scalar000
+  next: ProductObject016
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject016 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum016!
+  custom: Scalar001
+  next: ProductObject017
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject017 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum017!
+  custom: Scalar002
+  next: ProductObject018
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject018 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum018!
+  custom: Scalar003
+  next: ProductObject019
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject019 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum019!
+  custom: Scalar004
+  next: ProductObject020
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject020 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum020!
+  custom: Scalar000
+  next: ProductObject021
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject021 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum021!
+  custom: Scalar001
+  next: ProductObject022
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject022 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum022!
+  custom: Scalar002
+  next: ProductObject023
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject023 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum023!
+  custom: Scalar003
+  next: ProductObject024
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject024 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum024!
+  custom: Scalar004
+  next: ProductObject025
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject025 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum025!
+  custom: Scalar000
+  next: ProductObject026
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject026 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum026!
+  custom: Scalar001
+  next: ProductObject027
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject027 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum027!
+  custom: Scalar002
+  next: ProductObject028
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject028 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum028!
+  custom: Scalar003
+  next: ProductObject029
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject029 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum029!
+  custom: Scalar004
+  next: ProductObject030
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject030 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum030!
+  custom: Scalar000
+  next: ProductObject031
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject031 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum031!
+  custom: Scalar001
+  next: ProductObject032
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject032 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum032!
+  custom: Scalar002
+  next: ProductObject033
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject033 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum033!
+  custom: Scalar003
+  next: ProductObject034
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject034 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum034!
+  custom: Scalar004
+  next: ProductObject035
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject035 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum035!
+  custom: Scalar000
+  next: ProductObject036
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject036 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum036!
+  custom: Scalar001
+  next: ProductObject037
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject037 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum037!
+  custom: Scalar002
+  next: ProductObject038
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject038 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum038!
+  custom: Scalar003
+  next: ProductObject039
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject039 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum039!
+  custom: Scalar004
+  next: ProductObject040
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject040 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum040!
+  custom: Scalar000
+  next: ProductObject041
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject041 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum041!
+  custom: Scalar001
+  next: ProductObject042
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject042 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum042!
+  custom: Scalar002
+  next: ProductObject043
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject043 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum043!
+  custom: Scalar003
+  next: ProductObject044
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject044 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum044!
+  custom: Scalar004
+  next: ProductObject045
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject045 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum045!
+  custom: Scalar000
+  next: ProductObject046
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject046 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum046!
+  custom: Scalar001
+  next: ProductObject047
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject047 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum047!
+  custom: Scalar002
+  next: ProductObject048
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject048 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum048!
+  custom: Scalar003
+  next: ProductObject049
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject049 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum049!
+  custom: Scalar004
+  next: ProductObject050
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject050 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum050!
+  custom: Scalar000
+  next: ProductObject051
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject051 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum051!
+  custom: Scalar001
+  next: ProductObject052
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject052 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum052!
+  custom: Scalar002
+  next: ProductObject053
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject053 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum053!
+  custom: Scalar003
+  next: ProductObject054
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject054 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum054!
+  custom: Scalar004
+  next: ProductObject055
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject055 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum055!
+  custom: Scalar000
+  next: ProductObject056
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject056 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum056!
+  custom: Scalar001
+  next: ProductObject057
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject057 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum057!
+  custom: Scalar002
+  next: ProductObject058
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject058 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum058!
+  custom: Scalar003
+  next: ProductObject059
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject059 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum059!
+  custom: Scalar004
+  next: ProductObject060
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject060 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum060!
+  custom: Scalar000
+  next: ProductObject061
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject061 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum061!
+  custom: Scalar001
+  next: ProductObject062
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject062 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum062!
+  custom: Scalar002
+  next: ProductObject063
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject063 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum063!
+  custom: Scalar003
+  next: ProductObject064
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject064 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum064!
+  custom: Scalar004
+  next: ProductObject065
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject065 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum000!
+  custom: Scalar000
+  next: ProductObject066
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject066 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum001!
+  custom: Scalar001
+  next: ProductObject067
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject067 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum002!
+  custom: Scalar002
+  next: ProductObject068
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}
+
+type ProductObject068 {
+  id: ID!
+  name: String!
+  enabled: Boolean!
+  score: Int!
+  kind: Enum003!
+  custom: Scalar003
+  next: ProductObject000
+  values: [String!]!
+  count: Int!
+  ratio: Float
+}

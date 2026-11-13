@@ -1,0 +1,61 @@
+# Synthetic schema coverage: lists, nullability, defaults, roots and enum bindings.
+enum FixtureChoice018 {
+	VALUE036
+	VALUE010
+}
+
+enum FixtureChoice019 {
+	VALUE002
+	VALUE037
+}
+
+enum FixtureChoice020 {
+	VALUE067
+	VALUE135
+	VALUE153
+}
+
+enum FixtureChoice021 {
+	VALUE131
+	VALUE039
+	VALUE099
+	VALUE158
+	VALUE106
+}
+
+enum FixtureChoice022 {
+	VALUE002
+	VALUE038
+	VALUE037
+}
+
+enum FixtureChoice023 {
+	VALUE098
+	VALUE143
+	VALUE034
+	VALUE032
+	VALUE096
+}
+
+enum FixtureChoice024 {
+	VALUE005
+	VALUE087
+}
+
+enum FixtureChoice025 {
+	VALUE002
+	VALUE159
+	VALUE020
+}
+
+enum FixtureChoice026 {
+	VALUE126
+	VALUE085
+	VALUE006
+}
+
+enum FixtureChoice027 {
+	VALUE072
+	VALUE002
+	VALUE037
+}

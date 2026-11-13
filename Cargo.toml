@@ -1,0 +1,122 @@
+[workspace]
+members = [
+    "crates/axum",
+    "crates/cli",
+    "crates/codegen",
+    "crates/core",
+    "crates/facade",
+    "crates/graphiql",
+    "crates/host",
+    "crates/http",
+    "crates/hyper",
+    "crates/mock",
+    "crates/observability",
+    "crates/opentelemetry",
+    "crates/operation",
+    "crates/policy",
+    "crates/runtime",
+    "crates/rate",
+    "crates/rate-memory",
+    "crates/testkit",
+    "crates/tracing",
+    "examples/axum-adoption",
+    "examples/books",
+    "examples/subscriptions",
+]
+default-members = [
+    "crates/axum",
+    "crates/codegen",
+    "crates/core",
+    "crates/facade",
+    "crates/graphiql",
+    "crates/host",
+    "crates/http",
+    "crates/hyper",
+    "crates/observability",
+    "crates/opentelemetry",
+    "crates/operation",
+    "crates/policy",
+    "crates/runtime",
+    "crates/rate",
+    "crates/rate-memory",
+    "crates/testkit",
+    "crates/tracing",
+    "examples/axum-adoption",
+    "examples/books",
+    "examples/subscriptions",
+]
+exclude = [
+    "vendor/stylua-2.5.2",
+    "vendor/full_moon-2.2.0",
+    "generated/axum-adoption",
+    "generated/books",
+    "generated/mock-blog",
+    "generated/subscriptions-example",
+    "generated/testkit-subscriptions",
+    "generated/testkit-usability",
+]
+resolver = "3"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.95"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/craftguild/chigiri.rs"
+
+[workspace.dependencies]
+craftguild-cli = { git = "https://github.com/craftguild/standards.rs", rev = "6852b210a9a614920bc5be2187f2705f46db978d" }
+craftguild-cli-build = { git = "https://github.com/craftguild/standards.rs", rev = "6852b210a9a614920bc5be2187f2705f46db978d" }
+axum = { version = "0.8.4", default-features = false, features = ["http1", "tokio"] }
+blake3 = "1.8.7"
+bytes = "1.10.1"
+clap = { version = "=4.5.60", default-features = false, features = ["std", "help", "usage", "string"] }
+crossbeam-channel = "0.5.16"
+futures-core = "=0.3.34"
+futures-sink = { version = "=0.3.34", default-features = false }
+http-body-util = "0.1.3"
+hyper = { version = "1.6.0", default-features = false, features = ["http1", "server"] }
+hyper-util = { version = "0.1.11", default-features = false, features = ["tokio"] }
+tokio-tungstenite = { version = "=0.29.0", default-features = false, features = ["handshake"] }
+opentelemetry = { version = "0.32.0", default-features = false, features = ["trace"] }
+opentelemetry_sdk = { version = "=0.32.1", default-features = false, features = ["trace"] }
+opentelemetry-semantic-conventions = "=0.32.1"
+chigiri = { path = "crates/facade" }
+chigiri_axum = { path = "crates/axum" }
+chigiri_core = { path = "crates/core" }
+chigiri_graphiql = { path = "crates/graphiql" }
+chigiri_host = { path = "crates/host" }
+chigiri_http = { path = "crates/http" }
+chigiri_hyper = { path = "crates/hyper" }
+chigiri_observability = { path = "crates/observability" }
+chigiri_opentelemetry = { path = "crates/opentelemetry" }
+chigiri_operation = { path = "crates/operation" }
+chigiri_policy = { path = "crates/policy" }
+chigiri_rate = { path = "crates/rate" }
+chigiri_rate_memory = { path = "crates/rate-memory" }
+chigiri_runtime = { path = "crates/runtime" }
+chigiri_testkit = { path = "crates/testkit" }
+chigiri_tracing = { path = "crates/tracing" }
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = { version = "1.0.140", features = ["arbitrary_precision"] }
+tokio = { version = "1.53.3", default-features = false, features = [
+    "macros",
+    "net",
+    "rt-multi-thread",
+    "signal",
+    "time",
+] }
+tower = { version = "0.5.2", default-features = false, features = ["util"] }
+tracing = { version = "0.1.44", default-features = false, features = ["std"] }
+
+# formatter/parser/device does not change the Rust source, only manifests unnecessary dependence on the library.
+[patch.crates-io]
+stylua = { path = "vendor/stylua-2.5.2" }
+full_moon = { path = "vendor/full_moon-2.2.0" }
+
+# The first type definition is also available. Type testers and the Debug configuration of the Mock body are maintained.
+[profile.dev.package.stylua]
+opt-level = 3
+
+[profile.dev.package.full_moon]
+opt-level = 3

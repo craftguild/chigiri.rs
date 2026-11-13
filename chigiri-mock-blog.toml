@@ -1,0 +1,22 @@
+schema_version = "chigiri/config-v2"
+
+[schema]
+directory = "crates/mock/graphql"
+
+[package]
+name = "chigiri-mock-blog-contract"
+version = "0.0.0"
+edition = "2024"
+
+[generation]
+output = "generated/mock-blog"
+
+[runtime]
+source = "path"
+root = "."
+
+[consumer]
+cargo_manifest = "tests/fixtures/mock-blog-comparison/Cargo.toml"
+package = "chigiri-mock-blog-comparison"
+generated_dependency = "generated"
+all_targets = true

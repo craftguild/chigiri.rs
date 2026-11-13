@@ -1,0 +1,48 @@
+# Synthetic schema coverage: lists, nullability, defaults, roots and enum bindings.
+type FixtureRecord024 {
+	fixtureField421: FixtureRecord029!
+	fixtureField085: FixtureRecord025!
+	fixtureField440: [FixtureRecord030!]!
+}
+
+type FixtureRecord025 {
+	fixtureField157: ID!
+	fixtureField206: String!
+	fixtureField037: UnitKind!
+	fixtureField036: Int
+	fixtureField387: FixtureChoice025!
+	fixtureField196: [FixtureRecord026!]!
+}
+
+type FixtureRecord026 {
+	fixtureField157: ID!
+	fixtureField421: FixtureRecord029!
+	fixtureField338: FixtureChoice024!
+	fixtureField077: FixtureScalar003!
+}
+
+type FixtureRecord027 {
+	fixtureField195: FixtureRecord024!
+}
+
+type FixtureRecord028 {
+	fixtureField213: String!
+	fixtureField197: String!
+	fixtureField126: FixtureScalar003!
+}
+
+type FixtureRecord029 {
+	fixtureField157: ID!
+	fixtureField103: String
+	fixtureField114: String!
+	fixtureField387: FixtureChoice027!
+	fixtureField174: FixtureScalar003
+}
+
+type FixtureRecord030 {
+	fixtureField157: ID!
+	fixtureField014: FixtureScalar000!
+	fixtureField062: FixtureChoice031!
+	fixtureField171: Boolean!
+	fixtureField433: FixtureScalar003
+}

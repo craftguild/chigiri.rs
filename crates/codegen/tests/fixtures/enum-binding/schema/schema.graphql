@@ -1,0 +1,48 @@
+enum ProtocolKind {
+  ALPHA
+  BETA
+}
+
+enum OwnedKind {
+  ONE
+  TWO
+}
+
+input NestedInput {
+  kind: ProtocolKind! = ALPHA
+  kinds: [ProtocolKind!]!
+}
+
+input FilterInput {
+  nested: NestedInput!
+}
+
+input RecursiveInput {
+  kind: ProtocolKind!
+  next: RecursiveInput
+}
+
+input ChoiceInput @oneOf {
+  kind: ProtocolKind
+  nested: NestedInput
+}
+
+input ChoiceEnvelope {
+  choice: ChoiceInput!
+}
+
+type Query {
+  direct(value: ProtocolKind!): ProtocolKind!
+  defaulted(value: ProtocolKind! = ALPHA): ProtocolKind!
+  list(values: [ProtocolKind!]!): ProtocolKind!
+  nullableList(values: [ProtocolKind]!): ProtocolKind!
+  listOutput: [ProtocolKind!]!
+  listFailure: [ProtocolKind!]!
+  nullableListFailure: [ProtocolKind]!
+  object(input: FilterInput!): ProtocolKind!
+  recursive(input: RecursiveInput!): ProtocolKind!
+  choice(input: ChoiceInput!): ProtocolKind!
+  nestedChoice(input: ChoiceEnvelope!): ProtocolKind!
+  output: ProtocolKind
+  owned(value: OwnedKind!): OwnedKind!
+}

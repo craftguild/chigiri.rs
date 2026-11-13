@@ -1,0 +1,13 @@
+[package]
+name = "chigiri-custom-scalar-output"
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.95"
+publish = false
+
+[dependencies]
+generated = { package = "chigiri-codegen-scalar-contract", path = "../../golden/custom-scalar-output" }
+chigiri = { path = "../../../../facade" }
+chigiri_http = { path = "../../../../http" }
+
+[workspace]

@@ -1,0 +1,25 @@
+[package]
+name = "chigiri_hyper"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Hyper bridge for the Chigiri GraphQL endpoint"
+documentation = "https://docs.rs/chigiri_hyper"
+
+[features]
+default = []
+graphiql = ["chigiri/graphiql"]
+
+[dependencies]
+bytes.workspace = true
+futures-core.workspace = true
+futures-sink.workspace = true
+http-body-util.workspace = true
+hyper.workspace = true
+hyper-util.workspace = true
+chigiri = { workspace = true, features = ["subscription-worker"] }
+chigiri_http.workspace = true
+tokio.workspace = true
+tokio-tungstenite.workspace = true

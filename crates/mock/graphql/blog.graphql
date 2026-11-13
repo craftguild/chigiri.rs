@@ -1,0 +1,40 @@
+type User {
+  id: ID!
+  name: String!
+  posts(limit: Int! = 20): [Post!]!
+}
+
+type Post {
+  id: ID!
+  title: String!
+  body: String!
+  author: User!
+}
+
+input CreateUserInput {
+  name: String!
+}
+
+input CreatePostInput {
+  title: String!
+  body: String!
+  authorId: ID!
+}
+
+input UpdatePostInput {
+  title: String
+  body: String
+  authorId: ID
+}
+
+type Query {
+  getUsers(limit: Int! = 20): [User!]!
+  findPost(id: ID, authorId: ID, limit: Int! = 20): [Post!]!
+}
+
+type Mutation {
+  createUser(input: CreateUserInput!): User!
+  createPost(input: CreatePostInput!): Post!
+  updatePost(id: ID!, input: UpdatePostInput!): Post!
+  deletePost(id: ID!): Boolean!
+}

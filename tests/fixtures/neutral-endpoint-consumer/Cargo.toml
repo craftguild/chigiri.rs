@@ -1,0 +1,11 @@
+[workspace]
+
+[package]
+name = "neutral-endpoint-consumer"
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.95"
+publish = false
+
+[dependencies]
+chigiri = { path = "../../../crates/facade" }

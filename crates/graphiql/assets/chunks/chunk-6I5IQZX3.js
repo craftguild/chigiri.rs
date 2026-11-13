@@ -1,0 +1,1 @@
+import{c as r,ha as l,j as t}from"./chunk-P5PMNCG4.js";var o=!1;function n(i){if(o)return;o=!0;let s=new r(e=>{globalThis.postMessage(e)},e=>new l(t.getChannel(e),i));globalThis.onmessage=e=>{s.onmessage(e.data)}}globalThis.onmessage=i=>{o||n(null)};export{n as a};

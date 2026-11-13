@@ -1,0 +1,94 @@
+[package]
+name = "chigiri_testkit"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Reusable conformance and provider testkit for Chigiri"
+documentation = "https://docs.rs/chigiri_testkit"
+autotests = false
+
+[features]
+default = []
+graphiql = ["chigiri/graphiql", "chigiri_axum/graphiql", "chigiri_hyper/graphiql"]
+
+[dependencies]
+futures-util = "0.3.31"
+chigiri.workspace = true
+chigiri_http.workspace = true
+chigiri_operation.workspace = true
+chigiri_policy.workspace = true
+chigiri_rate.workspace = true
+serde_json.workspace = true
+
+[dev-dependencies]
+axum.workspace = true
+bytes.workspace = true
+futures-util = { version = "0.3.31", features = ["sink"] }
+generated = { package = "chigiri-testkit-usability-contract", path = "../../generated/testkit-usability" }
+subscription_generated = { package = "chigiri-testkit-subscriptions-contract", path = "../../generated/testkit-subscriptions" }
+http-body-util.workspace = true
+hyper.workspace = true
+hyper-util = { workspace = true, features = ["service"] }
+chigiri_axum.workspace = true
+chigiri_hyper.workspace = true
+chigiri_observability.workspace = true
+chigiri_opentelemetry.workspace = true
+chigiri_rate_memory.workspace = true
+opentelemetry.workspace = true
+opentelemetry_sdk.workspace = true
+sha2 = "0.10.9"
+tokio.workspace = true
+tokio-tungstenite.workspace = true
+tracing = { version = "=0.1.44", default-features = false, features = ["std"] }
+tracing-opentelemetry = { version = "=0.33.0", default-features = false }
+tracing-subscriber = { version = "=0.3.22", default-features = false, features = ["registry", "std"] }
+
+[[test]]
+name = "developer_contract"
+path = "tests/developer_contract.rs"
+
+[[test]]
+name = "public_contract"
+path = "tests/public_contract.rs"
+
+[[test]]
+name = "lifecycle_conformance"
+path = "tests/lifecycle_conformance.rs"
+
+[[test]]
+name = "rate_conformance"
+path = "tests/rate_conformance.rs"
+
+[[test]]
+name = "operation_http"
+path = "tests/operation_http.rs"
+
+[[test]]
+name = "endpoint_conformance"
+path = "tests/endpoint_conformance.rs"
+
+[[test]]
+name = "governance_conformance"
+path = "tests/governance_conformance.rs"
+
+[[test]]
+name = "provider_conformance"
+path = "tests/provider_conformance.rs"
+
+[[test]]
+name = "differential_conformance"
+path = "tests/differential_conformance.rs"
+
+[[test]]
+name = "usability"
+path = "tests/usability.rs"
+
+[[test]]
+name = "subscription_streaming"
+path = "tests/subscription_streaming.rs"
+
+[[test]]
+name = "managed_shutdown"
+path = "tests/managed_shutdown.rs"

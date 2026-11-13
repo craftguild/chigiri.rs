@@ -1,0 +1,67 @@
+# Second domain. Concrete objects are automatic models, both relation sides are explicit, and roots and fields with arguments are manual.
+enum Status { OPEN DONE }
+scalar Data @representation(type: JSON)
+scalar Count @representation(type: INTEGER, min: 0)
+scalar Code @representation(type: STRING, minBytes: 2, maxBytes: 8)
+interface Entity { id: ID! }
+type Member implements Entity {
+  id: ID!
+  name: String!
+  status: Status!
+  code: Code!
+  manager: Member @relation(fields: ["managerId"], references: ["id"])
+  reports: [Member!]! @relation
+  leading: Project @relation(name: "lead")
+  projects: [Project!]! @relation(name: "members")
+  label(prefix: String! = "member:"): String!
+}
+type Project {
+  id: ID!
+  name: String!
+  lead: Member @relation(fields: ["leadId"], references: ["id"], name: "lead")
+  members: [Member!]! @relation(fields: ["memberIds"], references: ["id"], name: "members")
+  tasks: [Task!]! @relation
+}
+type Task {
+  id: ID!
+  title: String!
+  project: Project! @relation(fields: ["projectId"], references: ["id"])
+  assignee: Member @relation(fields: ["assigneeId"], references: ["id"])
+}
+type Packet implements Entity {
+  id: ID! @virtual
+  caption: String!
+  child: Packet
+  member: Member
+  data: Data
+  label: String! @virtual
+}
+union Result = Member | Packet
+input Pick @oneOf { id: ID, name: String }
+input NewMember { name: String!, status: Status! = OPEN, code: Code!, managerId: ID }
+input MemberPatch { name: String, status: Status, code: Code, managerId: ID }
+input NewProject { name: String!, leadId: ID, memberIds: [ID!]! }
+input ProjectPatch { name: String, leadId: ID, memberIds: [ID!] }
+input NewTask { title: String!, projectId: ID!, assigneeId: ID }
+input TaskPatch { title: String, projectId: ID, assigneeId: ID }
+type Query {
+  members(status: Status, limit: Int! = 20): [Member!]!
+  projects: [Project!]!
+  tasks: [Task!]!
+  result(pick: Pick!): Result
+  entity: Entity
+  packet: Packet!
+  echo(data: Data): Data
+  count(value: Count! = 9007199254740994): Count!
+}
+type Mutation {
+  addMember(input: NewMember!): Member!
+  changeMember(id: ID!, input: MemberPatch!): Member!
+  removeMember(id: ID!): Boolean!
+  addProject(input: NewProject!): Project!
+  changeProject(id: ID!, input: ProjectPatch!): Project!
+  removeProject(id: ID!): Boolean!
+  addTask(input: NewTask!): Task!
+  changeTask(id: ID!, input: TaskPatch!): Task!
+  removeTask(id: ID!): Boolean!
+}

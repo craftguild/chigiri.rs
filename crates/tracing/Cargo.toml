@@ -1,0 +1,13 @@
+[package]
+name = "chigiri_tracing"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Tracing observer bridge for Chigiri"
+documentation = "https://docs.rs/chigiri_tracing"
+
+[dependencies]
+chigiri_runtime.workspace = true
+tracing.workspace = true

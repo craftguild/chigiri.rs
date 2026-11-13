@@ -1,0 +1,40 @@
+schema_version = "chigiri/config-v2"
+
+[schema]
+directory = "graphql"
+
+[package]
+name = "chigiri-large-contract"
+version = "0.0.0"
+edition = "2024"
+
+[generation]
+output = "generated"
+
+[runtime]
+source = "path"
+root = "../../.."
+
+[consumer]
+cargo_manifest = "consumer/Cargo.toml"
+package = "chigiri_vnext_large_consumer"
+generated_dependency = "generated"
+features = []
+all_targets = true
+
+[bindings]
+domain_enums = [
+  "Enum000", "Enum001", "Enum002", "Enum003", "Enum004",
+  "Enum005", "Enum006", "Enum007", "Enum008", "Enum009",
+  "Enum010", "Enum011", "Enum012", "Enum013", "Enum014",
+  "Enum015", "Enum016", "Enum017", "Enum018", "Enum019",
+  "Enum020", "Enum021", "Enum022", "Enum023", "Enum024",
+  "Enum025", "Enum026", "Enum027", "Enum028", "Enum029",
+  "Enum030", "Enum031", "Enum032", "Enum033", "Enum034",
+  "Enum035", "Enum036", "Enum037", "Enum038", "Enum039",
+  "Enum040", "Enum041", "Enum042", "Enum043", "Enum044",
+  "Enum045", "Enum046", "Enum047", "Enum048", "Enum049",
+  "Enum050", "Enum051", "Enum052", "Enum053", "Enum054",
+  "Enum055", "Enum056", "Enum057", "Enum058", "Enum059",
+  "Enum060", "Enum061", "Enum062", "Enum063", "Enum064",
+]

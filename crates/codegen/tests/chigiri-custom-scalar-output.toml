@@ -1,0 +1,21 @@
+schema_version = "chigiri/config-v2"
+
+[schema]
+directory = "fixtures/custom-scalar-output"
+
+[package]
+name = "chigiri-codegen-scalar-contract"
+version = "0.0.0"
+edition = "2024"
+
+[generation]
+output = "golden/custom-scalar-output"
+
+[runtime]
+source = "path"
+root = "../../.."
+
+[consumer]
+cargo_manifest = "compile/custom_scalar_output/Cargo.toml"
+package = "chigiri-custom-scalar-output"
+generated_dependency = "generated"

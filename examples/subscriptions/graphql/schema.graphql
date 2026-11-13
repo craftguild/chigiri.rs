@@ -1,0 +1,16 @@
+schema { query: Query subscription: Subscription }
+
+type Query {
+  "The application's current immutable reading."
+  current: Reading!
+}
+
+type Subscription {
+  "A bounded owned source of fresh readings."
+  readings: Reading!
+}
+
+type Reading {
+  number: Int!
+  message: String!
+}

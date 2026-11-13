@@ -1,0 +1,162 @@
+{
+  "schema_version": "chigiri/owned-corpus-v1",
+  "schemaSources": [
+    {
+      "fixture": "graphql/schema.graphql",
+      "bytes": 4641,
+      "sha256": "6fb9878138f8900e52c530a7579352cf41c5fba1569ae924827b3d5f05c8a826"
+    },
+    {
+      "fixture": "graphql/segment-00.graphql",
+      "bytes": 1271,
+      "sha256": "460a265157a2ca3d44dcc01a9efd7410fc787e4c2e0dbf9161d8397f23495927"
+    },
+    {
+      "fixture": "graphql/segment-01.graphql",
+      "bytes": 663,
+      "sha256": "86be50d88026924a8269aba478be0e21010d5109701655455c5d786baa0202fc"
+    },
+    {
+      "fixture": "graphql/segment-02.graphql",
+      "bytes": 1287,
+      "sha256": "150c3fdbc62f84e35437b6cef33bdd79e9544847321761f06674577f579a28f8"
+    },
+    {
+      "fixture": "graphql/segment-03.graphql",
+      "bytes": 1559,
+      "sha256": "e91862b98df47be7e11c53e0f93999348c62a85f38abbb72cafedc977548d00d"
+    },
+    {
+      "fixture": "graphql/segment-04.graphql",
+      "bytes": 2036,
+      "sha256": "a5dcc3efe00acb94223b3d181b155eecf12d61770aee0257ea087b06d9a1e959"
+    },
+    {
+      "fixture": "graphql/segment-06.graphql",
+      "bytes": 4648,
+      "sha256": "9ce8b47ad8c324e04c66e12fe044f0a040d3ea20988fc5176bafb5b7862460e3"
+    },
+    {
+      "fixture": "graphql/segment-07.graphql",
+      "bytes": 5199,
+      "sha256": "fce48c6ac4c25fdaf38b6160517d8988bd161d19c14e2bc791c642d79c3c2880"
+    },
+    {
+      "fixture": "graphql/segment-08.graphql",
+      "bytes": 1110,
+      "sha256": "d8523b2b498dcc2b97fae04630d131c815acd2f82f76a2f6758bb0c0246d7d9a"
+    },
+    {
+      "fixture": "graphql/segment-09.graphql",
+      "bytes": 7004,
+      "sha256": "be5273170139706de38f9a823ec07a302fb9a6cf747d39a459ced258fb6eeab3"
+    },
+    {
+      "fixture": "graphql/segment-10.graphql",
+      "bytes": 5269,
+      "sha256": "d96e581f0a77c2430b58570473c292e537b8f021cb0d31a5ba7590632402dd6f"
+    }
+  ],
+  "boundEnums": [
+    "FixtureChoice000",
+    "FixtureChoice001",
+    "FixtureChoice002",
+    "FixtureChoice004",
+    "FixtureChoice005",
+    "FixtureChoice006",
+    "FixtureChoice007",
+    "FixtureChoice008",
+    "FixtureChoice009",
+    "FixtureChoice010",
+    "FixtureChoice011",
+    "FixtureChoice012",
+    "FixtureChoice013",
+    "FixtureChoice014",
+    "FixtureChoice015",
+    "FixtureChoice016",
+    "FixtureChoice017",
+    "FixtureChoice018",
+    "FixtureChoice019",
+    "FixtureChoice020",
+    "FixtureChoice021",
+    "FixtureChoice022",
+    "FixtureChoice023",
+    "FixtureChoice024",
+    "FixtureChoice025",
+    "FixtureChoice026",
+    "FixtureChoice027",
+    "FixtureChoice029",
+    "FixtureChoice030",
+    "FixtureChoice031",
+    "FixtureChoice032",
+    "FixtureChoice033",
+    "FixtureChoice034",
+    "FixtureChoice035",
+    "FixtureChoice036",
+    "FixtureChoice038",
+    "FixtureChoice039",
+    "FixtureChoice040",
+    "FixtureChoice041",
+    "FixtureChoice042",
+    "FixtureChoice043",
+    "FixtureChoice044",
+    "FixtureChoice045",
+    "FixtureChoice046",
+    "FixtureChoice047",
+    "FixtureChoice048",
+    "FixtureChoice049",
+    "FixtureChoice050",
+    "FixtureChoice051",
+    "FixtureChoice052",
+    "FixtureChoice053",
+    "FixtureChoice054",
+    "FixtureChoice055",
+    "FixtureChoice056",
+    "FixtureChoice057",
+    "FixtureChoice058",
+    "FixtureChoice059",
+    "FixtureChoice060",
+    "FixtureChoice061",
+    "FixtureChoice062",
+    "FixtureChoice063",
+    "FixtureChoice064",
+    "FormatKind",
+    "TransportKind",
+    "UnitKind"
+  ],
+  "representativeEnums": [
+    {
+      "wire": "FormatKind",
+      "domain": "FormatKind",
+      "variants": [
+        "Value176",
+        "Value180",
+        "Value179"
+      ]
+    },
+    {
+      "wire": "TransportKind",
+      "domain": "ExternalTransport",
+      "variants": [
+        "Value168",
+        "Value169"
+      ]
+    },
+    {
+      "wire": "UnitKind",
+      "domain": "UnitKind",
+      "variants": [
+        "Value173",
+        "Value075",
+        "Value174"
+      ]
+    }
+  ],
+  "shape": {
+    "objects": 67,
+    "objectFields": 709,
+    "inputs": 19,
+    "enums": 65,
+    "scalars": 5
+  }
+}

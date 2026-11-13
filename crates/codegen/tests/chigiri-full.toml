@@ -1,0 +1,21 @@
+schema_version = "chigiri/config-v2"
+
+[schema]
+directory = "fixtures/full"
+
+[package]
+name = "chigiri-codegen-full-contract"
+version = "0.0.0"
+edition = "2024"
+
+[generation]
+output = "golden/full"
+
+[runtime]
+source = "path"
+root = "../../.."
+
+[consumer]
+cargo_manifest = "compile/pass/Cargo.toml"
+package = "chigiri-projection-consumer"
+generated_dependency = "generated"

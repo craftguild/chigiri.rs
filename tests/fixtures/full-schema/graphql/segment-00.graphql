@@ -1,0 +1,125 @@
+# Synthetic schema coverage: lists, nullability, defaults, roots and enum bindings.
+enum FixtureChoice000 {
+	VALUE102
+	VALUE138
+	VALUE017
+}
+
+enum FixtureChoice001 {
+	VALUE186
+	VALUE129
+	VALUE099
+	VALUE004
+}
+
+enum FixtureChoice002 {
+	VALUE030
+	VALUE077
+	VALUE000
+}
+
+enum UnitKind {
+	VALUE173
+	VALUE075
+	VALUE174
+}
+
+enum FixtureChoice004 {
+	VALUE102
+	VALUE120
+	VALUE020
+	VALUE187
+}
+
+enum FixtureChoice005 {
+	VALUE002
+	VALUE112
+	VALUE136
+}
+
+enum FixtureChoice006 {
+	VALUE082
+	VALUE099
+	VALUE188
+	VALUE015
+	VALUE013
+}
+
+enum FixtureChoice007 {
+	VALUE167
+	VALUE156
+	VALUE103
+	VALUE100
+	VALUE104
+}
+
+enum FixtureChoice008 {
+	VALUE102
+	VALUE138
+	VALUE017
+}
+
+enum FixtureChoice009 {
+	VALUE036
+	VALUE010
+	VALUE070
+	VALUE119
+	VALUE184
+	VALUE108
+	VALUE084
+	VALUE014
+	VALUE132
+}
+
+enum FixtureChoice010 {
+	VALUE036
+	VALUE010
+	VALUE070
+	VALUE119
+	VALUE184
+	VALUE108
+	VALUE084
+	VALUE014
+	VALUE132
+}
+
+enum FixtureChoice011 {
+	VALUE123
+	VALUE189
+	VALUE083
+}
+
+enum FixtureChoice012 {
+	VALUE114
+	VALUE090
+	VALUE190
+}
+
+enum FixtureChoice013 {
+	VALUE175
+	VALUE029
+	VALUE163
+	VALUE105
+}
+
+enum FixtureChoice014 {
+	VALUE185
+}
+
+enum FixtureChoice015 {
+	VALUE074
+	VALUE111
+	VALUE110
+	VALUE032
+	VALUE187
+}
+
+enum FixtureChoice016 {
+	VALUE001
+	VALUE073
+	VALUE187
+}
+
+enum FixtureChoice017 {
+	VALUE059
+}

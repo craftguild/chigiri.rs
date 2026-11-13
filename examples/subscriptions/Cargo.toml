@@ -1,0 +1,25 @@
+[package]
+name = "chigiri_subscriptions_example"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Application-owned Axum routes with SDK-managed GraphQL subscriptions"
+publish = false
+
+[dependencies]
+axum.workspace = true
+chigiri.workspace = true
+chigiri_axum.workspace = true
+futures-core.workspace = true
+generated = { package = "chigiri-subscriptions-example-contract", path = "../../generated/subscriptions-example" }
+tokio = { workspace = true, features = ["sync"] }
+
+[dev-dependencies]
+futures-util = "0.3.31"
+serde_json.workspace = true
+
+[[bin]]
+name = "chigiri-subscriptions-example"
+path = "src/main.rs"

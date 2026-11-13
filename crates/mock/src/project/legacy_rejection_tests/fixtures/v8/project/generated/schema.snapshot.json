@@ -1,0 +1,57 @@
+{
+  "format": "chigiri-mock-schema-snapshot/v9",
+  "generation": "335d4627de54bd424e2e9fd0e399710c8c552d86c2725bb626613086113b3746",
+  "public_schema": {
+    "normalization": "chigiri-mock-sdl-normalization/v1",
+    "sources": [
+      {
+        "name": "schema/001.graphql",
+        "sdl": "type Todo { id : ID ! title : String ! completed : Boolean ! } type Query { todos : [ Todo ! ] ! } type Mutation { addTodo ( title : String ! ) : Todo ! }\n"
+      }
+    ],
+    "digest": "74b9528d1246cb7d1449fbdaec25603890fda51bad731e375bd47d227552b996"
+  },
+  "schema_digest": "e8e39fc2a28639b99a8613d8de5e510d1a0b63ef8385a29eba3ea1325dd2fe82",
+  "summary": {
+    "query": "Query",
+    "mutation": "Mutation",
+    "entries": {
+      "argument/Mutation.addTodo/title": "5c04f82fda070b4065c9a6f1a685899d2feb0e2591ff6a6ce7ddd0c785172811",
+      "field/Mutation.addTodo": "0a45deab05fe1605b4eebbf1d2ec524a0aa9f810ecc20baf5df6d95bc9b401c8",
+      "field/Query.todos": "7687f6526f4b41d58dc25ac482ec4fb9f035ab07790bec313c51b555d4bda9bb",
+      "field/Todo.completed": "d93eb70f695091dd8e1fbad074eb07af915fdd4e9c6450357de6a84d87c2f5d7",
+      "field/Todo.id": "70db4920bdd438f56a722d3261b55f001d23dd6aed878e75440a4a59d6ac224c",
+      "field/Todo.title": "5c04f82fda070b4065c9a6f1a685899d2feb0e2591ff6a6ce7ddd0c785172811",
+      "model/Todo": "a56145270ce6b3bebd1dd012b73948677dd618d496488bc608a3cb43ce3547dd",
+      "type/Boolean": "43819c60b3bd9b70a7a5cc33659c9b518d9c652aaef39afacc1ecb127f0ce050",
+      "type/ChigiriMockRepresentation": "87385ef9f13ce27bd6800eace130f5f8ed02b4cc624f7887a071a7bf781c647c",
+      "type/Float": "43819c60b3bd9b70a7a5cc33659c9b518d9c652aaef39afacc1ecb127f0ce050",
+      "type/ID": "43819c60b3bd9b70a7a5cc33659c9b518d9c652aaef39afacc1ecb127f0ce050",
+      "type/Int": "43819c60b3bd9b70a7a5cc33659c9b518d9c652aaef39afacc1ecb127f0ce050",
+      "type/Mutation": "2d73aa2253d7937536e3166ccc1a7c708743dad7228a78d32e15ccc9a72bba30",
+      "type/Query": "b5d7bcf012eeaa823f5a0dff879affaebabaaaacf77b77a4e7fbaa2ecea5a50c",
+      "type/String": "43819c60b3bd9b70a7a5cc33659c9b518d9c652aaef39afacc1ecb127f0ce050",
+      "type/Todo": "a3e56557781184307ef6ad4ca517f50edca0f0f8b1a8fca00aeff1865cd7c766"
+    }
+  },
+  "config": {
+    "capability_version": "chigiri-mock-capabilities/v2",
+    "hooks": {
+      "request": {
+        "before": false,
+        "after": false
+      },
+      "operation": {
+        "before": false,
+        "after": false
+      },
+      "field": {
+        "before": false,
+        "after": false
+      }
+    },
+    "state_contract_digest": "ec79f5c52d70904503380c05944bf95a0f2254532b5081fda4c085bae61ea3e0",
+    "clock_mode": "system",
+    "clock_now": null
+  }
+}

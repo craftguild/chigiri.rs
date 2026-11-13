@@ -1,0 +1,22 @@
+schema_version = "chigiri/config-v2"
+
+[schema]
+directory = "examples/subscriptions/graphql"
+
+[package]
+name = "chigiri-subscriptions-example-contract"
+version = "0.0.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+
+[generation]
+output = "generated/subscriptions-example"
+
+[runtime]
+source = "path"
+root = "."
+
+[consumer]
+cargo_manifest = "examples/subscriptions/Cargo.toml"
+package = "chigiri_subscriptions_example"
+generated_dependency = "generated"

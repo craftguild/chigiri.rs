@@ -1,0 +1,214 @@
+# Legacy bundle used to verify explicit SDL, resolver, and seed migration.
+format = "chigiri-mock/v4"
+
+[state]
+contract_json = '{"fields":{},"initial":{}}'
+
+[hooks.request]
+before = false
+after = false
+
+[hooks.operation]
+before = false
+after = false
+
+[hooks.field]
+before = false
+after = false
+
+[hooks.modules]
+
+[server]
+listen = "127.0.0.1:4000"
+allowed_origins = ["http://localhost:5173"]
+
+[schema]
+digest = "077efc58422f0f144dee3a1628a54e148d374fca98c3a8eb00922f5a65033b06"
+vocabulary = "chigiri-mock-directives/v1"
+
+[[schema.sources]]
+name = "schema/001.graphql"
+text = '''
+# Legacy v1 blog fixture with explicit directives and operations.
+type User @chigiri_mock_model {
+  id: ID!
+  name: String! @chigiri_mock_value(maxBytes: 256)
+  posts(limit: Int! = 20): [Post!]!
+    @chigiri_mock_inverse(of: "Post.author", limit: "limit")
+}
+type Post @chigiri_mock_model {
+  id: ID!
+  title: String! @chigiri_mock_value(maxBytes: 256)
+  body: String! @chigiri_mock_value(maxBytes: 4096)
+  author: User! @chigiri_mock_relation(key: "authorId")
+}
+input CreateUserInput { name: String! }
+input CreatePostInput { title: String!, body: String!, authorId: ID! }
+input UpdatePostInput { title: String, body: String, authorId: ID }
+type Query {
+  getUsers(limit: Int! = 20): [User!]!
+    @chigiri_mock_crud(action: FIND, model: "User", limit: "limit")
+  findPost(id: ID, authorId: ID, limit: Int! = 20): [Post!]!
+    @chigiri_mock_crud(action: FIND, model: "Post", id: "id", limit: "limit",
+      where: [{argument: "authorId", field: "authorId"}])
+}
+type Mutation {
+  createUser(input: CreateUserInput!): User!
+    @chigiri_mock_crud(action: CREATE, model: "User", input: "input")
+  createPost(input: CreatePostInput!): Post!
+    @chigiri_mock_crud(action: CREATE, model: "Post", input: "input")
+  updatePost(id: ID!, input: UpdatePostInput!): Post!
+    @chigiri_mock_crud(action: UPDATE, model: "Post", id: "id", input: "input")
+  deletePost(id: ID!): Boolean!
+    @chigiri_mock_crud(action: DELETE, model: "Post", id: "id")
+}
+'''
+
+[[schema.sources]]
+name = "chigiri-mock/v1.graphql"
+text = '''
+# Mock v1 vocabulary definitions missing from the user SDL.
+enum ChigiriMockAction { FIND CREATE UPDATE DELETE }
+enum ChigiriMockRepresentation { STRING BOOLEAN INTEGER NUMBER OBJECT ARRAY JSON }
+input ChigiriMockWhere { argument: String! field: String! }
+directive @chigiri_mock_model(key: String! = "id") on OBJECT
+directive @chigiri_mock_relation(key: String!) on FIELD_DEFINITION
+directive @chigiri_mock_inverse(of: String!, limit: String) on FIELD_DEFINITION
+directive @chigiri_mock_crud(
+  action: ChigiriMockAction!
+  model: String!
+  id: String
+  input: String
+  limit: String
+  where: [ChigiriMockWhere!]
+) on FIELD_DEFINITION
+directive @chigiri_mock_resolver on FIELD_DEFINITION
+directive @chigiri_mock_value(
+  min: Float
+  max: Float
+  minBytes: Int
+  maxBytes: Int
+  minItems: Int
+  maxItems: Int
+) on FIELD_DEFINITION | INPUT_FIELD_DEFINITION
+directive @chigiri_mock_scalar(
+  representation: ChigiriMockRepresentation!
+  min: Float
+  max: Float
+  minBytes: Int
+  maxBytes: Int
+  minItems: Int
+  maxItems: Int
+) on SCALAR
+'''
+
+[seed]
+records_json = '{"User":[{"id":"User-1","name":"Alice"},{"id":"User-2","name":"Bob"}],"Post":[{"id":"Post-1","authorId":"User-1","title":"First post","body":"Body"}]}'
+
+[resolvers]
+
+[resolvers."Query.getUsers"]
+state = "ready"
+luau = '''
+--!strict
+local resolver: ChigiriQueryGetUsersResolver = {
+    state = "ready",
+    resolve = function(ctx: ChigiriQueryGetUsersContext, args: ChigiriQueryGetUsersArgs): ChigiriQueryGetUsersResult
+local predicates: {ChigiriUserWhere} = {}
+local limit = args["limit"]
+return ctx.models["User"]:find({
+  where = { all = predicates },
+  limit = limit :: number,
+})
+
+    end,
+}
+return resolver
+'''
+
+[resolvers."Query.findPost"]
+state = "ready"
+luau = '''
+--!strict
+local resolver: ChigiriQueryFindPostResolver = {
+    state = "ready",
+    resolve = function(ctx: ChigiriQueryFindPostContext, args: ChigiriQueryFindPostArgs): ChigiriQueryFindPostResult
+local predicates: {ChigiriPostWhere} = {}
+do
+  local value = args["id"]
+  if value ~= nil and value ~= ctx.null then
+    predicates[#predicates + 1] = { field = "id", op = "eq", value = value :: ChigiriIDValue }
+  end
+end
+do
+  local value = args["authorId"]
+  if value ~= nil and value ~= ctx.null then
+    predicates[#predicates + 1] = { field = "authorId", op = "eq", value = value :: ChigiriIDValue }
+  end
+end
+local limit = args["limit"]
+return ctx.models["Post"]:find({
+  where = { all = predicates },
+  limit = limit :: number,
+})
+
+    end,
+}
+return resolver
+'''
+
+[resolvers."Mutation.createUser"]
+state = "ready"
+luau = '''
+--!strict
+local resolver: ChigiriMutationCreateUserResolver = {
+    state = "ready",
+    resolve = function(ctx: ChigiriMutationCreateUserContext, args: ChigiriMutationCreateUserArgs): ChigiriMutationCreateUserResult
+return ctx.models["User"]:create(args["input"])
+
+    end,
+}
+return resolver
+'''
+
+[resolvers."Mutation.createPost"]
+state = "ready"
+luau = '''
+--!strict
+local resolver: ChigiriMutationCreatePostResolver = {
+    state = "ready",
+    resolve = function(ctx: ChigiriMutationCreatePostContext, args: ChigiriMutationCreatePostArgs): ChigiriMutationCreatePostResult
+return ctx.models["Post"]:create(args["input"])
+
+    end,
+}
+return resolver
+'''
+
+[resolvers."Mutation.updatePost"]
+state = "ready"
+luau = '''
+--!strict
+local resolver: ChigiriMutationUpdatePostResolver = {
+    state = "ready",
+    resolve = function(ctx: ChigiriMutationUpdatePostContext, args: ChigiriMutationUpdatePostArgs): ChigiriMutationUpdatePostResult
+return ctx.models["Post"]:update(args["id"], args["input"])
+
+    end,
+}
+return resolver
+'''
+
+[resolvers."Mutation.deletePost"]
+state = "ready"
+luau = '''
+--!strict
+local resolver: ChigiriMutationDeletePostResolver = {
+    state = "ready",
+    resolve = function(ctx: ChigiriMutationDeletePostContext, args: ChigiriMutationDeletePostArgs): ChigiriMutationDeletePostResult
+return ctx.models["Post"]:delete(args["id"])
+
+    end,
+}
+return resolver
+'''

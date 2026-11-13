@@ -1,0 +1,69 @@
+"Authorization metadata"
+directive @auth(
+  role: Role = ADMIN
+  legacy: String = "legacy" @deprecated(reason: "legacy metadata")
+) repeatable on OBJECT | FIELD_DEFINITION
+directive @schemaTag(value: String!) on SCHEMA
+
+"Generated fixture schema"
+schema @schemaTag(value: "full") {
+  query: Query
+  mutation: Mutation
+}
+
+scalar DateTime @specifiedBy(url: "https://example.test/datetime")
+
+enum Role {
+  ADMIN
+  READER @deprecated(reason: "Migrate to VIEWER")
+}
+
+interface Node {
+  id: ID!
+}
+
+type User implements Node @auth {
+  id: ID!
+  name: String!
+  updatedAt: DateTime!
+}
+
+type Team implements Node {
+  id: ID!
+  members(limit: Int = 10): [User!]!
+}
+
+union SearchResult = User | Team
+
+input DateRange {
+  from: DateTime
+  labels: [String]
+  legacy: String = "old" @deprecated(reason: "legacy input")
+}
+
+input Selector @oneOf {
+  id: ID
+  name: String
+}
+
+input RenameInput {
+  id: ID!
+  name: String!
+  range: DateRange
+}
+
+type Query {
+  user(
+    id: ID!
+    hint: String
+    role: Role = ADMIN
+    legacy: String = "old" @deprecated(reason: "legacy argument")
+  ): User @auth(role: READER)
+  node: Node
+  search(selector: Selector): [SearchResult!]!
+  health: Boolean! @deprecated(reason: "use status")
+}
+
+type Mutation {
+  rename(input: RenameInput!): User!
+}

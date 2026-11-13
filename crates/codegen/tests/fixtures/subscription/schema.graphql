@@ -1,0 +1,19 @@
+schema {
+  query: Query
+  subscription: Subscription
+}
+
+type Query {
+  health: Boolean!
+  subscription: Subscription!
+}
+
+type Subscription {
+  presence(teamId: ID!): Presence!
+  tick: Int!
+}
+
+type Presence {
+  teamId: ID!
+  online: Int!
+}

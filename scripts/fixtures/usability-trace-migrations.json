@@ -1,0 +1,54 @@
+{
+  "retired": {
+    "PROJ-01": [
+      "`chigiri_cli::rust_projection::proj_01_generates_correct_method_for_each_shape`",
+      "Retired by ADR-0053; the projection-specific requirement is historical."
+    ],
+    "PROJ-02": [
+      "`chigiri_cli::rust_projection::proj_02_does_not_generate_a_root_projection`",
+      "Retired by ADR-0053; the projection-specific requirement is historical."
+    ],
+    "PROJ-03": [
+      "`chigiri_projection_consumer::direct::proj_03_projection_and_full_trait_results_match`",
+      "Retired by ADR-0053; the projection-specific requirement is historical."
+    ],
+    "PROJ-04": [
+      "`chigiri_projection_consumer::direct::proj_04_projection_and_async_error_fields_can_mix`",
+      "Retired by ADR-0053; the projection-specific requirement is historical."
+    ],
+    "PROJ-05": [
+      "`chigiri_cli::rust_projection::proj_05_typestate_violations_fail_to_compile`",
+      "Retired by ADR-0053; the projection-specific requirement is historical."
+    ],
+    "PROJ-08": [
+      "`chigiri_projection_consumer::direct::proj_08_complete_projection_traits_can_be_passed_to_the_same_assembly`",
+      "Retired by ADR-0053; the projection-specific requirement is historical."
+    ]
+  },
+  "migrated": {
+    "PROJ-07": [
+      "`chigiri_projection_consumer::governance::proj_07_completion_and_policy_not_circumvented`",
+      "`chigiri_projection_consumer::governance::trait_completion_and_policy_not_circumvented`"
+    ],
+    "PROJ-09": [
+      "`chigiri_cli::rust_projection::proj_09_private_stage_is_hidden_from_rustdoc_and_the_ide`",
+      "`chigiri_cli::rust_traits::ri_01_08_private_adapters_and_assembly_stages_are_hidden_from_rustdoc`"
+    ],
+    "PROJ-10": [
+      "`chigiri_cli::rust_projection::proj_10_detects_drift_in_private_shards`",
+      "`chigiri_cli::rust_traits::ri_07_detects_private_dispatch_drift_without_writes`"
+    ],
+    "PROJ-11": [
+      "`chigiri_cli::rust_projection::proj_11_generated_size_and_semantic_units_are_protected` (ABI 6 semantic-unit layout)",
+      "`chigiri_cli::rust_traits::ri_07_large_generated_semantic_units_keep_resource_bounds` (ABI 7 semantic-unit layout)"
+    ],
+    "PROJ-12": [
+      "`scripts/check-large-consumer-conformance.sh` (ABI 6 MSRV/stable gate)",
+      "`scripts/check-large-consumer-conformance.sh` (ABI 7 MSRV/stable gate)"
+    ],
+    "PROJ-13": [
+      "`scripts/check-usability-contract.sh` (ABI 6 inventory/surface and ABI 4 mismatch fixture)",
+      "`scripts/check-usability-contract.sh` (ABI 7 inventory/surface and isolated mismatch fixture)"
+    ]
+  }
+}

@@ -1,0 +1,111 @@
+# Synthetic schema coverage: lists, nullability, defaults, roots and enum bindings.
+input FixtureInput000 {
+	fixtureField428: ID!
+	fixtureField139: String!
+	fixtureField135: FixtureScalar002!
+	fixtureField420: FixtureScalar002!
+	fixtureField355: String!
+}
+
+input FixtureInput001 {
+	fixtureField428: ID!
+	fixtureField346: ID!
+	fixtureField241: String!
+}
+
+input FixtureInput002 {
+	fixtureField428: ID!
+	fixtureField020: FixtureScalar001!
+	fixtureField022: FixtureScalar001!
+}
+
+input FixtureInput003 {
+	fixtureField200: ID!
+}
+
+input FixtureInput004 {
+	fixtureField428: ID!
+	fixtureField183: ID!
+	fixtureField184: String!
+	fixtureField345: ID!
+	fixtureField348: FixtureScalar002!
+	fixtureField050: FixtureInput008!
+	fixtureField336: FixtureScalar004
+}
+
+input FixtureInput005 {
+	sequence: FixtureScalar001!
+	fixtureField239: FixtureScalar000!
+	fixtureField183: ID!
+	fixtureField184: String!
+	fixtureField345: ID!
+	fixtureField348: FixtureScalar002!
+	fixtureField108: ID!
+	fixtureField422: FixtureScalar002!
+}
+
+input FixtureInput006 {
+	fixtureField378: ID!
+	fixtureField399: ID!
+	fixtureField199: Int!
+}
+
+input FixtureInput007 {
+	fixtureField428: ID!
+}
+
+input FixtureInput008 {
+	fixtureField192: Int!
+	fixtureField203: Int!
+	fixtureField189: Int!
+}
+
+input FixtureInput009 {
+	fixtureField428: ID!
+	fixtureField139: String!
+	fixtureField135: FixtureScalar002!
+}
+
+input FixtureInput010 {
+	fixtureField428: ID!
+	fixtureField346: ID!
+}
+
+input FixtureInput011 {
+	fixtureField428: ID!
+	fixtureField416: String!
+}
+
+input FixtureInput012 {
+	sequence: FixtureScalar001!
+	fixtureField416: String!
+}
+
+input FixtureInput013 {
+	fixtureField378: ID!
+	fixtureField399: ID!
+	fixtureField416: String!
+}
+
+input FixtureInput014 {
+	fixtureField428: ID!
+}
+
+input FixtureInput015 {
+	fixtureField197: String!
+	fixtureField355: String!
+}
+
+input FixtureInput016 {
+	fixtureField014: FixtureScalar000!
+	sequence: FixtureScalar001!
+}
+
+input FixtureInput017 {
+	fixtureField428: ID!
+	fixtureField411: [FixtureScalar000!]!
+}
+
+input FixtureInput018 {
+	fixtureField428: ID!
+}

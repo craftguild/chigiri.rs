@@ -1,0 +1,41 @@
+# Configure the SDL input and runtime source.
+schema_version = "chigiri/config-v2"
+
+[schema]
+directory = "graphql"
+
+[package]
+name = "graphql-contract"
+version = "0.1.0"
+edition = "2024"
+# Optional: choose the generated package's Cargo license expression yourself.
+# license = "MIT OR Apache-2.0"
+
+[generation]
+output = "generated/graphql-contract"
+
+[bindings]
+domain_enums = []
+
+# Example: select a path dependency relative to the manifest root.
+# [runtime]
+# source = "path"
+# root = "../chigiri-source"
+
+# For a Git dependency, specify the repository URL and full commit hash.
+# [runtime]
+# source = "git"
+# url = "< real HTTPS or SSH URL >"
+# revision = "< real lowercase 40 digit commit>"
+# Optional package assertion at that revision; emits version = "=0.1.0" in Cargo.
+# version = "0.1.0"
+
+# If you want to use a path dependence and a resolution on the production crate, then activate it for your doctor.
+# [consumer]
+# cargo_manifest = "Cargo.toml"
+# package = "my-app"
+# generated_dependency = "graphql_contract"
+# features = []
+# all_features = false
+# no_default_features = false
+# all_targets = true

@@ -1,0 +1,29 @@
+[package]
+name = "chigiri_codegen"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Schema-first Rust code generator for Chigiri"
+documentation = "https://docs.rs/chigiri_codegen"
+
+[features]
+fuzzing = []
+
+[dependencies]
+chigiri_core.workspace = true
+chigiri_host.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+semver = "1.0.28"
+sha2 = "0.10.9"
+toml_edit = "0.22.27"
+
+[target.'cfg(any(target_os = "linux", target_os = "macos"))'.dev-dependencies]
+rustix = { version = "1.1.4", features = ["fs", "process"] }
+signal-hook = { version = "0.3.18", default-features = false }
+
+[build-dependencies]
+chigiri_core.workspace = true
+chigiri_host.workspace = true

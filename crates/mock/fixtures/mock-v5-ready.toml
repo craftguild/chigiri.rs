@@ -1,0 +1,198 @@
+# Self-contained bundle exported from evaluated initial settings.
+format = "chigiri-mock/v5"
+
+[server]
+listen = "127.0.0.1:4000"
+allowed_origins = ["http://localhost:5173"]
+
+[schema]
+digest = "3971dd872d770fa15343dccb78841b3553e05445042d4f0768737d5dea69d022"
+vocabulary = "chigiri-mock-directives/v2"
+
+[[schema.sources]]
+name = "schema/001.graphql"
+text = '''
+# Blog schema with automatic models, explicit relations, and user-authored root Luau resolvers.
+type User {
+  id: ID!
+  name: String! @constraint(maxLength: 256)
+  posts: [Post!]! @relation
+}
+type Post {
+  id: ID!
+  title: String! @constraint(maxLength: 256)
+  body: String! @constraint(maxLength: 4096)
+  author: User! @relation(fields: ["authorId"], references: ["id"])
+}
+input CreateUserInput { name: String! }
+input CreatePostInput { title: String!, body: String!, authorId: ID! }
+input UpdatePostInput { title: String, body: String, authorId: ID }
+type Query {
+  getUsers(limit: Int! = 20): [User!]!
+  findPost(id: ID, authorId: ID, limit: Int! = 20): [Post!]!
+}
+type Mutation {
+  createUser(input: CreateUserInput!): User!
+  createPost(input: CreatePostInput!): Post!
+  updatePost(id: ID!, input: UpdatePostInput!): Post!
+  deletePost(id: ID!): Boolean!
+}
+'''
+
+[[schema.sources]]
+name = "chigiri-mock/v2.graphql"
+text = '''
+# Mock v2 vocabulary definitions missing from the user SDL.
+enum ChigiriMockRepresentation { STRING BOOLEAN INTEGER NUMBER OBJECT ARRAY JSON }
+directive @relation(
+  fields: [String!]
+  references: [String!]
+  name: String
+) on FIELD_DEFINITION
+directive @virtual on FIELD_DEFINITION
+directive @constraint(
+  minLength: Int
+  maxLength: Int
+  startsWith: String
+  endsWith: String
+  contains: String
+  notContains: String
+  pattern: String
+  format: String
+  min: Float
+  max: Float
+  exclusiveMin: Float
+  exclusiveMax: Float
+  multipleOf: Float
+  minItems: Int
+  maxItems: Int
+) on FIELD_DEFINITION | INPUT_FIELD_DEFINITION | ARGUMENT_DEFINITION
+directive @chigiri_mock_scalar(
+  representation: ChigiriMockRepresentation!
+  min: Float
+  max: Float
+  minBytes: Int
+  maxBytes: Int
+  minItems: Int
+  maxItems: Int
+) on SCALAR
+'''
+
+[state]
+contract_json = '{"fields":{},"initial":{}}'
+
+[hooks.request]
+before = false
+after = false
+
+[hooks.operation]
+before = false
+after = false
+
+[hooks.field]
+before = false
+after = false
+
+[hooks.modules]
+
+[seed]
+records_json = '{"User":[{"id":"User-1","name":"Alice"},{"id":"User-2","name":"Bob"}],"Post":[{"id":"Post-1","authorId":"User-1","title":"first","body":"body"}]}'
+
+[resolvers]
+
+[resolvers."Query.getUsers"]
+state = "ready"
+luau = '''
+--!strict
+local resolver: ChigiriQueryGetUsersResolver = {
+    state = "ready",
+    resolve = function(ctx: ChigiriQueryGetUsersContext, args: ChigiriQueryGetUsersArgs): ChigiriQueryGetUsersResult
+return ctx.models.User:find({limit = args.limit :: number})
+    end,
+}
+return resolver
+'''
+
+[resolvers."Query.findPost"]
+state = "ready"
+luau = '''
+--!strict
+local resolver: ChigiriQueryFindPostResolver = {
+    state = "ready",
+    resolve = function(ctx: ChigiriQueryFindPostContext, args: ChigiriQueryFindPostArgs): ChigiriQueryFindPostResult
+local filters: {ChigiriPostWhere} = {}
+local id = args.id
+local author = args.authorId
+if type(id) == 'string' then
+    local condition: ChigiriPostWhere = {field='id', op='eq', value=id}
+    filters[#filters + 1] = condition
+end
+if type(author) == 'string' then
+    local condition: ChigiriPostWhere = {field='authorId', op='eq', value=author}
+    filters[#filters + 1] = condition
+end
+return ctx.models.Post:find({where={all=filters}, limit=args.limit})
+    end,
+}
+return resolver
+'''
+
+[resolvers."Mutation.createUser"]
+state = "ready"
+luau = '''
+--!strict
+local resolver: ChigiriMutationCreateUserResolver = {
+    state = "ready",
+    resolve = function(ctx: ChigiriMutationCreateUserContext, args: ChigiriMutationCreateUserArgs): ChigiriMutationCreateUserResult
+local id = 'User-' .. (ctx.models.User:count({}) + 1)
+local input: ChigiriUserCreateInput = {id = id, name = args.input.name}
+local row = ctx.models.User:create(input)
+return {id = row.id, name = row.name}
+    end,
+}
+return resolver
+'''
+
+[resolvers."Mutation.createPost"]
+state = "ready"
+luau = '''
+--!strict
+local resolver: ChigiriMutationCreatePostResolver = {
+    state = "ready",
+    resolve = function(ctx: ChigiriMutationCreatePostContext, args: ChigiriMutationCreatePostArgs): ChigiriMutationCreatePostResult
+local id = 'Post-' .. (ctx.models.Post:count({}) + 1)
+local input: ChigiriPostCreateInput = {id = id, title = args.input.title, body = args.input.body, authorId = args.input.authorId}
+local row = ctx.models.Post:create(input)
+return {id = row.id, title = row.title, body = row.body, authorId = args.input.authorId}
+    end,
+}
+return resolver
+'''
+
+[resolvers."Mutation.updatePost"]
+state = "ready"
+luau = '''
+--!strict
+local resolver: ChigiriMutationUpdatePostResolver = {
+    state = "ready",
+    resolve = function(ctx: ChigiriMutationUpdatePostContext, args: ChigiriMutationUpdatePostArgs): ChigiriMutationUpdatePostResult
+local rows = ctx.models.Post:update({where = {field = 'id', op = 'eq', value = args.id}}, args.input)
+local row = rows[1]
+return {id = row.id, title = row.title, body = row.body, authorId = row.authorId}
+    end,
+}
+return resolver
+'''
+
+[resolvers."Mutation.deletePost"]
+state = "ready"
+luau = '''
+--!strict
+local resolver: ChigiriMutationDeletePostResolver = {
+    state = "ready",
+    resolve = function(ctx: ChigiriMutationDeletePostContext, args: ChigiriMutationDeletePostArgs): ChigiriMutationDeletePostResult
+return ctx.models.Post:delete({where = {field = 'id', op = 'eq', value = args.id}}) > 0
+    end,
+}
+return resolver
+'''

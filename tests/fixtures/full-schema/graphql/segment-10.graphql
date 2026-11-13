@@ -1,0 +1,192 @@
+# Synthetic schema coverage: lists, nullability, defaults, roots and enum bindings.
+type FixtureRecord051 {
+	fixtureField010: FixtureScalar001!
+}
+
+type FixtureRecord052 {
+	fixtureField157: ID!
+	fixtureField122: FixtureScalar002!
+	fixtureField299: FixtureRecord020!
+	fixtureField300: FixtureScalar002!
+	fixtureField271: FixtureRecord018!
+	fixtureField225: FixtureRecord015!
+	fixtureField297: FixtureRecord019!
+	fixtureField011: FixtureScalar000!
+	fixtureField012: FixtureScalar002!
+	fixtureField230: FixtureScalar000!
+	fixtureField231: FixtureScalar002!
+	fixtureField113: FixtureChoice035!
+	fixtureField294: FixtureChoice036!
+}
+
+type Measurement {
+	value: FixtureScalar001!
+	unit: UnitKind!
+	precision: Int!
+}
+
+type FixtureRecord054 {
+	value: FixtureScalar001!
+	unit: UnitKind!
+	precision: Int!
+}
+
+type FixtureRecord055 {
+	fixtureField157: ID!
+	fixtureField426: FixtureRecord057!
+	fixtureField106: FixtureRecord036!
+	fixtureField107: FixtureScalar002!
+	fixtureField259: FixtureScalar002!
+	fixtureField312: String!
+	fixtureField185: FixtureScalar002!
+	fixtureField054: FixtureScalar002!
+	fixtureField307: String!
+	fixtureField360: String!
+	fixtureField102: String!
+	fixtureField139: String!
+	fixtureField135: FixtureScalar002!
+	fixtureField055: [FixtureRecord044!]!
+	fixtureField077: FixtureScalar003!
+}
+
+type FixtureRecord056 {
+	fixtureField188: Int!
+	fixtureField191: Int!
+	fixtureField203: Int!
+	fixtureField189: Int!
+	fixtureField187: Int!
+	fixtureField071: Int!
+}
+
+type FixtureRecord057 {
+	fixtureField157: ID!
+	fixtureField293: ID
+	fixtureField233: FixtureRecord025!
+	fixtureField242: FixtureRecord030!
+	fixtureField060: FixtureRecord013!
+	fixtureField014: FixtureScalar000!
+	fixtureField128: FixtureScalar000!
+	fixtureField159: FixtureScalar000!
+	fixtureField160: FixtureScalar002!
+	fixtureField106: FixtureRecord036!
+	fixtureField107: FixtureScalar002!
+	fixtureField258: FixtureScalar000!
+	fixtureField259: FixtureScalar002!
+	fixtureField387: FixtureChoice064!
+	fixtureField284: FixtureRecord057
+	fixtureField389: FixtureRecord057
+	fixtureField202: [FixtureRecord059!]!
+	fixtureField041: [FixtureRecord004!]!
+	fixtureField009: FixtureRecord049
+	fixtureField218: FixtureRecord040
+	fixtureField283: [FixtureRecord061!]!
+	fixtureField409: [FixtureRecord023!]!
+	fixtureField086: FixtureRecord061
+	fixtureField175: FixtureRecord062
+	fixtureField210: FixtureScalar003
+	fixtureField211: FixtureChoice023
+	fixtureField353: FixtureRecord063!
+	fixtureField042: FixtureRecord012!
+}
+
+type FixtureRecord058 {
+	fixtureField157: ID!
+	fixtureField060: FixtureRecord013!
+	fixtureField128: FixtureScalar000!
+	fixtureField129: FixtureScalar002!
+	fixtureField159: FixtureScalar000!
+	fixtureField160: FixtureScalar002!
+	fixtureField115: Boolean!
+}
+
+type FixtureRecord059 {
+	fixtureField157: ID!
+	fixtureField200: FixtureScalar002!
+	fixtureField324: FixtureChoice060!
+	fixtureField377: FixtureRecord057!
+	fixtureField398: FixtureRecord057!
+	fixtureField199: Int!
+	fixtureField271: FixtureRecord018!
+	fixtureField021: FixtureScalar001!
+	fixtureField023: FixtureScalar001!
+	fixtureField201: FixtureRecord054
+	fixtureField156: FixtureRecord054
+	fixtureField374: FixtureRecord054
+	fixtureField373: FixtureRecord054
+	fixtureField396: FixtureRecord054
+	fixtureField395: FixtureRecord054
+	fixtureField387: FixtureChoice061!
+	fixtureField416: FixtureScalar002
+	fixtureField048: FixtureScalar001
+	fixtureField047: FixtureScalar002
+	fixtureField327: FixtureScalar003
+	fixtureField100: FixtureScalar003!
+	fixtureField143: FixtureScalar003
+	fixtureField070: FixtureScalar003
+}
+
+type FixtureRecord060 {
+	fixtureField240: FixtureScalar000!
+	fixtureField293: ID!
+	fixtureField273: ID!
+	fixtureField272: FixtureScalar002!
+	fixtureField136: ID!
+	fixtureField135: FixtureScalar002!
+	fixtureField037: UnitKind!
+	fixtureField045: ID!
+	fixtureField044: FixtureScalar002!
+	fixtureField046: FixtureChoice033!
+}
+
+type FixtureRecord061 {
+	fixtureField157: ID!
+	fixtureField426: FixtureRecord057!
+	fixtureField269: FixtureRecord017!
+	fixtureField271: FixtureRecord018!
+	transport: TransportKind!
+	fixtureField282: FixtureScalar000!
+	fixtureField281: String
+	fixtureField401: Int
+	fixtureField403: Int
+	fixtureField179: FixtureScalar001
+	fixtureField387: FixtureChoice052!
+	fixtureField224: FixtureScalar002
+	fixtureField223: ID
+	fixtureField222: FixtureScalar001
+	fixtureField221: FixtureScalar002
+	fixtureField067: FixtureScalar002
+	fixtureField220: FixtureScalar003
+	fixtureField065: FixtureScalar003
+}
+
+type FixtureRecord062 {
+	fixtureField157: ID!
+	fixtureField416: FixtureScalar002
+	fixtureField048: FixtureScalar001
+	fixtureField047: FixtureScalar002
+	fixtureField162: FixtureScalar003
+	fixtureField143: FixtureScalar003
+	fixtureField289: Int
+	fixtureField290: Int
+	fixtureField208: Int
+	fixtureField209: Int
+	fixtureField253: FixtureChoice048!
+	fixtureField256: FixtureChoice049!
+	fixtureField237: FixtureChoice053!
+	fixtureField131: FixtureChoice054
+}
+
+type FixtureRecord063 {
+	fixtureField205: FixtureChoice062!
+	reason: FixtureChoice063!
+	fixtureField111: FixtureScalar003
+}
+
+type FixtureRecord064 {
+	fixtureField366: ID!
+	fixtureField048: FixtureScalar001!
+	fixtureField047: FixtureScalar002!
+	fixtureField416: FixtureScalar002
+	fixtureField049: FixtureScalar003
+	fixtureField207: FixtureRecord054
+}

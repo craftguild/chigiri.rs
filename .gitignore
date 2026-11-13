@@ -1,0 +1,65 @@
+# Local agent integration and task state
+/.claude/
+/.codex/
+/.cursor/
+/.beads/
+/.dolt/
+/.craftguild/
+/.private/
+/.ac-wakeup
+/.agentchat-wakeup
+*.gate.lock*
+.beads-credential-key
+
+# Local environment and editor settings
+.env
+.env.*
+!.env.example
+!.env.*.example
+.direnv/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Operating system metadata
+.DS_Store
+Thumbs.db
+
+# Build caches and temporary output
+target/
+node_modules/
+__pycache__/
+*.py[cod]
+*.rs.bk
+/.tmp/
+/tmp/
+
+# Chigiri coverage and profiling output
+coverage/
+lcov.info
+cobertura.xml
+tarpaulin-report.html
+*.profraw
+*.profdata
+*.log
+
+# Keep the fixed regression corpus; ignore local fuzz discoveries.
+/fuzz/artifacts/
+/fuzz/corpus/*/*
+!/fuzz/corpus/config_parser/closed-shape
+!/fuzz/corpus/config_parser/valid
+!/fuzz/corpus/http_decode/document
+!/fuzz/corpus/http_decode/malformed
+!/fuzz/corpus/json_conversion/nested
+!/fuzz/corpus/json_conversion/numbers
+!/fuzz/corpus/parser/nesting-limit
+!/fuzz/corpus/parser/query
+!/fuzz/corpus/persisted_id/invalid
+!/fuzz/corpus/persisted_id/valid
+!/fuzz/corpus/sdl_composition/cycle
+!/fuzz/corpus/sdl_composition/schema
+
+# Generator-owned Cargo cache outside the generated ownership tree.
+/generated/.chigiri-cache/target/

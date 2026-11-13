@@ -1,0 +1,31 @@
+[package]
+name = "chigiri_axum"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Axum bridge for the Chigiri GraphQL endpoint"
+documentation = "https://docs.rs/chigiri_axum"
+
+[features]
+default = []
+graphiql = ["chigiri/graphiql"]
+
+[dependencies]
+axum = { workspace = true, features = ["ws"] }
+futures-core.workspace = true
+futures-sink.workspace = true
+hyper.workspace = true
+hyper-util.workspace = true
+http-body-util.workspace = true
+chigiri = { workspace = true, features = ["subscription-worker"] }
+chigiri_http.workspace = true
+tokio.workspace = true
+tokio-tungstenite.workspace = true
+tower.workspace = true
+
+[dev-dependencies]
+bytes.workspace = true
+futures-util = "0.3.31"
+serde_json.workspace = true

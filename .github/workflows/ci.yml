@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  linux:
+    name: Linux product validation
+    uses: ./.github/workflows/product-validation.yml
+    with:
+      runner: warp-ubuntu-2404-x64-4x
+      expected-os: Linux
+      expected-arch: x86_64
+      profile: ci
+  macos:
+    name: macOS product validation
+    uses: ./.github/workflows/product-validation.yml
+    with:
+      runner: warp-macos-26-arm64-6x
+      expected-os: Darwin
+      expected-arch: arm64
+      profile: ci
+  required:
+    name: Product validation required
+    if: ${{ always() }}
+    needs: [linux, macos]
+    runs-on: warp-ubuntu-2404-x64-2x
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify required jobs and completed validation
+        env:
+          CHIGIRI_REQUIRED_JOBS: ${{ toJSON(needs) }}
+        run: python3 scripts/check-required-jobs.py

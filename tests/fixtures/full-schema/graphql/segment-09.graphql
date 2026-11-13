@@ -1,0 +1,252 @@
+# Synthetic schema coverage: lists, nullability, defaults, roots and enum bindings.
+type FixtureRecord031 {
+	fixtureField264: FixtureRecord049!
+	fixtureField417: FixtureRecord046!
+}
+
+type FixtureRecord032 {
+	fixtureField157: ID!
+	fixtureField347: ID!
+	fixtureField439: FixtureScalar001!
+	fixtureField328: [FixtureChoice042!]!
+	fixtureField348: FixtureScalar002!
+	fixtureField295: FixtureScalar002!
+	fixtureField350: FixtureScalar002!
+	fixtureField107: FixtureScalar002!
+	fixtureField120: String!
+	fixtureField310: FixtureScalar001!
+	fixtureField212: FixtureScalar001!
+	fixtureField105: FixtureScalar001!
+	fixtureField204: FixtureScalar001!
+	fixtureField194: FixtureScalar001!
+	fixtureField193: FixtureScalar001!
+}
+
+type FixtureRecord033 {
+	fixtureField285: FixtureScalar000!
+	fixtureField417: FixtureRecord046!
+}
+
+type FixtureRecord034 {
+	fixtureField028: [FixtureRecord022!]!
+	fixtureField417: FixtureRecord046!
+}
+
+type FixtureRecord035 {
+	fixtureField280: FixtureRecord061
+	fixtureField387: FixtureChoice057!
+	fixtureField416: String!
+}
+
+type FixtureRecord036 {
+	fixtureField157: ID!
+	fixtureField060: FixtureRecord013!
+	fixtureField347: FixtureScalar002!
+	fixtureField439: Int!
+	fixtureField107: FixtureScalar002!
+	fixtureField214: FixtureChoice047!
+	fixtureField310: Int!
+	fixtureField212: Int!
+	fixtureField105: Int!
+	fixtureField245: FixtureScalar002!
+	fixtureField257: FixtureRecord038!
+	fixtureField258: FixtureScalar000!
+	fixtureField259: FixtureScalar002!
+	fixtureField380: FixtureScalar002!
+	fixtureField404: String!
+	fixtureField099: String!
+	fixtureField102: String!
+	fixtureField113: FixtureChoice035!
+	fixtureField294: FixtureChoice036!
+	fixtureField359: FixtureScalar004!
+}
+
+type FixtureRecord037 {
+	fixtureField005: FixtureChoice048!
+	reason: FixtureChoice049!
+	fixtureField394: Int!
+	fixtureField397: Int!
+	fixtureField401: Int!
+	fixtureField403: Int!
+	fixtureField442: Boolean!
+	fixtureField024: FixtureScalar001!
+	fixtureField112: Int!
+	fixtureField107: FixtureScalar002!
+	fixtureField259: FixtureScalar002!
+	fixtureField385: FixtureScalar002!
+	fixtureField254: FixtureScalar002!
+}
+
+type FixtureRecord038 {
+	fixtureField157: ID!
+	fixtureField060: FixtureRecord013!
+	fixtureField258: FixtureScalar000!
+	fixtureField259: FixtureScalar002!
+	fixtureField262: Int!
+	fixtureField380: FixtureScalar002!
+	fixtureField113: FixtureChoice035!
+	fixtureField294: FixtureChoice036!
+}
+
+type FixtureRecord039 {
+	fixtureField198: FixtureRecord059!
+	fixtureField106: FixtureRecord036!
+	fixtureField255: FixtureRecord037!
+	fixtureField260: FixtureScalar004!
+	fixtureField057: String!
+	fixtureField124: FixtureScalar001!
+	fixtureField095: FixtureScalar001!
+	fixtureField417: FixtureRecord046!
+}
+
+type FixtureRecord040 {
+	fixtureField157: ID!
+	fixtureField267: FixtureScalar002!
+	fixtureField321: FixtureChoice050!
+	fixtureField008: FixtureScalar002
+	fixtureField007: FixtureScalar003
+	fixtureField352: Boolean!
+}
+
+type FixtureRecord041 {
+	fixtureField182: ID!
+	fixtureField184: String!
+	fixtureField345: ID!
+	fixtureField348: FixtureScalar002!
+	fixtureField121: FixtureRecord052!
+	fixtureField122: FixtureScalar002!
+	fixtureField299: FixtureRecord020!
+	fixtureField300: FixtureScalar002!
+	fixtureField272: FixtureScalar002!
+	fixtureField226: FixtureScalar002!
+	fixtureField372: FixtureScalar002!
+	fixtureField295: FixtureScalar002!
+	fixtureField423: FixtureScalar003!
+	fixtureField424: FixtureScalar003!
+	fixtureField011: FixtureScalar000!
+	fixtureField012: FixtureScalar002!
+	fixtureField230: FixtureScalar000!
+	fixtureField231: FixtureScalar002!
+	fixtureField349: FixtureScalar000!
+	fixtureField350: FixtureScalar002!
+	fixtureField106: FixtureRecord036!
+	fixtureField107: FixtureScalar002!
+	fixtureField258: FixtureScalar000!
+	fixtureField259: FixtureScalar002!
+	fixtureField261: FixtureScalar002!
+	fixtureField266: String!
+	fixtureField267: FixtureScalar002!
+	fixtureField265: FixtureScalar002!
+	fixtureField152: FixtureScalar000
+	fixtureField153: FixtureScalar002
+	fixtureField150: FixtureRecord056!
+}
+
+type FixtureRecord042 {
+	fixtureField053: FixtureRecord044!
+	fixtureField268: FixtureRecord041!
+	fixtureField180: FixtureScalar004!
+}
+
+type FixtureRecord043 {
+	fixtureField264: FixtureRecord049
+	fixtureField417: FixtureRecord046!
+}
+
+type FixtureRecord044 {
+	fixtureField157: ID!
+	fixtureField314: ID!
+	fixtureField121: FixtureRecord052!
+	fixtureField271: FixtureRecord018!
+	fixtureField225: FixtureRecord015!
+	fixtureField106: FixtureRecord036!
+	fixtureField107: FixtureScalar002!
+	fixtureField258: FixtureScalar000!
+	fixtureField259: FixtureScalar002!
+	fixtureField404: String!
+	fixtureField099: String!
+	fixtureField335: FixtureChoice058!
+	fixtureField306: Int!
+	fixtureField308: FixtureScalar004!
+	fixtureField376: String!
+	fixtureField372: FixtureScalar002!
+	fixtureField295: FixtureScalar002!
+	fixtureField150: FixtureRecord056!
+	fixtureField165: FixtureRecord037
+	fixtureField309: FixtureRecord037
+	fixtureField359: FixtureScalar004!
+}
+
+type FixtureRecord045 {
+	fixtureField313: FixtureRecord055!
+	fixtureField055: [FixtureRecord044!]!
+}
+
+type FixtureRecord046 {
+	sequence: FixtureScalar001!
+	fixtureField405: FixtureScalar000!
+	fixtureField094: String!
+	fixtureField425: FixtureScalar001!
+	fixtureField099: String!
+}
+
+type FixtureRecord047 {
+	fixtureField377: FixtureRecord057!
+	fixtureField398: FixtureRecord057!
+	fixtureField200: FixtureScalar002!
+	fixtureField199: Int!
+	fixtureField125: FixtureScalar001!
+	fixtureField379: FixtureRecord060!
+	fixtureField400: FixtureRecord060!
+	fixtureField271: FixtureRecord018!
+	fixtureField133: FixtureRecord005!
+	fixtureField043: FixtureRecord015!
+	fixtureField417: FixtureRecord046!
+}
+
+type FixtureRecord048 {
+	fixtureField198: FixtureRecord059
+	fixtureField387: FixtureChoice057!
+	fixtureField416: String!
+}
+
+type FixtureRecord049 {
+	fixtureField157: ID!
+	fixtureField182: ID!
+	fixtureField184: String!
+	fixtureField345: ID!
+	fixtureField348: FixtureScalar002!
+	fixtureField121: FixtureRecord052!
+	fixtureField122: FixtureScalar002!
+	fixtureField299: FixtureRecord020!
+	fixtureField300: FixtureScalar002!
+	fixtureField269: FixtureRecord017!
+	fixtureField271: FixtureRecord018!
+	fixtureField225: FixtureRecord015!
+	fixtureField272: FixtureScalar002!
+	fixtureField226: FixtureScalar002!
+	fixtureField267: FixtureScalar002!
+	fixtureField372: FixtureScalar002!
+	fixtureField057: String!
+	fixtureField295: FixtureScalar002!
+	fixtureField387: FixtureChoice051!
+	fixtureField423: FixtureScalar003!
+	fixtureField424: FixtureScalar003!
+	fixtureField011: FixtureScalar000!
+	fixtureField012: FixtureScalar002!
+	fixtureField349: FixtureScalar000!
+	fixtureField350: FixtureScalar002!
+	fixtureField106: FixtureRecord036!
+	fixtureField107: FixtureScalar002!
+	fixtureField258: FixtureScalar000!
+	fixtureField259: FixtureScalar002!
+	fixtureField152: FixtureScalar000
+	fixtureField153: FixtureScalar002
+	fixtureField150: FixtureRecord056!
+}
+
+type FixtureRecord050 {
+	fixtureField426: FixtureRecord057
+	fixtureField387: FixtureChoice057!
+	fixtureField416: String!
+}

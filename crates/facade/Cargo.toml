@@ -1,0 +1,28 @@
+[package]
+name = "chigiri"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Application-facing GraphQL endpoint framework for Rust"
+documentation = "https://docs.rs/chigiri"
+
+[features]
+default = []
+graphiql = ["dep:chigiri_graphiql"]
+subscription-worker = ["dep:tokio", "tokio/sync"]
+
+[dependencies]
+chigiri_graphiql = { workspace = true, optional = true }
+chigiri_http.workspace = true
+chigiri_observability.workspace = true
+chigiri_operation.workspace = true
+chigiri_policy.workspace = true
+chigiri_rate.workspace = true
+chigiri_rate_memory.workspace = true
+chigiri_runtime.workspace = true
+tokio = { workspace = true, optional = true }
+
+[dev-dependencies]
+futures-core.workspace = true

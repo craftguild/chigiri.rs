@@ -1,0 +1,15 @@
+[workspace]
+
+[package]
+name = "chigiri-rate-provider-minimal"
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.95"
+publish = false
+
+[dependencies]
+chigiri_rate = { path = "../../../crates/rate", version = "=0.1.0" }
+
+[dev-dependencies]
+chigiri_testkit = { path = "../../../crates/testkit", version = "=0.1.0" }
+tokio = { version = "1.53.3", default-features = false, features = ["macros", "rt-multi-thread"] }

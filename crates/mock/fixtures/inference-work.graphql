@@ -1,0 +1,26 @@
+# Second domain connecting initial manual implementations and improvements to ready resolvers and non-empty seeds in one HTTP acceptance test.
+type Project {
+  id: ID!
+  name: String!
+  tasks: [Task!]! @relation
+}
+type Task {
+  id: ID!
+  title: String!
+  project: Project! @relation(fields: ["projectId"], references: ["id"])
+}
+input NewProject { name: String! }
+input NewTask { title: String!, projectId: ID! }
+type Query {
+  projects: [Project!]!
+  tasks: [Task!]!
+  "Returns tasks whose title contains the term, in registration order."
+  searchTasks(term: String!, limit: Int! = 20): [Task!]!
+}
+type Mutation {
+  addProject(input: NewProject!): Project!
+  addTask(input: NewTask!): Task!
+  removeTask(id: ID!): Boolean!
+  "Replaces only the Task projectId and returns the updated Task."
+  moveTask(id: ID!, projectId: ID!): Task
+}

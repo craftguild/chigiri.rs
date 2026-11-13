@@ -1,0 +1,21 @@
+schema_version = "chigiri/config-v2"
+
+[schema]
+directory = "crates/testkit/tests/fixtures/usability"
+
+[package]
+name = "chigiri-testkit-usability-contract"
+version = "0.0.0"
+edition = "2024"
+
+[generation]
+output = "generated/testkit-usability"
+
+[runtime]
+source = "path"
+root = "."
+
+[consumer]
+cargo_manifest = "crates/testkit/Cargo.toml"
+package = "chigiri_testkit"
+generated_dependency = "generated"

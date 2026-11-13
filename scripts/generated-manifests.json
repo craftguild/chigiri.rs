@@ -1,0 +1,12 @@
+[
+  "chigiri-axum-adoption.toml",
+  "chigiri-books.toml",
+  "chigiri-mock-blog.toml",
+  "chigiri-subscriptions.toml",
+  "chigiri-testkit-subscriptions.toml",
+  "chigiri-testkit.toml",
+  "crates/codegen/tests/chigiri-custom-scalar-output.toml",
+  "crates/codegen/tests/chigiri-full.toml",
+  "tests/fixtures/full-schema/chigiri.toml",
+  "tests/fixtures/vnext-large-product/chigiri.toml"
+]

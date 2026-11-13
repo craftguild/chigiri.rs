@@ -1,0 +1,181 @@
+{
+  "schema_version": "chigiri/generated-crate-v1",
+  "package": {
+    "name": "chigiri-testkit-subscriptions-contract",
+    "version": "0.0.0",
+    "edition": "2024"
+  },
+  "abi": 8,
+  "generator": {
+    "schema_version": "chigiri/generator-info-v1",
+    "version": "0.1.0",
+    "revision": "54a32b5d2c59a56d82064d6c3be3092bf1d9d8f2-dirty",
+    "git_commit": "54a32b5d2c59a56d82064d6c3be3092bf1d9d8f2",
+    "dirty": true,
+    "build": {
+      "rustc": "rustc 1.95.0 (59807616e 2026-04-14)",
+      "host": "aarch64-apple-darwin",
+      "target": "aarch64-apple-darwin",
+      "profile": "debug"
+    }
+  },
+  "runtime": {
+    "source": "path",
+    "root": "."
+  },
+  "provenance": {
+    "manifest_label": "chigiri-testkit-subscriptions.toml",
+    "manifest_sha256": "ee84429698197d57d14ce288ce84fa9db1b8b67f86401dc3e8253533a7628621",
+    "schema_sha256": "b0015a5836e5da7c91390ec4be8452083169088c932af222315d1f68f089f2bf",
+    "binding_sha256": "45c8ff0c5974f886e130b97833005691c161e7b50dad410edf3102537a315e18",
+    "sources": [
+      {
+        "path": "schema.graphql",
+        "bytes": 262,
+        "sha256": "fd2cedf6cdbe170c37ae27f9bb74042e6e4a011ea70fc0fe68edb52c37a5f372"
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": "Cargo.toml",
+      "bytes": 287,
+      "sha256": "f69ad1a22640755d2e463843d7375219f0b1072ab4ef26461b32df0a6e2c0188"
+    },
+    {
+      "path": "src/__chigiri/assembly.rs",
+      "bytes": 6277,
+      "sha256": "2cd74af5c1a9c0056aa43cbfa063bda562e1f705c0bc875c94250c80e6ac76ba"
+    },
+    {
+      "path": "src/__chigiri/generator_info.rs",
+      "bytes": 967,
+      "sha256": "3684d19ed87a0558ba1d07f8782e3fcdb18711c884fc5e8a7edbbea79ab97017"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/dispatch.rs",
+      "bytes": 4175,
+      "sha256": "dc7c6453ff49bffb1d12af2d99357477acc9ea823a1d4d0be9d548cf8260070a"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/mutation.rs",
+      "bytes": 4586,
+      "sha256": "a977359c298aa2d36c54fc6f465767022538106315f7770cf19d4ddf786a6b9d"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/query.rs",
+      "bytes": 4547,
+      "sha256": "3b03b4db4f941fb804d35568b843cf67e8d567a3bce2fdfa4026c2e5b25188e5"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/objects/tick.rs",
+      "bytes": 6291,
+      "sha256": "76ea8210481aea8636d1147593b4873ccfae8a4cab2d70b6138c31b71b825b58"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/schema.rs",
+      "bytes": 1978,
+      "sha256": "a71fc8993b0841c7dae5869dcbb11de079dc24500feef4549d1b12d0e55f7efd"
+    },
+    {
+      "path": "src/__chigiri/internal/bridge/subscription/subscription.rs",
+      "bytes": 8682,
+      "sha256": "605b45927cd115b9765904786a255b7c4a3cefea0dffb5fb306a8020af42ed74"
+    },
+    {
+      "path": "src/__chigiri/internal/coercion/tick.rs",
+      "bytes": 421,
+      "sha256": "73c33e0e736bd4d2b1e09fca857d561e4d5fefc6601092f8eba37195c2ae432f"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/schema.rs",
+      "bytes": 1378,
+      "sha256": "0f287cfb711ab09af888d9d54a7d9163388c28186f73c028f2723cb29a250918"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/mutation.rs",
+      "bytes": 1452,
+      "sha256": "bb0477de27a7b942f71873f25258d7a688ea10af81abc0ce67a68175fa315303"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/query.rs",
+      "bytes": 1446,
+      "sha256": "26e0fcdce2361819c9aa1c526d50519254487f4ebf44f66cf4a1c18d01441d70"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/subscription.rs",
+      "bytes": 1975,
+      "sha256": "fdc345a7407b9fa0cb7671d0e7d4f061c95f51cea0d70a4bd96a77c7de80fdf8"
+    },
+    {
+      "path": "src/__chigiri/internal/descriptor/types/tick.rs",
+      "bytes": 1964,
+      "sha256": "4c4dcc26181aa99165ec211f966499028dd98bfce46a821ef67872ff8e6ee8df"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/mutation.rs",
+      "bytes": 1765,
+      "sha256": "0094c3d1625811d1a23246eb9bf9e8b934d13e223d553edb7b4296586f7d8d82"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/query.rs",
+      "bytes": 1753,
+      "sha256": "825d4bc5c3d5742892eb9096f925a78e3b5ba7b0ec34b5289e4f135ead30d66d"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/subscription.rs",
+      "bytes": 3432,
+      "sha256": "51a031eca905964ca6fcf433821def8f51f1b1ebee9441e3819f44cc2960dc49"
+    },
+    {
+      "path": "src/__chigiri/internal/dispatch/tick.rs",
+      "bytes": 1749,
+      "sha256": "b12f02665df477feda5755db4bff9999ca165e6dd6de1732640c8ed99d166a78"
+    },
+    {
+      "path": "src/__chigiri/mod.rs",
+      "bytes": 1366,
+      "sha256": "430db29c5156f168665f7c37644cb5a8a9f78ffb7601d16c82cdec48f8bfb559"
+    },
+    {
+      "path": "src/__chigiri/modules.rs",
+      "bytes": 2923,
+      "sha256": "b59cf5d80f44e6e3cbc24bc7226ac09247927c1d672ab1e940f2cae699182862"
+    },
+    {
+      "path": "src/__chigiri/resolvers/mutation.rs",
+      "bytes": 623,
+      "sha256": "c6e9d245faa08b781c1e2251bd526006052842690ca480dfc01c4c02ea014b65"
+    },
+    {
+      "path": "src/__chigiri/resolvers/objects/tick.rs",
+      "bytes": 854,
+      "sha256": "351029b0d1ecfb5d7bab17994bf9ce8aaadef3c90117464a3309222c1d0539c2"
+    },
+    {
+      "path": "src/__chigiri/resolvers/query.rs",
+      "bytes": 614,
+      "sha256": "b0691f377e4f405834bf0ddd81764bfd07b355749baa92c0e36fa5e8dd7c3681"
+    },
+    {
+      "path": "src/__chigiri/resolvers/subscription.rs",
+      "bytes": 1656,
+      "sha256": "7561229cb3f58e2ea43bedad37dd96e2dcfd3cd09a03824daf90e7ef874b4f52"
+    },
+    {
+      "path": "src/__chigiri/schema_types.rs",
+      "bytes": 295,
+      "sha256": "5b7b52294489ed3bb29a08f4ab95718094218d8cec318a1b8d00bb4f348683b7"
+    },
+    {
+      "path": "src/__chigiri/sources.rs",
+      "bytes": 101,
+      "sha256": "4443c98ea7a06f739a375254dbe48c5afdca40ad7b67f3db728b81e6dda13915"
+    },
+    {
+      "path": "src/lib.rs",
+      "bytes": 501,
+      "sha256": "88b1b1d7e35946621e39976546454887167d10f4213285b2b9560f1f087d8a84"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "owner": "chigiri-codegen-scalar-contract",
+  "generator_revision": "54a32b5d2c59a56d82064d6c3be3092bf1d9d8f2",
+  "inputs": {
+    "crates/codegen/tests/chigiri-custom-scalar-output.toml": "cf79f5fe4953dd2a1c62f6c8a75a2d96526e16586baf459f761aa73e4241739b",
+    "crates/codegen/tests/fixtures/custom-scalar-output/schema.graphql": "76f1b08050d23cb72436b961dc55dff6d2719edfd7ee0420606936a4c638e659",
+    "crates/codegen/tests/golden/custom-scalar-output/chigiri-generated.json": "9486f0ab36fba4a6fc62165821c1b5417d2534b5d6c4998f90f86b4f0dcd3375"
+  },
+  "files": {
+    "crates/codegen/tests/golden/custom-scalar-output/Cargo.toml": "5f2128d0393d02d94eb9ccdb39160929a258b54dfda4085883acdeacc832a7b6",
+    "crates/codegen/tests/golden/custom-scalar-output/chigiri-generated.json": "9486f0ab36fba4a6fc62165821c1b5417d2534b5d6c4998f90f86b4f0dcd3375",
+    "crates/codegen/tests/golden/custom-scalar-output/src/__chigiri/assembly.rs": "7c0828d0b867b59d4745276c46d7e52de652bfbf8d3af8eef412126f49a0fa9b",
+    "crates/codegen/tests/golden/custom-scalar-output/src/__chigiri/generator_info.rs": "3684d19ed87a0558ba1d07f8782e3fcdb18711c884fc5e8a7edbbea79ab97017",
+    "crates/codegen/tests/golden/custom-scalar-output/src/__chigiri/internal/bridge/dispatch.rs": "45891835baac398b76059fcc6bb8a99d13c7f6a5a3840be54255ad023e2b054a",
+    "crates/codegen/tests/golden/custom-scalar-output/src/__chigiri/internal/bridge/objects/query.rs": "77bd6c319a8c11116d32403eecd1a66b65ea914f5921a4f6f8ae77863dfee502",
+    "crates/codegen/tests/golden/custom-scalar-output/src/__chigiri/internal/bridge/schema.rs": "c39bc84595da397326eb2f1cbfede673e5f9674faaefadab20ccb3ccbf206a65",
+    "crates/codegen/tests/golden/custom-scalar-output/src/__chigiri/internal/coercion/json.rs": "f0f402bc84d49d2be16a76d05b30fe7a0c678803928cd2cc995c7bd1142ce35a",
+    "crates/codegen/tests/golden/custom-scalar-output/src/__chigiri/internal/descriptor/schema.rs": "294d832197d7168c4b3aa50fb2cd928eeb4ba3829273201be1c126383486e01f",
+    "crates/codegen/tests/golden/custom-scalar-output/src/__chigiri/internal/descriptor/types/json.rs": "e1a00fc67849814b40bdb4b88ac72254e374055c9c262952de57ca8e0aabb5ef",
+    "crates/codegen/tests/golden/custom-scalar-output/src/__chigiri/internal/descriptor/types/query.rs": "4cda99aea141916e7526fe22713a8a88bff0422502e5c767260a78aa8723a434",
+    "crates/codegen/tests/golden/custom-scalar-output/src/__chigiri/internal/dispatch/query.rs": "825d4bc5c3d5742892eb9096f925a78e3b5ba7b0ec34b5289e4f135ead30d66d",
+    "crates/codegen/tests/golden/custom-scalar-output/src/__chigiri/internal/scalars/registry.rs": "a1db572e1c0fbac1d84137dd9e0925059ce586ec0f7d03e1a77ed0438212553a",
+    "crates/codegen/tests/golden/custom-scalar-output/src/__chigiri/internal/scalars/types/json.rs": "995176bd43b711edc4eced8218e08976b7d12082ac4dc011192f7c2aa4c45d45",
+    "crates/codegen/tests/golden/custom-scalar-output/src/__chigiri/mod.rs": "49f95466714c169668fdd8d5b873481627b6ffcda90cf40f7e9a11ea261562e8",
+    "crates/codegen/tests/golden/custom-scalar-output/src/__chigiri/modules.rs": "b203fd2c1063fef691080d53e4baed76038c557c966d4792b4ea6bf45de0c5be",
+    "crates/codegen/tests/golden/custom-scalar-output/src/__chigiri/resolvers/query.rs": "6c0250be4f00c2960e6f4781e20a68fde0612b25e72a99f3dd1680f247ec3786",
+    "crates/codegen/tests/golden/custom-scalar-output/src/__chigiri/schema_types.rs": "fd952d6ccc137172b32b82708c0d1c9cb8a408c9c4bda8b3d87073d2ae10bde1",
+    "crates/codegen/tests/golden/custom-scalar-output/src/__chigiri/sources.rs": "4443c98ea7a06f739a375254dbe48c5afdca40ad7b67f3db728b81e6dda13915",
+    "crates/codegen/tests/golden/custom-scalar-output/src/lib.rs": "88b1b1d7e35946621e39976546454887167d10f4213285b2b9560f1f087d8a84"
+  }
+}

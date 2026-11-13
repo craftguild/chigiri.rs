@@ -1,0 +1,126 @@
+# Bundle fixture for the legacy v5 reference CLI contract.
+format = "chigiri-mock/v5"
+
+[state]
+contract_json = '{"fields":{},"initial":{}}'
+
+[hooks.request]
+before = false
+after = false
+
+[hooks.operation]
+before = false
+after = false
+
+[hooks.field]
+before = false
+after = false
+
+[hooks.modules]
+
+[server]
+listen = "127.0.0.1:4000"
+allowed_origins = ["http://localhost:5173"]
+
+[schema]
+digest = "3971dd872d770fa15343dccb78841b3553e05445042d4f0768737d5dea69d022"
+vocabulary = "chigiri-mock-directives/v2"
+
+[[schema.sources]]
+name = "schema/001.graphql"
+text = '''
+# Blog schema with automatic models, explicit relations, and user-authored root Luau resolvers.
+type User {
+  id: ID!
+  name: String! @constraint(maxLength: 256)
+  posts: [Post!]! @relation
+}
+type Post {
+  id: ID!
+  title: String! @constraint(maxLength: 256)
+  body: String! @constraint(maxLength: 4096)
+  author: User! @relation(fields: ["authorId"], references: ["id"])
+}
+input CreateUserInput { name: String! }
+input CreatePostInput { title: String!, body: String!, authorId: ID! }
+input UpdatePostInput { title: String, body: String, authorId: ID }
+type Query {
+  getUsers(limit: Int! = 20): [User!]!
+  findPost(id: ID, authorId: ID, limit: Int! = 20): [Post!]!
+}
+type Mutation {
+  createUser(input: CreateUserInput!): User!
+  createPost(input: CreatePostInput!): Post!
+  updatePost(id: ID!, input: UpdatePostInput!): Post!
+  deletePost(id: ID!): Boolean!
+}
+'''
+
+
+[[schema.sources]]
+name = "chigiri-mock/v2.graphql"
+text = '''
+# Mock v2 vocabulary definitions missing from the user SDL.
+enum ChigiriMockRepresentation { STRING BOOLEAN INTEGER NUMBER OBJECT ARRAY JSON }
+directive @relation(
+  fields: [String!]
+  references: [String!]
+  name: String
+) on FIELD_DEFINITION
+directive @virtual on FIELD_DEFINITION
+directive @constraint(
+  minLength: Int
+  maxLength: Int
+  startsWith: String
+  endsWith: String
+  contains: String
+  notContains: String
+  pattern: String
+  format: String
+  min: Float
+  max: Float
+  exclusiveMin: Float
+  exclusiveMax: Float
+  multipleOf: Float
+  minItems: Int
+  maxItems: Int
+) on FIELD_DEFINITION | INPUT_FIELD_DEFINITION | ARGUMENT_DEFINITION
+directive @chigiri_mock_scalar(
+  representation: ChigiriMockRepresentation!
+  min: Float
+  max: Float
+  minBytes: Int
+  maxBytes: Int
+  minItems: Int
+  maxItems: Int
+) on SCALAR
+'''
+
+[seed]
+records_json = '{"User":[{"id":"User-1","name":"Alice"},{"id":"User-2","name":"Bob"}],"Post":[{"id":"Post-1","authorId":"User-1","title":"First post","body":"Body"}]}'
+
+[resolvers]
+
+[resolvers."Query.getUsers"]
+state = "unimplemented"
+luau = "return {}"
+
+[resolvers."Query.findPost"]
+state = "unimplemented"
+luau = "return {}"
+
+[resolvers."Mutation.createUser"]
+state = "unimplemented"
+luau = "return {}"
+
+[resolvers."Mutation.createPost"]
+state = "unimplemented"
+luau = "return {}"
+
+[resolvers."Mutation.updatePost"]
+state = "unimplemented"
+luau = "return {}"
+
+[resolvers."Mutation.deletePost"]
+state = "unimplemented"
+luau = "return {}"

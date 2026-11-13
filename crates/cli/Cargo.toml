@@ -1,0 +1,33 @@
+[package]
+name = "chigiri_cli"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish = false
+description = "Unified Chigiri Rust and Mock command adapter"
+
+[dependencies]
+craftguild-cli.workspace = true
+clap.workspace = true
+chigiri_codegen = { path = "../codegen" }
+chigiri_mock = { path = "../mock" }
+
+[dev-dependencies]
+axum.workspace = true
+chigiri.workspace = true
+chigiri_axum.workspace = true
+chigiri_core.workspace = true
+rustix = { version = "1.1.4", features = ["pipe", "process"] }
+serde_json.workspace = true
+sha2 = "0.10.9"
+tokio.workspace = true
+toml_edit = "0.22.27"
+
+[build-dependencies]
+craftguild-cli-build.workspace = true
+
+[[bin]]
+name = "chigiri"
+path = "src/main.rs"

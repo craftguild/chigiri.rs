@@ -1,0 +1,18 @@
+[package]
+name = "chigiri_policy"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Operation cost and two-stage rate-limit policies for Chigiri"
+documentation = "https://docs.rs/chigiri_policy"
+
+[dependencies]
+chigiri_http.workspace = true
+chigiri_rate.workspace = true
+chigiri_runtime.workspace = true
+
+[dev-dependencies]
+chigiri_rate_memory.workspace = true
+tokio.workspace = true

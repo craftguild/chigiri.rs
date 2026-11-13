@@ -1,0 +1,1 @@
+query Books($id: ID!) { book(id: $id) { id title } }

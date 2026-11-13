@@ -1,0 +1,51 @@
+[advisories]
+yanked = "deny"
+ignore = []
+
+[licenses]
+confidence-threshold = 0.8
+allow = [
+    "Apache-2.0",
+    "BSD-3-Clause",
+    "MIT",
+    "Unicode-3.0",
+]
+
+# Only the ADR-0034-approved packing formatter is an exception.
+[[licenses.exceptions]]
+name = "stylua"
+version = "=2.5.2"
+allow = ["MPL-2.0"]
+
+# 2026-09-09: User-specifically, only the required parser/derive for StyLua is allowed.
+[[licenses.exceptions]]
+name = "full_moon"
+version = "=2.2.0"
+allow = ["MPL-2.0"]
+
+[[licenses.exceptions]]
+name = "full_moon_derive"
+version = "=0.11.0"
+allow = ["MPL-2.0"]
+
+# Pinned standards' JSON Schema build dependency; no runtime policy expansion.
+[[licenses.exceptions]]
+name = "borrow-or-share"
+version = "=0.2.4"
+allow = ["MIT-0"]
+
+[bans]
+multiple-versions = "allow"
+# scripts/dependency_policy.py rejects wildcards across the complete graph,
+# permitting only verified local workspace edges plus cargo-deny's existing
+# private Path/Git and development-edge exceptions. Run the wrapper, not a
+# standalone cargo-deny invocation, for the complete product policy (ADR-0059).
+wildcards = "allow"
+allow-wildcard-paths = true
+highlight = "all"
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]
+allow-git = ["https://github.com/craftguild/standards.rs"]

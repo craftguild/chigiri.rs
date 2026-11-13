@@ -1,0 +1,11 @@
+[package]
+name = "chigiri_rate"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Runtime-independent rate-limit provider SPI for Chigiri"
+documentation = "https://docs.rs/chigiri_rate"
+
+[dependencies]

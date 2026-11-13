@@ -1,0 +1,20 @@
+//! User-owned private storage scaffold created only for a fresh project.
+
+pub(super) const PATH: &str = "storage.graphql";
+
+pub(super) const SCAFFOLD: &str = r#"# Private storage SDL is not part of the public GraphQL API.
+# To add storage to an existing public type, replace Session with a type from
+# your public schema and uncomment an extension such as:
+#
+# extend type Session {
+#   userId: ID!
+# }
+#
+# Independent private models use ordinary SDL and the same storage directives:
+#
+# type MockToken {
+#   id: ID!
+#   ownerId: ID!
+#   purpose: String! @constraint(minLength: 1)
+# }
+"#;

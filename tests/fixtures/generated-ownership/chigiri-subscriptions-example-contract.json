@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "owner": "chigiri-subscriptions-example-contract",
+  "generator_revision": "54a32b5d2c59a56d82064d6c3be3092bf1d9d8f2",
+  "inputs": {
+    "chigiri-subscriptions.toml": "9b92be2e813eb37d4a563550584c70c8e345148f778ad15144b1a5759cde57b5",
+    "examples/subscriptions/graphql/schema.graphql": "31e2f3d2f03b6d6c3effcfd9318abd5a61c9fde8c9b29f0b6103d30e31f43562",
+    "generated/subscriptions-example/chigiri-generated.json": "df82d3b34e4b9b54eee842376770807f50ec39a0fad6ae924d95156adacae053"
+  },
+  "files": {
+    "generated/subscriptions-example/Cargo.toml": "96a51acdaa505b97786d8cf6b5cba3ba19cda7aa729c583b4a3502849532c293",
+    "generated/subscriptions-example/chigiri-generated.json": "df82d3b34e4b9b54eee842376770807f50ec39a0fad6ae924d95156adacae053",
+    "generated/subscriptions-example/src/__chigiri/assembly.rs": "1ddc8743cc968786d1a1efc45777f0cde8dc2e5b1452543fbf419fb92c6370ae",
+    "generated/subscriptions-example/src/__chigiri/generator_info.rs": "3684d19ed87a0558ba1d07f8782e3fcdb18711c884fc5e8a7edbbea79ab97017",
+    "generated/subscriptions-example/src/__chigiri/internal/bridge/dispatch.rs": "7f742dd5713fc8a3754622f2e46ff47046139e5b7fc7f721c5e2ed1be9656ab2",
+    "generated/subscriptions-example/src/__chigiri/internal/bridge/objects/query.rs": "b59efcaf66f20a3d28e3a80323654384b1524a16e6b76d075916d84538f0994b",
+    "generated/subscriptions-example/src/__chigiri/internal/bridge/objects/reading.rs": "8fadd1bf1f4831261879b625710cbc8751afc8bc072d05de03cf808fc75d7d44",
+    "generated/subscriptions-example/src/__chigiri/internal/bridge/schema.rs": "322b4e1504255645922d892dc9e8ca1b96f4f2c4854c472af8e6cf49cb6901d6",
+    "generated/subscriptions-example/src/__chigiri/internal/bridge/subscription/subscription.rs": "0d586124362ad83855b20648be5c126f26729e0a4ae9b7fa17d23cbc21d396c3",
+    "generated/subscriptions-example/src/__chigiri/internal/coercion/reading.rs": "1c38e7a82453a986af5fd80cafbd99d34d9acd0354b7a98bdace452cc56011c8",
+    "generated/subscriptions-example/src/__chigiri/internal/descriptor/schema.rs": "8bbc9eda968d46777731d65100aa2c78519f0c1696839fc44964179bf859fca6",
+    "generated/subscriptions-example/src/__chigiri/internal/descriptor/types/query.rs": "cb1c25bef7680e8249bb7d25b51b808c09bf64a74fbba36b8ed930a1fdd35275",
+    "generated/subscriptions-example/src/__chigiri/internal/descriptor/types/reading.rs": "e47924043b2ced0922c67f3b0cd7d328d5e879e265bb9984d65bd4db910e054f",
+    "generated/subscriptions-example/src/__chigiri/internal/descriptor/types/subscription.rs": "80c9967af7600bce1050f1d8026b15633229aed5d05abb6215b1635a13fc9e25",
+    "generated/subscriptions-example/src/__chigiri/internal/dispatch/query.rs": "825d4bc5c3d5742892eb9096f925a78e3b5ba7b0ec34b5289e4f135ead30d66d",
+    "generated/subscriptions-example/src/__chigiri/internal/dispatch/reading.rs": "4a5ce4bad3590ee4f399477ee63268f4804cace33e50064375ce7479b8077bc2",
+    "generated/subscriptions-example/src/__chigiri/internal/dispatch/subscription.rs": "93ce38ffc674f65a9afc0950ab95d90011b3ed5fcd88c36d8f42b42a4c9251f2",
+    "generated/subscriptions-example/src/__chigiri/mod.rs": "1a9f87fab07916e36e9b40955e51e60b397440656e2fc7b4cd4ce1963c639311",
+    "generated/subscriptions-example/src/__chigiri/modules.rs": "6d2d738f5de8a465deaa9e6c632342df202ec2b68346a4c35029b17c7d2777d5",
+    "generated/subscriptions-example/src/__chigiri/resolvers/objects/reading.rs": "f57ce3daa3a901385571bfa317d11fe97ec39d3cac104c20682a007da7dee076",
+    "generated/subscriptions-example/src/__chigiri/resolvers/query.rs": "7095cea8c34767228c71b2cbb5e1d095c4d1f0e879125ff383503f3ce0a6f1cc",
+    "generated/subscriptions-example/src/__chigiri/resolvers/subscription.rs": "8b0b561ba4507b6e6fbe1e68ae2ac0cbf3dbed8f9ebc1e766e31a24f92cb3a55",
+    "generated/subscriptions-example/src/__chigiri/schema_types.rs": "6833ff85e2eeaec3b2c27f0a8e67c4c2ee262c536c191bd93369f65dd01a2671",
+    "generated/subscriptions-example/src/__chigiri/sources.rs": "4443c98ea7a06f739a375254dbe48c5afdca40ad7b67f3db728b81e6dda13915",
+    "generated/subscriptions-example/src/lib.rs": "88b1b1d7e35946621e39976546454887167d10f4213285b2b9560f1f087d8a84"
+  }
+}

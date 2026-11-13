@@ -1,0 +1,11 @@
+[package]
+name = "chigiri_core"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Dependency-free GraphQL language and execution core for Chigiri"
+documentation = "https://docs.rs/chigiri_core"
+
+[dependencies]
