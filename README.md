@@ -11,6 +11,12 @@ One schema generates typed Rust resolver contracts and editable Luau mock server
 The `chigiri` command contains both workflows. Version 0.1.0 is the initial
 release. Use the CLI binaries below or build the CLI and libraries from source.
 
+> [!WARNING]
+> This project has not reached version 1.0 and may be unstable.
+> Its behavior and specifications may change, and upgrades may require manual migration.
+> Our team uses it in internal production systems to refine its design and implementation, but it may not meet your requirements.
+> Please keep these limitations in mind when using it.
+
 ## Quick start
 
 Release binaries are available for Linux x86_64 GNU and macOS arm64 from
