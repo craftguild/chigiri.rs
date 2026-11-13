@@ -1,0 +1,22 @@
+{
+  "schema_version": 2,
+  "group": "chigiri",
+  "config_hash": "6517e851e13c6174d9c9cd43ec6f253cfe21f8d9c2297e82d3751167ea12a5b9",
+  "head": "3212d7b378e21da34fe356a232650a97b63dc58d",
+  "base": null,
+  "current": "0.1.0",
+  "next": "0.1.0",
+  "tag": "v0.1.0",
+  "bump": "none",
+  "mode": "normal",
+  "prepared": false,
+  "receipt_path": "docs/releases/v0.1.0.json",
+  "notes": "# v0.1.0\n\nGroup: `chigiri`\n\nCompare: `repository root (initial release)` → `3212d7b378e21da34fe356a232650a97b63dc58d`\n\n## Changes\n\n- feat: initial import (3212d7b378e21da34fe356a232650a97b63dc58d)\n",
+  "changes": [
+    {
+      "path": "docs/releases/v0.1.0.md",
+      "before": null,
+      "after": "439c1e038ec869dcd716e5a2d1588d51e859ab14bb90860c068fef090fffa89f"
+    }
+  ]
+}
