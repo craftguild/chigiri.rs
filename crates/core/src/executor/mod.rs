@@ -15,6 +15,8 @@ mod input_errors;
 mod internal_error;
 mod introspection;
 mod lifecycle;
+mod lookahead;
+pub use lookahead::{SelectedField, SelectionError};
 mod output;
 mod output_bytes;
 mod plugin;

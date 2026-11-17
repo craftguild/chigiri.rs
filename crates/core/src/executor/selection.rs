@@ -257,15 +257,17 @@ where
                 Some(self.identity),
                 self.telemetry,
             )
-            .__with_parent(parent);
-            let result = FieldNext::new(self.plugins, move |_| {
-                self.dispatch.resolve(
-                    self.context,
-                    runtime_type,
-                    &field.name.value,
-                    parent,
-                    arguments.dispatch,
-                )
+            .__with_parent(parent)
+            .with_selection_view(super::lookahead::SelectionView::new(
+                self.schema,
+                self.document,
+                self.variables,
+                &definition.ty,
+                &group.fields,
+            ));
+            let result = FieldNext::new(self.plugins, move |context| {
+                self.dispatch
+                    .resolve_with_context(context, parent, arguments.dispatch)
             })
             .run(context)
             .await;

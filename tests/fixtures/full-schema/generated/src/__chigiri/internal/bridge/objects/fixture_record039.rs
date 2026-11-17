@@ -8,7 +8,7 @@ pub(super) fn __chigiri_resolve_0041_0000<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -25,8 +25,7 @@ where
             __chigiri_parent,
             "FixtureRecord039",
         )?;
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "FixtureRecord039", "fixtureField198");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::FixtureRecord039Resolver<C, T, E>>::fixture_field198(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -45,7 +44,7 @@ pub(super) fn __chigiri_resolve_0041_0001<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -62,8 +61,7 @@ where
             __chigiri_parent,
             "FixtureRecord039",
         )?;
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "FixtureRecord039", "fixtureField106");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::FixtureRecord039Resolver<C, T, E>>::fixture_field106(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -82,7 +80,7 @@ pub(super) fn __chigiri_resolve_0041_0002<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -99,8 +97,7 @@ where
             __chigiri_parent,
             "FixtureRecord039",
         )?;
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "FixtureRecord039", "fixtureField255");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::FixtureRecord039Resolver<C, T, E>>::fixture_field255(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -119,7 +116,7 @@ pub(super) fn __chigiri_resolve_0041_0003<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -136,8 +133,7 @@ where
             __chigiri_parent,
             "FixtureRecord039",
         )?;
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "FixtureRecord039", "fixtureField260");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::FixtureRecord039Resolver<C, T, E>>::fixture_field260(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -156,7 +152,7 @@ pub(super) fn __chigiri_resolve_0041_0004<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -173,8 +169,7 @@ where
             __chigiri_parent,
             "FixtureRecord039",
         )?;
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "FixtureRecord039", "fixtureField057");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::FixtureRecord039Resolver<C, T, E>>::fixture_field057(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -193,7 +188,7 @@ pub(super) fn __chigiri_resolve_0041_0005<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -210,8 +205,7 @@ where
             __chigiri_parent,
             "FixtureRecord039",
         )?;
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "FixtureRecord039", "fixtureField124");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::FixtureRecord039Resolver<C, T, E>>::fixture_field124(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -230,7 +224,7 @@ pub(super) fn __chigiri_resolve_0041_0006<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -247,8 +241,7 @@ where
             __chigiri_parent,
             "FixtureRecord039",
         )?;
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "FixtureRecord039", "fixtureField095");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::FixtureRecord039Resolver<C, T, E>>::fixture_field095(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -267,7 +260,7 @@ pub(super) fn __chigiri_resolve_0041_0007<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -284,8 +277,7 @@ where
             __chigiri_parent,
             "FixtureRecord039",
         )?;
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "FixtureRecord039", "fixtureField417");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::FixtureRecord039Resolver<C, T, E>>::fixture_field417(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -304,7 +296,7 @@ pub(super) fn __chigiri_route_0041_0000<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_field_name: &'a str,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
@@ -404,7 +396,7 @@ pub(super) fn __chigiri_route_0041<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_field_name: &'a str,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,

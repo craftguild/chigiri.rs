@@ -130,7 +130,11 @@ fn extend_directives<'a>(
     }));
 }
 
-fn type_condition_applies(schema: &SemanticSchema, condition: &str, runtime_type: &str) -> bool {
+pub(super) fn type_condition_applies(
+    schema: &SemanticSchema,
+    condition: &str,
+    runtime_type: &str,
+) -> bool {
     condition == runtime_type
         || schema
             .possible_objects(condition)

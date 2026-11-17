@@ -171,6 +171,23 @@ fn render_resolve_method(writer: &mut RustWriter, schema_route: &str) {
     });
     writer.line(") -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>> {");
     writer.indented(|writer| {
+        writer.line("self.resolve_with_context(::chigiri::FieldContext::new(__chigiri_context, __chigiri_parent_type, __chigiri_field_name), __chigiri_parent, __chigiri_arguments)");
+    });
+    writer.line("}");
+    writer.blank_line();
+    writer.line("fn resolve_with_context<'a>(");
+    writer.indented(|writer| {
+        writer.line("&'a self,");
+        writer.line("__chigiri_context: ::chigiri::FieldContext<'a, C>,");
+        writer.line(
+            "__chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,",
+        );
+        writer.line("__chigiri_arguments: ::chigiri::__private::ArgumentValues,");
+    });
+    writer.line(") -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>> {");
+    writer.indented(|writer| {
+        writer.line("let __chigiri_parent_type = __chigiri_context.parent_type();");
+        writer.line("let __chigiri_field_name = __chigiri_context.field_name();");
         writer.line(&format!(
             "match super::{schema_route}(self, __chigiri_context, __chigiri_parent_type, __chigiri_field_name, __chigiri_parent, __chigiri_arguments) {{"
         ));

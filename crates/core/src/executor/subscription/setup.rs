@@ -59,6 +59,33 @@ where
             }
         };
         let operation = selected.operation;
+        let fields = super::super::collect_fields(
+            &prepared.schema,
+            &prepared.document,
+            &[&operation.selection_set],
+            &root.parent_type,
+            &prepared.variables,
+        );
+        let definition = prepared
+            .schema
+            .type_by_name(&root.parent_type)
+            .and_then(|object| object.field(&root.field_name));
+        let ([group], Some(definition)) = (fields.as_slice(), definition) else {
+            return SubscriptionSetupOutcome::Response(invariant_response(
+                &engine,
+                "prepared subscription selection is missing",
+                Vec::new(),
+                Vec::new(),
+                None,
+            ));
+        };
+        let selection_view = super::super::lookahead::SelectionView::new(
+            &prepared.schema,
+            &prepared.document,
+            &prepared.variables,
+            &definition.ty,
+            &group.fields,
+        );
         let path = vec![root.response_key.as_str().into()];
         let source_slot = Mutex::new(None);
         let operation_context = OperationContext::execution(
@@ -117,7 +144,8 @@ where
                     &root_for_terminal.directives,
                     Some(identity),
                     telemetry,
-                );
+                )
+                .with_selection_view(selection_view);
                 let result = FieldNext::new(plugins, move |context| {
                     Box::pin(async move {
                         match setup.subscribe(context, dispatch_arguments).await {

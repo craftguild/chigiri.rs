@@ -3,7 +3,7 @@
 
 pub(super) fn __chigiri_schema_route_00_0000<'a, C, T>(
     __chigiri_resolvers: &'a super::Resolvers<C, T>,
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent_type: &'a str,
     __chigiri_field_name: &'a str,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
@@ -19,269 +19,237 @@ where
     T: super::SchemaTypes,
 {
     match __chigiri_parent_type {
-        "Query" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[0].resolve(
+        "Query" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[0].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "Mutation" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[1].resolve(
+            ),
+        ),
+        "Mutation" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[1].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject000" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[2].resolve(
+            ),
+        ),
+        "ProductObject000" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[2].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject001" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[3].resolve(
+            ),
+        ),
+        "ProductObject001" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[3].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject002" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[4].resolve(
+            ),
+        ),
+        "ProductObject002" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[4].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject003" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[5].resolve(
+            ),
+        ),
+        "ProductObject003" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[5].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject004" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[6].resolve(
+            ),
+        ),
+        "ProductObject004" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[6].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject005" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[7].resolve(
+            ),
+        ),
+        "ProductObject005" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[7].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject006" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[8].resolve(
+            ),
+        ),
+        "ProductObject006" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[8].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject007" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[9].resolve(
+            ),
+        ),
+        "ProductObject007" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[9].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject008" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[10].resolve(
+            ),
+        ),
+        "ProductObject008" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[10].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject009" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[11].resolve(
+            ),
+        ),
+        "ProductObject009" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[11].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject010" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[12].resolve(
+            ),
+        ),
+        "ProductObject010" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[12].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject011" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[13].resolve(
+            ),
+        ),
+        "ProductObject011" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[13].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject012" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[14].resolve(
+            ),
+        ),
+        "ProductObject012" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[14].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject013" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[15].resolve(
+            ),
+        ),
+        "ProductObject013" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[15].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject014" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[16].resolve(
+            ),
+        ),
+        "ProductObject014" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[16].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject015" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[17].resolve(
+            ),
+        ),
+        "ProductObject015" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[17].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject016" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[18].resolve(
+            ),
+        ),
+        "ProductObject016" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[18].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject017" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[19].resolve(
+            ),
+        ),
+        "ProductObject017" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[19].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject018" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[20].resolve(
+            ),
+        ),
+        "ProductObject018" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[20].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject019" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[21].resolve(
+            ),
+        ),
+        "ProductObject019" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[21].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject020" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[22].resolve(
+            ),
+        ),
+        "ProductObject020" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[22].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject021" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[23].resolve(
+            ),
+        ),
+        "ProductObject021" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[23].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject022" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[24].resolve(
+            ),
+        ),
+        "ProductObject022" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[24].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject023" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[25].resolve(
+            ),
+        ),
+        "ProductObject023" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[25].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject024" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[26].resolve(
+            ),
+        ),
+        "ProductObject024" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[26].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject025" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[27].resolve(
+            ),
+        ),
+        "ProductObject025" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[27].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject026" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[28].resolve(
+            ),
+        ),
+        "ProductObject026" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[28].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject027" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[29].resolve(
+            ),
+        ),
+        "ProductObject027" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[29].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject028" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[30].resolve(
+            ),
+        ),
+        "ProductObject028" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[30].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject029" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[31].resolve(
+            ),
+        ),
+        "ProductObject029" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[31].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
+            ),
+        ),
         _ => ::chigiri::__private::DispatchAttempt::Unmatched(__chigiri_arguments),
     }
 }
 
 pub(super) fn __chigiri_schema_route_00_0001<'a, C, T>(
     __chigiri_resolvers: &'a super::Resolvers<C, T>,
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent_type: &'a str,
     __chigiri_field_name: &'a str,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
@@ -297,269 +265,237 @@ where
     T: super::SchemaTypes,
 {
     match __chigiri_parent_type {
-        "ProductObject030" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[32].resolve(
+        "ProductObject030" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[32].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject031" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[33].resolve(
+            ),
+        ),
+        "ProductObject031" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[33].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject032" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[34].resolve(
+            ),
+        ),
+        "ProductObject032" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[34].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject033" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[35].resolve(
+            ),
+        ),
+        "ProductObject033" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[35].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject034" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[36].resolve(
+            ),
+        ),
+        "ProductObject034" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[36].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject035" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[37].resolve(
+            ),
+        ),
+        "ProductObject035" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[37].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject036" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[38].resolve(
+            ),
+        ),
+        "ProductObject036" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[38].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject037" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[39].resolve(
+            ),
+        ),
+        "ProductObject037" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[39].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject038" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[40].resolve(
+            ),
+        ),
+        "ProductObject038" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[40].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject039" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[41].resolve(
+            ),
+        ),
+        "ProductObject039" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[41].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject040" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[42].resolve(
+            ),
+        ),
+        "ProductObject040" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[42].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject041" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[43].resolve(
+            ),
+        ),
+        "ProductObject041" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[43].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject042" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[44].resolve(
+            ),
+        ),
+        "ProductObject042" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[44].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject043" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[45].resolve(
+            ),
+        ),
+        "ProductObject043" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[45].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject044" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[46].resolve(
+            ),
+        ),
+        "ProductObject044" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[46].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject045" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[47].resolve(
+            ),
+        ),
+        "ProductObject045" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[47].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject046" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[48].resolve(
+            ),
+        ),
+        "ProductObject046" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[48].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject047" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[49].resolve(
+            ),
+        ),
+        "ProductObject047" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[49].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject048" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[50].resolve(
+            ),
+        ),
+        "ProductObject048" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[50].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject049" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[51].resolve(
+            ),
+        ),
+        "ProductObject049" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[51].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject050" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[52].resolve(
+            ),
+        ),
+        "ProductObject050" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[52].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject051" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[53].resolve(
+            ),
+        ),
+        "ProductObject051" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[53].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject052" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[54].resolve(
+            ),
+        ),
+        "ProductObject052" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[54].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject053" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[55].resolve(
+            ),
+        ),
+        "ProductObject053" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[55].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject054" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[56].resolve(
+            ),
+        ),
+        "ProductObject054" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[56].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject055" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[57].resolve(
+            ),
+        ),
+        "ProductObject055" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[57].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject056" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[58].resolve(
+            ),
+        ),
+        "ProductObject056" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[58].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject057" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[59].resolve(
+            ),
+        ),
+        "ProductObject057" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[59].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject058" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[60].resolve(
+            ),
+        ),
+        "ProductObject058" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[60].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject059" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[61].resolve(
+            ),
+        ),
+        "ProductObject059" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[61].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject060" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[62].resolve(
+            ),
+        ),
+        "ProductObject060" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[62].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject061" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[63].resolve(
+            ),
+        ),
+        "ProductObject061" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[63].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
+            ),
+        ),
         _ => ::chigiri::__private::DispatchAttempt::Unmatched(__chigiri_arguments),
     }
 }
 
 pub(super) fn __chigiri_schema_route_00_0002<'a, C, T>(
     __chigiri_resolvers: &'a super::Resolvers<C, T>,
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent_type: &'a str,
     __chigiri_field_name: &'a str,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
@@ -575,69 +511,62 @@ where
     T: super::SchemaTypes,
 {
     match __chigiri_parent_type {
-        "ProductObject062" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[64].resolve(
+        "ProductObject062" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[64].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject063" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[65].resolve(
+            ),
+        ),
+        "ProductObject063" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[65].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject064" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[66].resolve(
+            ),
+        ),
+        "ProductObject064" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[66].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject065" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[67].resolve(
+            ),
+        ),
+        "ProductObject065" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[67].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject066" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[68].resolve(
+            ),
+        ),
+        "ProductObject066" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[68].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject067" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[69].resolve(
+            ),
+        ),
+        "ProductObject067" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[69].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "ProductObject068" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[70].resolve(
+            ),
+        ),
+        "ProductObject068" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[70].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
+            ),
+        ),
         _ => ::chigiri::__private::DispatchAttempt::Unmatched(__chigiri_arguments),
     }
 }
 
 pub(super) fn __chigiri_schema_route_01_0000<'a, C, T>(
     __chigiri_resolvers: &'a super::Resolvers<C, T>,
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent_type: &'a str,
     __chigiri_field_name: &'a str,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,

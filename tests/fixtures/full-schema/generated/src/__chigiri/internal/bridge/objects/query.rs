@@ -8,7 +8,7 @@ pub(super) fn __chigiri_resolve_0002_0000<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -26,8 +26,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField051");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field051(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -45,7 +44,7 @@ pub(super) fn __chigiri_resolve_0002_0001<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -63,8 +62,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField195");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field195(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -84,7 +82,7 @@ pub(super) fn __chigiri_resolve_0002_0002<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -109,8 +107,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField233");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field233(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -131,7 +128,7 @@ pub(super) fn __chigiri_resolve_0002_0003<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -161,8 +158,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField236");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field236(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -183,7 +179,7 @@ pub(super) fn __chigiri_resolve_0002_0004<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -218,8 +214,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField064");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field064(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -240,7 +235,7 @@ pub(super) fn __chigiri_resolve_0002_0005<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -275,8 +270,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField117");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field117(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -297,7 +291,7 @@ pub(super) fn __chigiri_resolve_0002_0006<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -327,8 +321,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField116");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field116(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -349,7 +342,7 @@ pub(super) fn __chigiri_resolve_0002_0007<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -384,8 +377,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField069");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field069(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -406,7 +398,7 @@ pub(super) fn __chigiri_resolve_0002_0008<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -436,8 +428,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField068");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field068(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -458,7 +449,7 @@ pub(super) fn __chigiri_resolve_0002_0009<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -498,8 +489,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField427");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field427(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -520,7 +510,7 @@ pub(super) fn __chigiri_resolve_0002_0010<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -565,8 +555,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField279");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field279(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -587,7 +576,7 @@ pub(super) fn __chigiri_resolve_0002_0011<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -627,8 +616,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField301");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field301(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -649,7 +637,7 @@ pub(super) fn __chigiri_resolve_0002_0012<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -694,8 +682,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "measurements");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::measurements(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -716,7 +703,7 @@ pub(super) fn __chigiri_resolve_0002_0013<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -751,8 +738,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField232");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field232(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -773,7 +759,7 @@ pub(super) fn __chigiri_resolve_0002_0014<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -818,8 +804,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField274");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field274(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -840,7 +825,7 @@ pub(super) fn __chigiri_resolve_0002_0015<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -875,8 +860,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField227");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field227(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -897,7 +881,7 @@ pub(super) fn __chigiri_resolve_0002_0016<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -942,8 +926,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField123");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field123(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -964,7 +947,7 @@ pub(super) fn __chigiri_resolve_0002_0017<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -1004,8 +987,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField109");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field109(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -1026,7 +1008,7 @@ pub(super) fn __chigiri_resolve_0002_0018<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -1051,8 +1033,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField426");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field426(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -1073,7 +1054,7 @@ pub(super) fn __chigiri_resolve_0002_0019<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -1098,8 +1079,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField429");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field429(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -1120,7 +1100,7 @@ pub(super) fn __chigiri_resolve_0002_0020<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -1160,8 +1140,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField431");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field431(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -1182,7 +1161,7 @@ pub(super) fn __chigiri_resolve_0002_0021<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -1207,8 +1186,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField093");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field093(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -1227,7 +1205,7 @@ pub(super) fn __chigiri_resolve_0002_0022<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -1262,8 +1240,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField430");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field430(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -1284,7 +1261,7 @@ pub(super) fn __chigiri_resolve_0002_0023<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -1302,8 +1279,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField083");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field083(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -1321,7 +1297,7 @@ pub(super) fn __chigiri_resolve_0002_0024<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -1346,8 +1322,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField038");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field038(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -1368,7 +1343,7 @@ pub(super) fn __chigiri_resolve_0002_0025<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -1408,8 +1383,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField040");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field040(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -1430,7 +1404,7 @@ pub(super) fn __chigiri_resolve_0002_0026<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -1455,8 +1429,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField082");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field082(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -1477,7 +1450,7 @@ pub(super) fn __chigiri_resolve_0002_0027<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -1512,8 +1485,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField169");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field169(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -1534,7 +1506,7 @@ pub(super) fn __chigiri_resolve_0002_0028<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -1569,8 +1541,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField251");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field251(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -1591,7 +1562,7 @@ pub(super) fn __chigiri_resolve_0002_0029<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -1626,8 +1597,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField247");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field247(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -1648,7 +1618,7 @@ pub(super) fn __chigiri_resolve_0002_0030<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -1683,8 +1653,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "Query", "fixtureField250");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::fixture_field250(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -1705,7 +1674,7 @@ pub(super) fn __chigiri_route_0002_0000<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_field_name: &'a str,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
@@ -2012,7 +1981,7 @@ pub(super) fn __chigiri_route_0002<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_field_name: &'a str,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,

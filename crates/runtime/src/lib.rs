@@ -25,7 +25,7 @@ pub use chigiri_core::executable::ScalarCoercionError;
 pub use chigiri_core::executor::{
     CostArgumentMetadata, CostArgumentPresence, CostFieldMetadata, ExecutableDirective,
     ExecutableDirectiveSite, FieldNext, OperationContext, OperationNext, Plugin, RequestContext,
-    RequestNext, SelectionMetadata,
+    RequestNext, SelectedField, SelectionError, SelectionMetadata,
 };
 pub use chigiri_core::{
     DigestParseError, DocumentDigest, ErrorEvent, ErrorId, ErrorIdFactory, ErrorIdFactoryError,

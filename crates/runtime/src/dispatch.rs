@@ -15,6 +15,15 @@ impl<C> FieldDispatch<C> for GeneratedDispatch<C> {
         None
     }
 
+    fn resolve_with_context<'a>(
+        &'a self,
+        context: chigiri_core::executor::FieldContext<'a, C>,
+        parent: Option<&'a ResolvedObject>,
+        arguments: ArgumentValues,
+    ) -> BoxFuture<'a, FieldResult<ResolvedValue>> {
+        self.0.resolve_with_context(context, parent, arguments)
+    }
+
     fn resolve<'a>(
         &'a self,
         context: &'a C,

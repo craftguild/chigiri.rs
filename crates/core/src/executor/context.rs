@@ -8,6 +8,7 @@ use crate::{
 
 use super::CostFieldMetadata;
 use super::ExecutableDirective;
+use super::lookahead::{SelectedField, SelectionError, SelectionView};
 
 /// Raw request context available before parsing and cache lookup.
 #[derive(Clone, Copy)]
@@ -172,7 +173,6 @@ pub struct SelectionMetadata<'a> {
 }
 
 /// The schema coordinate context shared by the resolver and field middleware.
-#[derive(Clone, Copy)]
 pub struct FieldContext<'a, C> {
     context: &'a C,
     parent_type: &'a str,
@@ -181,9 +181,17 @@ pub struct FieldContext<'a, C> {
     arguments: Option<&'a Object>,
     parent: Option<&'a super::ResolvedObject>,
     selection: Option<SelectionMetadata<'a>>,
+    selection_view: Option<SelectionView<'a>>,
     directives: &'a [ExecutableDirective],
     identity: Option<&'a OperationIdentity>,
     telemetry: Option<&'a RequestTelemetry>,
+}
+
+impl<C> Copy for FieldContext<'_, C> {}
+impl<C> Clone for FieldContext<'_, C> {
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 
 impl<'a, C> FieldContext<'a, C> {
@@ -197,6 +205,7 @@ impl<'a, C> FieldContext<'a, C> {
             arguments: None,
             parent: None,
             selection: None,
+            selection_view: None,
             directives: &[],
             identity: None,
             telemetry: None,
@@ -225,6 +234,7 @@ impl<'a, C> FieldContext<'a, C> {
             arguments: Some(arguments),
             parent: None,
             selection: Some(selection),
+            selection_view: None,
             directives,
             identity,
             telemetry,
@@ -269,9 +279,28 @@ impl<'a, C> FieldContext<'a, C> {
         self.arguments
     }
 
-    /// It returns the selection metadata when middleware is running.
+    /// Returns selection metadata during middleware and regenerated resolver execution.
     pub const fn selection(&self) -> Option<SelectionMetadata<'a>> {
         self.selection
+    }
+
+    pub(super) const fn with_selection_view(mut self, view: SelectionView<'a>) -> Self {
+        self.selection_view = Some(view);
+        self
+    }
+
+    /// Returns effective child fields for one compatible concrete output type.
+    ///
+    /// Fragments, aliases, merged occurrences and coerced include/skip variables
+    /// use the same collector as execution. This performs no child resolution.
+    /// Manually constructed contexts have no effective selection metadata.
+    pub fn selected_fields(
+        &self,
+        runtime_type: &str,
+    ) -> Result<Vec<SelectedField<'a>>, SelectionError> {
+        self.selection_view
+            .ok_or(SelectionError::Unavailable)?
+            .selected_fields(runtime_type)
     }
 
     /// Returns the fragment ancestry of the merged field occurrence and the direct application sequence.

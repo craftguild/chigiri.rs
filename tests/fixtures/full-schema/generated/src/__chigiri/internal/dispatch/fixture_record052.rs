@@ -51,8 +51,31 @@ where
         super::__chigiri_route_0054::<C, T, R, E>(
             &self.resolver,
             &*self.mapper,
-            __chigiri_context,
+            ::chigiri::FieldContext::new(
+                __chigiri_context,
+                "FixtureRecord052",
+                __chigiri_field_name,
+            ),
             __chigiri_field_name,
+            __chigiri_parent,
+            __chigiri_arguments,
+        )
+    }
+
+    fn resolve_with_context<'a>(
+        &'a self,
+        __chigiri_context: ::chigiri::FieldContext<'a, C>,
+        __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
+        __chigiri_arguments: ::chigiri::__private::ArgumentValues,
+    ) -> ::chigiri::__private::BoxFuture<
+        'a,
+        ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>,
+    > {
+        super::__chigiri_route_0054::<C, T, R, E>(
+            &self.resolver,
+            &*self.mapper,
+            __chigiri_context,
+            __chigiri_context.field_name(),
             __chigiri_parent,
             __chigiri_arguments,
         )

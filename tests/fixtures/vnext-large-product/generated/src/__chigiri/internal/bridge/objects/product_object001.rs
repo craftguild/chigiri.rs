@@ -8,7 +8,7 @@ pub(super) fn __chigiri_resolve_0003_0000<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -25,8 +25,7 @@ where
             __chigiri_parent,
             "ProductObject001",
         )?;
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "ProductObject001", "id");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::ProductObject001Resolver<C, T, E>>::id(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -45,7 +44,7 @@ pub(super) fn __chigiri_resolve_0003_0001<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -62,8 +61,7 @@ where
             __chigiri_parent,
             "ProductObject001",
         )?;
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "ProductObject001", "name");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::ProductObject001Resolver<C, T, E>>::name(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -82,7 +80,7 @@ pub(super) fn __chigiri_resolve_0003_0002<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -106,8 +104,7 @@ where
             __chigiri_parent,
             "ProductObject001",
         )?;
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "ProductObject001", "related");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::ProductObject001Resolver<C, T, E>>::related(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -129,7 +126,7 @@ pub(super) fn __chigiri_resolve_0003_0003<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -146,8 +143,7 @@ where
             __chigiri_parent,
             "ProductObject001",
         )?;
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "ProductObject001", "enabled");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::ProductObject001Resolver<C, T, E>>::enabled(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -166,7 +162,7 @@ pub(super) fn __chigiri_resolve_0003_0004<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -183,8 +179,7 @@ where
             __chigiri_parent,
             "ProductObject001",
         )?;
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "ProductObject001", "score");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::ProductObject001Resolver<C, T, E>>::score(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -203,7 +198,7 @@ pub(super) fn __chigiri_resolve_0003_0005<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -220,8 +215,7 @@ where
             __chigiri_parent,
             "ProductObject001",
         )?;
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "ProductObject001", "kind");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::ProductObject001Resolver<C, T, E>>::kind(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -240,7 +234,7 @@ pub(super) fn __chigiri_resolve_0003_0006<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -257,8 +251,7 @@ where
             __chigiri_parent,
             "ProductObject001",
         )?;
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "ProductObject001", "custom");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::ProductObject001Resolver<C, T, E>>::custom(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -279,7 +272,7 @@ pub(super) fn __chigiri_resolve_0003_0007<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -296,8 +289,7 @@ where
             __chigiri_parent,
             "ProductObject001",
         )?;
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "ProductObject001", "next");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::ProductObject001Resolver<C, T, E>>::next(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -318,7 +310,7 @@ pub(super) fn __chigiri_resolve_0003_0008<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -335,8 +327,7 @@ where
             __chigiri_parent,
             "ProductObject001",
         )?;
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "ProductObject001", "values");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::ProductObject001Resolver<C, T, E>>::values(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -355,7 +346,7 @@ pub(super) fn __chigiri_resolve_0003_0009<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -372,8 +363,7 @@ where
             __chigiri_parent,
             "ProductObject001",
         )?;
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "ProductObject001", "count");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::ProductObject001Resolver<C, T, E>>::count(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -392,7 +382,7 @@ pub(super) fn __chigiri_resolve_0003_0010<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -409,8 +399,7 @@ where
             __chigiri_parent,
             "ProductObject001",
         )?;
-        let __chigiri_ctx =
-            ::chigiri::FieldContext::new(__chigiri_context, "ProductObject001", "ratio");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::ProductObject001Resolver<C, T, E>>::ratio(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -429,7 +418,7 @@ pub(super) fn __chigiri_route_0003_0000<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_field_name: &'a str,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
@@ -554,7 +543,7 @@ pub(super) fn __chigiri_route_0003<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_field_name: &'a str,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,

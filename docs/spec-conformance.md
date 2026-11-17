@@ -221,6 +221,8 @@ OneOf variables are subject to the non-null rules in §5.8.5.
 | 7.1 | Response Format | Required | `execution_contract::aliases_preserve_nested_object_response_order`; `execution_contract::distinguishes_request_errors_from_nullable_non_null_completion` |
 | 7.1.6 | Errors | Required | `execution_contract::completion::{builtin_scalar_output_errors_become_masked_field_errors,null_list_items_preserve_their_index_paths}`; `execution_contract::middleware::only_a_field_plugin_can_observe_the_internal_source_and_convert_the_result` |
 
+Effective selection inspection reuses field collection rather than another parser or expansion algorithm. `crates/runtime/tests/execution/lookahead.rs` covers aliases, merged occurrences, fragments, coerced include/skip/defaults and abstract types. The canonical generated consumer in `crates/codegen/tests/compile/lookahead.rs` checks that the active context reaches an ordinary trait resolver and can select preparation before child execution. The subscription setup/event behavior regression covers the same metadata lifetime across fresh contexts. These are required executable checks, not a claim of current whole-product qualification.
+
 ### Execution concurrency tests
 
 - Both sibling query-field futures are polled before either completes.

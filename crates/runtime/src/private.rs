@@ -36,6 +36,16 @@ pub trait ResolverGroupDispatch<C>: Send + Sync + 'static {
     /// Returns the object's index in schema source order.
     fn object_index(&self) -> usize;
 
+    /// Dispatches while preserving active executor metadata when supported.
+    fn resolve_with_context<'a>(
+        &'a self,
+        context: chigiri_core::executor::FieldContext<'a, C>,
+        parent: Option<&'a ResolvedObject>,
+        arguments: ArgumentValues,
+    ) -> BoxFuture<'a, FieldResult<ResolvedValue>> {
+        self.resolve(context.context(), context.field_name(), parent, arguments)
+    }
+
     /// Dispatches a field resolver on the object.
     fn resolve<'a>(
         &'a self,

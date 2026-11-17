@@ -141,6 +141,24 @@ pub trait ResolverDispatch<C>: Send + Sync {
     fn register_custom_scalars(&self, registry: &mut CustomScalarRegistry);
 
     /// Calls a schema-coordinate resolver and type-erases its output.
+    /// Dispatches with the active executor metadata. Existing dispatchers retain
+    /// their original behavior through the default forwarding implementation.
+    fn resolve_with_context<'a>(
+        &'a self,
+        context: super::FieldContext<'a, C>,
+        parent: Option<&'a ResolvedObject>,
+        arguments: ArgumentValues,
+    ) -> BoxFuture<'a, FieldResult<ResolvedValue>> {
+        self.resolve(
+            context.context(),
+            context.parent_type(),
+            context.field_name(),
+            parent,
+            arguments,
+        )
+    }
+
+    /// Dispatches with the original context-only contract.
     fn resolve<'a>(
         &'a self,
         context: &'a C,

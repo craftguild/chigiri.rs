@@ -2,7 +2,7 @@
 
 use chigiri_core::schema::SemanticType;
 
-use crate::writer::{GeneratedItem, RustWriter};
+use crate::writer::{GeneratedItem, RustWriter, rust_string_literal};
 
 use super::super::bridge::object_router_name;
 use super::super::model::RenderModel;
@@ -104,13 +104,27 @@ fn render_ordinary_impl(
         );
         writer.indented(|writer| {
             writer.line(&format!(
-                "super::{router}::<C, T, R, E>(&self.resolver, &*self.mapper, __chigiri_context, __chigiri_field_name, __chigiri_parent, __chigiri_arguments)"
+                "super::{router}::<C, T, R, E>(&self.resolver, &*self.mapper, ::chigiri::FieldContext::new(__chigiri_context, {}, __chigiri_field_name), __chigiri_field_name, __chigiri_parent, __chigiri_arguments)",
+                rust_string_literal(object.name())
             ));
         });
         writer.line("}");
+        writer.blank_line();
+        writer.line("fn resolve_with_context<'a>(");
+        writer.indented(|writer| {
+            writer.line("&'a self,");
+            writer.line("__chigiri_context: ::chigiri::FieldContext<'a, C>,");
+            writer.line("__chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,");
+            writer.line("__chigiri_arguments: ::chigiri::__private::ArgumentValues,");
+        });
+        writer.line(") -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>> {");
+        writer.indented(|writer| writer.line(&format!(
+            "super::{router}::<C, T, R, E>(&self.resolver, &*self.mapper, __chigiri_context, __chigiri_context.field_name(), __chigiri_parent, __chigiri_arguments)"
+        )));
+        writer.line("}");
     });
     writer.line("}");
-    let _ = (model, object);
+    let _ = model;
 }
 
 fn render_unavailable_ordinary_impl(

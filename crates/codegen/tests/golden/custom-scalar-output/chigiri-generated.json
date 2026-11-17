@@ -8,15 +8,15 @@
   "abi": 8,
   "generator": {
     "schema_version": "chigiri/generator-info-v1",
-    "version": "0.1.0",
-    "revision": "54a32b5d2c59a56d82064d6c3be3092bf1d9d8f2-dirty",
-    "git_commit": "54a32b5d2c59a56d82064d6c3be3092bf1d9d8f2",
+    "version": "0.1.1",
+    "revision": "5f90235ddb705a1a394b9a5cfda23a9ea62dc4b6-dirty",
+    "git_commit": "5f90235ddb705a1a394b9a5cfda23a9ea62dc4b6",
     "dirty": true,
     "build": {
       "rustc": "rustc 1.95.0 (59807616e 2026-04-14)",
       "host": "aarch64-apple-darwin",
       "target": "aarch64-apple-darwin",
-      "profile": "debug"
+      "profile": "release"
     }
   },
   "runtime": {
@@ -49,23 +49,23 @@
     },
     {
       "path": "src/__chigiri/generator_info.rs",
-      "bytes": 967,
-      "sha256": "3684d19ed87a0558ba1d07f8782e3fcdb18711c884fc5e8a7edbbea79ab97017"
+      "bytes": 969,
+      "sha256": "80b4044e28831a05e753080818901edb108f807ea068fd2ea1bcd899c3afc9ad"
     },
     {
       "path": "src/__chigiri/internal/bridge/dispatch.rs",
-      "bytes": 4227,
-      "sha256": "45891835baac398b76059fcc6bb8a99d13c7f6a5a3840be54255ad023e2b054a"
+      "bytes": 5046,
+      "sha256": "a05e50a02f9af040ca347c2281774f5d9b7b401e6a8f306f217e56f02b9a2603"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/query.rs",
-      "bytes": 11207,
-      "sha256": "77bd6c319a8c11116d32403eecd1a66b65ea914f5921a4f6f8ae77863dfee502"
+      "bytes": 11145,
+      "sha256": "bb3103d523d9f59ecef2a7c8b0b3bdddabeb31d857b7fc9a2b281f116708b64a"
     },
     {
       "path": "src/__chigiri/internal/bridge/schema.rs",
       "bytes": 1105,
-      "sha256": "c39bc84595da397326eb2f1cbfede673e5f9674faaefadab20ccb3ccbf206a65"
+      "sha256": "c2dadbce0bbe70fc396c750f8a77c07578781d46a952d0017760d884c3ea28a5"
     },
     {
       "path": "src/__chigiri/internal/coercion/json.rs",
@@ -89,8 +89,8 @@
     },
     {
       "path": "src/__chigiri/internal/dispatch/query.rs",
-      "bytes": 1753,
-      "sha256": "825d4bc5c3d5742892eb9096f925a78e3b5ba7b0ec34b5289e4f135ead30d66d"
+      "bytes": 2474,
+      "sha256": "4560d2416d83e194b122beb40257bcf99fdca9f7a4a2d3a73f86a5124aa556a7"
     },
     {
       "path": "src/__chigiri/internal/scalars/registry.rs",

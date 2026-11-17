@@ -3,7 +3,7 @@
 
 pub(super) fn __chigiri_schema_route_00_0000<'a, C, T>(
     __chigiri_resolvers: &'a super::Resolvers<C, T>,
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent_type: &'a str,
     __chigiri_field_name: &'a str,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
@@ -19,269 +19,237 @@ where
     T: super::SchemaTypes,
 {
     match __chigiri_parent_type {
-        "FixtureRecord000" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[0].resolve(
+        "FixtureRecord000" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[0].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "Mutation" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[1].resolve(
+            ),
+        ),
+        "Mutation" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[1].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "Query" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[2].resolve(
+            ),
+        ),
+        "Query" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[2].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord001" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[3].resolve(
+            ),
+        ),
+        "FixtureRecord001" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[3].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord002" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[4].resolve(
+            ),
+        ),
+        "FixtureRecord002" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[4].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord003" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[5].resolve(
+            ),
+        ),
+        "FixtureRecord003" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[5].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord004" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[6].resolve(
+            ),
+        ),
+        "FixtureRecord004" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[6].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord005" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[7].resolve(
+            ),
+        ),
+        "FixtureRecord005" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[7].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord006" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[8].resolve(
+            ),
+        ),
+        "FixtureRecord006" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[8].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord007" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[9].resolve(
+            ),
+        ),
+        "FixtureRecord007" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[9].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord008" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[10].resolve(
+            ),
+        ),
+        "FixtureRecord008" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[10].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord009" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[11].resolve(
+            ),
+        ),
+        "FixtureRecord009" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[11].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord010" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[12].resolve(
+            ),
+        ),
+        "FixtureRecord010" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[12].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord011" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[13].resolve(
+            ),
+        ),
+        "FixtureRecord011" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[13].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord012" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[14].resolve(
+            ),
+        ),
+        "FixtureRecord012" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[14].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord013" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[15].resolve(
+            ),
+        ),
+        "FixtureRecord013" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[15].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord014" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[16].resolve(
+            ),
+        ),
+        "FixtureRecord014" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[16].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord015" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[17].resolve(
+            ),
+        ),
+        "FixtureRecord015" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[17].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord016" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[18].resolve(
+            ),
+        ),
+        "FixtureRecord016" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[18].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord017" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[19].resolve(
+            ),
+        ),
+        "FixtureRecord017" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[19].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord018" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[20].resolve(
+            ),
+        ),
+        "FixtureRecord018" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[20].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord019" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[21].resolve(
+            ),
+        ),
+        "FixtureRecord019" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[21].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord020" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[22].resolve(
+            ),
+        ),
+        "FixtureRecord020" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[22].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord021" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[23].resolve(
+            ),
+        ),
+        "FixtureRecord021" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[23].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord022" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[24].resolve(
+            ),
+        ),
+        "FixtureRecord022" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[24].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord023" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[25].resolve(
+            ),
+        ),
+        "FixtureRecord023" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[25].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord024" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[26].resolve(
+            ),
+        ),
+        "FixtureRecord024" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[26].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord025" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[27].resolve(
+            ),
+        ),
+        "FixtureRecord025" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[27].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord026" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[28].resolve(
+            ),
+        ),
+        "FixtureRecord026" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[28].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord027" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[29].resolve(
+            ),
+        ),
+        "FixtureRecord027" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[29].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord028" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[30].resolve(
+            ),
+        ),
+        "FixtureRecord028" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[30].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord029" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[31].resolve(
+            ),
+        ),
+        "FixtureRecord029" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[31].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
+            ),
+        ),
         _ => ::chigiri::__private::DispatchAttempt::Unmatched(__chigiri_arguments),
     }
 }
 
 pub(super) fn __chigiri_schema_route_00_0001<'a, C, T>(
     __chigiri_resolvers: &'a super::Resolvers<C, T>,
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent_type: &'a str,
     __chigiri_field_name: &'a str,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
@@ -297,269 +265,237 @@ where
     T: super::SchemaTypes,
 {
     match __chigiri_parent_type {
-        "FixtureRecord030" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[32].resolve(
+        "FixtureRecord030" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[32].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord031" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[33].resolve(
+            ),
+        ),
+        "FixtureRecord031" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[33].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord032" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[34].resolve(
+            ),
+        ),
+        "FixtureRecord032" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[34].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord033" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[35].resolve(
+            ),
+        ),
+        "FixtureRecord033" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[35].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord034" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[36].resolve(
+            ),
+        ),
+        "FixtureRecord034" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[36].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord035" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[37].resolve(
+            ),
+        ),
+        "FixtureRecord035" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[37].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord036" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[38].resolve(
+            ),
+        ),
+        "FixtureRecord036" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[38].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord037" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[39].resolve(
+            ),
+        ),
+        "FixtureRecord037" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[39].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord038" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[40].resolve(
+            ),
+        ),
+        "FixtureRecord038" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[40].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord039" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[41].resolve(
+            ),
+        ),
+        "FixtureRecord039" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[41].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord040" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[42].resolve(
+            ),
+        ),
+        "FixtureRecord040" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[42].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord041" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[43].resolve(
+            ),
+        ),
+        "FixtureRecord041" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[43].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord042" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[44].resolve(
+            ),
+        ),
+        "FixtureRecord042" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[44].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord043" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[45].resolve(
+            ),
+        ),
+        "FixtureRecord043" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[45].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord044" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[46].resolve(
+            ),
+        ),
+        "FixtureRecord044" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[46].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord045" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[47].resolve(
+            ),
+        ),
+        "FixtureRecord045" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[47].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord046" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[48].resolve(
+            ),
+        ),
+        "FixtureRecord046" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[48].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord047" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[49].resolve(
+            ),
+        ),
+        "FixtureRecord047" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[49].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord048" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[50].resolve(
+            ),
+        ),
+        "FixtureRecord048" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[50].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord049" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[51].resolve(
+            ),
+        ),
+        "FixtureRecord049" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[51].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord050" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[52].resolve(
+            ),
+        ),
+        "FixtureRecord050" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[52].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord051" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[53].resolve(
+            ),
+        ),
+        "FixtureRecord051" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[53].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord052" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[54].resolve(
+            ),
+        ),
+        "FixtureRecord052" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[54].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "Measurement" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[55].resolve(
+            ),
+        ),
+        "Measurement" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[55].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord054" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[56].resolve(
+            ),
+        ),
+        "FixtureRecord054" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[56].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord055" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[57].resolve(
+            ),
+        ),
+        "FixtureRecord055" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[57].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord056" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[58].resolve(
+            ),
+        ),
+        "FixtureRecord056" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[58].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord057" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[59].resolve(
+            ),
+        ),
+        "FixtureRecord057" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[59].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord058" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[60].resolve(
+            ),
+        ),
+        "FixtureRecord058" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[60].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord059" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[61].resolve(
+            ),
+        ),
+        "FixtureRecord059" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[61].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord060" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[62].resolve(
+            ),
+        ),
+        "FixtureRecord060" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[62].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord061" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[63].resolve(
+            ),
+        ),
+        "FixtureRecord061" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[63].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
+            ),
+        ),
         _ => ::chigiri::__private::DispatchAttempt::Unmatched(__chigiri_arguments),
     }
 }
 
 pub(super) fn __chigiri_schema_route_00_0002<'a, C, T>(
     __chigiri_resolvers: &'a super::Resolvers<C, T>,
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent_type: &'a str,
     __chigiri_field_name: &'a str,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
@@ -575,37 +511,34 @@ where
     T: super::SchemaTypes,
 {
     match __chigiri_parent_type {
-        "FixtureRecord062" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[64].resolve(
+        "FixtureRecord062" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[64].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord063" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[65].resolve(
+            ),
+        ),
+        "FixtureRecord063" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[65].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "FixtureRecord064" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[66].resolve(
+            ),
+        ),
+        "FixtureRecord064" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[66].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
+            ),
+        ),
         _ => ::chigiri::__private::DispatchAttempt::Unmatched(__chigiri_arguments),
     }
 }
 
 pub(super) fn __chigiri_schema_route_01_0000<'a, C, T>(
     __chigiri_resolvers: &'a super::Resolvers<C, T>,
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent_type: &'a str,
     __chigiri_field_name: &'a str,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,

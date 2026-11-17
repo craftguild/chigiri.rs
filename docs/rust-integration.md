@@ -260,3 +260,11 @@ Compilation evidence is separate from editor evidence. IDE completion,
 required-member insertion, and navigation remain unexecuted unless the
 validation record names actual editor and
 rust-analyzer versions and results.
+
+## Effective child selections
+
+Regenerated resolver adapters forward the executor's actual `FieldContext`, including its response path, parent, coerced arguments and effective selection. `ctx.selected_fields("ConcreteOutputType")` returns selected child fields with schema `name()`, aliased `response_key()` and `output_type()`. Each returned field supports another `selected_fields("ConcreteChildType")` call. Use a concrete compatible member for a union or interface; an incompatible type returns `SelectionError::InvalidRuntimeType`.
+
+This read-only view uses the same field collector, validated document and coerced variables as execution. It merges occurrences with the same response key, expands named/inline fragments and applies `@include`/`@skip` before returning fields. It does not execute children, inspect response values, authorize access or guarantee child success. Existing operation expansion bounds apply; returned vectors belong to the caller. Resolvers can determine a bounded preparation profile before constructing an object, without depending on sibling resolver order or parsing query strings.
+
+Manually constructed `FieldContext::new` values and adapters generated before this capability return `SelectionError::Unavailable`. Regenerate through the canonical generator before requiring this view. The additive dispatch methods preserve generated ABI 8 and existing dispatch implementations; no runtime, format, subscription or publication upgrade is implied. Finite fields, subscription source setup and each fresh event expose the applicable immutable selection for their execution.

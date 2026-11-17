@@ -33,6 +33,8 @@ mod http_policy;
 mod introspection;
 #[path = "execution/limits.rs"]
 mod limits;
+#[path = "execution/lookahead.rs"]
+mod lookahead;
 #[path = "execution/middleware.rs"]
 mod middleware;
 #[path = "execution/mutation_nested.rs"]

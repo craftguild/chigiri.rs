@@ -322,3 +322,19 @@ fn assert_budget(files: &std::collections::BTreeMap<String, Vec<u8>>) {
     assert!(files.values().map(Vec::len).sum::<usize>() <= 64 * 1024 * 1024);
     assert!(!files.keys().any(|name| name.ends_with("_00.rs")));
 }
+
+#[test]
+fn effective_selection_reaches_generated_resolvers() {
+    let temporary = TestDirectory::new("effective-selection");
+    let schema = temporary.join("schema");
+    fs::create_dir(&schema).unwrap();
+    fs::write(schema.join("schema.graphql"),
+        "type Query { entry: Pool! }\ntype Pool { nodes: [Node!]! }\nunion Node = Text | Code\ntype Text { text: String! }\ntype Code { source: String! tokens: [String!]! }\n"
+    ).unwrap();
+    temporary.generate();
+    temporary.write_consumer(
+        "effective_selection_consumer",
+        include_str!("../compile/lookahead.rs"),
+    );
+    temporary.assert_consumer("test");
+}

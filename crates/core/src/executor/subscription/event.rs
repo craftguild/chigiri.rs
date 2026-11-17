@@ -220,7 +220,14 @@ where
         &root.directives,
         Some(&prepared.identity),
         input.telemetry,
-    );
+    )
+    .with_selection_view(super::super::lookahead::SelectionView::new(
+        &prepared.schema,
+        &prepared.document,
+        &prepared.variables,
+        &definition.ty,
+        &group.fields,
+    ));
     let result = FieldNext::new(input.plugins, move |context| event.resolve_event(context))
         .run(context)
         .await;

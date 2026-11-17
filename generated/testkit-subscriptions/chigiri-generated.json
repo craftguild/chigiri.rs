@@ -8,15 +8,15 @@
   "abi": 8,
   "generator": {
     "schema_version": "chigiri/generator-info-v1",
-    "version": "0.1.0",
-    "revision": "54a32b5d2c59a56d82064d6c3be3092bf1d9d8f2-dirty",
-    "git_commit": "54a32b5d2c59a56d82064d6c3be3092bf1d9d8f2",
+    "version": "0.1.1",
+    "revision": "5f90235ddb705a1a394b9a5cfda23a9ea62dc4b6-dirty",
+    "git_commit": "5f90235ddb705a1a394b9a5cfda23a9ea62dc4b6",
     "dirty": true,
     "build": {
       "rustc": "rustc 1.95.0 (59807616e 2026-04-14)",
       "host": "aarch64-apple-darwin",
       "target": "aarch64-apple-darwin",
-      "profile": "debug"
+      "profile": "release"
     }
   },
   "runtime": {
@@ -49,33 +49,33 @@
     },
     {
       "path": "src/__chigiri/generator_info.rs",
-      "bytes": 967,
-      "sha256": "3684d19ed87a0558ba1d07f8782e3fcdb18711c884fc5e8a7edbbea79ab97017"
+      "bytes": 969,
+      "sha256": "80b4044e28831a05e753080818901edb108f807ea068fd2ea1bcd899c3afc9ad"
     },
     {
       "path": "src/__chigiri/internal/bridge/dispatch.rs",
-      "bytes": 4175,
-      "sha256": "dc7c6453ff49bffb1d12af2d99357477acc9ea823a1d4d0be9d548cf8260070a"
+      "bytes": 4994,
+      "sha256": "2b0ccdef04301ba035020532f6f705e037464f5feb9b009f2bba75c31e608fe0"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/mutation.rs",
-      "bytes": 4586,
-      "sha256": "a977359c298aa2d36c54fc6f465767022538106315f7770cf19d4ddf786a6b9d"
+      "bytes": 4592,
+      "sha256": "d6fa9a859d1e69e4e63ad3d20283fdd51b1af7e4460fbb34e03e32dddd147766"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/query.rs",
-      "bytes": 4547,
-      "sha256": "3b03b4db4f941fb804d35568b843cf67e8d567a3bce2fdfa4026c2e5b25188e5"
+      "bytes": 4571,
+      "sha256": "e0a63ecc475304c17eea6e7ff7190906b45161c3b242b75efacc0f60e92229a5"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/tick.rs",
-      "bytes": 6291,
-      "sha256": "76ea8210481aea8636d1147593b4873ccfae8a4cab2d70b6138c31b71b825b58"
+      "bytes": 6295,
+      "sha256": "c081ef9e66a83b3d09f9edd65cfa35eb452468e5766992a2688e927ad1b4e33c"
     },
     {
       "path": "src/__chigiri/internal/bridge/schema.rs",
-      "bytes": 1978,
-      "sha256": "a71fc8993b0841c7dae5869dcbb11de079dc24500feef4549d1b12d0e55f7efd"
+      "bytes": 1903,
+      "sha256": "f88880d221172a1c75785534f1efe9df999724c79ef713812a5770ad398b14b5"
     },
     {
       "path": "src/__chigiri/internal/bridge/subscription/subscription.rs",
@@ -114,13 +114,13 @@
     },
     {
       "path": "src/__chigiri/internal/dispatch/mutation.rs",
-      "bytes": 1765,
-      "sha256": "0094c3d1625811d1a23246eb9bf9e8b934d13e223d553edb7b4296586f7d8d82"
+      "bytes": 2489,
+      "sha256": "8a32b0cc25f8a1d802aca95f9eaffe13b7097157fa6804903a20c89d155e8bfc"
     },
     {
       "path": "src/__chigiri/internal/dispatch/query.rs",
-      "bytes": 1753,
-      "sha256": "825d4bc5c3d5742892eb9096f925a78e3b5ba7b0ec34b5289e4f135ead30d66d"
+      "bytes": 2474,
+      "sha256": "4560d2416d83e194b122beb40257bcf99fdca9f7a4a2d3a73f86a5124aa556a7"
     },
     {
       "path": "src/__chigiri/internal/dispatch/subscription.rs",
@@ -129,8 +129,8 @@
     },
     {
       "path": "src/__chigiri/internal/dispatch/tick.rs",
-      "bytes": 1749,
-      "sha256": "b12f02665df477feda5755db4bff9999ca165e6dd6de1732640c8ed99d166a78"
+      "bytes": 2469,
+      "sha256": "0e0e355d738655232e654845a67ec70fcf3e6ab86f47efc93fe3298b4d3ada51"
     },
     {
       "path": "src/__chigiri/mod.rs",

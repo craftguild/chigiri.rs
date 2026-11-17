@@ -33,6 +33,10 @@ fn setup_once_and_fresh_events_use_plugins_without_root_redispatch() {
 
     assert_eq!(session, "session");
     assert_eq!(setup.calls.load(Ordering::SeqCst), 1);
+    assert_eq!(
+        *setup.selections.lock().unwrap(),
+        [vec!["required", "label"]]
+    );
     assert_eq!(*setup.contexts.lock().unwrap(), [1]);
     assert_eq!(root.response_key(), "chosen");
     assert_eq!(root.field_name(), "event");
@@ -68,6 +72,14 @@ fn setup_once_and_fresh_events_use_plugins_without_root_redispatch() {
     assert!(first_response.errors.is_empty());
     assert!(second_response.errors.is_empty());
     assert_eq!(*first.contexts.lock().unwrap(), [2]);
+    assert_eq!(
+        *first.selections.lock().unwrap(),
+        [vec!["required", "label"]]
+    );
+    assert_eq!(
+        *second.selections.lock().unwrap(),
+        [vec!["required", "label"]]
+    );
     assert_eq!(*second.contexts.lock().unwrap(), [3]);
     assert_eq!(dispatch.root_calls.load(Ordering::SeqCst), 0);
     assert_eq!(dispatch.nested_calls.load(Ordering::SeqCst), 4);

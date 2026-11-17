@@ -34,6 +34,28 @@ where
         'a,
         ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>,
     > {
+        self.resolve_with_context(
+            ::chigiri::FieldContext::new(
+                __chigiri_context,
+                __chigiri_parent_type,
+                __chigiri_field_name,
+            ),
+            __chigiri_parent,
+            __chigiri_arguments,
+        )
+    }
+
+    fn resolve_with_context<'a>(
+        &'a self,
+        __chigiri_context: ::chigiri::FieldContext<'a, C>,
+        __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
+        __chigiri_arguments: ::chigiri::__private::ArgumentValues,
+    ) -> ::chigiri::__private::BoxFuture<
+        'a,
+        ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>,
+    > {
+        let __chigiri_parent_type = __chigiri_context.parent_type();
+        let __chigiri_field_name = __chigiri_context.field_name();
         match super::__chigiri_schema_route_01_0000(
             self,
             __chigiri_context,

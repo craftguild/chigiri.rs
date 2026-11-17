@@ -133,9 +133,9 @@ pub use chigiri_runtime::{
     OperationNext, OperationRootsDescriptor, PathSegment, Plugin, RequestContext, RequestId,
     RequestIdFactory, RequestIdFactoryError, RequestIdentity, RequestNext, RequestTelemetry,
     ResultShapeDigest, Sampler, SamplingDecision, Scalar, ScalarCoercionError, SchemaBuildError,
-    SchemaDescriptor, SchemaDigest, SchemaInfo, SchemaSourceKind, SelectionMetadata,
-    SubscriptionOverflow, SubscriptionSource, TraceId, TypeDescriptor, TypeDescriptorKind,
-    TypeRefDescriptor, ValidatedOperation, Value,
+    SchemaDescriptor, SchemaDigest, SchemaInfo, SchemaSourceKind, SelectedField, SelectionError,
+    SelectionMetadata, SubscriptionOverflow, SubscriptionSource, TraceId, TypeDescriptor,
+    TypeDescriptorKind, TypeRefDescriptor, ValidatedOperation, Value,
 };
 
 /// Neutral contract that only uses custom bridge and provider implementations.

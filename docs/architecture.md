@@ -859,6 +859,8 @@ consuming, non-`Clone` type that can be invoked once. Request and Operation
 middleware may short-circuit with a response; Field middleware may
 short-circuit with a value or error.
 
+Generated ordinary field adapters forward the active executor `FieldContext` through additive context-aware dispatch methods. The read-only `selected_fields(concrete_output_type)` view reuses the validated document, coerced variables and actual field collector, including merged response keys, aliases, fragments and include/skip directives. Child selection views do not resolve values or authorize access. Manually constructed contexts and older adapters report unavailable metadata; canonical regeneration is required to use this additive ABI-8 capability. Subscription source setup and fresh event contexts carry the same selection view for their operation. See [Rust integration](rust-integration.md#effective-child-selections).
+
 Plugin instances must be `Sync` because fields may run concurrently.
 Applications choose their own mutex or atomic strategy for mutable plugin
 state and must not hold a blocking lock guard across `.await`. A panic is an

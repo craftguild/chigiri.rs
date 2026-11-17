@@ -8,7 +8,7 @@ pub(super) fn __chigiri_resolve_0003_0000<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -23,7 +23,7 @@ where
         ::chigiri::__private::finish_arguments(&mut __chigiri_values)?;
         let __chigiri_typed_parent =
             ::chigiri::__private::required_parent::<T::Tick>(__chigiri_parent, "Tick")?;
-        let __chigiri_ctx = ::chigiri::FieldContext::new(__chigiri_context, "Tick", "value");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::TickResolver<C, T, E>>::value(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -42,7 +42,7 @@ pub(super) fn __chigiri_resolve_0003_0001<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -57,7 +57,7 @@ where
         ::chigiri::__private::finish_arguments(&mut __chigiri_values)?;
         let __chigiri_typed_parent =
             ::chigiri::__private::required_parent::<T::Tick>(__chigiri_parent, "Tick")?;
-        let __chigiri_ctx = ::chigiri::FieldContext::new(__chigiri_context, "Tick", "padding");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::TickResolver<C, T, E>>::padding(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -76,7 +76,7 @@ pub(super) fn __chigiri_route_0003_0000<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_field_name: &'a str,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
@@ -122,7 +122,7 @@ pub(super) fn __chigiri_route_0003<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_field_name: &'a str,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,

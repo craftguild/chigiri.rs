@@ -53,7 +53,7 @@ fn render_leaf(name: &str, chunk: usize, objects: &[&SemanticType]) -> Generated
             for (offset, object) in objects.iter().enumerate() {
                 let index = chunk * ROUTES_PER_FUNCTION + offset;
                 writer.line(&format!(
-                    "{} => ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[{index}].resolve(__chigiri_context, __chigiri_field_name, __chigiri_parent, __chigiri_arguments)),",
+                    "{} => ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[{index}].resolve_with_context(__chigiri_context, __chigiri_parent, __chigiri_arguments)),",
                     rust_string_literal(object.name()),
                 ));
             }
@@ -90,7 +90,7 @@ fn render_header(writer: &mut RustWriter, name: &str) {
     writer.line(&format!("pub(super) fn {name}<'a, C, T>("));
     writer.indented(|writer| {
         writer.line("__chigiri_resolvers: &'a super::Resolvers<C, T>,");
-        writer.line("__chigiri_context: &'a C,");
+        writer.line("__chigiri_context: ::chigiri::FieldContext<'a, C>,");
         writer.line("__chigiri_parent_type: &'a str,");
         writer.line("__chigiri_field_name: &'a str,");
         writer.line(

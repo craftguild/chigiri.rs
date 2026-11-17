@@ -42,7 +42,7 @@ fn render_header(
     writer.indented(|writer| {
         writer.line("__chigiri_resolver: &'a R,");
         writer.line("__chigiri_mapper: &'a (dyn ::std::ops::Fn(E) -> ::chigiri::FieldError + ::std::marker::Send + ::std::marker::Sync),");
-        writer.line("__chigiri_context: &'a C,");
+        writer.line("__chigiri_context: ::chigiri::FieldContext<'a, C>,");
         writer.line(
             "__chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,",
         );
@@ -71,11 +71,7 @@ fn render_body(
     render_coercion(writer, model, definition)?;
     render_typed(writer, model, object.name(), definition)?;
     render_parent(writer, model, object);
-    writer.line(&format!(
-        "let __chigiri_ctx = ::chigiri::FieldContext::new(__chigiri_context, {}, {});",
-        rust_string_literal(object.name()),
-        rust_string_literal(&definition.name.value)
-    ));
+    writer.line("let __chigiri_ctx = __chigiri_context;");
     let resolver = resolver_trait(model, object.name());
     let mut call = format!(
         "<R as super::{resolver}<C, T, E>>::{}(__chigiri_resolver, __chigiri_ctx",

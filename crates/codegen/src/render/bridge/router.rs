@@ -157,7 +157,7 @@ fn render_parameters(writer: &mut RustWriter) {
     writer.indented(|writer| {
         writer.line("__chigiri_resolver: &'a R,");
         writer.line("__chigiri_mapper: &'a (dyn ::std::ops::Fn(E) -> ::chigiri::FieldError + ::std::marker::Send + ::std::marker::Sync),");
-        writer.line("__chigiri_context: &'a C,");
+        writer.line("__chigiri_context: ::chigiri::FieldContext<'a, C>,");
         writer.line("__chigiri_field_name: &'a str,");
         writer.line(
             "__chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,",

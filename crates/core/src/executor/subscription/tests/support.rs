@@ -113,6 +113,7 @@ impl std::error::Error for TestFailure {}
 pub(super) struct Setup {
     pub calls: AtomicUsize,
     pub contexts: Mutex<Vec<usize>>,
+    pub selections: Mutex<Vec<Vec<String>>>,
 }
 
 impl Setup {
@@ -120,6 +121,7 @@ impl Setup {
         Self {
             calls: AtomicUsize::new(0),
             contexts: Mutex::new(Vec::new()),
+            selections: Mutex::new(Vec::new()),
         }
     }
 }
@@ -130,6 +132,12 @@ impl SubscriptionSetupDispatch<TestContext, String> for Setup {
         context: FieldContext<'a, TestContext>,
         arguments: ArgumentValues,
     ) -> BoxFuture<'a, FieldResult<String>> {
+        self.selections.lock().unwrap().push(
+            context
+                .selected_fields("Event")
+                .map(|fields| fields.iter().map(|field| field.name().to_owned()).collect())
+                .unwrap_or_default(),
+        );
         self.calls.fetch_add(1, Ordering::SeqCst);
         self.contexts
             .lock()
@@ -150,6 +158,7 @@ impl SubscriptionSetupDispatch<TestContext, String> for Setup {
 pub(super) struct Event {
     pub calls: AtomicUsize,
     pub contexts: Mutex<Vec<usize>>,
+    pub selections: Mutex<Vec<Vec<String>>>,
     pub required: &'static str,
     pub label: &'static str,
 }
@@ -159,6 +168,7 @@ impl Event {
         Self {
             calls: AtomicUsize::new(0),
             contexts: Mutex::new(Vec::new()),
+            selections: Mutex::new(Vec::new()),
             required,
             label,
         }
@@ -170,6 +180,12 @@ impl SubscriptionEventDispatch<TestContext> for Event {
         &'a self,
         context: FieldContext<'a, TestContext>,
     ) -> BoxFuture<'a, FieldResult<ResolvedValue>> {
+        self.selections.lock().unwrap().push(
+            context
+                .selected_fields("Event")
+                .map(|fields| fields.iter().map(|field| field.name().to_owned()).collect())
+                .unwrap_or_default(),
+        );
         self.calls.fetch_add(1, Ordering::SeqCst);
         self.contexts
             .lock()

@@ -8,9 +8,9 @@
   "abi": 8,
   "generator": {
     "schema_version": "chigiri/generator-info-v1",
-    "version": "0.1.0",
-    "revision": "54a32b5d2c59a56d82064d6c3be3092bf1d9d8f2-dirty",
-    "git_commit": "54a32b5d2c59a56d82064d6c3be3092bf1d9d8f2",
+    "version": "0.1.1",
+    "revision": "5f90235ddb705a1a394b9a5cfda23a9ea62dc4b6-dirty",
+    "git_commit": "5f90235ddb705a1a394b9a5cfda23a9ea62dc4b6",
     "dirty": true,
     "build": {
       "rustc": "rustc 1.95.0 (59807616e 2026-04-14)",
@@ -100,352 +100,352 @@
     {
       "path": "src/__chigiri/generator_info.rs",
       "bytes": 969,
-      "sha256": "737f0bab617a64c1b6964178e9f38a38d037efaf0986d9f22722c8e2d5ffa562"
+      "sha256": "80b4044e28831a05e753080818901edb108f807ea068fd2ea1bcd899c3afc9ad"
     },
     {
       "path": "src/__chigiri/internal/bridge/dispatch.rs",
-      "bytes": 4231,
-      "sha256": "751069e5803a6c7abaef0a5339f5cafd49c8544ef7eee9db079cabb15a962f51"
+      "bytes": 5050,
+      "sha256": "c428753b84527f25d1d64bd72044fb25c5158c70938d78d5da3fec783377d4a1"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record000.rs",
-      "bytes": 6573,
-      "sha256": "182e39600c0dacf717945c337ac63e514118c24a552cf8374b5ebec0ed0ec62b"
+      "bytes": 6511,
+      "sha256": "7f5d6768afed5bb0fbc92c4f0a007b78fd8df7c6c8165666569a5b0f7a1ed79b"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record001.rs",
-      "bytes": 29984,
-      "sha256": "942fb94e344d55c32ee2d71505f9ca0a3cbb452eb4a2e22ded965c85bfa81fc7"
+      "bytes": 29250,
+      "sha256": "3503fae05348856daff957658ebc375b5990fc2d3355c44a0ebc08595fe88781"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record002.rs",
-      "bytes": 27862,
-      "sha256": "d43fa64ee4736e5a092394f6820d00ea556823df03c90b1e3e1461d51cdeb225"
+      "bytes": 27184,
+      "sha256": "3bd352d2431c7247ba9d9823161869ee26a2f2cabcb0d88e27dccfb8896f50a2"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record003.rs",
-      "bytes": 20045,
-      "sha256": "ee6c58b7f731dd623d35bf9527b5c83467305b67d307d8657512928080ee1cfd"
+      "bytes": 19591,
+      "sha256": "57f87b6ab7b5dbde2574d63a9a06f855c830b4e4b7a7130fb8c2d90a4ada25e1"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record004.rs",
-      "bytes": 16418,
-      "sha256": "85ac2ece5f4babfe30126143b8f8ce9c22f2e5b2b03a0301c4d458a4b6864666"
+      "bytes": 16085,
+      "sha256": "db1c19b34ca4e10d391e930660287dab90de18a87207f0c0ee4669293eac07ea"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record005.rs",
-      "bytes": 23827,
-      "sha256": "8f8f82a9e4757e1530879a1b431541efa7faa42dd97fc3a95c9a01f0bcb6ba8f"
+      "bytes": 23261,
+      "sha256": "7ec2b0c9637777d0134c3d5b311a149079b28bb2a7ef7f91cb4bea4c2d489c9b"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record006.rs",
-      "bytes": 46971,
-      "sha256": "fc4104eab59be45c83e613763756b8ae2a342a72656f59b83a642701739b5916"
+      "bytes": 45733,
+      "sha256": "081dcaf595a8960b242e87830b75e3280d5b4070d2eb4ef06837857eec2b11a4"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record007.rs",
-      "bytes": 21946,
-      "sha256": "ed2786eb01c7be18667c508e2cde629ee52b7d13716b4fa606456027bc7c54ad"
+      "bytes": 21436,
+      "sha256": "5bc08acc0dd974de7f53c22ce157c78044ad59e90aa7c9c4bf5ec193ffeac088"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record008.rs",
-      "bytes": 41074,
-      "sha256": "ab9af2b401a6537da232c89b78932387ea45ecfe98a523a6d47c0911579b9e15"
+      "bytes": 40015,
+      "sha256": "0cf4562f46a8b93d896d43825642e41f403e9b4f25f405e917c9589dc518221d"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record009.rs",
-      "bytes": 25624,
-      "sha256": "76c3d64e93a23729f3bf5b99df9b96993d47db830d247269fa464f7c10796ba9"
+      "bytes": 25023,
+      "sha256": "d8bf7295197d96977d886565a1687d298d77a68d35dc165ad05aee2e7be1fd6f"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record010.rs",
-      "bytes": 16075,
-      "sha256": "b885df4718c9a4cb7ebe9a0d13849e00c481cf6c3a1ded66acb60cb1f2e974ad"
+      "bytes": 15754,
+      "sha256": "17b91aa442bb77dcb2a20c16985851ef45fef47dfcbe7f642758486acd7b65f9"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record011.rs",
-      "bytes": 16079,
-      "sha256": "ede72f6bbe5ac9e0f69c17714e624bea05e2bc8e3be972eaa3ab9fe66c790003"
+      "bytes": 15767,
+      "sha256": "d59afca45e145283f8c7e86ab9faf299653684458068613cfde0d21c7f88c415"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record012.rs",
-      "bytes": 10751,
-      "sha256": "29756a00b508e4f8befe8363c216c99144444d081ec11886ab8a768156805cfe"
+      "bytes": 10577,
+      "sha256": "de62289c6f94d3e82a7dbaaaad2c544ddff8d4c02fff9fb246963470aacc3893"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record013.rs",
-      "bytes": 19952,
-      "sha256": "87946bef96ee5bb5ac568972762cd6715e8a8a7853cce86ed187fd9da65e9704"
+      "bytes": 19505,
+      "sha256": "b2b91d39fe7afda1c05a91610e7b73da6351cff40847b11847c8fcc3123c1aac"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record014.rs",
-      "bytes": 37241,
-      "sha256": "12eb34277740d2b575ad5698e16d060a5ed74eddcb8cc13def80fd70d32aaea9"
+      "bytes": 36283,
+      "sha256": "1cd6cab02f3998d755c1566142dedd15ba64afae718d0550ca4866e9908987e0"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record015.rs",
-      "bytes": 47303,
-      "sha256": "6f1ee6dc70b0dfa6ff3c4e75c5467d8ae59ce0da50393042b5ed9ddd9d853615"
+      "bytes": 46065,
+      "sha256": "0c0e94ecee01fc1b30a762645d7a1c6b99a3f8be9af9ff536a586b5c5811b876"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record016.rs",
-      "bytes": 22031,
-      "sha256": "7a44b4326893ace9e880cb0390e743bdc0a42e9953b2af9da2afa61ad0da46b5"
+      "bytes": 21521,
+      "sha256": "3845eeb2ce89ec30e8fdb2032356449d4fccc3f786ca51885876aee275fb8ac5"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record017.rs",
-      "bytes": 26024,
-      "sha256": "8d3e82e65d603f6850563f1a77ae671e0dbc34e011da8659e39c8537b8b09a3b"
+      "bytes": 25408,
+      "sha256": "b6af6c42c8713b8656003bdef615ba33a97f507b3ff79966cd5733ad7b9ffd51"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record018.rs",
-      "bytes": 37419,
-      "sha256": "fef43831652aabfe3f0c6acc51fe5e35847866a1f99e28f0bfb2694eb4e5ba51"
+      "bytes": 36476,
+      "sha256": "5a25e941901aab4b5ac9c0e0cd41f9510c86bd33c1503613e3ecc686bedcf861"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record019.rs",
-      "bytes": 35642,
-      "sha256": "b42dab743bc6b18ffcf242e470e9dfb42802c279d94559a7d5bc1c79810aeee9"
+      "bytes": 34755,
+      "sha256": "45c13c188dc7e61105de5d24b76febee6577e2e2fb4e96240f5c2977b9804c63"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record020.rs",
-      "bytes": 35728,
-      "sha256": "4b60e2a8c1f504199c3d07bb5029432355494a7d69d8836561763ae966d22006"
+      "bytes": 34832,
+      "sha256": "a7aaa8032faa5ce594a502f600add1653980d1ffd3448ee81e18c8fe33d90eaf"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record021.rs",
-      "bytes": 23840,
-      "sha256": "fc0f9ab51d2bc6744d268d8a49e83cd6f115cf59d92bb424171d1a8f5b0aaacb"
+      "bytes": 23274,
+      "sha256": "c01281f06631ecccc47e9b62488ee6a649d7d4ca9b921028a3d8390cb4badd74"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record022.rs",
-      "bytes": 20073,
-      "sha256": "b047e2acf15b9cb0be8eb44a1619320f7d621f67f78c964eb75564d148749287"
+      "bytes": 19629,
+      "sha256": "0805189a1664ece97d639b41eefde2fb20b99f9bd3b640b0377562f0c7067f5f"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record023.rs",
-      "bytes": 16233,
-      "sha256": "f3fc7646bc41fb6c95dd21b735d4a6eb7b72778c7666932a8b800f60ccf19402"
+      "bytes": 15901,
+      "sha256": "521cf9c94fe5ed850e8dba98540662c195e110250f769ac1b108ff3b6ed64f19"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record024.rs",
-      "bytes": 8591,
-      "sha256": "f6373569bbceade85e321e8ee5993a89cd2ca2ed2c71988d29e6daf66a218320"
+      "bytes": 8473,
+      "sha256": "0173500333b86560c6ee4950d7b04c79788740fb334e08b9da8bd9fe5b56e335"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record025.rs",
-      "bytes": 14343,
-      "sha256": "5c4f80c73c5e705185eff469f30c7c0135fc6a5b2a30d72e068f3dd12f9fcd03"
+      "bytes": 14057,
+      "sha256": "0b9af49f87ebc77e5772d8b36632f933e07e02b0936421fd5e7f940255c5a876"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record026.rs",
-      "bytes": 10426,
-      "sha256": "1133b65d000713768ec54dfd4aa06f3b35dc7306bdd5744c0044d393aa850b60"
+      "bytes": 10252,
+      "sha256": "e953318eb121d204cb633eb82d2de27bfaec97077eec28a4165d66c54e5c758f"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record027.rs",
-      "bytes": 4679,
-      "sha256": "fc0a267f04f11a514da8acdff85a52c6aa5ea57bef38b29ea015a527fc89840f"
+      "bytes": 4673,
+      "sha256": "92383432bea1eeb8ecfc4148df3814de2d27a47b79c00f2cf5ce86a7f7c98b38"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record028.rs",
-      "bytes": 8493,
-      "sha256": "d8d8c144c6dfefe982b1874ac7c8a5585f227e5912b794a6dbcf06b6e86f83ec"
+      "bytes": 8375,
+      "sha256": "a76c4fa92968c825821d18d4d65cf9309f02ba1e02c4a3c9f287185d5c1ab05f"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record029.rs",
-      "bytes": 12437,
-      "sha256": "c0c4f90d086b983e6b7942e9975ba6bbd0343a0b3a420891012b30b846b37b56"
+      "bytes": 12207,
+      "sha256": "4996095ea8bbf880811e2a0f0529f62ddf8ab70e6c0d5bbaeb1816dd281c4679"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record030.rs",
-      "bytes": 12411,
-      "sha256": "a219821d7019e483ca8c2aef1e62165121371647ef607bd2fa343cdec69f3193"
+      "bytes": 12181,
+      "sha256": "905640dee0f2b975d40c6d60304e827f43bf8286cd1a109e5dc7f8ace7dd2c51"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record031.rs",
-      "bytes": 6599,
-      "sha256": "e55cebbccbb1603989ee4d5d25a8e3096d068c61c7abbc45efdaf836a38d6a6b"
+      "bytes": 6537,
+      "sha256": "94379b53787182446627eeb5d2b451e713289008b2428548ae406e590ee92932"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record032.rs",
-      "bytes": 31592,
-      "sha256": "c4ee71b4d6fd79b5494fae8e2cff48b191a68dbe4b1f8b4e527b2509dd353329"
+      "bytes": 30802,
+      "sha256": "d939eadafce10b7063eb6b74c76d6036ff919907f379c3cc294b5128910c5126"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record033.rs",
-      "bytes": 6599,
-      "sha256": "bd9e4ad0c33471152565c1b5d8f35957358efcb09cc4c084f83809b526fdfac4"
+      "bytes": 6537,
+      "sha256": "72021611fb2bb6ab6e327e684d317c7c4a39db78142ffa13a882db5af587eef5"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record034.rs",
-      "bytes": 6671,
-      "sha256": "763197434114a00ad43f1695dce9077ee8d3cf51a8e82947cc4889ed5d5ba9d8"
+      "bytes": 6609,
+      "sha256": "dd8b730df2ac0d0e04165d254a7131105a9a1e857114ef778e94e01c3380f180"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record035.rs",
-      "bytes": 8584,
-      "sha256": "0312855d65f3a650e93fbca58a0f55d70e65bc39953c971f217c5bbf0dd6c762"
+      "bytes": 8466,
+      "sha256": "8ab9bcbd603710a3bf69ca45048cdf68e0a01ed41a5dfb6698019463759c11c9"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record036.rs",
-      "bytes": 41055,
-      "sha256": "36cfd1365f49b00692e918bbba1dd056c5dab4a6fc3351d0cb560df53753d6ae"
+      "bytes": 39985,
+      "sha256": "88e6cff99be69097c82fa77fa1fb38f72438ce77bc3b961f0a73c2ee71d2eddc"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record037.rs",
-      "bytes": 27613,
-      "sha256": "4542e4fb9ed4e39b9ce1b9b18a06337c54b4e707fc530b286fc73ee0c0b7e0cb"
+      "bytes": 26944,
+      "sha256": "0fd75997ea89695e8a2e17a4a2e68f4d513a100f2e2dbd7db7ebd75c1c04a358"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record038.rs",
-      "bytes": 18093,
-      "sha256": "7747dfb8d65048834eb969e6a81fcfac12971fd9642f257fc91e22a091d9744a"
+      "bytes": 17695,
+      "sha256": "b21beb9fa58d26e176055b0ef18828e4a25d93d99f11846144d1f0a9c3ba7d45"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record039.rs",
-      "bytes": 18106,
-      "sha256": "f39b5effebe93dfa59266f8b0788418dc8d1897d0c041d3e54f28e516d6dd587"
+      "bytes": 17708,
+      "sha256": "caef3dcb078091bbb32e01547e025927ca26869d056fb84a4518a20526981fd0"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record040.rs",
-      "bytes": 14409,
-      "sha256": "f36bae7065b022ff9cf43bae92c05d6b0b6ff61ac7795410f51c2c3cf86cd1fe"
+      "bytes": 14123,
+      "sha256": "d36fe1133270b727bf52e470de6881e380e2c702921b92fe358868b9d34b60de"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record041.rs",
-      "bytes": 62383,
-      "sha256": "10c11376ecda55aa68345020e37d3511fa4a5057f838fa86c07d7a9af85ac9f5"
+      "bytes": 60697,
+      "sha256": "0ee908d47f9d7252a95c403bb65ad0e74fba78b6bcecf76be42927a2eae44298"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record042.rs",
-      "bytes": 8519,
-      "sha256": "e7a3627e99bc006bb8bdf77a13c369818bdbdbed3390073a4e62446dbd968e23"
+      "bytes": 8401,
+      "sha256": "60e6e6ea06a651339ab832d8f3053338605002849fe9639e85b8fcc313f1612d"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record043.rs",
-      "bytes": 6677,
-      "sha256": "6e90b79995943310c29e543ed85fab5a77c3fa7e1d96040da553b5d23d0e60aa"
+      "bytes": 6615,
+      "sha256": "157062e2b98a1f311c49d81eee81663a2ecfc1805ff303075238ca47fcc3bea7"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record044.rs",
-      "bytes": 43157,
-      "sha256": "ef5324f4e1a8dd862a1f5d01e23f4136e0dfb1a8a08841be12738a9b815d62de"
+      "bytes": 42031,
+      "sha256": "cc00a171c9fc677bb108e2505f5a5158bbf5775e2a1a20d06e74ef66451733c6"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record045.rs",
-      "bytes": 6671,
-      "sha256": "912fc43fb6d0ba4583919c495e3f3e854d9e58cf847af76f6a85f95b9af11457"
+      "bytes": 6609,
+      "sha256": "ef9f7222ca2b471313141e2ce2b3e3ec446f224b1cf46210cb9079e2b21394b3"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record046.rs",
-      "bytes": 12311,
-      "sha256": "597d39e30259d77322255666e45cdc28917d16309ae95f3cc62248a78d30759e"
+      "bytes": 12088,
+      "sha256": "88389373591e0bd817122b4533c2f4aa8e2b232d7c3308acd3a8d741341d4960"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record047.rs",
-      "bytes": 23866,
-      "sha256": "4d48b27da8127031e96cec1982f949dbca4ec6f87e7c392f0ac7945ff888c4d8"
+      "bytes": 23300,
+      "sha256": "185fed5cf3f54d4ed21fecc4b29739f773d83cea4090c7104a56d15344fed027"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record048.rs",
-      "bytes": 8584,
-      "sha256": "f38e0b942ebfb7bac86a370753ff1e99b9f9c84a045e4dbc0170be4fd40cc307"
+      "bytes": 8466,
+      "sha256": "d0843594549f6c78f57dcfbd4e0c9cac1b393f630c581642b62d242dd88785e8"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record049.rs",
-      "bytes": 64290,
-      "sha256": "f2b9cc279ee0dc36ab792c1fb396c2bcbb626ba01133bfd8d28117f4e8fc02d9"
+      "bytes": 62548,
+      "sha256": "6f716411f07716b365dcb56d38df7978c772ac3eeee62001cc3d87e5ed738a28"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record050.rs",
-      "bytes": 8584,
-      "sha256": "c39cb107f1521dd9df8edec0f0d60e345f032849a708a9bf79b93450c24dcc1b"
+      "bytes": 8466,
+      "sha256": "f73d6d401ea0ac65cb0d255e57e7541e99eb2fd6d88bbc564443fd7e82a5dbf1"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record051.rs",
-      "bytes": 4679,
-      "sha256": "5bb7daff5607638832be145e56e9df1e664368b4ba05147e7cfccb16bc85cc35"
+      "bytes": 4673,
+      "sha256": "7e2db4b085601a1eeb5c903830ac31fbd9ed191fb271d86d7267ac35291b809c"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record052.rs",
-      "bytes": 27706,
-      "sha256": "53f844ed67d51c640a06ffec795abde9cc14fcfc4450ffc0bc1edc3f95690a17"
+      "bytes": 27028,
+      "sha256": "e85e7bcd9a2580693bf7cc1c030ead921795b069844c7990dea73cfaac89e953"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record054.rs",
-      "bytes": 8414,
-      "sha256": "acdd0a64a77d88efd021a132145028591aa362df015a6be09004719521f3f328"
+      "bytes": 8323,
+      "sha256": "3279e3e6b40f9123b7340b594e4c041df9847f25dc56969562150a3093071c1d"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record055.rs",
-      "bytes": 31553,
-      "sha256": "22bc872708e6fd1d70ce6f40ed2d8bfa142bcdcb057a28f58a470e104c8962ef"
+      "bytes": 30763,
+      "sha256": "41ce108fc6891892e40047a5606025f7deafef30be9d7b4d4109641f0e373fc4"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record056.rs",
-      "bytes": 14201,
-      "sha256": "e1af97ef9276eb92535893b1a78526f438a0be2b2bf04a1d3e108431d0e1d7fb"
+      "bytes": 13915,
+      "sha256": "e23865debf50eaca33e5ac92225f1bf801a944b5e443e23e6f40e3f0954579af"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record057.rs",
-      "bytes": 57444,
-      "sha256": "f86a743120909c12e8e56f4419a4d7bb975abdf4c9b9338da65db9f7df8114a1"
+      "bytes": 55926,
+      "sha256": "48ce72de72648b402bb8acde56bfa58f355970f91a33eedc7ea69ae3d6d2b89a"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record058.rs",
-      "bytes": 16173,
-      "sha256": "c071b952e1738b92be19024a2fd21de392029a274890707c58ed6bbddcabca06"
+      "bytes": 15831,
+      "sha256": "4fca75fe41e4ab14b56f7d0d31e2dc25504e400ee1f40fa7453d5d0a1d5a1b17"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record059.rs",
-      "bytes": 47829,
-      "sha256": "859247ad6c6382252791af0be393138d0f881c0e064bc8b57ab9e692fa6d0499"
+      "bytes": 46591,
+      "sha256": "edbe2c8fde15413240f82d9833ec989d80c6eba802261360d554b8313c67e6f3"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record060.rs",
-      "bytes": 21899,
-      "sha256": "79aab8ced1cf8469336c5edb245e31d67a87df1df582194906b870093ffde206"
+      "bytes": 21389,
+      "sha256": "e3053035d7658fed6f743896bcdcb2beb81504d5cdf8433b8d39bfb608ec4272"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record061.rs",
-      "bytes": 37934,
-      "sha256": "b6931f89d32237fb693af3de3f431f63b09ac386b957a91f0367b0c155affced"
+      "bytes": 36982,
+      "sha256": "bbd9c61377357013641657bef4b0fe710685ae03c98f77d0bdc4753c47d10bc2"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record062.rs",
-      "bytes": 30198,
-      "sha256": "f064ff16c794d8e5b09a0bb5406b62c8b330b023568884bf3742e11ee20c46c0"
+      "bytes": 29464,
+      "sha256": "e7568d4d2f73087b1c2a6add6507169358d71c279fbee65689098fba88210bd9"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record063.rs",
-      "bytes": 8569,
-      "sha256": "e9c7a6166fdd40e63cdadf453cbd3750413f4f726f090f2fd1a581a4b2ad9777"
+      "bytes": 8460,
+      "sha256": "d5aaf9cd808c712c5b055233ca815e52b08b49210d7c44460569c337769f1e2f"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/fixture_record064.rs",
-      "bytes": 14500,
-      "sha256": "76846bbf9d0903971879357954b88ce1c847f8f80cdef2c9ad7ecdd5135e7ab4"
+      "bytes": 14214,
+      "sha256": "ed1564fb15e63fe8438d4528631a52302363f8221ee9ffbc9d3b35f33b70b7b0"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/measurement.rs",
-      "bytes": 8300,
-      "sha256": "7bc6d9d83d1fc54522d331614b266be448d56c5c4afdd50f97bbbd394fd61b1d"
+      "bytes": 8248,
+      "sha256": "16232a26d40cc7a90d57b3574c31c5b765b710443babd906a28f94b100e75a30"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/mutation.rs",
-      "bytes": 45434,
-      "sha256": "12b7ef46aade7c6a24cf6e3a6b1a2ac32c9e5785b50172deb4221a8619e860ae"
+      "bytes": 44572,
+      "sha256": "23ef8174580a971e9de9452aad9af3b6692323521663b4dc6fd943980242bbcf"
     },
     {
       "path": "src/__chigiri/internal/bridge/objects/query.rs",
-      "bytes": 87182,
-      "sha256": "ee0fc88a447c3816a39082bc0b48d455f909390bc80a375e1795735b56e08a32"
+      "bytes": 85840,
+      "sha256": "e90d9c7aa20a7f2b33846db3e1fa4e8ab7391f01873b899e0641c00ab7dbb4ff"
     },
     {
       "path": "src/__chigiri/internal/bridge/schema.rs",
-      "bytes": 24772,
-      "sha256": "d6dc9bbacec891f9beb2a3e3ded32c1d62f5ecd6f6eff24733fec7921fc467bc"
+      "bytes": 23197,
+      "sha256": "060920bee28d3b059f607d13c860f188bb79e37f84b501f55e42716723227db7"
     },
     {
       "path": "src/__chigiri/internal/coercion/fixture_choice004.rs",
@@ -1914,338 +1914,338 @@
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record000.rs",
-      "bytes": 1801,
-      "sha256": "18922d8caf980c4f846497d8eaee139e6065f69956f72ec6aa3bdd3f1cdd6465"
+      "bytes": 2596,
+      "sha256": "70bddf264d207bf09503c607ff84ee5c55fc3f8c4c67ce3f641e2788527c90ba"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record001.rs",
-      "bytes": 1801,
-      "sha256": "44461b2469d32b4782bfcc62ce25bff724da826482b4c729c64631ae0cab2f28"
+      "bytes": 2596,
+      "sha256": "92a876c7f95ac31389737c30c9476dc7486734b0edd6de4308ca93f234c19cff"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record002.rs",
-      "bytes": 1801,
-      "sha256": "2fcef375feb7648519c01d0ca91daff5910eff6f7d887e099d91b133cbb4a0a7"
+      "bytes": 2596,
+      "sha256": "67ee74dd2ad48211994ce89e3c834e32664fb4a083b66776ab2ffed09310f683"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record003.rs",
-      "bytes": 1801,
-      "sha256": "f71b6fba013a615c8e236b4b0a00f469861a66a0f366a2173478f9bc4d140f30"
+      "bytes": 2596,
+      "sha256": "eb9a3c8213a1817c4c30fbb08a4caa04d3a704b7b970158d812f9993d46193a8"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record004.rs",
-      "bytes": 1801,
-      "sha256": "4afece8bdcdd348b0f512dca2a91d169e02d0f70ce964cbb58a5d9e523f9efad"
+      "bytes": 2596,
+      "sha256": "640cc040b338ef1a32de77f9a5abf17908f81b8ea0342d411752587452e6039e"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record005.rs",
-      "bytes": 1801,
-      "sha256": "d28cb6bf4d0933cc07da45ffac30af4adc27723628f1a96a91d2068336b6abc5"
+      "bytes": 2596,
+      "sha256": "9ee29cd82650fa4bb90ae057996a9bd967256f06a97e70829a6257c1a3df4bed"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record006.rs",
-      "bytes": 1801,
-      "sha256": "010a27206bab0ef1ec97caca6398ea8450d8b5642d55e3f4cfa0083ae5805028"
+      "bytes": 2596,
+      "sha256": "48df596c3d5e5ca11679b28af6019ea736e3b1d40bf769cd457becc48ec0aca6"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record007.rs",
-      "bytes": 1801,
-      "sha256": "75a25ce80c3a483b673d80e1d8c0724566528ca42fca0e3767e1792791d1a882"
+      "bytes": 2596,
+      "sha256": "48823c1a187e614f7dc4c5595df7902e12722783d3b9dbbcf1c76ee5f8bdea96"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record008.rs",
-      "bytes": 1802,
-      "sha256": "c3da172e456ba6046a8f1d2009d10dc40a83cbd8a80e05a584df7f6b2a42e164"
+      "bytes": 2597,
+      "sha256": "ffd6af713e6bf70f491b0a6e85facf1754d082db4217422d7bd072fb44708e04"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record009.rs",
-      "bytes": 1802,
-      "sha256": "1a1ff20538805ba56a2c7b8557aeaaaf80442d3148fc3a08fd9a6cab43e87194"
+      "bytes": 2597,
+      "sha256": "9bf1a1094d92dfbb9191f7e8fc3d4e32728385a5dc95294a9660a0fd5c48f5cb"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record010.rs",
-      "bytes": 1802,
-      "sha256": "b2bbe27eb5ae36fc350ca62f21e5d3059d8b1da256a669a2ff9a3fa0a57abcd7"
+      "bytes": 2597,
+      "sha256": "70227aa49286f1312a8a37c74d50e2e1a7d991631d144435d4d87201343cb873"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record011.rs",
-      "bytes": 1802,
-      "sha256": "e8ee80c98f38bbbc80db09c74c8a0d2c760fb191e95756564a293084fecac07e"
+      "bytes": 2597,
+      "sha256": "3abe16b628d46b227b15bf7f50500a594f42e93b1933c9847925f1b1c5762c03"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record012.rs",
-      "bytes": 1802,
-      "sha256": "783131fe71f16074e5785292237aa8529c82dfff584e61452af6755a0df449be"
+      "bytes": 2597,
+      "sha256": "87a4e0b5e70bc9634b522ed74c4c973419ae6ec0fa1c530a8bcee4b62ece3bf0"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record013.rs",
-      "bytes": 1802,
-      "sha256": "a68d9a3f1792f850972e9ae211a1f19af31924c5e0ed0a8cfbb41b288b6d97ff"
+      "bytes": 2597,
+      "sha256": "08f8eb19bb37fc9a3ffe20db6a582715df0f84799e21a3a6b3eae8b88d52e248"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record014.rs",
-      "bytes": 1802,
-      "sha256": "060446497021004a2433061e2d6d11a9f19ca15bc579c600fd38fe1d1d6225c0"
+      "bytes": 2597,
+      "sha256": "6d0444761ab8d0ba3cfaab49839a644b32641605fa880f9636fc695dc9672b0a"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record015.rs",
-      "bytes": 1802,
-      "sha256": "1f17cee8d0c0f5da2f587a0ce72f14a9b598d657a3a001cc95a76b8e6aab9822"
+      "bytes": 2597,
+      "sha256": "60f01c57154cd0815db987334d06fd26fe7fb0d01e26e29216c0f6f76e9bca97"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record016.rs",
-      "bytes": 1802,
-      "sha256": "9f0519f84e6e20ee8016a585b13b668cbfaa808ffbd269721ca2d76d981336f8"
+      "bytes": 2597,
+      "sha256": "850a6842b9069ddaa239408c8217bc31149495dbec093e17008250f89d9df49b"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record017.rs",
-      "bytes": 1802,
-      "sha256": "fa673daaf7e329be0273152311c9236647ccac736a29797dcac0595f419c68fb"
+      "bytes": 2597,
+      "sha256": "9c9f994a68a9c6eb09a329baa9db809bb8c73067bef40a7f3e3ff02e72be9899"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record018.rs",
-      "bytes": 1802,
-      "sha256": "defc98fbba582304292bbf24d236cc2d9bccb3f0ae8a095bf595792650f75cd3"
+      "bytes": 2597,
+      "sha256": "1724f0943c0818bc6f5c727d09e1977c8692379db6f2f9c12452deefb1cf4110"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record019.rs",
-      "bytes": 1802,
-      "sha256": "ed7e1e388ffccbcd0a549e6e1fe3a2f5a5e349cafc598166b07f443c44730453"
+      "bytes": 2597,
+      "sha256": "845a8cbce37bfd6e0e4016e73b91b030205d6f3989a3af4fbb2b6c8cbefaaa55"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record020.rs",
-      "bytes": 1802,
-      "sha256": "0420918af40ab8331d7caf13600cad88b0944bd469bffc1a39b39ac7ec52e080"
+      "bytes": 2597,
+      "sha256": "81c45cd772bee978d6eb74df24c27bc4649e85e52c70e48a59facb02d0a1e179"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record021.rs",
-      "bytes": 1802,
-      "sha256": "566f69eccff3919934f63045e49bc8e1871f23186293efab6a9db01861229e43"
+      "bytes": 2597,
+      "sha256": "3d6b97d001e661311175ced44e30ca550bd7ecc39f3297c0d14d046213312dc7"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record022.rs",
-      "bytes": 1802,
-      "sha256": "3101b2d524498579da1aa8450230e1da125888e7e95d3632eaf3967e9ded5341"
+      "bytes": 2597,
+      "sha256": "2d2781454fd286e023306c83381d660cc81f51b32ba1551197ea95b2f09b114f"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record023.rs",
-      "bytes": 1802,
-      "sha256": "cf5673ca48dde1549d5c907ec4dabd2110f6bcf9a535912053c4085fb5cd0d22"
+      "bytes": 2597,
+      "sha256": "ec97ce4301c4ce63e82ced16e676fe0cb3d8d486359a3efd5f097eb515dd6c3e"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record024.rs",
-      "bytes": 1802,
-      "sha256": "db12b12f45e740852aa426c4a7c2dfc83b838e7326e616806a9b21233fd6ba4b"
+      "bytes": 2597,
+      "sha256": "81cb4ca9de3681cdef092cbdf03c35f3a989afc5d2a251a1a52231cc18399629"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record025.rs",
-      "bytes": 1802,
-      "sha256": "a3c759dbbb9db614bbd74409c89572f14915b113ab97bd5add150682d8f0cee5"
+      "bytes": 2597,
+      "sha256": "86d49015e83fd215f772b2e4e1f49b0dcd13f3c97398dfb265aa34af94f8793d"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record026.rs",
-      "bytes": 1802,
-      "sha256": "b832bea422d1f780dedf5d3b8dd9aa79ee40451ff64a9224ae339a5ae9664e19"
+      "bytes": 2597,
+      "sha256": "bda0993ad01b88070d02b4c2ca630c42c053b7a11d0399dedd9b2ec76b7727df"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record027.rs",
-      "bytes": 1802,
-      "sha256": "dd63e253d45b1a162f88c14b787db25206efd4e4080caaff29f34f0323673f00"
+      "bytes": 2597,
+      "sha256": "05816ceaf4a5b20e3bd7515a0f54f59c1296c02a097b1b0e644cf09121f79d49"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record028.rs",
-      "bytes": 1802,
-      "sha256": "b5a3e2e6a8621fd4abe1f332c98104865391e90ebcea9e41d0330508075c77a1"
+      "bytes": 2597,
+      "sha256": "edb79e5dd9b574812f5899951779fdf7657ae0e97d413cb7a4ffa93de4befdea"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record029.rs",
-      "bytes": 1802,
-      "sha256": "f9bc4e01b21c17f25cb063379e07b924e455c96d6b51e1d95c0e0c736dc4cb8b"
+      "bytes": 2597,
+      "sha256": "b986e518a1e75afdff9404c525491d891355e4350eb58deef64ce6301c56cf98"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record030.rs",
-      "bytes": 1802,
-      "sha256": "dee86c18e832b6a57a1a1ef8939f2ffefb1a9a235888cc76f68662296e1140ae"
+      "bytes": 2597,
+      "sha256": "f9ba811f101f884ea0df45e8d1e7c12f594f8f20d15407efc483d6e6ea088042"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record031.rs",
-      "bytes": 1802,
-      "sha256": "c0a50c01c151ad53ead8d15d67fde90af6aae39b5cb6a038750f73e4080d0963"
+      "bytes": 2597,
+      "sha256": "ea32f32d64085a9ba30ee2bf3f864ba0ca32db601c5b954cdf5596bd2908007b"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record032.rs",
-      "bytes": 1802,
-      "sha256": "8fb976f189bb256ffdb536cb9b2f17c1e6eb574da71261e0004756b67700c27f"
+      "bytes": 2597,
+      "sha256": "f511fd185b29b126bf49c8335848a542c7d05862bd25359610eac4e5418d9a99"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record033.rs",
-      "bytes": 1802,
-      "sha256": "a2bd747949cf8f88f4fcd67891039c41a5f54d539edc8698c92b451ddd139378"
+      "bytes": 2597,
+      "sha256": "cd3feb68e0d4189c4b483852d3f9deb2c8927eaea349c2172a91c431ae4d8037"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record034.rs",
-      "bytes": 1802,
-      "sha256": "3eeec14d4ef8c786fd6d238cfc07598680a1831effc7c73aaba2eb1b94ca2646"
+      "bytes": 2597,
+      "sha256": "e0222bb76f910776a729ef8d7ad94235b1fb69f00715654b49ed3ccebebbb812"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record035.rs",
-      "bytes": 1802,
-      "sha256": "ff60861dd4c7d8298c891431b0049e6aac7ef96073a085a7e8e258dcdb0cc199"
+      "bytes": 2597,
+      "sha256": "c27f99ab0f94ee846ecf660764dd3c6c85abbadd89a3ea557b34735f30f42376"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record036.rs",
-      "bytes": 1802,
-      "sha256": "ef9f6e0d33adc472f2b896235d4628df495e33303acd22d1ff257ad094c2d0d8"
+      "bytes": 2597,
+      "sha256": "4e03f4559f39debf7e7893376dafc6f59ff0523eff68196fcaab33c3f9e247ef"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record037.rs",
-      "bytes": 1802,
-      "sha256": "dafc5a76798ff03e349aaf9e6cf0e57929753b801ba6f91d2e13b5b74f383bfd"
+      "bytes": 2597,
+      "sha256": "f8a99b3d39c7cd40e8070ff81a67923a55684b355d547a0031e6b42d0be1dc07"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record038.rs",
-      "bytes": 1802,
-      "sha256": "0fb378c3d86e113b32b9c93c6ab3f781c63337e3a714bc7ea88f92aeaec5459e"
+      "bytes": 2597,
+      "sha256": "ebeff9f708ef1793bad3e9d30d9e31a2682a981acd8947078daff87caeba4da4"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record039.rs",
-      "bytes": 1802,
-      "sha256": "fe2d1b093e3cf0b859f786c89287b1da7718e07c108ddf879e5d8145c84a33de"
+      "bytes": 2597,
+      "sha256": "2a47957f671258a3143757cca520afdf72acef551de4615f9adc795289a523ff"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record040.rs",
-      "bytes": 1802,
-      "sha256": "67040b0adf9c20267b12dcdc728b51fc1e0542523722a64498f9fccaaf412906"
+      "bytes": 2597,
+      "sha256": "d55cd3bad8e63241d2a6e4ad4964e2b7d66e89aa2cc08a14fd1aedacbe1856bc"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record041.rs",
-      "bytes": 1802,
-      "sha256": "bb3e2cb82f0f525a38807afff2bba6323304b5572ca3226be1c504eebf6b4521"
+      "bytes": 2597,
+      "sha256": "fe9e1c3b661e89b1b8a4d1ea557d2ae3c3eacc494270fc1b78e555bae803033d"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record042.rs",
-      "bytes": 1802,
-      "sha256": "49acd919cd964eda0f45aae4234fcfebec918c50032184ad5e5afaf4c9803990"
+      "bytes": 2597,
+      "sha256": "11769f240085eae01b40c3c51ae354a12828054b1fb2546123d95744c34533d3"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record043.rs",
-      "bytes": 1802,
-      "sha256": "3afdac5e8df9fd5e7859edfdd378206bcfa9667ed6c7f182cd325a1e1777932d"
+      "bytes": 2597,
+      "sha256": "1f3da925f10bcb50c41da5894dcf649f9ae22a7c6b751d5684ad12fa5db98416"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record044.rs",
-      "bytes": 1802,
-      "sha256": "a58aff71452436e454e1fda0bfd62193ed57689eaeca451f89555c36b51a5ac2"
+      "bytes": 2597,
+      "sha256": "e1a77e2c2956c06423849c35c7058a509243b3aec17b28a1e3a06de8dcbedd90"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record045.rs",
-      "bytes": 1802,
-      "sha256": "925f4fffce39f9de39333e7371b17def06ef0d28318e981be8c6b2f82a0cbb98"
+      "bytes": 2597,
+      "sha256": "e8dca757cba14b25dea21caa428851b93ddb73b5eb168e0ef418c2729e663cd8"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record046.rs",
-      "bytes": 1802,
-      "sha256": "5c83d1b035e1ccf751a2a35074d206817d4522ec6f1f623b37719f139ccfafa1"
+      "bytes": 2597,
+      "sha256": "6f3c550aa1c38adba97e2412fe9f63a5147819f51b1f8dae5460ff984c7560a5"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record047.rs",
-      "bytes": 1802,
-      "sha256": "6414def8e8ee403f9dedd45fa4f467bee00b1a78bb665cccd6f16fbdf34e8e06"
+      "bytes": 2597,
+      "sha256": "47701320d10a3c30343b5b5d4e94bb0f3d33402bc40e56615e616a2c550af1fd"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record048.rs",
-      "bytes": 1802,
-      "sha256": "f5dfa83fc1de4e1915255a07e4cb7a7b5e86a4c065c6340f90c8b80278c35805"
+      "bytes": 2597,
+      "sha256": "c7b2ae0a2048ebd53598144ec9b5932f12debf734e07bbe9ca3faf82e40a139d"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record049.rs",
-      "bytes": 1802,
-      "sha256": "37db1b77560b5f89dcacc94ca78bd7efacb441a2ffd0e6a24cc0d3f1950cd1ba"
+      "bytes": 2597,
+      "sha256": "9dd004374d6139ab96cc2d8f5701439ea56adbb3afe140a228f4e4e8dd714c0a"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record050.rs",
-      "bytes": 1802,
-      "sha256": "77e500d5f1e01ef2fa2f6a50605ebb9103a783d1382aee1e81a020ed74b31be4"
+      "bytes": 2597,
+      "sha256": "08814fee8acb346de7671b0ca3dca915d715340c080c539d07fc888453c975fe"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record051.rs",
-      "bytes": 1802,
-      "sha256": "24ed5ae28dbaba98679a6462a14cc213fd760ff9bda8fb507981e3f3365351e8"
+      "bytes": 2597,
+      "sha256": "5aa3092f0fcf9808d1571bd8fa59a9f825e0283ee777ebab2c9c4e9b9bf147b8"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record052.rs",
-      "bytes": 1802,
-      "sha256": "2314b77ca6b61ad529efb50d3a5364ee6218d0723e5da5855a5e1878dfc56c89"
+      "bytes": 2597,
+      "sha256": "3d83402a1582ae8abbee18bbe8c6c05ca4643a0ad5e94314a6669332e5e9d008"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record054.rs",
-      "bytes": 1802,
-      "sha256": "1bc8ec1df42ee91b8415e64b0ed9b6f6a843b1baad16dab35c67343a35b6f2c5"
+      "bytes": 2597,
+      "sha256": "ddb0fd23b1d53dac93f18a63a719c25d28016980f44a185270f04398aa27176b"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record055.rs",
-      "bytes": 1802,
-      "sha256": "763fd08af3319ed6380149576566762cc5d2524b0f10dc9f67adccccde75ce30"
+      "bytes": 2597,
+      "sha256": "d7bf2aad911d447182df11e9269440eaa7f1103471ccb69c433798eaffb87247"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record056.rs",
-      "bytes": 1802,
-      "sha256": "ab747fa5109ecc138dbb85090ea1b52aefcd283c9da1cd0a51da25df6b19aa0d"
+      "bytes": 2597,
+      "sha256": "5cafece7fc555d6d00d836184ab6459134ca4945de8d645eba8f8d4b77c7c407"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record057.rs",
-      "bytes": 1802,
-      "sha256": "12c5d25a98dcc32f968a9d71f1ff1229c6808b816a876db93df44a0583f75a40"
+      "bytes": 2597,
+      "sha256": "fae65124e76a6b0c6d3e74476f3686ede8257039168fd235af7ea1e667944e96"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record058.rs",
-      "bytes": 1802,
-      "sha256": "ddf60d7ce5cfd5c60d284934a5fb1b84cc4ba3f85f9c177b52ebb9c3e2975b0d"
+      "bytes": 2597,
+      "sha256": "3f20e3a8ee0d54b927bdb31de078ca8447e63eec0393e257f8c58d21731aa6b3"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record059.rs",
-      "bytes": 1802,
-      "sha256": "2f9c90d4a820f0a7ca4fecca135fe68be8d856eed3a78a1a70962351c40ebc94"
+      "bytes": 2597,
+      "sha256": "a9096f4e1a911094b69ec3bdf639e3671e797850fa448135ed81ce5e27238bb6"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record060.rs",
-      "bytes": 1802,
-      "sha256": "e0f56636491f6c71351912e5eb47c3e3d20db9bf017d625eba9ffb8efe1f5d88"
+      "bytes": 2597,
+      "sha256": "2d851756ffe2a3844d28f349cfe64cb439620918da63c49801433a99f982e3e7"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record061.rs",
-      "bytes": 1802,
-      "sha256": "a2894355593121ee59e252eac2e06616b28ecf811890fb6a7c2e1b67f73553fd"
+      "bytes": 2597,
+      "sha256": "f52b1bedbb051ae0e4b3be486b8e805f7eb894be94f8713718494b821f11e45e"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record062.rs",
-      "bytes": 1802,
-      "sha256": "de93e568aba2bb49f51e0fef5188f013391c1deef90ed3b75efa33da22e30f8f"
+      "bytes": 2597,
+      "sha256": "5cb8b70992d596dd973dc215f7f631e6018a683a218bd625884fb847cc9d5230"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record063.rs",
-      "bytes": 1802,
-      "sha256": "8d33bf3ec8ddd64412400d8c719469c8bb3fe602c363303d8af9a187e4981953"
+      "bytes": 2597,
+      "sha256": "63347e9f38bd2d38e320b0f59dadd172d0fda287722956c2882754bdc5485c45"
     },
     {
       "path": "src/__chigiri/internal/dispatch/fixture_record064.rs",
-      "bytes": 1802,
-      "sha256": "f1d717f4a3f0d8bb9cb6d7a8cae61aa14c770a868253e336478d20583cad9ae6"
+      "bytes": 2597,
+      "sha256": "007fa4a3ceec4812898904abca02e4caad9c4397a88f666b2a9b5863a2f48e56"
     },
     {
       "path": "src/__chigiri/internal/dispatch/measurement.rs",
-      "bytes": 1778,
-      "sha256": "b23251e6b5a092cba0e7f3b7375dde89338311b490874c351327f57c2677109a"
+      "bytes": 2505,
+      "sha256": "4b8b4dedf10985a2cb29c264eb8cbb0aa0f4c1f88b6252f846298e82c3ab1adb"
     },
     {
       "path": "src/__chigiri/internal/dispatch/mutation.rs",
-      "bytes": 1765,
-      "sha256": "0094c3d1625811d1a23246eb9bf9e8b934d13e223d553edb7b4296586f7d8d82"
+      "bytes": 2489,
+      "sha256": "8a32b0cc25f8a1d802aca95f9eaffe13b7097157fa6804903a20c89d155e8bfc"
     },
     {
       "path": "src/__chigiri/internal/dispatch/query.rs",
-      "bytes": 1753,
-      "sha256": "fa361de36bdb4e6592ba719ef870b2c41be5b5481717b88784d46c62d48c207f"
+      "bytes": 2474,
+      "sha256": "191ec65d91c94005b24d37ff29a46b1e96eabae98076d083252c4b605dd36c77"
     },
     {
       "path": "src/__chigiri/internal/scalars/registry.rs",

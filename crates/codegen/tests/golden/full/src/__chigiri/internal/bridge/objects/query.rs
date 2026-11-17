@@ -8,7 +8,7 @@ pub(super) fn __chigiri_resolve_0002_0000<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -48,7 +48,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx = ::chigiri::FieldContext::new(__chigiri_context, "Query", "user");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::user(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -69,7 +69,7 @@ pub(super) fn __chigiri_resolve_0002_0001<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -87,7 +87,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx = ::chigiri::FieldContext::new(__chigiri_context, "Query", "node");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output =
             <R as super::QueryResolver<C, T, E>>::node(__chigiri_resolver, __chigiri_ctx)
                 .await
@@ -105,7 +105,7 @@ pub(super) fn __chigiri_resolve_0002_0002<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -130,7 +130,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx = ::chigiri::FieldContext::new(__chigiri_context, "Query", "search");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output = <R as super::QueryResolver<C, T, E>>::search(
             __chigiri_resolver,
             __chigiri_ctx,
@@ -151,7 +151,7 @@ pub(super) fn __chigiri_resolve_0002_0003<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
 ) -> ::chigiri::__private::BoxFuture<'a, ::chigiri::FieldResult<::chigiri::__private::ResolvedValue>>
@@ -169,7 +169,7 @@ where
                 "root resolver received an unexpected parent value",
             ));
         }
-        let __chigiri_ctx = ::chigiri::FieldContext::new(__chigiri_context, "Query", "health");
+        let __chigiri_ctx = __chigiri_context;
         let __chigiri_output =
             <R as super::QueryResolver<C, T, E>>::health(__chigiri_resolver, __chigiri_ctx)
                 .await
@@ -185,7 +185,7 @@ pub(super) fn __chigiri_route_0002_0000<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_field_name: &'a str,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,
@@ -249,7 +249,7 @@ pub(super) fn __chigiri_route_0002<'a, C, T, R, E>(
                 + ::std::marker::Send
                 + ::std::marker::Sync
         ),
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_field_name: &'a str,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
     __chigiri_arguments: ::chigiri::__private::ArgumentValues,

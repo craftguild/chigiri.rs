@@ -3,7 +3,7 @@
 
 pub(super) fn __chigiri_schema_route_00_0000<'a, C, T>(
     __chigiri_resolvers: &'a super::Resolvers<C, T>,
-    __chigiri_context: &'a C,
+    __chigiri_context: ::chigiri::FieldContext<'a, C>,
     __chigiri_parent_type: &'a str,
     __chigiri_field_name: &'a str,
     __chigiri_parent: ::std::option::Option<&'a ::chigiri::__private::ResolvedObject>,
@@ -19,38 +19,34 @@ where
     T: super::SchemaTypes,
 {
     match __chigiri_parent_type {
-        "Viewer" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[0].resolve(
+        "Viewer" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[0].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "Item" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[1].resolve(
+            ),
+        ),
+        "Item" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[1].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "Query" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[2].resolve(
+            ),
+        ),
+        "Query" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[2].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
-        "Mutation" => {
-            ::chigiri::__private::DispatchAttempt::Matched(__chigiri_resolvers.groups[3].resolve(
+            ),
+        ),
+        "Mutation" => ::chigiri::__private::DispatchAttempt::Matched(
+            __chigiri_resolvers.groups[3].resolve_with_context(
                 __chigiri_context,
-                __chigiri_field_name,
                 __chigiri_parent,
                 __chigiri_arguments,
-            ))
-        }
+            ),
+        ),
         _ => ::chigiri::__private::DispatchAttempt::Unmatched(__chigiri_arguments),
     }
 }

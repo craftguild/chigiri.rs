@@ -608,7 +608,7 @@ role = "test"
 reason = "Dedicated regression or integration test code"
 
 [[sources]]
-pattern = "crates/codegen/tests/compile/{input_edges.rs,root_nested.rs,subscription.rs,subscription_shapes.rs}"
+pattern = "crates/codegen/tests/compile/{input_edges.rs,lookahead.rs,root_nested.rs,subscription.rs,subscription_shapes.rs}"
 role = "test"
 reason = "Dedicated regression or integration test code"
 
@@ -923,7 +923,7 @@ role = "test-helper"
 reason = "Parsed test-only Rust module, fixed fuzz replay, or isolated benchmark harness"
 
 [[sources]]
-pattern = "crates/core/src/executor/{arguments.rs,collect.rs,complete.rs,context.rs,cost_budget.rs,cost_metadata.rs,directive.rs,engine.rs,execute.rs,field_dispatch.rs,fingerprint.rs,input_errors.rs,internal_error.rs,lifecycle.rs,mod.rs,output_bytes.rs,plugin.rs,selection.rs,value.rs}"
+pattern = "crates/core/src/executor/{arguments.rs,collect.rs,complete.rs,context.rs,cost_budget.rs,cost_metadata.rs,directive.rs,engine.rs,execute.rs,field_dispatch.rs,fingerprint.rs,input_errors.rs,internal_error.rs,lifecycle.rs,lookahead.rs,mod.rs,output_bytes.rs,plugin.rs,selection.rs,value.rs}"
 role = "implementation"
 reason = "First-party runtime, public example, generator, build, validation or configuration implementation; mixed Rust tests are separated syntactically"
 
@@ -2823,7 +2823,7 @@ role = "test"
 reason = "Dedicated regression or integration test code"
 
 [[sources]]
-pattern = "crates/runtime/tests/execution/{cache.rs,cancellation.rs,collection.rs,completion.rs,concurrency.rs,descriptions.rs,directives.rs,dispatch_integrity.rs,error_id_failure.rs,http_policy.rs,introspection.rs,limits.rs,middleware.rs,mutation_nested.rs,observability.rs,output_diagnostics.rs,poll_set.rs,request_telemetry.rs,support.rs}"
+pattern = "crates/runtime/tests/execution/{cache.rs,cancellation.rs,collection.rs,completion.rs,concurrency.rs,descriptions.rs,directives.rs,dispatch_integrity.rs,error_id_failure.rs,http_policy.rs,introspection.rs,limits.rs,lookahead.rs,middleware.rs,mutation_nested.rs,observability.rs,output_diagnostics.rs,poll_set.rs,request_telemetry.rs,support.rs}"
 role = "test"
 reason = "Dedicated regression or integration test code"
 
