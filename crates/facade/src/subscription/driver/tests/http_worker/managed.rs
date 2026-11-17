@@ -73,7 +73,12 @@ async fn until(counter: &AtomicUsize, expected: usize) {
         }
     })
     .await
-    .expect("bounded managed worker progress");
+    .unwrap_or_else(|_| {
+        panic!(
+            "bounded managed worker progress: expected={expected}, observed={}",
+            count(counter)
+        )
+    });
 }
 
 async fn until_pending_source(probe: &State) {

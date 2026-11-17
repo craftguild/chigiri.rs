@@ -153,6 +153,8 @@ impl Future for PendingFactory {
     type Output = Result<PreparedContext<AppContext, HookState>, PrepareError>;
 
     fn poll(self: Pin<&mut Self>, _: &mut Context<'_>) -> Poll<Self::Output> {
+        #[cfg(feature = "subscription-worker")]
+        self.0.wait_in_pending();
         Poll::Pending
     }
 }
@@ -172,6 +174,8 @@ impl Future for PendingHook {
     type Output = Result<ResponseHeaders, HookError>;
 
     fn poll(self: Pin<&mut Self>, _: &mut Context<'_>) -> Poll<Self::Output> {
+        #[cfg(feature = "subscription-worker")]
+        self.0.wait_in_pending();
         Poll::Pending
     }
 }

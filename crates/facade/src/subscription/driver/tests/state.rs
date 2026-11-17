@@ -91,6 +91,8 @@ pub(super) struct State {
     scalar_gate: Mutex<Option<Arc<ScalarGate>>>,
     #[cfg(feature = "subscription-worker")]
     source_drop_gate: Mutex<Option<Arc<ScalarGate>>>,
+    #[cfg(feature = "subscription-worker")]
+    pending_gate: Mutex<Option<Arc<ScalarGate>>>,
 }
 
 impl State {
@@ -136,6 +138,8 @@ impl State {
             scalar_gate: Mutex::new(None),
             #[cfg(feature = "subscription-worker")]
             source_drop_gate: Mutex::new(None),
+            #[cfg(feature = "subscription-worker")]
+            pending_gate: Mutex::new(None),
         })
     }
 
@@ -178,10 +182,49 @@ impl State {
         }
     }
 
+    #[cfg(feature = "subscription-worker")]
+    pub(super) fn block_pending(&self) -> PendingBlock {
+        let gate = Arc::new(ScalarGate::default());
+        *self.pending_gate.lock().unwrap() = Some(gate.clone());
+        PendingBlock(gate)
+    }
+
+    #[cfg(feature = "subscription-worker")]
+    pub(super) fn wait_in_pending(&self) {
+        let gate = self.pending_gate.lock().unwrap().clone();
+        if let Some(gate) = gate {
+            gate.enter_and_wait();
+        }
+    }
+
     pub(super) fn wait_in_scalar(&self) {
         if let Some(gate) = self.scalar_gate.lock().unwrap().clone() {
             gate.enter_and_wait();
         }
+    }
+}
+
+#[cfg(feature = "subscription-worker")]
+pub(super) struct PendingBlock(Arc<ScalarGate>);
+
+#[cfg(feature = "subscription-worker")]
+impl PendingBlock {
+    pub(super) fn wait_entered(&self) {
+        assert!(
+            self.0.wait_entered(Duration::from_secs(2)),
+            "pending application future must enter"
+        );
+    }
+
+    pub(super) fn release(&self) {
+        self.0.release();
+    }
+}
+
+#[cfg(feature = "subscription-worker")]
+impl Drop for PendingBlock {
+    fn drop(&mut self) {
+        self.release();
     }
 }
 

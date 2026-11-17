@@ -274,6 +274,8 @@ impl Future for PendingSetup {
     type Output = FieldResult<ErasedSubscription>;
 
     fn poll(self: Pin<&mut Self>, _: &mut Context<'_>) -> Poll<Self::Output> {
+        #[cfg(feature = "subscription-worker")]
+        self.0.wait_in_pending();
         Poll::Pending
     }
 }

@@ -155,6 +155,9 @@ fn pending_context_source_and_hook_cancel_inside_the_same_task_without_parent_po
                     },
                 );
                 let fixture = Fixture::new(probe.clone(), None);
+                // Declared after the runtime owner so a failed assertion
+                // releases the native poll before that runtime is dropped.
+                let pending = probe.block_pending();
                 let mut preparation = Box::pin(fixture.preparation(profile, VALID));
                 let counter = match stage {
                     0 => &probe.counts.factory_calls,
@@ -163,7 +166,11 @@ fn pending_context_source_and_hook_cancel_inside_the_same_task_without_parent_po
                     _ => unreachable!(),
                 };
                 fixture.reach(preparation.as_mut(), || count(counter) == 1);
+                pending.wait_entered();
+                // Install both Graceful and Expired before the child can
+                // observe cancellation and select its completion outcome.
                 stop(&fixture, mode);
+                pending.release();
                 fixture.finished();
                 assert_eq!(
                     fixture

@@ -27,7 +27,7 @@ fn source_cancelled_after_poll_start_cannot_spin_the_graceful_emission_fence() {
             let service = endpoint.__managed_service().unwrap();
             let mut body = body(&endpoint, &service, profile).await;
             drop(next(&mut body).await.unwrap());
-            until(&probe.counts.source_polls, 1).await;
+            until_pending_source(&probe).await;
             let (entered, enter) = sync_channel(1);
             let (released, receive_release) = sync_channel(1);
             let mut release = Release(Some(released));
