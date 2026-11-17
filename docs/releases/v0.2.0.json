@@ -1,0 +1,112 @@
+{
+  "schema_version": 2,
+  "group": "chigiri",
+  "config_hash": "6f0aa1a7ae0dc145877599621c9dcfc48ea60ac0b5681cb8b056ec204da417a9",
+  "head": "0d394153d9a69e1b091855fb9ea06e5e709be01c",
+  "base": "v0.1.1",
+  "current": "0.1.1",
+  "next": "0.2.0",
+  "tag": "v0.2.0",
+  "bump": "minor",
+  "mode": "normal",
+  "prepared": false,
+  "receipt_path": "docs/releases/v0.2.0.json",
+  "notes": "# v0.2.0\n\nGroup: `chigiri`\n\nCompare: `v0.1.1` → `0d394153d9a69e1b091855fb9ea06e5e709be01c`\n\n## Changes\n\n- feat(executor): expose effective field selections to resolvers (0a571e12414d987fbb4824de72f0d0e2e052a127)\n- test(subscription): synchronize cancellation fixture transitions (0d394153d9a69e1b091855fb9ea06e5e709be01c)\n",
+  "changes": [
+    {
+      "path": "Cargo.toml",
+      "before": "50d9aa6c15bc119a0138339d7872b8e6195d9ae51bbdb0949c2d8bcb1f36f858",
+      "after": "4edd9bf2e60256b289aaa01b5324f4854a6b211c965bc5b7f78ac14d8b9b8a74"
+    },
+    {
+      "path": "Cargo.lock",
+      "before": "42ce1b376e8f3ebd84c2e56ff1f22c02b3d007ba7238df3a5e45d8cd89986915",
+      "after": "d00e17001630077d906aef8826582f65cc429b0de655931a852b27f1091ce7bd"
+    },
+    {
+      "path": "crates/codegen/tests/compile/custom_scalar_output/Cargo.lock",
+      "before": "95c11b89f35f024eb7c3e8c2f6e42b9b35c44f54bfee2d60f665991e3492b6f3",
+      "after": "d3c2c946211594cb0bad998a825ed8cc144895e223c4622ed5c48546f3c3a8dd"
+    },
+    {
+      "path": "crates/codegen/tests/compile/field_missing/Cargo.lock",
+      "before": "05a7152da9cd275c791e60692c50a8bf2ebde3a63688d3d8972d2efba9c2d244",
+      "after": "76dd820aae1d079b28c808e1fcf2108ff60c1f290fc4383ae894276ff226be41"
+    },
+    {
+      "path": "crates/codegen/tests/compile/group_missing/Cargo.lock",
+      "before": "e58ef8b83215d22d5b1afd935a7b54076c52df1d23c8503cf9a7393487f9c772",
+      "after": "c5f901b163d86a1def7b5b1dfa0aa366694b52366789bab2fdd9d7881b180805"
+    },
+    {
+      "path": "crates/codegen/tests/compile/pass/Cargo.lock",
+      "before": "0b1fcef30db29991dc03fe63e899f11cb9e575e8f6fb78ef25a48baa3b28b986",
+      "after": "ee67e4204085d6f654d07bc179b4d2064624003b420e2e467ee8c1a21dfb31d1"
+    },
+    {
+      "path": "crates/codegen/tests/compile/typestate_fail/Cargo.lock",
+      "before": "b039e58010daf53a731138cc8d97c1098cea7ffe8411ae2d90fa5765a6548204",
+      "after": "a9f414728a431a79c7b45a2375342274ed2b3268063ce62c370df79112f26b02"
+    },
+    {
+      "path": "fuzz/Cargo.lock",
+      "before": "8a747f152f17e61c22d211d29b9d546a619ef7d6dc5980904bcaf136f46d960d",
+      "after": "b735687403151d6391ba0d11992ad6659749443812324681fe2301e1229bb00b"
+    },
+    {
+      "path": "tests/fixtures/bridge-negative-surface/Cargo.lock",
+      "before": "b07e1ef5c647a78d550b7ca608a2b4e00872b2d5873919d40fca60d28fc10e71",
+      "after": "f974603efed0940d32b15fe082189c536cb901876cab3350bcbab41f3794f787"
+    },
+    {
+      "path": "tests/fixtures/full-schema/consumer/Cargo.lock",
+      "before": "23cceef5fe204315657838d2a95c1f487b7c26618a7889d5ca177265847737a5",
+      "after": "ed9f3f4247ef7ccea6ae3b0e213340b4e750e4dc00b9797f73c84e43d87868c5"
+    },
+    {
+      "path": "tests/fixtures/graphiql-consumer/Cargo.lock",
+      "before": "c41126580160a78db6aaf8ff70839d69f6e8b1961b55b2f0eef760ebfd1a633e",
+      "after": "57b420b7a45f9135d16df0c023a04f33cebb4877fa57dec36196dd889ad3378c"
+    },
+    {
+      "path": "tests/fixtures/mock-blog-comparison/Cargo.lock",
+      "before": "ad2112cb8e2c73fed07c1b43493e0f21ffa11fee774ec5821fe3261f5c81e9cb",
+      "after": "90e6242248f0f8de3a149b1abde09e0519acc863a14658279def05657e2ca340"
+    },
+    {
+      "path": "tests/fixtures/neutral-endpoint-consumer/Cargo.lock",
+      "before": "30f5a117f9858772d8c50f265250961802bcadd9dda4e0164b27ab726c78adcf",
+      "after": "42c987fc53f57321ec9ad10d25ac1b165d12fd9445fff908b006083e6a2a124d"
+    },
+    {
+      "path": "tests/fixtures/observability-opt-in-consumer/Cargo.lock",
+      "before": "02ce2433d3ed5e167154f8284d5fdaa1e9d578ec4eb98a1e13360ed45ef3f29e",
+      "after": "ea9bafaef327d70ff067601a22fe1a89b90ed2d7f1198f0faf59de31d121dc3d"
+    },
+    {
+      "path": "tests/fixtures/rate-provider-minimal/Cargo.lock",
+      "before": "63aee6907d867c823dc2ca533747b34e1510a2ff679e8f935cdedaf12d66db33",
+      "after": "e078bc65e518f6e502ff27ca8d1556a8af3bea9a27e82f98c9ab871986381f4b"
+    },
+    {
+      "path": "tests/fixtures/repository-consumer/Cargo.lock",
+      "before": "d8c8e5f605463fc02fd25daf6b56156bfedad1691648df2f036374a1a800c2d0",
+      "after": "72dc23dcb758fa2a35a74f900b9f003fedb1190dcb6148803eaf597f5f171c05"
+    },
+    {
+      "path": "tests/fixtures/usability-negative-surface/Cargo.lock",
+      "before": "0c30baaa0d90b4ffd9e5a71c66772b180d3a04cc6f11517486d8cdc1a27ca264",
+      "after": "f1471d7e280e21e56bd842501b121d80bfdbf79c3efcf2c90183625f30c63998"
+    },
+    {
+      "path": "tests/fixtures/vnext-large-product/consumer/Cargo.lock",
+      "before": "252d10ad6e4b57a7b52298cc1dfa8f9900c72127d899d764b208b1f920e2670d",
+      "after": "503049c185b316a08508f2fcb8f8f9b284f0746c43913cddde45177d5387059e"
+    },
+    {
+      "path": "docs/releases/v0.2.0.md",
+      "before": null,
+      "after": "df1703fc67fe99fd7312c49879ed204ee8ffc5f08bdbd3ec32d5d86210013e81"
+    }
+  ]
+}
