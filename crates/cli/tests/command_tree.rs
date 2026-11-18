@@ -43,6 +43,8 @@ impl Fixture {
         let (reader, writer) = std::io::pipe().unwrap();
         after_pipe();
         drop(reader);
+        #[cfg(unix)]
+        wait_for_closed_stdout(&writer);
         Command::new(env!("CARGO_BIN_EXE_chigiri"))
             .args(args)
             .current_dir(&self.0)
@@ -55,6 +57,32 @@ impl Fixture {
             .wait_with_output()
             .unwrap()
     }
+}
+
+#[cfg(unix)]
+fn wait_for_closed_stdout(mut writer: &std::io::PipeWriter) {
+    use std::io::{ErrorKind, Write};
+    use std::time::{Duration, Instant};
+
+    // Parallel process startups can briefly retain a reader until exec.
+    // A persistent inherited reader must still fail this precondition.
+    rustix::io::ioctl_fionbio(writer, true).unwrap();
+    let deadline = Instant::now() + Duration::from_secs(5);
+    loop {
+        match writer.write(b".") {
+            Err(error) if error.kind() == ErrorKind::BrokenPipe => break,
+            Ok(_) => {}
+            Err(error)
+                if matches!(error.kind(), ErrorKind::WouldBlock | ErrorKind::Interrupted) => {}
+            Err(error) => panic!("could not observe closed stdout: {error}"),
+        }
+        assert!(
+            Instant::now() < deadline,
+            "stdout still has a reader before CLI launch"
+        );
+        std::thread::sleep(Duration::from_millis(1));
+    }
+    rustix::io::ioctl_fionbio(writer, false).unwrap();
 }
 
 impl Drop for Fixture {

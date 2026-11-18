@@ -38,7 +38,8 @@ fn sg_proc_02_missing_lockfile_rejects_update_requests_without_creating_a_lockfi
 #[test]
 fn rejects_consumers_that_mix_core_types_from_another_source() {
     let fixture = prepare("");
-    add_dependency(&fixture, "chigiri_core", "0.2.0", "other_core");
+    let other_version = format!("{}-other-source", env!("CARGO_PKG_VERSION"));
+    add_dependency(&fixture, "chigiri_core", &other_version, "other_core");
     lock(&fixture);
     let original = inputs(&fixture);
     let paths = tool_log(&fixture);
