@@ -1,6 +1,7 @@
 //! Read-only effective child selections, using the executor's field collector.
 use crate::executable::{CoercedVariables, ValidatedDocument};
 use crate::language::ast::{Field, TypeRef, TypeRefKind};
+use crate::schema::introspection::{self, model::DescriptorKind};
 use crate::schema::{SemanticSchema, TypeKind};
 use std::fmt;
 
@@ -122,11 +123,14 @@ fn collect<'a>(
     runtime_type: &str,
 ) -> Result<Vec<SelectedField<'a>>, SelectionError> {
     let schema = environment.schema;
-    let object = schema
+    let is_object = schema
         .type_by_name(runtime_type)
-        .filter(|object| object.kind() == TypeKind::Object)
-        .filter(|_| type_condition_applies(schema, output_type, runtime_type))
-        .ok_or(SelectionError::InvalidRuntimeType)?;
+        .is_some_and(|object| object.kind() == TypeKind::Object)
+        || introspection::type_by_name(runtime_type)
+            .is_some_and(|object| object.kind == DescriptorKind::Object);
+    if !is_object || !type_condition_applies(schema, output_type, runtime_type) {
+        return Err(SelectionError::InvalidRuntimeType);
+    }
     let sets: Vec<_> = fields
         .iter()
         .filter_map(|field| field.selection_set.as_ref())
@@ -141,16 +145,8 @@ fn collect<'a>(
     .into_iter()
     .map(|group| {
         let name = group.fields[0].name.value.as_str();
-        let output_type = if name == "__typename" {
-            "String"
-        } else {
-            named_type(
-                &object
-                    .field(name)
-                    .ok_or(SelectionError::InvalidRuntimeType)?
-                    .ty,
-            )
-        };
+        let output_type = field_output_type(schema, runtime_type, name)
+            .ok_or(SelectionError::InvalidRuntimeType)?;
         Ok(SelectedField {
             environment,
             response_key: group.response_key,
@@ -160,6 +156,30 @@ fn collect<'a>(
         })
     })
     .collect()
+}
+
+fn field_output_type<'a>(schema: &'a SemanticSchema, parent: &str, name: &str) -> Option<&'a str> {
+    if name == "__typename" {
+        return Some("String");
+    }
+    if let Some(field) = schema
+        .type_by_name(parent)
+        .and_then(|object| object.field(name))
+    {
+        return Some(named_type(&field.ty));
+    }
+    if schema
+        .roots()
+        .query()
+        .is_some_and(|root| root.type_name == parent)
+    {
+        return introspection::root_field(name).map(|field| field.ty.named_type);
+    }
+    introspection::type_by_name(parent)?
+        .fields
+        .iter()
+        .find(|field| field.name == name)
+        .map(|field| field.ty.named_type)
 }
 
 fn named_type(mut reference: &TypeRef) -> &str {

@@ -2823,7 +2823,7 @@ role = "test"
 reason = "Dedicated regression or integration test code"
 
 [[sources]]
-pattern = "crates/runtime/tests/execution/{cache.rs,cancellation.rs,collection.rs,completion.rs,concurrency.rs,descriptions.rs,directives.rs,dispatch_integrity.rs,error_id_failure.rs,http_policy.rs,introspection.rs,limits.rs,lookahead.rs,middleware.rs,mutation_nested.rs,observability.rs,output_diagnostics.rs,poll_set.rs,request_telemetry.rs,support.rs}"
+pattern = "crates/runtime/tests/execution/{cache.rs,cancellation.rs,collection.rs,completion.rs,concurrency.rs,descriptions.rs,directives.rs,dispatch_integrity.rs,error_id_failure.rs,http_policy.rs,introspection.rs,limits.rs,lookahead.rs,lookahead_introspection.rs,middleware.rs,mutation_nested.rs,observability.rs,output_diagnostics.rs,poll_set.rs,request_telemetry.rs,support.rs}"
 role = "test"
 reason = "Dedicated regression or integration test code"
 

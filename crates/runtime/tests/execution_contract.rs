@@ -35,6 +35,8 @@ mod introspection;
 mod limits;
 #[path = "execution/lookahead.rs"]
 mod lookahead;
+#[path = "execution/lookahead_introspection.rs"]
+mod lookahead_introspection;
 #[path = "execution/middleware.rs"]
 mod middleware;
 #[path = "execution/mutation_nested.rs"]
