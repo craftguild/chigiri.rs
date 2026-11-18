@@ -1,0 +1,112 @@
+{
+  "schema_version": 2,
+  "group": "chigiri",
+  "config_hash": "6f0aa1a7ae0dc145877599621c9dcfc48ea60ac0b5681cb8b056ec204da417a9",
+  "head": "e04bcc60f50f3b12eabb6dffd6695975f5d0ea1d",
+  "base": "v0.2.0",
+  "current": "0.2.0",
+  "next": "0.2.1",
+  "tag": "v0.2.1",
+  "bump": "patch",
+  "mode": "normal",
+  "prepared": false,
+  "receipt_path": "docs/releases/v0.2.1.json",
+  "notes": "# v0.2.1\n\nGroup: `chigiri`\n\nCompare: `v0.2.0` → `e04bcc60f50f3b12eabb6dffd6695975f5d0ea1d`\n\n## Changes\n\n- fix(executor): support introspection in effective selections (e04bcc60f50f3b12eabb6dffd6695975f5d0ea1d)\n",
+  "changes": [
+    {
+      "path": "Cargo.toml",
+      "before": "4edd9bf2e60256b289aaa01b5324f4854a6b211c965bc5b7f78ac14d8b9b8a74",
+      "after": "ef43aab79431189ef43d975c3298fed81c140fa0f384f028f6d92c878658d64e"
+    },
+    {
+      "path": "Cargo.lock",
+      "before": "d00e17001630077d906aef8826582f65cc429b0de655931a852b27f1091ce7bd",
+      "after": "b4b9cef3a54acbd593fa1e11eec85e9d329ed88379269495fae999dd70a17db1"
+    },
+    {
+      "path": "crates/codegen/tests/compile/custom_scalar_output/Cargo.lock",
+      "before": "d3c2c946211594cb0bad998a825ed8cc144895e223c4622ed5c48546f3c3a8dd",
+      "after": "8cc26c736c302d79c51589328e9eb5bd116d6fe058e3d5bb81e4347b7b3d9a47"
+    },
+    {
+      "path": "crates/codegen/tests/compile/field_missing/Cargo.lock",
+      "before": "76dd820aae1d079b28c808e1fcf2108ff60c1f290fc4383ae894276ff226be41",
+      "after": "8d2b68f69d1240cdf231b99f125b4289a93c12eca0c51dd0b26a2456b7cb4e1e"
+    },
+    {
+      "path": "crates/codegen/tests/compile/group_missing/Cargo.lock",
+      "before": "c5f901b163d86a1def7b5b1dfa0aa366694b52366789bab2fdd9d7881b180805",
+      "after": "5e0c00ea48a454a6f4057398e70087e22b72dc7769711b0d9b7574897a058cb5"
+    },
+    {
+      "path": "crates/codegen/tests/compile/pass/Cargo.lock",
+      "before": "ee67e4204085d6f654d07bc179b4d2064624003b420e2e467ee8c1a21dfb31d1",
+      "after": "54347b43aff9da2a0cfc648509727f0dbd59f57bd6aaa4c656aeb1a118f32842"
+    },
+    {
+      "path": "crates/codegen/tests/compile/typestate_fail/Cargo.lock",
+      "before": "a9f414728a431a79c7b45a2375342274ed2b3268063ce62c370df79112f26b02",
+      "after": "0837d7438246a61c61d5e36bafcc488d934c4459f2bfab8af987965292f12843"
+    },
+    {
+      "path": "fuzz/Cargo.lock",
+      "before": "b735687403151d6391ba0d11992ad6659749443812324681fe2301e1229bb00b",
+      "after": "35e81c6a67e10bc7a34db02998480e1215ce2ed7545c1e431ffb8afb0dbf5ba1"
+    },
+    {
+      "path": "tests/fixtures/bridge-negative-surface/Cargo.lock",
+      "before": "f974603efed0940d32b15fe082189c536cb901876cab3350bcbab41f3794f787",
+      "after": "3a9280139bf644922e4f213590828f873d231bf32bbe31def435787336b35053"
+    },
+    {
+      "path": "tests/fixtures/full-schema/consumer/Cargo.lock",
+      "before": "ed9f3f4247ef7ccea6ae3b0e213340b4e750e4dc00b9797f73c84e43d87868c5",
+      "after": "88bef2d78a525fc62a4a118e307869111dd28fe3a73ceeca3240e2b0cb1556be"
+    },
+    {
+      "path": "tests/fixtures/graphiql-consumer/Cargo.lock",
+      "before": "57b420b7a45f9135d16df0c023a04f33cebb4877fa57dec36196dd889ad3378c",
+      "after": "539b9441d19a51a1fa8bce3ff68ef2911612009b698c8b237030b0b365b9e800"
+    },
+    {
+      "path": "tests/fixtures/mock-blog-comparison/Cargo.lock",
+      "before": "90e6242248f0f8de3a149b1abde09e0519acc863a14658279def05657e2ca340",
+      "after": "1860c222819f0aad1551b1b4c0211833f0f9d93ada845816874219b40a41aa6a"
+    },
+    {
+      "path": "tests/fixtures/neutral-endpoint-consumer/Cargo.lock",
+      "before": "42c987fc53f57321ec9ad10d25ac1b165d12fd9445fff908b006083e6a2a124d",
+      "after": "f5d7bfe8e0363299c6477fc71b111fa2415c975865aba1d252733ef4a8c4e075"
+    },
+    {
+      "path": "tests/fixtures/observability-opt-in-consumer/Cargo.lock",
+      "before": "ea9bafaef327d70ff067601a22fe1a89b90ed2d7f1198f0faf59de31d121dc3d",
+      "after": "7369e37eed7876ee8abf904a13603c9b66a10f73e469b49f2a854e0946b2caac"
+    },
+    {
+      "path": "tests/fixtures/rate-provider-minimal/Cargo.lock",
+      "before": "e078bc65e518f6e502ff27ca8d1556a8af3bea9a27e82f98c9ab871986381f4b",
+      "after": "f46421bda4ed55fc42804cf4a9c9cf4bb42d8b56cc0f84ee7d3adffe5b8b9693"
+    },
+    {
+      "path": "tests/fixtures/repository-consumer/Cargo.lock",
+      "before": "72dc23dcb758fa2a35a74f900b9f003fedb1190dcb6148803eaf597f5f171c05",
+      "after": "2b545bcd55b6a7fdeab14fb28b902b6caec850e6fc3d9038c58a8601a9ae9ef8"
+    },
+    {
+      "path": "tests/fixtures/usability-negative-surface/Cargo.lock",
+      "before": "f1471d7e280e21e56bd842501b121d80bfdbf79c3efcf2c90183625f30c63998",
+      "after": "5a4015039f38a1ec12eb4f5104b54f658a8e1918acb7b743b889b92508690c73"
+    },
+    {
+      "path": "tests/fixtures/vnext-large-product/consumer/Cargo.lock",
+      "before": "503049c185b316a08508f2fcb8f8f9b284f0746c43913cddde45177d5387059e",
+      "after": "1bae4141584e8af8b293f4ce7037e5284fcd1851d0ce0f9a4a568bcb8ecd6a61"
+    },
+    {
+      "path": "docs/releases/v0.2.1.md",
+      "before": null,
+      "after": "4565113a360a88ddd5e7206a29289badca38f04b1186fc588b6f41df0edc3f36"
+    }
+  ]
+}
